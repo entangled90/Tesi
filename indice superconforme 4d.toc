@@ -1,0 +1,26 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {section}{\numberline {1}Teoria Elettrica}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Calcolo indice superconforme}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Contributo dalla parte vettoriale}{4}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Contributo della materia nell'aggiunta}{6}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Contributo materia nella fondamentale}{8}{subsubsection.1.1.3}
+\contentsline {subsection}{\numberline {1.2}Formula per Indice superconforme Kutasov-Schwimmer 4d}{8}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Riduzione dell'indice alla funzione di partizione}{8}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Funzione di partizione}{9}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Contributo divergente}{10}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Funzione di partizione}{11}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.4}Masse reali e flow senza $\eta $}{11}{subsubsection.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.5}Limite per $m \rightarrow \infty $}{12}{subsubsection.1.3.5}
+\contentsline {section}{\numberline {2} Teoria Magnetica}{14}{section.2}
+\contentsline {subsection}{\numberline {2.1}Calcolo dell'indice superconforme}{14}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Contributo dei campi chirali}{14}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Contributo dei mesoni}{15}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Indice e funzione di partizione}{16}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Espressione dell'indice}{16}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Funzione di partizione}{17}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Contributi divergenti}{19}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Formula per la funzione di partizione}{21}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Vuoti e rotture di simmetria per il limite a massa infinita}{22}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Limite sulla funzione di partizione}{23}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Mesoni}{23}{subsubsection.2.6.1}

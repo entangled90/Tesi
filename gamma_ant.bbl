@@ -1,0 +1,24 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aharony et~al.(2013)Aharony, Razamat, Seiberg, and
+  Willett]{Aharony:2013dha}
+Ofer Aharony, Shlomo~S. Razamat, Nathan Seiberg, and Brian Willett.
+\newblock {3d dualities from 4d dualities}.
+\newblock \emph{JHEP}, 1307:\penalty0 149, 2013.
+\newblock \doi{10.1007/JHEP07(2013)149}.
+
+\bibitem[Amariti and Klare(2014)]{Amariti:2014iza}
+Antonio Amariti and Claudius Klare.
+\newblock {A journey to 3d: exact relations for adjoint SQCD from dimensional
+  reduction}.
+\newblock 2014.
+
+\bibitem[van~de Bult()]{vanDeBult:2007}
+Fokko van~de Bult.
+
+\end{thebibliography}
