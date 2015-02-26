@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,12 @@ F.A. Dolan and H.~Osborn.
   q-Hypergeometric Identities to N=1 Dual Theories}.
 \newblock \emph{Nucl.Phys.}, B818:\penalty0 137--178, 2009.
 \newblock \doi{10.1016/j.nuclphysb.2009.01.028}.
+
+\bibitem[Spiridonov and Vartanov(2011)]{Spiridonov:2009za}
+V.P. Spiridonov and G.S. Vartanov.
+\newblock {Elliptic Hypergeometry of Supersymmetric Dualities}.
+\newblock \emph{Commun.Math.Phys.}, 304:\penalty0 797--874, 2011.
+\newblock \doi{10.1007/s00220-011-1218-9}.
 
 \bibitem[van~de Bult(2007)]{vanDeBult:2007}
 Fokko van~de Bult.

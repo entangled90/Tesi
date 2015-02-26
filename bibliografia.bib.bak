@@ -45,3 +45,19 @@
       reportNumber   = "DAMTP-08-07, DIAS-STP-08-02, SHEP-08-06",
       SLACcitation   = "%%CITATION = ARXIV:0801.4947;%%",
 }
+
+@article{Spiridonov:2009za,
+      author         = "Spiridonov, V.P. and Vartanov, G.S.",
+      title          = "{Elliptic Hypergeometry of Supersymmetric Dualities}",
+      journal        = "Commun.Math.Phys.",
+      volume         = "304",
+      pages          = "797-874",
+      doi            = "10.1007/s00220-011-1218-9",
+      year           = "2011",
+      eprint         = "0910.5944",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-th",
+      reportNumber   = "AEI-2009-106",
+      SLACcitation   = "%%CITATION = ARXIV:0910.5944;%%",
+}
+
