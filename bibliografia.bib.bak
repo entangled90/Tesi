@@ -61,3 +61,17 @@
       SLACcitation   = "%%CITATION = ARXIV:0910.5944;%%",
 }
 
+@article{Nii:2014jsa,
+      author         = "Nii, Keita",
+      title          = "{3d duality with adjoint matter from 4d duality}",
+      journal        = "JHEP",
+      volume         = "1502",
+      pages          = "024",
+      doi            = "10.1007/JHEP02(2015)024",
+      year           = "2015",
+      eprint         = "1409.3230",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-th",
+      SLACcitation   = "%%CITATION = ARXIV:1409.3230;%%",
+}
+

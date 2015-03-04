@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  26 FEB 2015 15:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  2 MAR 2015 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,189 +686,179 @@ Overfull \hbox (47.01854pt too wide) in paragraph at lines 328--328
  []
 
 
-Overfull \hbox (60.64447pt too wide) in paragraph at lines 354--354
+Overfull \hbox (60.64447pt too wide) in paragraph at lines 353--353
 [] 
  []
 
 [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 428.
+(hyperref)                removing `math shift' on input line 427.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\eta' on input line 428.
+(hyperref)                removing `\eta' on input line 427.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 428.
+(hyperref)                removing `math shift' on input line 427.
 
 
-Overfull \hbox (66.37498pt too wide) in paragraph at lines 435--435
+Overfull \hbox (66.37498pt too wide) in paragraph at lines 434--434
 [] 
  []
 
 
-Overfull \hbox (46.555pt too wide) in paragraph at lines 439--439
+Overfull \hbox (46.555pt too wide) in paragraph at lines 438--438
 [] 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 486--490
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
 
  []
 
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 497.
+(hyperref)                removing `math shift' on input line 496.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rightarrow' on input line 497.
+(hyperref)                removing `\rightarrow' on input line 496.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 497.
+(hyperref)                removing `\infty' on input line 496.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 497.
+(hyperref)                removing `math shift' on input line 496.
 
 
-Overfull \hbox (10.15468pt too wide) in paragraph at lines 521--521
+Overfull \hbox (10.15468pt too wide) in paragraph at lines 520--520
 [] 
  []
 
 [13]
-Overfull \hbox (58.56584pt too wide) in paragraph at lines 534--534
+Overfull \hbox (58.56584pt too wide) in paragraph at lines 533--533
 [] 
  []
 
 [14] [15]
-Overfull \hbox (8.51816pt too wide) in paragraph at lines 625--625
+Overfull \hbox (8.51816pt too wide) in paragraph at lines 624--624
 [] 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 659--661
+Underfull \hbox (badness 10000) in paragraph at lines 658--660
 
  []
 
 [17]
-Overfull \hbox (29.0627pt too wide) in paragraph at lines 672--672
+Overfull \hbox (29.0627pt too wide) in paragraph at lines 671--671
 [] 
  []
 
 
-Overfull \hbox (50.90819pt too wide) in paragraph at lines 685--685
+Overfull \hbox (50.90819pt too wide) in paragraph at lines 684--684
 [] 
  []
 
 [18]
-Overfull \hbox (60.64447pt too wide) in paragraph at lines 707--707
+Overfull \hbox (60.64447pt too wide) in paragraph at lines 706--706
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--713
+Underfull \hbox (badness 10000) in paragraph at lines 710--712
 
  []
 
 [19]
-Overfull \hbox (65.30449pt too wide) in paragraph at lines 722--722
+Overfull \hbox (65.30449pt too wide) in paragraph at lines 721--721
 [] 
  []
 
 
-Overfull \hbox (50.7443pt too wide) in paragraph at lines 737--737
+Overfull \hbox (50.7443pt too wide) in paragraph at lines 736--736
 [] 
  []
 
 
-Overfull \hbox (14.5863pt too wide) in paragraph at lines 737--741
+Overfull \hbox (14.5863pt too wide) in paragraph at lines 736--740
 \OT1/cmr/m/n/12 I ter-mi-ni in blu si can-cel-la-no gra-zie al fat-to che $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--741
+Underfull \hbox (badness 10000) in paragraph at lines 736--740
 
  []
 
 [20]
 
 LaTeX Warning: Reference `eqn:R-charge_dual_quark' on page 21 undefined on inpu
-t line 749.
+t line 748.
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 775--777
+Underfull \hbox (badness 10000) in paragraph at lines 774--776
 
  []
 
 
-Overfull \hbox (49.30194pt too wide) in paragraph at lines 790--790
+Overfull \hbox (10.02315pt too wide) in paragraph at lines 788--788
 [] 
  []
 
 [22] [23]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 853.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 862--866
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 862--866
-
- []
+d on input line 850.
 
 [24] [25] [26] [27]
-Overfull \hbox (56.39836pt too wide) in paragraph at lines 988--988
+Overfull \hbox (56.39836pt too wide) in paragraph at lines 984--984
+[] 
+ []
+
+
+Overfull \hbox (32.03784pt too wide) in paragraph at lines 1000--1000
 [] 
  []
 
 [28]
-Overfull \hbox (32.03784pt too wide) in paragraph at lines 1004--1004
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1035.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1035.
+
+
+Overfull \hbox (54.3715pt too wide) in paragraph at lines 1041--1041
 [] 
  []
 
 [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1039.
+(hyperref)                removing `math shift' on input line 1069.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1039.
+(hyperref)                removing `subscript' on input line 1069.
 
 
-Overfull \hbox (54.3715pt too wide) in paragraph at lines 1045--1045
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1069.
+
+
+Overfull \hbox (9.04721pt too wide) in paragraph at lines 1080--1080
 [] 
  []
 
 [30]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1070.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1070.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1070.
-
-
-Overfull \hbox (9.04721pt too wide) in paragraph at lines 1081--1081
-[] 
- []
-
-
-Overfull \hbox (19.41899pt too wide) detected at line 1090
+Overfull \hbox (19.41899pt too wide) detected at line 1089
 []\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 m[]N[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@
 \OML/cmm/m/it/12 m[]N[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 !\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 N[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^A[]
@@ -877,66 +867,95 @@ m/m/it/12 m[]N[]![][] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 + 1
 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 2[]
  []
 
+
+Overfull \hbox (24.75383pt too wide) in paragraph at lines 1102--1102
+[] 
+ []
+
 [31]
-Overfull \hbox (24.75383pt too wide) in paragraph at lines 1103--1103
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 1104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rho' on input line 1104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1104.
+
+
+Overfull \hbox (11.4866pt too wide) in paragraph at lines 1112--1112
 [] 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+Overfull \hbox (51.49684pt too wide) in paragraph at lines 1134--1134
+[] 
+ []
 
+[32]
+Overfull \hbox (11.3876pt too wide) in paragraph at lines 1145--1145
+[] 
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1105.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 1105.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
-
-
-Overfull \hbox (11.4866pt too wide) in paragraph at lines 1113--1113
+[33]
+Overfull \hbox (34.83546pt too wide) in paragraph at lines 1161--1161
 [] 
  []
 
 
-Overfull \hbox (36.77502pt too wide) in paragraph at lines 1135--1135
+Overfull \hbox (62.59267pt too wide) in paragraph at lines 1184--1193
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1195
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (53.3725pt too wide) in paragraph at lines 1200--1200
 [] 
  []
 
-[32] [33] (./indice superconforme 4d.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1143.
- [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1143.
+[34] [35] (./indice superconforme 4d.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1209.
+ [36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1209.
  (./indice superconforme 4d.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1143.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1209.
 
 Package rerunfilecheck Info: File `"indice superconforme 4d".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 66C4B891BB825D66C05A7313A9C0C99C;2684.
+(rerunfilecheck)             Checksum: 4A47261663523762B2F14E3249493EF8;2656.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7770 strings out of 494976
- 108127 string characters out of 6180006
- 213834 words of memory out of 5000000
- 10754 multiletter control sequences out of 15000+600000
+ 7777 strings out of 494976
+ 108206 string characters out of 6180006
+ 212856 words of memory out of 5000000
+ 10757 multiletter control sequences out of 15000+600000
  16999 words of font info for 62 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,22n,31p,810b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -957,9 +976,9 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "indice superconforme 4d.pdf" (35 pages, 382051 bytes).
+Output written on "indice superconforme 4d.pdf" (37 pages, 392353 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
