@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,12 @@ F.A. Dolan and H.~Osborn.
   q-Hypergeometric Identities to N=1 Dual Theories}.
 \newblock \emph{Nucl.Phys.}, B818:\penalty0 137--178, 2009.
 \newblock \doi{10.1016/j.nuclphysb.2009.01.028}.
+
+\bibitem[Kim and Park(2013)]{Kim:2013cma}
+Hyungchul Kim and Jaemo Park.
+\newblock {Aharony Dualities for 3d Theories with Adjoint Matter}.
+\newblock \emph{JHEP}, 1306:\penalty0 106, 2013.
+\newblock \doi{10.1007/JHEP06(2013)106}.
 
 \bibitem[Nii(2015)]{Nii:2014jsa}
 Keita Nii.

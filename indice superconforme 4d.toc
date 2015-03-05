@@ -26,7 +26,7 @@
 \contentsline {subsubsection}{\numberline {2.6.2}Chirali}{26}{subsubsection.2.6.2}
 \contentsline {subsubsection}{\numberline {2.6.3}Contributo della materia nell'aggiunta e campo vettoriale }{28}{subsubsection.2.6.3}
 \contentsline {subsubsection}{\numberline {2.6.4}Somma dei contributi}{29}{subsubsection.2.6.4}
-\contentsline {subsubsection}{\numberline {2.6.5}Contributi proporzionali a $m$}{29}{subsubsection.2.6.5}
+\contentsline {subsubsection}{\numberline {2.6.5}Contributi proporzionali a $m$}{30}{subsubsection.2.6.5}
 \contentsline {subsubsection}{\numberline {2.6.6}Contribui proporzionali a $m_B$}{31}{subsubsection.2.6.6}
 \contentsline {subsubsection}{\numberline {2.6.7}Contributo dei termini misti}{31}{subsubsection.2.6.7}
 \contentsline {subsubsection}{\numberline {2.6.8}Contributi con $\sigma $ e $\rho $}{32}{subsubsection.2.6.8}

@@ -987,22 +987,33 @@ L'esponente dell'ultimo sarà dato da (a meno dei soliti prefattori..):
 \begin{align*}
 \sum_{1 \leq i \leq kN_f- N_c } \sum_{ 1 \leq j \leq k }  \bigg( &  - \left( \omega( \Delta_X -1) + ( -m_1 + m_2) + B + C + \sigma'_i - \rho'_j \right)^2 \\
 & + \left(  \omega( \Delta_X -1) + ( m_1 - m_2) - B - C - \sigma'_i + \rho'_j\right)^2 \\
-& + \left(  -m_1 + m_2 + B + C + \sigma'_i - \rho'_j \right)^2 + \\
-& - \left(  m_1 - m_2 - B - C - \sigma'_i + \rho'_j\right)^2 
+& + \left( -\omega  - m_1 + m_2 + B + C + \sigma'_i - \rho'_j \right)^2 + \\
+& - \left( -\omega +  m_1 - m_2 - B - C - \sigma'_i + \rho'_j\right)^2 
 \bigg)
 \end{align*}
 dove vale $ m_1 - m_2 = m$ e $ B+C = \frac{1}{k N_f - N_c}= D$.\\
+Le ultime due righe hanno segno opposto perchè sono a denominatore nella formula.
 Quindi abbiamo:
 \begin{align*}
 \sum_{1 \leq i \leq kN_f- N_c } \sum_{ 1 \leq j \leq k }  \bigg( &  - \left( \omega( \Delta_X -1) -m + D + \sigma'_i - \rho'_j \right)^2  + \left(  \omega( \Delta_X -1) + m -D - \sigma'_i + \rho'_j\right)^2 \\
 & -\left(  -m + D + \sigma'_i - \rho'_j \right)^2  + \left( m - D - \sigma'_i + \rho'_j\right)^2 
 \bigg)
 \end{align*}
-La seconda riga è nulla in quanto è la differenza dello stesso quadrato. Per la prima riga invece abbiamo:
+Per la prima riga invece abbiamo:
 \begin{align*}
 & \sum_{ \overset{1 \leq i \leq kN_f- N_c }{ 1 \leq j \leq k }} 4 \omega ( \Delta_X -1) ( m - D - \sigma'_i + \rho'_j)
 \end{align*} 
+Per la seconda riga abbiamo:
+\begin{align*}
+- 4 \omega \left( k ( k N_f - N_c )  ( - m + B + C) + \sum_i^{k N_f - N_c} \sum_j^{k} ( \sigma_i - \rho_j) \right)
+\end{align*}
+Sommando i due contributi otteniamo:
+\begin{align*}
+&  4 \omega \Delta_X \left( k ( k N_f - N_c)   (m - D) + \sum_i^{k N_f -N_c} \sum_k^{k }  ( \sigma'_i + \rho'_j)\right)
+\end{align*}
+
 \subsubsection{Somma dei contributi}
+
 
 I termini quadratici nelle masse reali si cancellano con il contributo dato dai mesoni di \ref{eqn:contributo_mesoni}.
 Ora mettiamo insieme tutti i contributi (lascio stare $\rho_i$ e $\sigma_i$:
@@ -1024,10 +1035,10 @@ Ora mettiamo insieme tutti i contributi (lascio stare $\rho_i$ e $\sigma_i$:
 +  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) \\
 \end{cases}\\
 \mbox{Adj matter} & \begin{cases}
-	+ m( 4 \omega ( \Delta_X -1) k ( k N_f - N_C) +\\
-	- D ( 4 \omega ( \Delta_X -1) k ( kN_f - N_C) + \\
-	- 4 k \sum_i \sigma'_i (  \omega ( \Delta_X -1) ) + \\
-	+ 4 (k N_f - N_c)  \sum_i \rho'_i(  \omega ( \Delta_X -1) ) 
+	+ m( 4 \omega \Delta_X k ( k N_f - N_C) +\\
+	- D ( 4 \omega \Delta_X k ( kN_f - N_C) + \\
+	- 4 k \sum_i \sigma'_i (  \omega \Delta_X ) + \\
+	+ 4 (k N_f - N_c)  \sum_i \rho'_i(  \omega \Delta_X ) 
 \end{cases}
 \end{align*}
 
@@ -1037,7 +1048,7 @@ I contributi proporzionali ad $m$ sono:
 \begin{align*}
  m  &\bigg( - 4 k N_f m_A ( N_f -1) - 4 N_f N_c m_A   + 4 k N_f m m_A (N_f -1)\bigg)  + \\
   4 m \omega &  \bigg(   k N_f( \Delta_Q + \Delta_M -1 + \frac{(k-1)}{2} \Delta_X )  + (k N_f -N_c) ( \Delta_X - \Delta_M - 1) + k N_f ( \Delta_X - \Delta_Q -1) + \\ 
-  & +  ( \Delta_X -1) k ( k N_f - N_C) \bigg)
+  & +  \Delta_X  k ( k N_f - N_C) \bigg)
  \end{align*}
 Ora usiamo la condizione sulle masse reali:
 \begin{equation}
@@ -1051,20 +1062,19 @@ Otteniamo usando il valore esplicito di $\Delta_X$ e scrivendo $ \frac{k-1}{2} =
 \begin{align*}
   4m \bigg(& -   N_f N_c m_A  +   \omega \big( k N_f ( \Delta_Q - N_c \Delta_X + N_f ( 1 - \Delta_Q)+ 1 + \overbrace{\frac{k+1}{2}\Delta_X}^{=1} - \Delta_X  -1 \big)  + \\
 +& (k N_f -N_c) ( \Delta_X -( - N_c \Delta_X + N_f( 1-\Delta_Q) +1) - 1) +  k N_f (  \Delta_X -\Delta_Q - 1) \big)+ \\
-+ & ( \Delta_X -1) k ( k N_f - N_c)  \bigg) 
++ &  \Delta_X  k ( k N_f - N_c)  \bigg) 
 \end{align*}
-Semplificando dei primi termini otteniamo:
+Semplificando (utilizzando il valore esplicito di $\Delta_X$ primi termini otteniamo:
 \begin{align*}
  4 & m \omega N_c \bigg(   -   N_f  m_A 
  -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
  + & 4 m \omega (k N_f - N_c) \bigg(
-(\Delta_X - 2 + k ( \Delta_X - 1) )   \bigg)  = \\
+(\Delta_X - 2 + k \Delta_X )   \bigg)  = \\
 = 4 & m \omega N_c \bigg(    -   N_f  m_A  
  -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
- + 4 & m \omega ( k N_f - N_c) \bigg( \Delta_X ( k+1) - k -2 ) \bigg) = \\
+ + 4 & m \omega ( k N_f - N_c) \bigg( \Delta_X ( k+1) -2 ) \bigg) = \\
  = 4 & m \omega N_c \bigg(    -   N_f  m_A 
  -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
- + 4 & m \omega ( k N_f - N_c) \big(-k \big)
 \end{align*}
 \subsubsection{Contribui  proporzionali a $m_B$}
 Il contributo proporzionale a $m_B$ invece è:
@@ -1095,23 +1105,19 @@ Come si può vedere matcha esattamente con la fase ottenuta dalla teoria elettri
 \subsubsection{Contributo dei termini misti}
 I termini rimanenti da calcolare sono dati da:
 \begin{align*}
- & m_A(- B N_f + C ) + \omega ( (C+B) ( -\Delta_X + 1)+( -k (k N_f -N_C) (\Delta_X -1) + B \Delta_M + C \Delta_Q) = \\
- & \omega \left( \frac{1}{k N_f - N_c} ( -\Delta_X + 1) ( 1 + k (k N_f - N_c)) + B \Delta_M + C \Delta_Q \right)+ \\
- & m_A \left(\frac{-N_c}{(k N_f - N_c) ( k (N_f+1) -N-c)} \right)  =\\
- & 
+ & m_A(- B N_f + C ) + \omega ( (C+B) ( -\Delta_X + 1)+( -k (k N_f -N_C) \Delta_X  + B \Delta_M + C \Delta_Q) = 
 \end{align*}
 Non c'è modo di farli andare via se non con $ B = C = 0$
 \subsubsection{Contributi con $\sigma$ e $\rho$}
 Ho anche contributi proporzionali a $\rho$ e a $\sigma$:
 \begin{align*}
-  & 4 \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \big) +  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) =  \\
-  = & 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( \Delta_X - ( N_f (1 - \Delta_Q ) - N_c \Delta_X  + 1) - 1) \big) +\\
-    +&  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) =  \\
-    = & 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega(( N_c +1) \Delta_X - N_f (1 - \Delta_Q )-2) \big)  +\\
-    +& 4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) =
+  & 4 \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( \Delta_X(1+k)  - \Delta_M - 1) \big) +  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) + \\
+  & + 4 (k N_f - N_c)  \sum_i \rho'_i(  \omega \Delta_X )  =  \\
+  = & 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( 1 - \Delta_M) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X( N_f + ( k N_f - N_c) ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f + \omega(  \Delta_M -1 ) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X N_f(k+1) - N_c \Delta_X ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f +  \omega( - N_c \Delta_X + N_f ( 1 - \Delta_Q)) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) ) =  \\
+    & = 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))
 \end{align*}
-
-
 
 
 
@@ -1121,7 +1127,6 @@ Vediamo ora di tirare le somme su quanto trovato dopo aver fatto il limite nella
 Z_{mag} ( \mu_i , \nu_j , \tilde{\mu_i}, \tilde{\nu_j} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
  \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
  & c \left( 4 N_c( m + m_B) ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
- &  c \left( 4m \omega ( k N_f - N_c)(-k)\right) \\
  &  \left( \prod_{j=0}^{k-1} 
 \bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
 &\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
@@ -1129,8 +1134,7 @@ Z_{mag} ( \mu_i , \nu_j , \tilde{\mu_i}, \tilde{\nu_j} ) \,= & \, \frac{1}{ (k(N
  &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c } \Gamma_h \big( m_B \frac{N_c}{k(N_f+1)-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
  & \Gamma_h \big(  -m_B \frac{N_c}{k(N_f+1)-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
  & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
- &c (  4  \sum_j^{k N_f - N_c} \sigma_j \big( - m_A N_f -  \omega(( N_c +1) \Delta_X - N_f (1 - \Delta_Q )-2) \big) \\
- & c \big( 4 N_f \sum_{j=1}^k  \rho_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)  \big) 
+ &c \big( 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
  \end{align*}
 \section{Analisi dualità}
 A questo punto possiamo capire il rapporto fra le due teorie in questo limite.
@@ -1153,7 +1157,7 @@ Possiamo utilizzare questa identità integrale sul settore $ U(k)$ (attenzione a
 	\mu_a & = m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X \Delta_M ) \\
 	\nu_a  &= -m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X -\Delta_M )\\
 	\tau  & =  \omega \Delta_X  \\
-	\lambda & = \mbox{da vedere con antonio}
+	\lambda & = \mbox{da vedere con Antonio}
 \end{align*}
 Ottengo l'espressione:
 \begin{align*}
@@ -1191,8 +1195,7 @@ Questi termini sono associati a dei singoletti che hanno le seguenti cariche ( s
 	\end{tabular}
 \centering
 \end{table}
-Confrontando con la tabella 6 di \citep{Nii:2014jsa} (ricordare che $\Delta_X = \frac{2}{k+1}$).\\
-
+Confrontando con la tabella 6 di \citep{Nii:2014jsa} (vedi anche \citep{Kim:2013cma}) (ricordare che $\Delta_X = \frac{2}{k+1}$).\\
 Posso fare la stessa cosa anche per il secondo termine:
 \begin{align*}
 & \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) = \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + j) - 2 \Delta_M)\right) = \\
