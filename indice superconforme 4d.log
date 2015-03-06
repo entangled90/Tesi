@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  6 MAR 2015 10:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  6 MAR 2015 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,26 +545,27 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read1
 )
 \MBox=\box28
+\myleftlen=\skip54
 
 (./indice superconforme 4d.aux)
 \openout1 = `"indice superconforme 4d.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Info: Redefining \it@ocap on input line 32.
-LaTeX Info: Redefining \it@ccap on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Info: Redefining \it@ocap on input line 40.
+LaTeX Info: Redefining \it@ccap on input line 40.
 
 
 File italian.ldf warning: 
@@ -572,7 +573,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 32.
+italian.ldf    on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -603,7 +604,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 32.
+Package hyperref Info: Link coloring ON on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -613,20 +614,20 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
-LaTeX Info: Redefining \nameref on input line 32.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 (./indice superconforme 4d.out) (./indice superconforme 4d.out)
 \@outlinefile=\write3
 \openout3 = `"indice superconforme 4d.out"'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -643,7 +644,7 @@ Package JHEP Warning: E-mails are missing.
 \openout4 = `"indice superconforme 4d.toc"'.
 
  [1]
-Overfull \hbox (33.28592pt too wide) in paragraph at lines 58--58
+Overfull \hbox (33.28592pt too wide) in paragraph at lines 66--66
 [] 
  []
 
@@ -651,214 +652,214 @@ Overfull \hbox (33.28592pt too wide) in paragraph at lines 58--58
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 96.
+(amsmath)                 on input line 104.
 
 [3] [4]
-Overfull \hbox (36.00584pt too wide) in paragraph at lines 167--167
+Overfull \hbox (36.00584pt too wide) in paragraph at lines 175--175
 [] 
  []
 
 [5]
 
-LaTeX Warning: Command \i invalid in math mode on input line 228.
+LaTeX Warning: Command \i invalid in math mode on input line 236.
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 233.
+LaTeX Warning: Command \i invalid in math mode on input line 241.
 
 [6]
-Overfull \hbox (62.5206pt too wide) in paragraph at lines 245--245
+Overfull \hbox (62.5206pt too wide) in paragraph at lines 253--253
 [] 
  []
 
 [7]
-Overfull \hbox (9.97978pt too wide) in paragraph at lines 283--283
+Overfull \hbox (9.97978pt too wide) in paragraph at lines 291--291
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 [8]
-Overfull \hbox (47.01854pt too wide) in paragraph at lines 328--328
+Overfull \hbox (47.01854pt too wide) in paragraph at lines 336--336
 [] 
  []
 
 
-Overfull \hbox (60.64447pt too wide) in paragraph at lines 353--353
+Overfull \hbox (60.64447pt too wide) in paragraph at lines 361--361
 [] 
  []
 
 [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 427.
+(hyperref)                removing `math shift' on input line 435.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\eta' on input line 427.
+(hyperref)                removing `\eta' on input line 435.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 427.
+(hyperref)                removing `math shift' on input line 435.
 
 
-Overfull \hbox (66.37498pt too wide) in paragraph at lines 434--434
+Overfull \hbox (66.37498pt too wide) in paragraph at lines 442--442
 [] 
  []
 
 
-Overfull \hbox (49.72446pt too wide) in paragraph at lines 438--438
+Overfull \hbox (49.72446pt too wide) in paragraph at lines 446--446
 [] 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 485--489
+Underfull \hbox (badness 10000) in paragraph at lines 493--497
 
  []
 
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 496.
+(hyperref)                removing `math shift' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rightarrow' on input line 496.
+(hyperref)                removing `\rightarrow' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 496.
+(hyperref)                removing `\infty' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 496.
+(hyperref)                removing `math shift' on input line 504.
 
 
-Overfull \hbox (10.15468pt too wide) in paragraph at lines 520--520
+Overfull \hbox (10.15468pt too wide) in paragraph at lines 528--528
 [] 
  []
 
 [13]
-Overfull \hbox (58.56584pt too wide) in paragraph at lines 533--533
+Overfull \hbox (58.56584pt too wide) in paragraph at lines 541--541
 [] 
  []
 
 [14] [15]
-Overfull \hbox (8.51816pt too wide) in paragraph at lines 624--624
+Overfull \hbox (8.51816pt too wide) in paragraph at lines 632--632
 [] 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 658--660
+Underfull \hbox (badness 10000) in paragraph at lines 666--668
 
  []
 
 [17]
-Overfull \hbox (29.0627pt too wide) in paragraph at lines 671--671
+Overfull \hbox (29.0627pt too wide) in paragraph at lines 679--679
 [] 
  []
 
 
-Overfull \hbox (50.90819pt too wide) in paragraph at lines 684--684
+Overfull \hbox (50.90819pt too wide) in paragraph at lines 692--692
 [] 
  []
 
 [18]
-Overfull \hbox (60.64447pt too wide) in paragraph at lines 706--706
+Overfull \hbox (60.64447pt too wide) in paragraph at lines 714--714
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 710--712
+Underfull \hbox (badness 10000) in paragraph at lines 718--720
 
  []
 
 [19]
-Overfull \hbox (65.30449pt too wide) in paragraph at lines 721--721
+Overfull \hbox (65.30449pt too wide) in paragraph at lines 729--729
 [] 
  []
 
 
-Overfull \hbox (50.7443pt too wide) in paragraph at lines 736--736
+Overfull \hbox (50.7443pt too wide) in paragraph at lines 744--744
 [] 
  []
 
 
-Overfull \hbox (14.5863pt too wide) in paragraph at lines 736--740
+Overfull \hbox (14.5863pt too wide) in paragraph at lines 744--748
 \OT1/cmr/m/n/12 I ter-mi-ni in blu si can-cel-la-no gra-zie al fat-to che $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--740
+Underfull \hbox (badness 10000) in paragraph at lines 744--748
 
  []
 
 [20]
 
 LaTeX Warning: Reference `eqn:R-charge_dual_quark' on page 21 undefined on inpu
-t line 748.
+t line 756.
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 774--776
+Underfull \hbox (badness 10000) in paragraph at lines 782--784
 
  []
 
 
-Overfull \hbox (10.02315pt too wide) in paragraph at lines 788--788
+Overfull \hbox (10.02315pt too wide) in paragraph at lines 796--796
 [] 
  []
 
 [22] [23]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 850.
+d on input line 858.
 
 [24] [25] [26] [27]
-Overfull \hbox (56.39836pt too wide) in paragraph at lines 984--984
+Overfull \hbox (56.39836pt too wide) in paragraph at lines 992--992
 [] 
  []
 
 
-Overfull \hbox (32.03784pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (32.03784pt too wide) in paragraph at lines 1009--1009
 [] 
  []
 
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1046.
+(hyperref)                removing `math shift' on input line 1054.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1046.
+(hyperref)                removing `math shift' on input line 1054.
 
 
-Overfull \hbox (54.3715pt too wide) in paragraph at lines 1052--1052
+Overfull \hbox (54.3715pt too wide) in paragraph at lines 1060--1060
 [] 
  []
 
 [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1079.
+(hyperref)                removing `math shift' on input line 1087.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1079.
+(hyperref)                removing `subscript' on input line 1087.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1079.
+(hyperref)                removing `math shift' on input line 1087.
 
 
-Overfull \hbox (9.04721pt too wide) in paragraph at lines 1090--1090
+Overfull \hbox (9.04721pt too wide) in paragraph at lines 1098--1098
 [] 
  []
 
 [30]
-Overfull \hbox (19.41899pt too wide) detected at line 1099
+Overfull \hbox (19.41899pt too wide) detected at line 1107
 []\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 m[]N[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@
 \OML/cmm/m/it/12 m[]N[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 !\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 N[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^A[]
@@ -869,65 +870,80 @@ m/m/it/12 m[]N[]![][] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 + 1
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1111.
+(hyperref)                removing `math shift' on input line 1119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1111.
+(hyperref)                removing `\sigma' on input line 1119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1111.
+(hyperref)                removing `math shift' on input line 1119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1111.
+(hyperref)                removing `math shift' on input line 1119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 1111.
+(hyperref)                removing `\rho' on input line 1119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1111.
+(hyperref)                removing `math shift' on input line 1119.
 
 
-Overfull \hbox (104.19946pt too wide) in paragraph at lines 1120--1120
+Overfull \hbox (104.19946pt too wide) in paragraph at lines 1128--1128
 [] 
  []
 
 [31]
-Overfull \hbox (51.49684pt too wide) in paragraph at lines 1138--1138
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
+
+ []
+
+
+Overfull \hbox (71.45561pt too wide) in paragraph at lines 1148--1148
 [] 
  []
 
 [32]
-Overfull \hbox (11.3876pt too wide) in paragraph at lines 1149--1149
+Overfull \hbox (54.21385pt too wide) in paragraph at lines 1171--1171
 [] 
  []
 
 [33]
-Overfull \hbox (34.83546pt too wide) in paragraph at lines 1165--1165
+Overfull \hbox (11.3876pt too wide) in paragraph at lines 1185--1185
+[] 
+ []
+
+[34]
+Overfull \hbox (33.85631pt too wide) in paragraph at lines 1204--1204
 [] 
  []
 
 
-Overfull \hbox (62.59267pt too wide) in paragraph at lines 1188--1197
+Overfull \hbox (62.59267pt too wide) in paragraph at lines 1227--1236
  [][] 
  []
 
 
-Overfull \hbox (53.3725pt too wide) in paragraph at lines 1203--1203
+Overfull \hbox (53.3725pt too wide) in paragraph at lines 1242--1242
 [] 
  []
 
-[34] [35] (./indice superconforme 4d.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1212.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1212.
+[35]
+Overfull \hbox (41.96983pt too wide) in paragraph at lines 1268--1268
+[] 
+ []
+
+[36] (./indice superconforme 4d.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1272.
+ [37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1272.
  (./indice superconforme 4d.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1212.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1212.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1272.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1272.
 
 Package rerunfilecheck Info: File `"indice superconforme 4d".out' has not chang
 ed.
@@ -938,10 +954,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7781 strings out of 494976
- 108279 string characters out of 6180006
- 212887 words of memory out of 5000000
- 10760 multiletter control sequences out of 15000+600000
+ 7785 strings out of 494976
+ 108313 string characters out of 6180006
+ 212911 words of memory out of 5000000
+ 10763 multiletter control sequences out of 15000+600000
  16999 words of font info for 62 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  41i,22n,31p,810b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -962,9 +978,9 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "indice superconforme 4d.pdf" (37 pages, 393202 bytes).
+Output written on "indice superconforme 4d.pdf" (38 pages, 398863 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

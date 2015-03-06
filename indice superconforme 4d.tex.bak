@@ -26,6 +26,14 @@
 \newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
   \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
   
+%% comando per aligned nestati
+\newlength{\myleftlen}
+\newcommand{\setmyleftlen}[1]{\settowidth{\myleftlen}{\( \displaystyle
+#1\)}}
+\newcommand{\backup}{\hskip-\myleftlen\mkern-7mu}
+  
+  
+  
 %%comando per funzione segno
 \newcommand{\sign}{\mbox{sign}}
 
@@ -189,7 +197,7 @@ Da questi termini si ottengono le funzioni $\Gamma_e$ attraverso le seguenti ide
  Le funzioni ipergeometriche sono definite attraverso:
  $$
  \begin{aligned}
-   \Gamma_e (z;p,q) &= \prod_{i,j \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
+   \Gamma_e (y;p,q) &= \prod_{j,k \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
   \quad \theta(z;p) &= \prod_{j \geq 0 } (1- z p^j) ( 1- z^{-1}p^{j+1}) \\
   (x;p) &= \prod_{j \geq 0} ( 1- xp^j)
   \end{aligned}
@@ -421,7 +429,7 @@ usando la convenzione $ \Gamma_h ( \pm x ) = \Gamma_h (x) \Gamma_h( -x)$
 
 Avendo compattificato una direzione, il superpotenziale $\eta$ impone la seguente condizione sulle masse reali (in 4D, viene portata anche in 3D):
 \begin{equation}
-  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( N_c \Delta_X + (N_f+1))
+  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( - N_c \Delta_X + (N_f+1))
   \label{eqn:R-symm Anomaly}
 \end{equation}
 \subsubsection{Masse reali e flow senza $\eta$}
@@ -432,11 +440,11 @@ Assegnano le masse reali come segue si ottiene una rottura di $ SU(N_f+1)^2 \tim
 \mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A - \sum_a m_a) \qquad \mbox{shift di } m_a \; \rightarrow \; m_a + m_A \\
 \mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A ) \qquad \mbox{imponendo } \sum_a m_a = 0 \;\mbox{:}\; SU(N_f+1) \rightarrow SU(N_f)
 \end{align*}
-A questo punto si può aggiungere una massa $\hat{m}$ che sarà poi quella che manderemo ad infinito mischiando $SU(N) \times U(1)$: 
+A questo punto si può aggiungere una massa $\hat{m}$ che sarà poi quella che manderemo ad infinito mischiando $SU(N) \times U(1)_B$: 
 \begin{align*}
-\mbox{diag}(0, \dots , \hat{m} ) = \mbox{diag} (m_B - M, \dots , m_b + N_f M) \quad \mbox{con } M = m_B \mbox{ e dove $M$ sta in } SU(N_f+1) \\
+\mbox{diag}(0, \dots , m ) = \mbox{diag} (m_B - M, \dots , m_B + N_f M) \quad \mbox{con } M = m_B \mbox{ e dove $M$ sta in } SU(N_f+1) \\
 \end{align*}
-Abbiamo quindi $\hat{m} = m_B + N_f M$. NOTA BENE $m_B$ non è tutta la massa barionica, ma un altro shift..\\
+Abbiamo quindi $ m = (N_f+1) M$. NOTA BENE $m_B$ non è tutta la massa barionica, ma un altro shift..\\
 A questo punto mettendo tutto insieme otteniamo:
 \begin{align*}
 \mu = &
@@ -1116,28 +1124,54 @@ Ho anche contributi proporzionali a $\rho$ e a $\sigma$:
   = & 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( 1 - \Delta_M) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X( N_f + ( k N_f - N_c) ) - N_f \Delta_Q - N_f ) ) =  \\
     =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f + \omega(  \Delta_M -1 ) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X N_f(k+1) - N_c \Delta_X ) - N_f \Delta_Q - N_f ) ) =  \\
     =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f +  \omega( - N_c \Delta_X + N_f ( 1 - \Delta_Q)) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) ) =  \\
-    & = 4 ( \sum_i^{k N_f -N_c} + \sum_j^{k} ) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) 
+    & = 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))
 \end{align*}
 
 
 
 \subsection{Funzione di partizione nel limite (riassumendo)}
-Vediamo ora di tirare le somme su quanto trovato dopo aver fatto il limite nella parte magnetica.
+Vediamo ora di tirare le somme su quanto trovato dopo aver fatto il limite nella parte magnetica.\\
 \begin{align*}
-Z_{mag} ( \mu_i , \nu_j , \tilde{\mu_i}, \tilde{\nu_j} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
  \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
  & c \left( 4 N_c( m + m_B) ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
- &  c \left( 4m \omega ( k N_f - N_c)(-k)\right) \\
  &  \left( \prod_{j=0}^{k-1} 
 \bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
 &\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
 & \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
- &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c } \Gamma_h \big( m_B \frac{N_c}{k(N_f+1)-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
- & \Gamma_h \big(  -m_B \frac{N_c}{k(N_f+1)-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k(N_f+1)-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & &&\Gamma_h \big(  -m_B \frac{N_c}{k(N_f+1)-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ \end{aligned}\\
  & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
- &c (  4  \sum_j^{k N_f - N_c} \sigma_j \big( - m_A N_f -  \omega(( N_c +1) \Delta_X - N_f (1 - \Delta_Q )-2) \big) \\
- & c \big( 4 N_f \sum_{j=1}^k  \rho_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)  \big) 
+ &c \big( 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
  \end{align*}
+ Posso fare un ulteriore shift sul vev di $\sigma$ e $\rho$, a traccia nulla in modo da rinormalizzare le cariche barioniche a $ \frac{N_c}{k N_f - N_c}$ invece di $ \frac{N_c}{k (N_f+1) - N_c}$.
+Questo shift è dato da:
+\begin{align*}
+	& \sigma_i \quad \longrightarrow \quad \sigma_i + \frac{k N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B \\
+	& \rho_i \quad \longrightarrow \quad \rho_i - \frac{N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B  
+\end{align*}
+Questo shift non crea alcun problema in quanto è traceless e quindi non contribuisce all'esponenziale dell'ultima riga, l'unico effetto che ha è rinormalzizare le cariche barioniche.
+A questo punto la funzione di partizione diventa:
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
+ & c \left( 4 N_c( m + m_B) ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1} 
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & &&\Gamma_h \big(  -m_B \frac{N_c}{k N_f -N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
+ &c \big( 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
+\end{align*}
+
+
+ 
 \section{Analisi dualità}
 A questo punto possiamo capire il rapporto fra le due teorie in questo limite.
 Utilizziamo la seguente identità integrale.\\
@@ -1146,7 +1180,7 @@ Definendo prima:
 W_{N_c , K } \, ( \mu_a, \nu_b , \tau, \lambda ) = & \frac{\Gamma_h (\tau)^{N_c}}{N_c !}
 \int \prod_{i=1}^{N_c} \, d \sigma_i \, e^{ \frac{i \pi}{2 \omega_1 \omega_2} \left( 2 \lambda
 \, \mbox{tr } \sigma - 2 K \mbox{ tr } \sigma^2 \right)} \prod_{1 \leq i < \leq N_c}
-\frac{ \Gamma_h ( \tau \pm ( \sigma_i - \sigma_j) }{ \pm (\sigma_i - \sigma_j) } \\
+\frac{ \Gamma_h ( \tau \pm ( \sigma_i - \sigma_j) }{ \Gamma_h  \left( \pm (\sigma_i - \sigma_j \right) } \\
 &  \prod_{i=1}^{N_c} \prod_{a,b=1}^{N_f} \Gamma_h ( \mu_a + \sigma_i) \Gamma_h(\nu_b- \sigma_i)
 \end{align*} 
 Abbiamo (da \citep{vanDeBult:2007}(5.3.15) \& \citep{Amariti:2014iza}(3.18)):
@@ -1154,38 +1188,41 @@ Abbiamo (da \citep{vanDeBult:2007}(5.3.15) \& \citep{Amariti:2014iza}(3.18)):
 W_{N_c , 0 } \, ( \mu_a, \nu_b , \omega \Delta_X, \lambda )  = \prod_{j=0}^{k-1} \Gamma_h \left( \omega  - j \omega \Delta_X  - \frac{\mu+\nu}{2} \pm \frac{\lambda}{2} \right) 
 \Gamma_h \left( \mu + \nu + j \omega \Delta_X \right)
 \end{align*}
-Possiamo utilizzare questa identità integrale sul settore $ U(k)$ (attenzione al fattore $k!$ da considerare) e utilizzando:
+Possiamo utilizzare questa identità integrale sul settore $ U(k)$ (attenzione al fattore $k!$ da considerare).\\
+Prima di dualizzare il settore faccio uno shift in $\xi$ in modo da cancellare i termini dell'ultima riga (proporizonali a $ \sum \sigma + \sum \rho$).\\
+Inoltre bisogna effettuare una dilatazione in $\xi$ in modo da matchare con il termine FI dell'identità (cambia anche la misura).
+Utilizzando le seguenti cariche otteniamo:
 \begin{align*}
-	\mu_a & = m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X \Delta_M ) \\
-	\nu_a  &= -m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X -\Delta_M )\\
+	\mu_a & =  m_A N_f + \omega( \Delta_X - \Delta_M ) \\
+	\nu_a  &=  m_A N_f + \omega( \Delta_X -\Delta_M )\\
 	\tau  & =  \omega \Delta_X  \\
-	\lambda & = \mbox{da vedere con Antonio}
+	\lambda & = \xi
 \end{align*}
 Ottengo l'espressione:
 \begin{align*}
-\prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega(\Delta_X - \Delta_M)) \pm \frac{\lambda}{2} \right) \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) 
+\prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega(\Delta_X - \Delta_M)) \pm \frac{\xi}{2} \right) \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) 
 \end{align*}
 Il primo termine può essere riscritto come:
 \begin{align*}
-& \prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega( (N_c+1) \Delta_X - N_f (1 - \Delta_Q ) - 1) \pm \frac{\lambda}{2} \right) = \\
-= & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\lambda}{2} +\omega \left( 
+& \prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega( (N_c+1) \Delta_X - N_f (1 - \Delta_Q ) - 1) \pm \frac{\xi}{2} \right) = \\
+= & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
  2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + j)  \right) - m_A N_f 
  \right) = \\
- = & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\lambda}{2} +\omega \left( 
+ = & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
  2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + (k-1 - j)  \right) - m_A N_f \
  \right)
 \end{align*}
 Shift di $j$: $j' = j+1$
 \begin{align*}
- & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\lambda}{2} +\omega \left( 
- 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +  k + 1 - j')  \right) - m_A N_f \
+ & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+ 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +  k + 1 - j')  \right) - m_A N_f 
  \right) = \\
-   & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\lambda}{2} +\omega \left( 
-  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f \
+   & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f 
  \right) 
 \end{align*}
 dove nell'ultima riga ho usato il valore esplicito di $\Delta_X$.\\
-Questi termini sono associati a dei singoletti che hanno le seguenti cariche ( si leggono dagli argomenti delle $\Gamma_{h} $):
+Questi termini sono associati a dei singoletti (monopoli elettrici) che hanno le seguenti cariche ( si leggono dagli argomenti delle $\Gamma_{h} $):
 \begin{table}[h]
 	\begin{tabular}{| c | c | c | c | c | }
 		\hline 
@@ -1208,6 +1245,28 @@ Ciò deriva dal fatto che dualizzando il settore $U(k)$ viene generata una massa
 \begin{equation}
 	W = m M^{\dagger} M \quad \longrightarrow \quad R(M^{\dagger}) = 2 - R (M)
 \end{equation}
+
+A questo punto la funzione di partizione diventa ( strippando i fattori divergenti) :
+
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{(2 \pi i )^{k(N_f+1) - N_c}}\frac{k!}{ (k(N_f+1) - N_c)! }
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ k N_f - N_c -1}  \\
+ &  \left( \prod_{j=0}^{k-1} 
+\prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \, 
+\frac{d \xi}{2 \omega_1 \omega_2} \, e^{ \frac{\pi i }{ 2 \omega_1 \omega_2} 2 \xi  \sum \sigma_i }  \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} 
+  \\&
+\begin{aligned}
+   &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  	
+   && \Gamma_h \big( m_B \frac{N_c}{ k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & && \Gamma_h \big(  -m_B \frac{N_c}{k N_f-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j \big)  \bigg)
+  \end{aligned}
+  \\
+  & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f 
+ \right) 
+\end{align*}
+I campi di questa funzione di p
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{bibliografia}

@@ -30,5 +30,5 @@
 \contentsline {subsubsection}{\numberline {2.6.6}Contribui proporzionali a $m_B$}{31}{subsubsection.2.6.6}
 \contentsline {subsubsection}{\numberline {2.6.7}Contributo dei termini misti}{31}{subsubsection.2.6.7}
 \contentsline {subsubsection}{\numberline {2.6.8}Contributi con $\sigma $ e $\rho $}{32}{subsubsection.2.6.8}
-\contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{33}{subsection.2.7}
-\contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{33}{section.3}
+\contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{32}{subsection.2.7}
+\contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{34}{section.3}
