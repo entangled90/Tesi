@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  4 MAR 2015 12:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.27)  6 MAR 2015 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,7 +709,7 @@ Overfull \hbox (66.37498pt too wide) in paragraph at lines 434--434
  []
 
 
-Overfull \hbox (46.555pt too wide) in paragraph at lines 438--438
+Overfull \hbox (49.72446pt too wide) in paragraph at lines 438--438
 [] 
  []
 
@@ -962,7 +962,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "indice superconforme 4d.pdf" (37 pages, 393155 bytes).
+Output written on "indice superconforme 4d.pdf" (37 pages, 393202 bytes).
 PDF statistics:
  490 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)

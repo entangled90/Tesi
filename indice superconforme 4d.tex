@@ -189,7 +189,7 @@ Da questi termini si ottengono le funzioni $\Gamma_e$ attraverso le seguenti ide
  Le funzioni ipergeometriche sono definite attraverso:
  $$
  \begin{aligned}
-   \Gamma_e (z;p,q) &= \prod_{i,j \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
+   \Gamma_e (y;p,q) &= \prod_{j,k \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
   \quad \theta(z;p) &= \prod_{j \geq 0 } (1- z p^j) ( 1- z^{-1}p^{j+1}) \\
   (x;p) &= \prod_{j \geq 0} ( 1- xp^j)
   \end{aligned}
@@ -421,7 +421,7 @@ usando la convenzione $ \Gamma_h ( \pm x ) = \Gamma_h (x) \Gamma_h( -x)$
 
 Avendo compattificato una direzione, il superpotenziale $\eta$ impone la seguente condizione sulle masse reali (in 4D, viene portata anche in 3D):
 \begin{equation}
-  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( N_c \Delta_X + (N_f+1))
+  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( - N_c \Delta_X + (N_f+1))
   \label{eqn:R-symm Anomaly}
 \end{equation}
 \subsubsection{Masse reali e flow senza $\eta$}
@@ -432,11 +432,11 @@ Assegnano le masse reali come segue si ottiene una rottura di $ SU(N_f+1)^2 \tim
 \mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A - \sum_a m_a) \qquad \mbox{shift di } m_a \; \rightarrow \; m_a + m_A \\
 \mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A ) \qquad \mbox{imponendo } \sum_a m_a = 0 \;\mbox{:}\; SU(N_f+1) \rightarrow SU(N_f)
 \end{align*}
-A questo punto si può aggiungere una massa $\hat{m}$ che sarà poi quella che manderemo ad infinito mischiando $SU(N) \times U(1)$: 
+A questo punto si può aggiungere una massa $\hat{m}$ che sarà poi quella che manderemo ad infinito mischiando $SU(N) \times U(1)_B$: 
 \begin{align*}
-\mbox{diag}(0, \dots , \hat{m} ) = \mbox{diag} (m_B - M, \dots , m_b + N_f M) \quad \mbox{con } M = m_B \mbox{ e dove $M$ sta in } SU(N_f+1) \\
+\mbox{diag}(0, \dots , m ) = \mbox{diag} (m_B - M, \dots , m_B + N_f M) \quad \mbox{con } M = m_B \mbox{ e dove $M$ sta in } SU(N_f+1) \\
 \end{align*}
-Abbiamo quindi $\hat{m} = m_B + N_f M$. NOTA BENE $m_B$ non è tutta la massa barionica, ma un altro shift..\\
+Abbiamo quindi $ m = (N_f+1) M$. NOTA BENE $m_B$ non è tutta la massa barionica, ma un altro shift..\\
 A questo punto mettendo tutto insieme otteniamo:
 \begin{align*}
 \mu = &
