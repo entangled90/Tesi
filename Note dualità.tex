@@ -1,0 +1,1390 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+%%\usepackage{mathtools}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fullpage}
+%%\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+%%\usepackage{natbib}
+\usepackage{jheppub}
+\usepackage{verbatim}
+\title{Note per riduzione dualità Kutasov-Schwimmer 4d $\rightarrow$ 3d}
+\author{Carlo Sana}
+%%% Comando per far le matrici con le barre verticali
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+%%Comando per sottolineare testo con linea colorata in math mode
+\newsavebox\MBox
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
+  
+%% comando per aligned nestati
+\newlength{\myleftlen}
+\newcommand{\setmyleftlen}[1]{\settowidth{\myleftlen}{\( \displaystyle
+#1\)}}
+\newcommand{\backup}{\hskip-\myleftlen\mkern-7mu}
+  
+  
+  
+%%comando per funzione segno
+\newcommand{\sign}{\mbox{sign}}
+
+\begin{document}
+\maketitle
+\newpage
+\section*{KS duality: rappresentazioni e cariche}
+Teoria in quattro dimensioni.
+\subsection*{Teoria Elettrica}
+\begin{center}
+\begin{table}[h!]
+\begin{tabular}{c c c c c }
+ & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$Q$ & $N_F$ & $1$   &  $1$  & $ 1 - \frac{2}{k+1} \frac{N_c}{N_f}$  \\
+$\tilde{Q}$  &  $1$ & $\overline{ N_F}$   & $-1$   &  $ 1 - \frac{2}{k+1} \frac{N_c}{N_f} $   \\
+$X$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+\end{tabular}
+\centering
+\caption{Tabella delle cariche per teoria elettrica}
+\label{table:charge_table_el_ks_4d}
+\end{table}
+\end{center}
+La materia nell'aggiunta ha un superpotenziale dato da $ W = \hbox{tr} Y^{k+1}$ che ne fissa la R-Carica.\\
+Le R-cariche sono fissate in modo che la R-simmetria sia non anomala (queste vale solo in 4D).
+Il contributo dai diagrammi triangolare è dato da:
+\begin{align*}
+R_{gaugino} T (\hbox{Ad}) + \sum_{Repr R} (& R_{ferm} - 1)  T(R) \, \hbox{dim}( \hbox{global})  = 0 \\
+N_c + (R_Q -1) \frac{1}{2} 2 N_f + (R_X - 1 ) N_c = 0 \quad & \rightarrow \quad (R_Q - 1 ) N_f = - R_X N_c \rightarrow R_Q = 1 - R_X \frac{N_c}{N_f} 
+\end{align*}
+È stato usato il fatto che il gaugino ha R carica 1. \\
+Questa condizione non è presente in 3D. ( Il grafico non è anomalo)
+\subsection*{Teoria Magnetica}
+\begin{center}
+\begin{table}[h!]
+\begin{tabular}{c  c c c c }
+ & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$q$ & $\overline{N_F}$  & $1$   &  $ \frac{N_c}{k N_f - N_c }$  & $ 1 - \frac{2}{k+1} \frac{ k N_f  - N_c}{N_f}$  \\
+$\tilde{q}$  & $1 $ &  $N_F$  & $-\frac{N_c}{k N_f - N_c }$   &  $ 1 - \frac{2}{k+1} \frac{k N_f - N_c}{N_f}$   \\
+$Y$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+$ M_j$ & $N_f$ & $ \overline{N_f}$ & 0 & $2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1}$ \\ 
+\end{tabular}
+\centering
+\caption{Tabella delle cariche per teoria magnetica}
+\label{table:charge_table_mag_ks_4d}
+\end{table}
+\end{center}
+Il superpotenziale per questa teoria è dato da 
+$$ 
+W = \hbox{tr} X^{k+1} + \sum_{j=0}^{k-1} M_j q Y^{k-j-1} \tilde{q} \qquad \hbox{dove} \; M_j = Q Y^j \tilde{Q} 
+$$
+I mesoni sono costruiti dai quark ELETTRICI.\\
+Questo superpotenziale oltre a fissare $R_X = R_Y$  fissa le R-cariche di mesoni e quark duali.
+\begin{align*}
+ & 2 = R (  M_j q Y^{k-j-1} \tilde{q} ) = 2 R_Q + j R_Y + 2 R_q + (k - j -1) R_Y =\\
+ & 2 = 2 R_Q + j R_Y + 2 R_q + (k+1) R_X - 2 R_X  \\
+ & 2 = 2 R_Q + j R_Y + 2 R_q + 2 - 2 R_X \; \rightarrow \; R_q = R_X - R_Q
+ \label{eqn:R-charge_dual_quark}
+\end{align*}
+
+\section{Teoria Elettrica}
+Si seguiranno le convenzioni di \citep{Amariti:2014iza}.
+\subsection{Calcolo indice superconforme}
+ L'indice superconforme della teoria elettrica di Kutasov-Schwimmer ( $ SU(N_C)  \times SU(N_f)_L)\times SU(N_f)_R)\times  U(1)_B  $) è dato da (vedi \citep{Dolan:2008qi})
+ \begin{equation}
+\begin{aligned}
+& i_E (p,q,v, y,\tilde y ,z) = \\ & -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
+\big((p\,q)^{s}- (p\,q)^{1-s}\big)
+\bigg) \big( p_{N_c}( z)\, p_{N_c}(z^{-1})-1\big ) \\ 
+&{} +{1\over (1-p)(1-q)}\bigg((p\,q)^{{1\over 2}r} \, v \, p_{N_f}(y)\, p_{N_c}(z)
+- (p\,q)^{1- {1\over 2}r} \, {1 \over v}\, p_{{N_f}}(y^{-1})\, p_{{N_c}}(z^{-1})\\
+&\qquad\qquad\qquad\qquad
++ (p\,q)^{{1\over 2}r}\, {1\over v}\, p_{{N_f}}({\tilde y}\,) \, p_{{N_c}}(z^{-1})
+- (p\,q)^{1- {1\over 2}r} \, v\, p_{N_f}({\tilde y}^{-1})\, p_{N_c}(z)\bigg) \,\\
+\end{aligned}
+\end{equation}
+I polinomi sono definiti come
+$$
+ p_{N_c}({x}) = \sum_i^{N_c} x_i \qquad p_{N_c}({x^{-1}}) =  \sum_i^{N_c} { 1 \over x_i  }
+$$
+Esplicitando i polinomi si ottiene 
+\begin{align*}
+& i_E (p,q,v, y,\tilde y ,z) = \\ & -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
+\big((p\,q)^{s}- (p\,q)^{1-s}\big)
+\bigg) \big(\sum_{1 \leq i,j \leq N_c} {z_i \over z_j} -1\big ) \\ 
+&{} +{1\over (1-p)(1-q)}\sum_{i = 1}^{N_f} \sum_{j = 1}^{N_c}\bigg( (p\,q)^{{1\over 2}r} \, v \, y_i \, z_j
+- (p\,q)^{1- {1\over 2}r} \, {1 \over v}\,y_i^{-1} \, z_j^{-1})\\
+&\qquad\qquad\qquad\qquad
++ (p\,q)^{{1\over 2}r}\, {1\over v}\, \tilde y_i \, z_j^{-1}
+- (p\,q)^{1- {1\over 2}r} \, v\, \tilde y_i^{-1}\, z_j\bigg) \,\\
+\end{align*}
+riscalando $ (pq)^{ \frac{1}{2} r }v y \rightarrow y$ e  
+$ (pq)^{- \frac{1}{2} r } v \tilde y \rightarrow \tilde y$  :
+\begin{equation}
+\begin{aligned}
+&i_E(p,q,y,{\tilde y},y) =\\ 
+&{} -\bigg({p\over 1-p}+{q\over 1-q } -{1 \over (1-p)(1-q)}
+\big((p\,q)^{s}- (p\,q)^{1-s}\bigg)
+\bigg(\sum_{1\leq i,j\leq N_c}z_i/z_j-1\bigg)\cr\\ 
+&{}+{1\over
+(1-p)(1-q)}\sum_{i=1}^{N_f}\sum_{j=1}^{N_c}\Big(\big (y_i-p\,q\,{\tilde y}_i \big )z_j
++ \big ({\tilde y}_i{\!}^{-1}-p\,q\,y_i{\!}^{-1} \big )z_j{\!}^{-1}\Big)\, 
+\end{aligned}
+\end{equation}
+dove $R_q$ e $R_X$ sono le R-cariche della materia (nella fondamentale e nell'aggiunta).
+\begin{equation}
+R_Q =1-{2\over k+1}{N_c\over N_f} \, , \qquad s = {1 \over k+1} = {1 \over 2 } R_X  \\ 
+\end{equation}
+Si nota che questa scelta di R-Carica è stata fatta imponendo che la R-simmetria sia non anomala in 4D. In 3D la R-simmetria si può mixare con le altre simmetrie e le cariche non sono più vincolate in questo modo (ok?).\\
+ L'indice superconforme è definito come:
+ \begin{equation*}
+ I_E (p,q,v, y,\tilde y) = \int_{SU(N_c)}\, d \mu(z) \, \exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E (p^n,q^n,v^n, y^n,\tilde y^n,z^n) \bigg)
+ \end{equation*}
+ L'integral sul gruppo $SU(N_c)$ può essere scritto come integrale sulla Cartan del gruppo attraverso:
+ \begin{equation}
+  \int_{SU(N_c)}\, d \mu(z) \, f(z) = {1 \over N_c!} \int_{T^{N_c-1}} \prod_{i=1}^{N_c } 
+  { d z_i \over { 2 \pi i z_i} } \Delta (z) \Delta (z^{-1}) f(z) \bigg \rvert_{\prod_{i=1}^{N_c} z_i = 1} 
+ \end{equation}
+ e dove $\Delta (z) $ è il determinante di Vandermonde:
+ $$
+ \Delta (z ) \, = \, \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c} ( z_i - z_j) \, = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg) \, z_j = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg)
+ $$
+ L'ultima equivalenza è dovuta al vincolo $ \prod_{i=1}^{N_c} z_i = 1$.
+ \\
+ Ogni termine dell'indice superconforme a singola particella $i_E$ si fattorizza nell'indice ``completo'' $I_E$ essendo all'interno di un esponenziale.\\
+s \subsubsection{Contributo dalla parte vettoriale}
+ Abbiamo per la parte vettoriale (nell'aggiunta):
+ \begin{align*} &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,z^n) \bigg) \overset{def}{=} \\
+ &\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg(\bigg( \sum_{ 1 \leq i,j \leq N_c}  {z_i^n \over z_j^n}  \bigg)- 1 \bigg) \bigg) \, = \\
+ =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( \sum_{i=1}^{N_c} 1 \bigg)- 1 \bigg) \bigg) \, = \\
+  =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( N_c \bigg)- 1 \bigg) \bigg) \, = \\
+  \end{align*}
+  \begin{align*}
+    =&\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) \bigg)\bigg] \\
+	&    \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( N_c - 1 \bigg) \bigg) \, = \\
+=& \bigg[\prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)   {z_i^n \over z_j^n}\bigg) \bigg] \,  
+\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \big( {p^n \over 1-p^n} + {q^n \over 1-q^n} \big) \bigg) \bigg] ^{N_c-1}
+\end{align*}
+
+\begin{equation}
+\bigg[\prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  {z_i^n \over z_j^n}\bigg) \bigg] \,  
+\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \,  i_E^V(p^n,q^n) \bigg) \bigg] ^{N_c-1}
+\end{equation}
+
+Da questi termini si ottengono le funzioni $\Gamma_e$ attraverso le seguenti identità non banali:
+
+\begin{align}
+\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg) \bigg( z^n + z^{-n} \bigg) \,& = 
+\,  \frac{ \theta ( z;p) \theta (z;q) }{ 1-z^2 } \\
+& =  \, \frac{1}{ ( 1 - z ) ( 1 - z^{-1}) \Gamma_e( z;p,q) \Gamma_e( z^{-1}; p,q)} \, 
+\label{Gamma_eVectorAdjoint} 
+\end{align}
+
+\begin{align}
+  \exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg)  &= (p;p) (q;q) \,
+  \label{Gamma_eVector} \\
+ \mbox{dove} \quad i_E^V(p^n,q^n) \, &= \, - \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg) 
+\end{align}
+
+ Le funzioni ipergeometriche sono definite attraverso:
+ $$
+ \begin{aligned}
+   \Gamma_e (y;p,q) &= \prod_{j,k \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
+  \quad \theta(z;p) &= \prod_{j \geq 0 } (1- z p^j) ( 1- z^{-1}p^{j+1}) \\
+  (x;p) &= \prod_{j \geq 0} ( 1- xp^j)
+  \end{aligned}
+$$
+
+L'identità \ref{Gamma_eVector} si utilizza per l'ultimo termine dell'indice e applicandola direttamente si trova:
+$$
+	(p;p)^{N_c-1} ( q;q)^{N_c-1}
+$$
+ Prima di utilizzare l'identità \ref{Gamma_eVectorAdjoint} è necessario considerare che:
+ $$
+ \prod_{ \overset{ 1 \leq i,j \leq N_c}{ i\neq j }} {z_i^n \over z_j^n} \,  = \, 
+  \prod_{ 1 \leq i < j \leq N_c}\bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}   \bigg)
+ $$
+ A questo punto identificando $ {z_i \over z_j} = z$ si applica l'identità \ref{Gamma_eVectorAdjoint} per ogni termine della produttoria e si ottiene:
+\begin{align*}
+\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg) \, =\\
+\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg) 
+\\
+ \prod_{ 1 \leq i < j \leq N_c}   \, \frac{ 1 } { \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  }
+\end{align*}
+ Mettendo insieme i contributi per la parte vettoriali otteniamo:
+ \begin{align*}
+& (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  } \\
+& (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \frac{1}{ \Delta(z) \Delta (z^{-1})} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)} 
+\end{align*}
+\subsubsection{Contributo della materia nell'aggiunta}
+Per il calcolo del contributo dato dalla materia nella rappresentazione aggiunta è necessario utilizzare l'identità matematica:
+$$
+\Gamma_e(z;p,q) \, = \, \exp \bigg( \sum_{n=1}^{\infty} {1 \over n }
+ \frac{ z^n - \big( {pq \over z} \big)^n }{(1-p^n) ( 1-q^n)} \bigg)
+ \label{Gamma_eChiral}
+$$
+L'indice a singola particella dato da questo campo è dato da:
+$$
+\i_E^{Adj}(p,q,z) = {1 \over (1-p)(1-q)}
+\big((p\,q)^{s}- (p\,q)^{1-s}\big) \bigg( \bigg(  \sum_{ 1 \leq i,j \leq N_c}  {z_i\over z_j}  \bigg)- 1 \bigg)
+$$
+L'espressione da calcolare è
+\begin{equation}
+I_E^{Adj}(p,q,z)  = \exp \bigg(  \sum_{n=1}^{\infty} {1 \over n } \i_E^{Adj}(p^n,q^n,z^n) \bigg)
+\end{equation}
+
+Come è stato fatto per la parte vettoriale, si spezza la serie, sommando solo sulle coppie:
+\begin{align*}
+ &\bigg( \sum_{ 1 \leq i,j \leq N_c}  {z_i^n \over z_j^n}  \bigg)- 1  = \\
+ &  \bigg( \sum_{ 1 \leq i< j \leq N_c}  {z_i^n \over z_j^n} + {z_j^n \over z_i^n}  \bigg) + N_c -1 
+\end{align*}
+Si arriva quindi a
+\begin{align*}
+I_E^{Adj}(p,q,z)  = \exp \bigg[  \sum_{n=1}^{\infty} {1 \over n } {1 \over (1-p^n)(1-q^n)}
+\big((p \, q)^{sn}- (p\,q)^{(1-s)n}\big) \bigg( \bigg(  \sum_{ \overset{1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n\over z_j^n} + { z_j^n \over z_i^n}  \bigg)+N_c- 1 \bigg)\bigg]
+\end{align*}
+Come fatto precedentemente, si calcolano separatamente i termini che dipendono da z da quelli che non ne dipendono.\\
+Per calcolare l'indice superconforme è necessario calcolare il \emph{plethystic exponential} come negli altri casi. Per i termini non dipendenti da ${z_i \over z_j}$ è dato da:
+$$ 
+\begin{aligned}
+&\exp \bigg( (N_c -1) \sum_{n=1}^{\infty} {1 \over n}  \frac{ (pq)^{sn} - (pq)^{(1-s)n}}{(1-p^n)(1-q^n)} \bigg) =
+\exp \bigg( (N_c-1) \sum_{n=1}^{\infty} {1 \over n}  \frac{ (y)^{n} - ({pq \over y})^{n}}{(1-p^n)(1-q^n)} \bigg)\\
+&\mbox{Avendo posto} \quad (pq)^s = y
+\end{aligned}
+$$
+L'identità \ref{Gamma_eChiral} si applica immediatamente ai termini indipendenti da $z_i$ e si ottiene un contributo pari a:
+$$
+	\Gamma_e( (pq)^s;p,q)^{N_c-1}
+$$
+Per i termini dipendenti da $z_i$ consideriamo il numeratore dell'esponente (il denominatore non viene alterato)
+\begin{align*}
+& ((pq)^{sn} - (pq)^{(1-s)n}) \bigg ( {z_i^n\over z_j^n} + { z_j^n \over z_i^n} \bigg) \\
+\intertext{Riarrangiando i 4 termini}
+& \bigg( (pq)^{sn} {z_i^n\over z_j^n} - (pq)^{(1-s)n}{ z_j^n \over z_i^n} \bigg)  + \bigg( (pq)^{sn} { z_j^n \over z_i^n} - (pq)^{(1-s)n}{z_i^n\over z_j^n} \bigg)
+\end{align*}
+il cambio di variabile da effettuare è
+$$
+	 y = (pq)^s {z_i \over z_j} \quad y'= (pq)^s {z_j \over z_i} 
+$$
+per i termini nella prima e seconda parentesi rispettivamente.
+A questo punto si applica l'identità \ref{Gamma_eChiral} utilizzando le variabili $y,y'$ e il contributo è pari a
+$$
+\prod_{1\leq i<j\leq N_c} \Gamma_e \bigg( (pq)^s {z_i \over z_j} \bigg) \Gamma_e \bigg( (pq)^s {z_j \over z_i}\bigg) 	
+$$
+Riassumento il contributo dato dalla materia nell'aggiunta è:
+$$
+	\Gamma_e( (pq)^s;p,q)^{N_c-1} \prod_{1\leq i<j\leq N_c} \Gamma_e \bigg( (pq)^s {z_i \over z_j} \bigg) \Gamma_e \bigg( (pq)^s {z_j \over z_i}\bigg) 
+$$
+\subsubsection{Contributo materia nella fondamentale}
+Per questo campo è necessario calcolare (dopo il riscalamento di $y$ e $\tilde y$):
+\begin{align*}
+\prod_{\overset{ 1 \leq j \leq N_c}{ 1 \leq i \leq N_f}} \exp \bigg[ \sum_{n=1}^{\infty} - {1 \over n} \, {1 \over (1-p^n)( 1-q^n)}
+\bigg[ \bigg( (y_i z_j)^n - \big({ pq \over y_i z_j}\big)^n \bigg) + \bigg( {1 \over  (\tilde{y_i} z_j)^n } - \big( { pq \tilde y_i z_j} \big)^n\bigg) \bigg] \bigg]
+\end{align*}
+Identificando $ t = y_i z_j$ e $ t' = (\tilde y_i z_j)^{-1}$ con gli argomenti delle $\Gamma_e$ nell'identità \ref{Gamma_eChiral} si può scrivere il contributo della materia nella fondamentale applicando direttamente l'identità (separatamente per i due termini nelle parentesi) (ricordando il rescaling iniziale):
+$$
+\prod_{\overset{ 1 \leq j \leq N_c}{ 1 \leq i \leq N_f}} \Gamma_e ( (pq)^{R_Q \over 2} v y_i z_j )
+\Gamma_e ( (pq)^{R_Q \over 2} v^{-1} {\tilde y_i}^{-1} z_j^{-1})
+$$
+\subsection{Formula per Indice superconforme Kutasov-Schwimmer 4d}
+Mettendo insieme tutti i contributi e aggiungendo anche l'integrazione sul gruppo di gauge si ottiene l'espressione finale per l'indice superconforme
+\begin{align*}
+&I_{El} ( p,q,y,\tilde y , v) = \\
+ & { 1 \over N_c !} (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \Gamma_e( (pq)^s;p,q)^{N_c-1} \\
+&\int_{T^{N_c-1}} \bigg( \prod_{i=1}^{N_c } { d z_i \over { 2 \pi i z_i} } \bigg) \delta \bigg( \prod_{i=1}^{N_c} z_i - 1 \bigg) 
+\prod_{ 1 \leq i < j \leq N_c} \frac{ \Gamma_e \big( (pq)^s {z_i \over z_j} \big) \Gamma_e \big( (pq)^s {z_j \over z_i} \big) }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)} \\
+& \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e ( (pq)^{R_Q \over 2} v y_i z_j )
+\Gamma_e ( (pq)^{R_Q \over 2} v^{-1} {\tilde y_i}^{-1} z_j^{-1})
+\end{align*}
+Il determinante di Vandermonde dovuto alla riduzione dell'integrazione alla Cartan si è cancellato con il contributo dato dalla parte vettoriale.
+\subsection{Riduzione dell'indice alla funzione di partizione}
+
+Parametrizzando i vari "potenziali chimici" si può calcolare la funzione di partizione, nel limite $ r \rightarrow 0$.\\
+$$
+\begin{aligned}
+p = e^{ 2 \pi i r  \omega_1 } \, \, \,  q &= e^{ 2 \pi i r \omega_2 } \,  \, \, z_i = e^{ 2 \pi i r \sigma_i } \\ 
+\, \, y_a = e^{ 2 \pi i r m_a } \, \,  \, 
+y_a &= e^{ 2 \pi i r  {\tilde m_a} } \, \, \,  v = e^{ 2 \pi i r m_B}
+\label{fugacities_redefined}
+\end{aligned}
+$$
+
+Identità fondamentale per calcolare questo limite è la seguente (cfr \citep{vanDeBult:2007} pag 30)
+\begin{align*}
+&\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 i r z}; e^{ i  r \omega_1} , e^{i r  \omega_2})
+ e^{\frac{ i \pi^2 }{12  r \omega_1 \omega_2 } ( 2 z - \omega_1 -\omega_2)} =\\
+&\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 i r z}; e^{ i  r \omega_1} , e^{i r  \omega_2}) 
+ e^{\frac{ i \pi^2 }{6 r \omega_1 \omega_2 } (  z - \omega )} = \Gamma_h(z;\omega_1 , \omega_2)
+\end{align*}
+con $ \omega = {1 \over 2 } ( \omega_1 + \omega_2)$.
+Si possono riscalare le variabili in modo da sistemare il fattore di $\pi$ all'esponente:
+$$
+ z \rightarrow \pi z \quad  \omega_1 \rightarrow  \pi \omega_1 \quad  \omega_2 \rightarrow  \pi \omega_2 
+$$
+Si ottiene:
+\begin{align*}
+&\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 i \pi r z}; e^{ i \pi  r \omega_1} , e^{i \pi r  \omega_2}) =
+ e^{\frac{ - i \pi^2 }{6 r  (\pi \omega_1) (\pi \omega_2) } ( (\pi z) - (\pi \omega))}\Gamma_h(\pi z; \pi \omega_1 ,\pi \omega_2) =   e^{\frac{ - i \pi }{6 r \omega_1 \omega_2 } (  z - \omega )} \, \Gamma_h ( z; \omega_1 , \omega_2 ) \\
+\end{align*}
+Considerando la proprietà di rescaling di $\Gamma_h$: la sua definizione infatti è ( cfr \citep{vanDeBult:2007} 2.2.4):
+\begin{align*}
+ \Gamma_h ( z;\omega_1, \omega_2) =& \exp \bigg( \pi i \frac{(2z-\omega_1 - \omega_2)^2}{8 \omega_1 \omega_2 } - \pi i \frac{(\omega_1^2 + \omega_2^2)}{ 24 \omega_1 \omega_2} \bigg) \\
+ & \frac{ (\exp( -2 \pi i (z-\omega_2)/ \omega_1 ); \exp( 2 \pi i \omega_2 / \omega_1 ))_{\infty}}
+ { (\exp( -2 \pi z / \omega_2 ); \exp( - 2 \pi i \omega_1 / \omega_2))_{\infty}}\\
+ & = \Gamma_h ( \pi z; \pi \omega_1, \pi \omega_2)
+\end{align*}
+
+Intanto scrivo le parti non divergenti date dal limite per $ r \rightarrow 0$ utilizzando le ridefinizioni delle fugacità in \ref{fugacities_redefined}. Di seguito il calcolo dei vari limiti (ricordare che $ s = \frac{\Delta_X}{2}$
+
+
+\begin{align*}
+& \Gamma_e((pq)^{\frac{\Delta_X}{2}})^{N_c -1} =
+\Gamma_e( e^{2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)})^{N_c-1} =  \Gamma_e( e^{2 \pi i r  \Delta_X \omega })^{N_c-1} = \\
+&=\big[ \exp{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega) }\big]^{N_c-1} \Gamma_h ( \omega \Delta_X ; \omega_1, \omega_2)^{N_c-1}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+ \begin{align*}
+ & \Gamma_e\big( (pq)^{\frac{\Delta_X}{2}} \big( { z_i \over z_j} \big) \big) \Gamma_e \big( (pq)^{\frac{\Delta_X}{2}} \big( { z_j \over z_i} \big) \big) = \\
+&= \Gamma_e\big( e^{2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)} e^{ 2 \pi  i r (\sigma_i - \sigma j)} \big) \big) \Gamma_e \big( e^{ 2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)}  e^{ 2 \pi i r (\sigma_j - \sigma_i)} \big) =  \\
+&= \Gamma_e\big( e^{2 \pi  i r (\Delta_X \omega +\sigma_i - \sigma j} \big) \Gamma_e \big(  e^{2 \pi  i r (\Delta_X \omega +\sigma_j - \sigma_i} \big) \\
+ & = \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\bigg)\, \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) \\
+ & = \exp\bigg({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\bigg)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+\begin{align*}
+  \Gamma_e\big( {z_i \over z_j})\Gamma_e\big( {z_j \over z_i}) = &e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega)} \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+& = \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - 2 \omega)}  \bigg) , \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i)
+\end{align*}
+
+\begin{align*}
+& \lim_{r \rightarrow 0^+} \Gamma_e( 
+(pq)^{\frac{\Delta}{2} b y_i z_j }) \Gamma_e( 
+(pq)^{\frac{\Delta}{2} b^{-1} \tilde y_i^{-1} z_j^{-1} })  = \\
+=& \lim_{r \rightarrow 0^+ } \Gamma_e( e^{2 \pi i  r  {\Delta \over 2} (\omega_1 + \omega_2)} e^{2 \pi i r ( m_i + m_B + \sigma_j) })\Gamma_e( e^{2 \pi i r  {\Delta \over 2} (\omega_1 + \omega_2)} e^{2 \pi i r ( -\tilde m_i - m_B - \sigma_j) }) = \\
+= &  \,e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( ( \omega \Delta + m_i + m_B + \sigma_j -  \omega) + ( \omega \Delta -\tilde m_i - m_B - \sigma_j -  \omega))} \, \\
+& \Gamma_h ( \omega \Delta + m_i + m_B + \sigma_j) \Gamma_h ( \omega \Delta - \tilde m_i - m_B - \sigma_j) = \\
+=&\, e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta - 1) + m_i - \tilde m_i )} \, \, \Gamma_h ( \mu_i + \sigma_j) \Gamma_h ( \nu_i - \sigma_j) 
+\end{align*}
+Dove abbiamo definito le masse reali come
+$$
+ \mu_i = \omega \Delta + m_i + m_B  \quad  \nu_i = \omega \Delta - \tilde m_i - m_B  
+$$
+\subsubsection{Contributo divergente}
+Il contributo divergente degli esponenziali è uguale a (non scrivo $ \frac{- i \pi}{6 r \omega_1 \omega_2} $):
+\begin{align*}
+& \, \omega (\Delta_X - 1) ( N_c - 1) + \frac{N_c(N_c -1)}{2} 2 \omega(\Delta_x - 1) - \frac{N_c(N_c -1)}{2}  ( - 2 \omega)  +\\
+&+ (N_c - 1  \, \,(\mbox{qualcosa} )) + N_c ( \sum_i^{N_f} 2 \omega(\Delta - 1 ) + m_i - \tilde{m_i}) = \\
+= &  \omega (\Delta_X - 1) ( N_c^2 - 1) + (N_c^2 -1) \omega + N_c N_f 2 \omega(\Delta - 1) + N_c (\sum_{i}^{N_f}  m_i - \tilde{m_i} )
+\end{align*}
+Inoltre c'è da considerare anche la misura e la \emph{delta function} nelle nuove coordinate $ z_i = e^{2 \pi i r \sigma_i }$:
+
+$$
+\prod_{i=1}^{N_c} \, \frac{dz_i}{2 \pi i z_i} \, \, \delta \big( \prod_{i=1}^{N_c} z_i - 1 \big)
+$$ 
+Il determinante della trasformazione è
+$$
+  \det \big (\frac{ \partial z_i }{ \partial \sigma_j})= (2 \pi i r)^{N_c} \prod_{i=1}^{N_c}  z_i \quad \longrightarrow \quad \prod_{i=1}^{N_c} \, \frac{dz_i}{2 \pi i} \, = \, r^{N_c} \prod_{i=1}^{N_c} d \sigma_i
+$$
+La \emph{delta function} diventa:
+\begin{equation}
+\delta \big( \prod_{i=1}^{N_c} z_i - 1 \big) \, = \, \delta \big(e^{2 \pi i r \sum \sigma_i} - 1 \big) \quad \longrightarrow \quad  \bigg( \frac{1}{ ((2 \pi i r) e^{2 \pi i r (\sum \sigma_i)}} \bigg)^{N_c} \, \delta ( \sum \sigma_i)
+ \end{equation}
+\begin{comment}
+		 Si può capire il risultato della delta function come un ulteriore cambio di variabile fra le $\sigma_i$:
+ 	\begin{align*}
+ 	 \sigma_i \rightarrow \tilde{\sigma_i} \qquad \mbox{per} \qquad i= 1 \ldots N-1 \qquad \sigma_N \rightarrow \tilde{\sigma_N} = S = \sum_{i=1}^{N} \sigma_i \\
+ 	  Det(J) = Det \bigg( \frac{\partial \sigma_i}{\partial \tilde{\sigma_j} } \bigg) \; = \; 
+ 	   \begin{pmatrix}[c c c  c|c]
+			1 	& 0 		& 0 & \cdots & 0 \\
+			0 			 & 1 & 0 & \cdots &  \vdots \\
+			\vdots 		& 0 		& \ddots & 0 & \vdots \\
+			\vdots & \vdots & 0 & 1 & 0 \\
+			\hline 
+			1 & \cdots & \cdots & 1  &1 \\
+	\end{pmatrix} 
+	\end{align*}
+\end{comment}
+
+\subsection{Funzione di partizione}
+Considerando le parti finite, la funzione di partizione diventa
+(Manca il limite dei pochhammer, vedi \citep{Spiridonov:2009za})
+\begin{align*}
+Z_{el} ( \mu_i , \nu_i ) = &
+ \frac{1}{ (2 \ \pi i)^{N_c} }{1 \over N_c ! } 
+\Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{N_c-1}
+\int_{T^{N_c-1}}  
+\prod_{i=1}^{N_c} d \sigma_i \, \delta( \sum_i \sigma_i) \, \\
+ &  \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} 
+ \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b - \sigma_j)
+\end{align*}
+usando la convenzione $ \Gamma_h ( \pm x ) = \Gamma_h (x) \Gamma_h( -x)$
+
+Avendo compattificato una direzione, il superpotenziale $\eta$ impone la seguente condizione sulle masse reali (in 4D, viene portata anche in 3D):
+\begin{equation}
+  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( - N_c \Delta_X + (N_f+1))
+  \label{eqn:R-symm Anomaly}
+\end{equation}
+\subsubsection{Masse reali e flow senza $\eta$}
+
+Assegnano le masse reali come segue si ottiene una rottura di $ SU(N_f+1)^2 \times U(1)_B \, \rightarrow \, SU(N_f)^2 \times U(1)_A \times U(1)_B$. Vediamo come si implementa tale rottura per il gruppo $SU(N_f+1) \times U(1)_B$
+\begin{align*}
+\mu &= \mbox{diag} ( m_a + m_B , \dots, m_B - \sum_a m_a) \qquad \mbox{ compatibile con } SU(N_f+1) \times U(1)_B \\
+\mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A - \sum_a m_a) \qquad \mbox{shift di } m_a \; \rightarrow \; m_a + m_A \\
+\mu &= \mbox{diag} ( m_a + m_B + m_A , \dots , m_B - N_f m_A ) \qquad \mbox{imponendo } \sum_a m_a = 0 \;\mbox{:}\; SU(N_f+1) \rightarrow SU(N_f)
+\end{align*}
+A questo punto si può aggiungere una massa $\hat{m}$ che sarà poi quella che manderemo ad infinito mischiando $SU(N) \times U(1)_B$: 
+\begin{align*}
+\mbox{diag}(0, \dots , m ) = \mbox{diag} (m_B - M, \dots , m_B + N_f M) \quad \mbox{con } M = m_B \mbox{ e dove $M$ sta in } SU(N_f+1) \\
+\end{align*}
+Abbiamo quindi $ m = (N_f+1) M$. NOTA BENE $m_B$ non è tutta la massa barionica, ma un altro shift..\\
+A questo punto mettendo tutto insieme otteniamo:
+\begin{align*}
+\mu = &
+\begin{pmatrix}[c c c c|c]
+		m_a + m_A 	& 0 		& \cdots 	& \cdots 	& 0 \\
+		0 			 & m_a + m_A & 0 &\cdots & \vdots \\
+		\vdots 		& 0 		& \ddots & 0 & \vdots \\
+		\vdots & \vdots & 0 & m_a + m_A & 0 \\
+		\hline 
+		0 & \cdots & \cdots & 0 & m  - m_A N_f\\
+\end{pmatrix} \\
++ &
+\begin{pmatrix}[c c c c|c]
+		m_B + \omega \Delta 	& 0 		& \cdots 	& \cdots 	& 0 \\
+		0 			 & m_B + \omega \Delta & 0 &\cdots & \vdots \\
+		\vdots 		& 0 		& \ddots & 0 & \vdots \\
+		\vdots & \vdots & 0 & m_B + \omega \Delta & 0 \\
+		\hline 
+		0 & \cdots & \cdots & 0 &  m_B + \omega \Delta_m\\
+\end{pmatrix}
+\end{align*}
+dove valgono le condizioni:
+$$
+\sum_a^{N_f} m_a = 0 \qquad  m = m'_B + N_f M 
+$$
+La stessa cosa si fa per $SU(N_f)_R$ 
+\begin{align*}
+\nu = &
+\begin{pmatrix}[c c c c|c]
+		\tilde m_a + m_A 	& 0 		& \cdots 	& \cdots 	& 0 \\
+		0 			 & \tilde m_a + m_A 	& 0 &\cdots & \vdots \\
+		\vdots 		& 0 		& \ddots & 0 & \vdots \\
+		\vdots & \vdots & 0 & \tilde m_a + m_A 	 & 0 \\
+		\hline 
+		0 & \cdots & \cdots & 0 & -m  - m_A N_f\\
+\end{pmatrix} \\
++ & 
+\begin{pmatrix}[c c c c|c]
+		- m_B + \omega \Delta 	& 0 		& \cdots 	& \cdots 	& 0 \\
+		0 			 & - m_B + \omega \Delta  & 0 &\cdots & \vdots \\
+		\vdots 		& 0 		& \ddots & 0 & \vdots \\
+		\vdots & \vdots & 0 & - m_B + \omega \Delta & 0 \\
+		\hline 
+		0 & \cdots & \cdots & 0 & -m_B + \omega \Delta_m\\
+\end{pmatrix}
+\end{align*}
+le stesse condizioni valgono in questo caso (tildate).\\
+Il valore di $m_A$ è uguale sia per particelle \emph{left} e \emph{right}, e genera per questo motivo un $U(1)$ "diagonale".\\
+NB: $U(1)_A$ mixa con la R-Symmetry e quindi le R-Cariche vanno modificate e sono diverse fra i primi $N_f$ sapori e l'ultimo ( $\Delta $ e $\Delta_m$).\\
+
+NB: da \citep{Aharony:2013dha} (5.28):
+Date masse $m_a$ e $\tilde m_a$ per $Q$ e $\tilde{Q}$, abbiamo:
+$$
+	m_V = {1 \over 2 }( m_a -  m_a) \quad m_A = {1 \over 2 }( m_a + m_a)
+$$
+
+\subsubsection{Limite per $m \rightarrow \infty$}
+Per fare il limite $m \rightarrow \infty$ utilizziamo la seguente identità \citep{Aharony:2013dha} (formula 5.25 pag 53 vedi def. 5.14)
+\begin{align*}
+ &\lim_{ m \rightarrow \infty } \Gamma_h ( \omega \Delta + \sigma_i + M + m) = \\
+& \exp \bigg( \mbox{sign} (m) \frac{\pi i }{2 \omega_1 \omega_2} \bigg( [ \omega (\Delta
+ -1) + \sigma_i + (m+M)]^2 - \frac{\omega_1^2 + \omega_2^2}{12} \bigg) \bigg)
+\end{align*} 
+Applicandola ai due termini che hanno il termine di massa che andrà all'infinito otteniamo:
+\begin{align*}
+\Gamma_h ( \sigma_i + \mu_{N_f+1}(m)) \, = &\, \exp \bigg( \, \mbox{sign}(m) \frac{\pi i}{2 \omega_1 \omega_2 } \big[ [ \omega (\Delta_M - 1) + \sigma_i + \\
++ & ( m + m_B - N_f m_A)]^2 - \frac{ \omega_1^2 + \omega_2^2 }{12} \big] \bigg )\\
+\Gamma_h ( - \sigma_i + \nu_{N_f+1}(m)) \, = &\, \exp \bigg( \, \mbox{sign}(-m) \frac{\pi i}{2 \omega_1 \omega_2 } \big[ [ \omega (\Delta_M - 1) - \sigma_i + \\
+&( - m - m_B - N_f m_A)]^2 - \frac{ \omega_1^2 + \omega_2^2 }{12} \big] \bigg )\\
+\end{align*}
+Per via del fattore $\sign(\pm m)$ i quadrati dei vari termini si cancellano (termini che darebbero vita a termini \emph{Chern-Simons})
+[Se si integrasse un numero diverso di fermioni L o R, avremmo per l'appunto questi termini]. Rimangono solo \emph{alcuni} doppi prodotti. I termini rimanenti sono:
+\begin{align*}
+\exp \bigg[ \frac{\pi i}{2 \omega_1 \omega_2 } \bigg[& 4 \,  \omega (\Delta_M - 1) ( m + \sigma_i + m_B )  - 4 ( m_A N_f) ( \sigma_i + m + m_B) \bigg] \bigg]  = \\
+ = \exp \bigg[ \frac{\pi i}{2 \omega_1 \omega_2 } \bigg[& 4  ( m  + m_B ) ( \omega (\Delta_M - 1) -  m_A N_f ) + 	4 \sigma_i  (\omega (\Delta_M - 1) -  m_A N_f)  \bigg] \bigg]
+\end{align*}
+Inserendoli all'interno della funzione di partizione si ottiene:
+\begin{align*}
+ &\prod_{i=1}^{N_c} \exp \bigg[ \frac{\pi i}{2 \omega_1 \omega_2 } \bigg[ 4  ( m  + m_B ) ( \omega (\Delta_M - 1) -  m_A N_f ) + 	4 \sigma_i  (\omega (\Delta_M - 1) -  m_A N_f)\bigg] \bigg] = \\
+ &\exp \bigg[ \frac{\pi i}{2 \omega_1 \omega_2 } \bigg[ 4 N_c  ( m  + m_B ) ( \omega (\Delta_M - 1) -  m_A N_f ) +4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big(\omega (\Delta_M - 1) -  m_A N_f \big)  \bigg] \bigg] \\
+\end{align*}
+Il primo e l'ultimo termine possono esser portati fuori dall'integrale, mentre il termine proporzionale a $ \sum_{i=1}^{N_c}	\sigma_i  $ può essere inglobato nella $\delta( \sum \sigma_i)$.\\
+Definendo la funzione $ c(x) = e^{ \frac{i \pi x }{2 \omega_1 \omega_2}}$ i contributi diventano:
+$$
+c( 4 N_c  ( m  + m_B ) ( \omega (\Delta_M - 1) -  m_A N_f )\,  c( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big (\omega (\Delta_M - 1) -  m_A N_f \big)
+$$
+Utilizziamo la condizione \ref{eqn:R-symm Anomaly} utilizzando questa assegnazione delle masse, ossia:
+\begin{equation}
+  { 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( -N_c \Delta_X + N_f + 1 )  \, =\omega( \, N_f \Delta +  \Delta_M )
+\end{equation}
+Utilizziamo questa relazione nell'esponenziale precedente (in modo da non avere termini che dipendono dal campo che ha massa che tende a infinito):
+\begin{align*}
+c \left( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) -  m_A N_f )\,  c( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big ( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f ) \big) \right)\\
+\end{align*}
+
+
+
+\subsection{Funzione di partizione finale}
+La funzione di partizione finale è data da:
+\begin{align*}
+ Z_{el} ( \mu_i , \nu_i ) = &
+ \frac{1}{ (2 \ \pi i)^{N_c} }{1 \over N_c ! } 
+\Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{N_c-1} \\
+& c \big( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) -  m_A N_f ) \big) \\
+&\int_{T^{N_c-1}}  
+\prod_{i=1}^{N_c} d \sigma_i \, \delta( \sum_i \sigma_i) \,  c \left( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right)\\
+& \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)\\
+ &  \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} 
+ \end{align*}
+
+Ricapitoliamo infine la tabella delle cariche:
+\begin{table}[h!]
+ \begin{tabular}{|c |c |c |c |c |c |c |}
+\hline
+Fields & $SU(N_f)_L$ & $SU(N_f)_R$ & $U(1)_B$ & $U(1)_A$ & $U(1)_J$ & $U(1)_R $ \\
+\hline
+$Q$ & $N_f$ & 0  &$ N_c $& $1 $& 0  & $\Delta_Q$ \\
+$\tilde{Q} $  & 0  &$\overline{N_f}$ & $ - N_c $& $1 $ & 0 & $\Delta_Q$ \\
+$X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
+\hline
+\end{tabular}
+\centering
+\end{table}
+
+\newpage
+\section{ Teoria Magnetica}
+\subsection{Calcolo dell'indice superconforme}
+L'indice superconforme a singolo stato per la teoria magnetica è dato dalla seguente espressione ( $\tilde N_c = k N_f - N_c$) (NB: Corretto rispetto a \citep{Dolan:2008qi}):
+\begin{align*}
+ i_M &(p,q, \tilde v, y,\tilde y ,\tilde z) =  \\ 
+& -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)} \big((p\,q)^{s}- (p\,q)^{1-s}\big)
+\bigg) \big( p_{\tilde N_c}( \tilde z)\, p_{\tilde N_c}(\tilde z^{-1})-1\big ) + \\ 
+& +{1\over (1-p)(1-q)}\bigg((p\,q)^{{1 \over 2 } r} \,\tilde v \, p_{N_f}(y^{-1})\, p_{\tilde N_c}(\tilde z)
+- (p\,q)^{1-  {1\over 2}r} \, {1 \over \tilde v}\, p_{{N_f}}(y)\, p_{{\tilde N_c}}(\tilde z^{-1}) + \\
+& + (p\,q)^{{1 \over 2 } r}\, {1\over \tilde v}\, p_{{N_f}}({\tilde y}\,) \, p_{{\tilde N_c}}(\tilde z^{-1})
+- (p\,q)^{1-{1\over 2}r} \, \tilde v \, p_{N_f}({\tilde y}^{-1})\, p_{\tilde N_c}(\tilde z)\bigg) +  \,\\
+&\sum_{l=0}^{k-1}   \bigg( (pq)^{ {1 \over 2 } 2 ( r + l s  )} p_{N_f}(y) p_{N_f}(\tilde y^{-1}) - (pq)^{1 -  {1 \over 2 } 2 ( r + s l )} p_{N_f}(y^{-1} p_{N_f}{\tilde y}\bigg)  \\
+\end{align*}
+
+Esplicitando i polinomi otteniamo:
+
+\begin{align*}
+ i_M &(p,q, \tilde v, y,\tilde y ,\tilde z) = \\ 
+& -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)} \big((p\,q)^{s}- (p\,q)^{1-s}\big)
+\bigg) \big( \sum_{i,j}^{\tilde N_c} \tilde z_i \tilde z_j^{-1} -1\big ) + \\ 
+%% CHIRALS
+& +{1\over (1-p)(1-q)}\bigg[ \sum_i^{N_f}\sum_j^{\tilde N_c} \bigg( (p\,q)^{{1 \over 2 } r} \,\tilde v \, y_i^{-1}\, \tilde z_j
+- (p\,q)^{1- {1\over 2}r} \, {1 \over \tilde v}\, y_i \,   
+\tilde z_j^{-1} + \\
+& + (p\,q)^{{1 \over 2 } r}\, {1\over \tilde v}\, 
+({\tilde y_i}\,) \,  
+(\tilde z_j^{-1})
+- (p\,q)^{1-  {1\over 2}r} \, \tilde v \, 
+{\tilde y_i}^{-1} \, 
+\tilde z_j \bigg) + \\
+%% MESONS
+ &\sum_i^{N_f} \sum_j^{N_f} \sum_{l=0}^{k-1}   \bigg(  (pq)^{ r + s l  } y_i \tilde y_j^{-1}   - (pq)^{1 -( r + s l )}
+y_i^{-1}  {\tilde y_i}  \bigg) \bigg] \\
+\end{align*}
+La prima riga è identica alla teoria elettrica (eccetto per il numero di colori).
+Il contributo dai cambi chirali è diverso, essendo le cariche nella nuova teoria diverse.
+L'ultima riga come è diversa come struttura dalla teoria elettrica, infatti è il contributo all'indice dai mesoni ( solo flavour nessun colore).
+\subsubsection{Contributo dei campi chirali}
+Definiamo i seguenti cambi di variabile per calcolare più facilmente l'indice.
+$$
+	\alpha = {1 \over 2 } r  
+$$
+	L'indice superconforme può essere così riscritto come:
+\begin{align*}
+ i_M^{Chiral}  (p,q, \tilde v, y,\tilde y ,\tilde z) = &
+ +{1\over (1-p)(1-q)} \sum_i^{N_f}\sum_j^{\tilde N_c} \bigg( (p\,q)^{\alpha} \,\tilde v \, y_i\, \tilde z_j
+- (p\,q)^{1- \alpha} \, {1 \over \tilde v}\, y_i^{-1} \,   
+\tilde z_j^{-1} + \\
+& + (p\,q)^{\alpha}\, {1\over \tilde v}\, 
+({\tilde y_i}\,) \,  
+(\tilde z_j^{-1})
+- (p\,q)^{1- \alpha} \, \tilde v \, 
+{\tilde y_i}^{-1} \, 
+\tilde z_j \bigg) + \\
+\end{align*}
+Esponenziamo separatemente i primi due termini dagli ultimi due:
+\begin{align*} 
+&\exp \bigg( \sum_{n}^{\infty} \frac{1}{n} i_M^{Chiral} (p^n,q^n, \tilde v^n, y^n,\tilde y^n ,\tilde{z^n} ) \bigg)  = \\
+& \exp \bigg( \sum_{n}^{\infty} \sum_i^{N_f}\sum_j^{\tilde N_c}  \frac{1}{n}    {1\over (1-p^n)(1-q^n)} \big( (p \, q)^{\alpha n} \,\tilde v^n \, y_i^n\, \tilde z_j^n
+- (p\,q)^{(1- \alpha)n} \, \tilde v^{-n}\, y_i^{-n} \,   
+\tilde z_j^{-n} \big) \bigg) \\
+& \; \mbox{ facciamo il cambio di variabile } \, (pq)^{\alpha} \tilde{v} y_i^{-1} \tilde{z_j} = t \\
+=& \prod_i^{N_f}\prod_j^{\tilde N_c}  \exp \bigg( \sum_{n}^{\infty} \frac{1}{n}   {1\over (1-p^n)(1-q^n)} \big( t^n - \big( \frac{pq}{t} \big)^n \big) \bigg) \bigg)
+\end{align*}
+A questo punto si utilizza l'identità \ref{Gamma_eChiral} e otteniamo così:
+\begin{equation}
+	\prod_i^{N_f}\prod_j^{\tilde N_c} \Gamma_e ( t ; p,q) = \prod_i^{N_f}\prod_j^{\tilde N_c} \Gamma_e ( (pq)^{\alpha} \tilde{v} y_i^{-1} \tilde{z_j} ; p,q)
+\end{equation}
+Gli altri due termini si ottengono nello stesso modo, ma facendo il cambio di variabile:
+$$
+	\frac{1}{\tilde v } \tilde{y_i} z_j^{-1} (pq)^{\alpha} = t'
+$$
+Ottenendo così il contributo completo dei campi chirali (ripristinando le R-cariche al posto di $\alpha$):
+\begin{equation}
+\prod_i^{N_f}\prod_j^{\tilde N_c} \Gamma_e ( (pq)^{{1 \over 2 } r} \tilde{v} y_i^{-1} \tilde{z_j} ; p,q)\Gamma_e ( (pq)^{{1 \over 2 } r} \tilde{v}^{-1} \tilde y_i \tilde{z_j}^{-1} ; p,q)
+\end{equation}
+
+\subsubsection{Contributo dei mesoni}
+L'indice di singolo stato dei mesoni è calcolto come i campi chirali, tenendo conto che la loro R-carica è $ R_M = 2 R_Q + R_X j$ dove $j$ indica l'esponente dell'aggiunta nel mesone. $ R_Q$ è la carica del quark della teoria \Cline[red]{ELETTRICA}.
+Utilizzo $m_{ij} = y_i \tilde{y_j}$
+(Seconda formula è da \citep{Dolan:2008qi}, inutilmente complicata, equivale alla mia (la prima))
+\begin{align*}
+ i_M^{Mesons} (p,q, \tilde v, y,\tilde y ,\tilde z) = 
+\,  &\frac{1}{(1-p)(1-q)} \sum_i^{N_f} \sum_j^{N_f}   \sum_{l=0}^{k-1}  \bigg( (pq)^{( r+ l s  )}m_{ij}  - (pq)^{1 -( r + l s )}
+m_{ij}^{-1} \bigg) = \\ 
+= \, & \frac{1}{(1-p)(1-q)}\frac{1 - (pq)^{1-s}}{1 - (pq)^s}  \sum_i^{N_f} \sum_j^{N_f}  \bigg( (pq)^r
+m_{ij} - (pq)^{2s-r} 
+m_{ij}^{-1} \bigg)\\
+\end{align*}
+
+L'esponenziale da calcolare è:
+\begin{align*}
+& \exp \bigg( \sum_{n}^{\infty} \frac{1}{n} i_M^{Meson} (p^n,q^n, \tilde v^n, y^n,\tilde y^n) \bigg) = \\
+& \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \exp \sum_{n}^{\infty} \bigg( \frac{1}{n}  \frac{1}{(1-p^n)(1-q^n)} \bigg( (pq)^{(r + l s )n}
+m_{ij}^n - (pq)^{(1-(r + l s )n} 
+m_{ij}^{-n} \bigg) \bigg) \\
+\end{align*}
+
+Ponendo ora $ (pq)^{r+sl} m_{ij} = y$:
+\begin{align*}
+& \exp \bigg( \sum_{n}^{\infty} \frac{1}{n} i_M^{Meson} (p^n,q^n, \tilde v^n, y^n,\tilde y^n) \bigg) = \\
+& \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \exp \sum_{n}^{\infty} \bigg( \frac{1}{n}  \frac{1}{(1-p^n)(1-q^n)} \bigg( y^n
+m_{ij}^n - (pq/y)^{n} 
+m_{ij}^{-n} \bigg) \bigg)\\
+= \, & \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{r + l s} ; p ,q)
+\end{align*}
+
+\subsection{Indice e funzione di partizione}
+
+\subsubsection{Espressione dell'indice}
+L'indice superconforme per la teoria magnetica è dato da ( $\tilde{N_c} = k N_f - N_c$):
+\begin{align*}
+&I_{Mag} ( p,q,y,\tilde y,\tilde v) = \\
+ & { 1 \over \tilde{N_c !}} (p;p)^{\tilde{N_c}-1} ( q;q)^{\tilde{N_c}-1} \, \Gamma_e( (pq)^s;p,q)^{\tilde{N_c}-1} \bigg( \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{r + l s} y_i \tilde{y_j}^{-1}; p ,q) \bigg) \\
+&\int_{T^{\tilde{N_c-1}}} \bigg( \prod_{i=1}^{ \tilde{N_c }} { d z_i \over { 2 \pi i z_i} } \bigg) \delta \bigg( \prod_{i=1}^{\tilde{N_c}} z_i - 1 \bigg) 
+\prod_{ 1 \leq i < j \leq \tilde{N_c}} \frac{ \Gamma_e \big( (pq)^s {z_i \over z_j} \big) \Gamma_e \big( (pq)^s {z_j \over z_i} \big) }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)} \\
+& \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f} \Gamma_e ( (pq)^{{1 \over 2 } \Delta'} \tilde{v} y_i^{-1} \tilde{z_j} ; p,q)\Gamma_e ( (pq)^{{1 \over 2 } \Delta'} \tilde{v}^{-1} \tilde y_i \tilde{z_j}^{-1} ; p,q)
+\end{align*}
+dove $r $ è la \underline{R-Carica del quark NON duale} , $\Delta'$ la \underline{R-Carica del quark DUALE } e $ s = \frac{1}{k+1} = {1 \over 2 } \Delta_X$.
+La presenza delle cariche dei quark NON duali è dovuto al fatto che i mesoni nella teoria magnetica sono i mesono costruibili nella teoria elettrica.
+
+\subsubsection{Funzione di partizione}
+Come fatto per la teoria elettrica si riduce l'indice superconforme alla funzione di partizione della teoria.
+I contributi del campo vettoriale e del campo chirale nell'aggiunta sono espressioni identiche ( in funzione del nuovo numero di colori ($\tilde{N_c}$).\\
+\subsubsection*{Mesoni}
+Il contributo dei mesoni è dato da:
+
+\begin{align*}
+&\prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{r + l s} y_i \tilde{y_j}^{-1}; p ,q)  = \\
+& \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e \big ( \exp( 2 \pi i r [(2 \omega)(r + l s) +  ( m_i - \tilde{m_j})]); p ,q \big)  = \\
+\overset{ r\rightarrow 0 }{ \sim } &  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big( 2 \omega ( r + l s ) + m_i - \tilde{m_j} - \omega \big) \bigg) \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)   = \\
+= &  \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big(  N_f^2  \bigg( \sum _{l=0}^{k-1} 2 \omega ( r + l s - \frac{1}{2}  )\bigg)  +N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\big) \big) \bigg) \\
+&\qquad \qquad  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l  \Delta_X) + m_i -  \tilde{m_j} \big)  \\
+= &  \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big(  N_f^2  \bigg( \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q - \frac{1}{2}) + \omega l \Delta_X   )\bigg)  +N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\big) \big) \bigg) \\
+&\qquad \qquad  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)  
+\end{align*}
+%% dove il vincolo sulle masse reali $ \sum m_i = \sum \tilde{m_j} = 0$ le ha eliminate dal fattore divergente.\\
+
+\subsubsection*{Chirali fondamentali}
+Per i chirali nella fondamentale abbiamo ( $r = \Delta'$):
+
+\begin{align*}
+ \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f} & \Gamma_e ( (pq)^{{1 \over 2 } \Delta'} \tilde{v} y_i^{-1} \tilde{z_j} ; p,q)\Gamma_e ( (pq)^{{1 \over 2 } \Delta'} \tilde{v}^{-1} \tilde y_i \tilde{z_j}^{-1} ; p,q)  = \\
+ = \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f}  & \Gamma_e ( \exp\big( 2 \omega( {1 \over 2 } \Delta')   + \tilde{m_B} - m_i  + \tilde{\sigma_j} \big) ; p,q) \\
+ &\Gamma_e ( \exp\big( 2 \omega(  {1 \over 2 } \Delta' )  - \tilde{m_B} + \tilde  m_i  - \tilde{\sigma_j} \big) ; p,q)  = \\
+ \overset{ r \rightarrow 0 } { \sim } \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f}   &\exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \bigg(  \big(\omega ( \Delta' - 1) + \tilde{m_B} - m_i  + \tilde{\sigma_j} \big)  +  \big( \omega (  \Delta' - 1) - \tilde{m_B} + \tilde m_i  - \tilde{\sigma_j}  \big)\bigg) \\
+&\Gamma_h \big(\omega \Delta' + \tilde{m_B} - m_i  + \tilde{\sigma_j} \big) \Gamma_h \big(\omega \Delta' - \tilde{m_B} +  \tilde m_i  - \tilde{\sigma_j} \big)  = \\
+ =   \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} &\big( 2  N_f \tilde{N_c}\omega (\Delta' - 1 ) +  \tilde{N_c} \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big)  \big) \bigg)  \Gamma_h \big( \mu_i + \tilde{\sigma_j} \big) \Gamma_h \big(\nu_i - \tilde{\sigma_j} \big)  
+\end{align*}
+Dove abbiamo definito le masse reali 
+$$
+ \mu_i = \omega \Delta' + \tilde{m_B} - m_i   \qquad \nu_i  = \omega \Delta' - \tilde{m_B} +  \tilde m_i 
+$$
+
+
+\subsubsection*{Campo di gauge e materia nell'aggiunta}
+Come detto precedentemente i contributi sono come nel caso elettrico:
+\begin{align*}
+& \Gamma_e((pq)^{\frac{\Delta_X}{2}})^{N_c -1} =
+\Gamma_e( e^{2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)})^{\tilde{N_c}-1} =  \Gamma_e( e^{2 \pi i r  \Delta_X \omega })^{\tilde{N_c}-1} = \\
+&=\big[ \exp{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega) }\big]^{N_c-1} \Gamma_h ( \omega \Delta_X ; \omega_1, \omega_2)^{\tilde{N_c}-1}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+ \begin{align*}
+ & \Gamma_e\big( (pq)^{\frac{\Delta_X}{2}} \big( { z_i \over z_j} \big) \big) \Gamma_e \big( (pq)^{\frac{\Delta_X}{2}} \big( { z_j \over z_i} \big) \big) = \\
+&= \Gamma_e\big( e^{2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)} e^{ 2 \pi  i r (\sigma_i - \sigma j)} \big) \big) \Gamma_e \big( e^{ 2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)}  e^{ 2 \pi i r (\sigma_j - \sigma_i)} \big) =  \\
+&= \Gamma_e\big( e^{2 \pi  i r (\Delta_X \omega +\sigma_i - \sigma j} \big) \Gamma_e \big(  e^{2 \pi  i r (\Delta_X \omega +\sigma_j - \sigma_i} \big) \\
+ & = \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\bigg)\, \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) \\
+ & = \exp\bigg({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\bigg)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align*}
+\begin{align*}
+  \Gamma_e\big( {z_i \over z_j})\Gamma_e\big( {z_j \over z_i}) = &e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega)} \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+& = \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - 2 \omega)}  \bigg) , \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i)
+\end{align*}
+Attenzione che l'ultimo termine entra nella funzione di partizione al denominatore.\\
+
+\subsection{Contributi divergenti}
+Cerchiamo ora di mettere insieme tutti i contributi divergenti ottenuti dal limite per $ r\rightarrow 0$.
+Essendo le 't Hooft anomalies per anomalie gravitazionali, devono matchare con il corrispettivo elettrico.\\
+Scriviamo solo l'esponente ( a meno di $ \frac{- i \pi }{6 r \omega_1 \omega_2}$):\\
+C'E' DA FARE ANCORA IL CONTRIBUTO DEI POCHHAMMER!!
+\begin{align*}
+& \overbrace{ (\tilde N_c - 1) \hbox{Q-pochhammer} + ( 2 \omega) \frac{\tilde N_c(\tilde  N_c-1)}{2}}^{\hbox{Adj Vector}} +  \overbrace{ ( \omega (\Delta_x - 1)(\tilde  N_c - 1) + ( 2 \omega (\Delta_x - 1)\frac{\tilde  N_c(\tilde N_c-1)}{2}) }^{ \hbox{Adj Chiral}} + \\
+& \overbrace{2  N_f \tilde{N_c}\omega (\Delta' - 1 ) +  \tilde{N_c} \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big) }^{\hbox{Fond Chirals}} +  \overbrace{ N_f^2 \big(  \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q + l \frac{\Delta_X}{2} - \frac{1}{2} ) \big)  + N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i} \big)}^{\hbox{Mesons}} = \\
+\end{align*}
+Per calcolare il contributo dato dai mesoni è sufficiente notare che:
+$$
+ \sum_{i=0}^{n} i =  \frac{n ( n + 1 )}{2} \qquad \longrightarrow 	\qquad  \sum_{i=0}^{k-1} i =  \frac{ (k-1)k}{2}
+$$
+Nel caso del mesone, la somma va fino a $ k-1$:
+$$
+N_f^2 \omega ( 2 \Delta_Q - 1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} + k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)
+$$
+\begin{align*}
+= & \overbrace{ (\tilde {N_c}  - 1) \hbox{Q} + \omega \tilde  N_c( \tilde N_c-1)}^{\hbox{Adj Vector}} +  \overbrace{ ( \omega (\Delta_X - 1)( \tilde N_c^2 - 1)}^{ \hbox{Adj Chiral}} +  \overbrace{2   N_f \tilde N_c \omega (\Delta' - 1 ) +  \tilde{N_c} \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big) }^{\hbox{Fond Chirals}} +\\
+&  \overbrace{N_f^2 \big(   \omega (2 \Delta_Q -1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} \big) + k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)}^{\hbox{Mesons}} = \\
+=&\overbrace{ ( k N_f -N_c  - 1) \hbox{Q} + \omega (k N_f -N_c)( k N_f -N_c -1)}^{\hbox{Adj Vector}} +  \overbrace{ ( \omega (\Delta_X - 1)((k N_f -N_c)^2 - 1)}^{ \hbox{Adj Chiral}} + \\
+& \overbrace{2   N_f (k N_f -N_c) \omega (\Delta' - 1 ) +  (\Cline[blue]{k N_f} -N_c) \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big) }^{\hbox{Fond Chirals}} +\\
++&  \overbrace{N_f^2 \big(  \omega ( 2 \Delta_Q -1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} \big) + \Cline[blue]{ k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)}}^{\hbox{Mesons}}
+\end{align*}
+I termini in blu si cancellano grazie al fatto che \underline{ quark e mesoni sono in rappresentazioni}
+\underline{"opposte" di flavour}.\\
+Ora poniamo $Q = 1$ DA VERIFICARE , MA DOVREBBE ESSERE OK! (LO ERA NEL CASO ELETTRICO).\\
+\begin{align*}
+=&\overbrace{ \Cline[blue]{( k^2 N_f^2 + N_c^2 - 2 k N_f N_c - 1 ) \omega } }^{\hbox{Adj Vector}} +  \overbrace{ \Cline[blue]{( k^2 N_f^2 + N_c^2 - 2 k N_f N_c - 1 )}  \omega (\Delta_X \Cline[blue]{ - 1})}^{ \hbox{Adj Chiral}} + \\
+& \overbrace{ (2   k N_f^2    - 2 N_f N_c) \omega (\Delta' - 1 ) +  \Cline[green] {N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) }}^{\hbox{Fond Chirals}} +\\
++&  \overbrace{N_f^2 \big(  \omega (2  \Delta_Q -1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} \big)}^{\hbox{Mesons}}
+\end{align*}
+Il termine sottolineato in verde matcha già con la teoria elettrica con il segno corretto. D'ora in poi verrà tralasciato e inserito solo alla fine.\\
+A questo punto è necessario esplicitare la R-Carica del quark duale per poter confrontare il risultato con la teoria elettrica.\\
+Ricordare che la carica dei mesoni è data dai quark \Cline[red]{ELETTRICI} e l'aggiunta.
+Abbiamo  da \ref{eqn:R-charge_dual_quark} che 
+$$
+ 	\Delta' \; = \; \Delta_X - \Delta_Q
+$$
+Utilizziamo questa relazione per andare avanti:
+\begin{align*}
+=& ( k^2 N_f^2 + N_c^2 - 2 k N_f N_c - 1 )  \omega  \Delta_X  +  ( 2   k N_f^2    - 2 N_f N_c) \omega (\Delta_X - \Delta_Q - 1 ) + \\
++&  N_f^2  \bigg( k \omega (2 \Delta_Q -1)  + \omega \Delta_X  \frac{ ( k-1) k }{2} \bigg) = \\
+ = & \, \omega \Delta_X \big( k^2 N_f^2 - 2 k N_f N_c + 2 k N_f^2 - 2 N_f N_c + N_f^2 \frac{k(k-1)}{2} + N_c^2 -1 \big) +\\
++ & \, \omega \Delta_Q \big ( \Cline[red]{- 2 k N_f^2} + 2 N_f N_c +\Cline[red]{2 k N_f^2}  \big) + \omega \big ( - 2  k N_f^2 + 2 N_f N_c -  k N_f^2 \big)\\
+\end{align*}
+Ora manipoliamo separatamente i termini a seconda della R-Carica. Sarà necessario utilizzare il valore esplicito di $ \Delta_X = \frac{2}{k+1}$ per matchare le anomalie tra i due modelli.
+\begin{align*}
+&\omega \frac{2}{k+1} \bigg( - 2 N_f N_c ( k+1 ) + k N_f^2 ( k+1 ) + k N_f^2 + k N_f^2 \frac{k(k+1-2)}{2} + N_c^2 -1 \bigg)  = \\
+= \, & \omega \big(  - 4 N_f N_c  + 2 k N_f^2  + \Cline[red]{k N_f^2 }+ 2  N_f^2 \frac{k}{2} \, \Cline[red]{- k N_f^2} \big) + \omega \Delta_x ( N_c^2 -1 )
+\end{align*}
+A questo punto abbiamo ottenuto dei termini spogli di R-cariche che possiamo combinare con l'altro termine senza R-cariche :
+\begin{align*}
+	\longrightarrow & \; \omega \big (  \overbrace{- 4 N_f N_c  + 2 k N_f^2  +   k N_f^2}^{\hbox{ termini da } \omega \Delta_X}  \overbrace{- 2  k N_f^2 + 2 N_f N_c - 2  k N_f^2}^{\hbox{termini da } \omega} \big) = \\
+	 = &\; \omega \big (  - 2 N_f N_c  \big) 
+\end{align*}
+A questo punto possiamo mettere insieme tutti i "pezzi" che abbiamo calcolato separatamente:
+\begin{align*}
+ & \omega \Delta_x ( N_c^2 - 1) + \omega ( - 2 N_f N_c  ) + \omega \Delta_Q ( 2 N_f N_c )  + N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) =  \\
+ = & \omega \Delta_x ( N_c^2 - 1) + ( + \omega - \omega)  ( N_c^2 -1 ) + 2 N_f N_c  \omega ( \Delta_Q -1 )  +  N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) = \\
+ = &\omega ( N_c^2 -1 ) + ( N_c^2 - 1) \omega (\Delta_x  - 1 ) + 2 N_f N_c  \omega ( \Delta_Q -1 )  + N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) 
+\end{align*}
+Come si può vedere combacia con il contributo divergente della teoria elettrica.\\
+\subsection{Formula per la funzione di partizione}
+Dopo aver controllato le anomalie gravitazionali, possiamo scrivere la la funzione di partizione.\\
+MANCANO I POCHHAMMERRRRRR
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{\tilde{N_c}! (2 \pi i )^{\tilde{N_c}}}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ \tilde N_c-1}
+\bigg( \prod_{a,b=1}^{N_f}   \prod_{l=0}^{k-1} \Gamma_h \big( \mu_a+  \nu_b + l \omega \Delta_X) \big)  \bigg) \\
+&\int_{T^{ \tilde N_c-1}}  
+\prod_{i=1}^{ kN_f - N_c} d \sigma_i \, \delta( \sum_i \sigma_i) \, 
+ %% e^{- 2 \pi i r \tilde N_c \sum \sigma_i} 
+ \prod_{ 1 \leq i<j \leq kN_f - N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \\
+ &  \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c} \Gamma_h \big( \tilde \mu_a + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_b - \tilde{\sigma_j} \big)  
+\end{align*}
+dove abbiamo utilizzato le definizioni:
+\begin{align*}
+ \mu_i = \omega \Delta_Q + m_i  &\qquad \nu_i = \omega \Delta_Q - \tilde{m_i}\\
+ \tilde \mu_i = \omega ( \Delta_X - \Delta_Q ) + \tilde{m_B} - m_i  &  \qquad \tilde \nu_i = \omega ( \Delta_X - \Delta_Q ) - \tilde{m_B} + \tilde m_i 
+\end{align*}
+\subsection{Vuoti e rotture di simmetria per il limite a massa infinita}
+Come prima cosa è necessario mappare le masse reali fra le due teorie. Sappiamo che i barioni costruiti con i quark nelle due teorie "coincidono". Ciò mappa le masse reali barioniche delle due teorie.: $ B = Q^{N_c} = q^{k N_f - N_c} $. ciò fissa  le cariche barioniche in \ref{table:charge_table_el_ks_4d} e \ref{table:charge_table_mag_ks_4d}:
+$$
+		\tilde{m}_B = \frac{ N_C}{ kN_f - N_C } m_B
+$$
+
+Le cariche di flavour rimangono invariate a meno di un segno ( sono infatti opposte), non essendo legate al gruppo di gauge (come la simmetria barionica).\\
+Possiamo scrivere quindi:
+\begin{align*}
+ \tilde \mu_a = \omega ( \Delta_x - \Delta_Q ) + \tilde{m_B} - m_a    \qquad &  \tilde \nu_a = \omega ( \Delta_x - \Delta_Q ) - \tilde{m_B} + \tilde m_a  
+\end{align*}
+dove $ m_a$ e $\tilde{m_a}$ sono le masse reali di flavour elettriche.\\
+A questo punto è necessario rompere la simmetria in modo consistente con quanto fatto nella teoria elettrica.
+Considero per il gruppo $SU(N_f+1)L \times U(1)_B$ per il contributo divergente nella teoria elettrica. Gli altri contributi vengono mappati in maniera "\emph{banale}".
+\begin{align*}
+\hbox{Teoria elettrica: }  \quad &  \mu = \mbox{diag} ( m_b - M, \dots , m_B+ N_f M) \qquad \mbox{ con } m_B = M \quad \\
+ \longrightarrow  \qquad & \mu = \mbox{diag} ( 0, \dots , \hat{m}) \qquad \mbox{ con } M(N_f+1) = \hat{m} 
+\end{align*}
+
+È importante ricordare che le cariche barioniche e di sapore nella dualità si mappano in modo diverso, cfr \ref{table:charge_table_el_ks_4d} con \ref{table:charge_table_mag_ks_4d}.  Per questo motivo le masse nella teoria magnetica non sono mappate "\emph{banalmente}" ed è per questo motivo che tutti i quark ricevono un contributo nella teoria magnetica.
+\\
+Ricordiamo innanzitutto la mappa:
+\begin{align*}
+ m_B \quad \longrightarrow \quad & \tilde{m}_B = \frac{N_c}{k(N_f+1)-N_c} m_B \\  M \quad \longrightarrow \quad &\tilde{M} = - M
+\end{align*}
+A questo punto le masse reali saranno della forma $ \tilde{\mu} = \mbox{diag} ( m_1 , \dots , m_2)$. Calcoliamo ora questi due valori.
+\begin{align*} 
+m_1 & = \tilde{m}_B - \tilde{M} = \frac{N_c}{k(N_f+1)-N_c} m_B + M = \frac{N_c + k (N_f+1) - N_c }{k(N_f+1)-N_c} M \\
+& = \frac{k (N_f+1) }{k(N_f+1)-N_c} M = \frac{k}{k(N_f+1)-N_c} \hat{m} \\
+m_2 & = \tilde{m}_B + N_f \tilde{M} = \frac{N_c}{k(N_f+1)-N_c} m_B -N_f M = \frac{N_c - N_f( k(N_f+1) - N_c)}{k(N_f+1)-N_c} m_B = \\ 
+	& = \frac{N_c(N_f+1) - N_f k (N_f+1)}{k(N_f+1)-N_c} m_B  = \frac{N_c - k N_f}{k(N_f+1)-N_c} \hat{m}   
+\end{align*}
+Il resto delle masse viene mappato in maniera banale, seguendo la tabella delle cariche della teoria magnetica. \\
+Per il gruppo $SU(N_f+1)_R $ avviene in maniera identica, ma le cariche hanno segno opposto (sia quelle barioniche che di flavour), quindi c'è un segno overall e i calcoli sono identici.
+\begin{align*}
+	 \tilde \mu_a =
+	 \begin{cases}
+	  \tilde{ \mu_a} =  \omega ( \Delta_X - \Delta_Q ) + m_B \frac{N_c}{k(N_f +1) - N_c} - m_a  - m_A + m_1  \qquad a = 1 \dots N_f \\
+	  \tilde \mu_{N_f+1} =  \omega ( \Delta_X - \Delta_M ) + m_B \frac{N_c}{k(N_f +1) - N_c} +  m_A N_f + m_2    \\
+	 \end{cases} 
+	 \\
+\tilde{ \nu_a} = 	
+	\begin{cases}
+	\tilde \nu_a = \omega ( \Delta_X - \Delta_Q ) - m_B \frac{N_c}{k(N_f +1) - N_c}  + \tilde m_a  - m_A - m_1 \qquad a = 1 \dots N_f\\
+	 \tilde \nu_{N_f+1} = \omega ( \Delta_X - \Delta_M ) - m_B \frac{N_c}{k(N_f +1) - N_c}  +  m_A N_f- m_2 \\
+	\end{cases}	 
+\end{align*}
+dove ( $\hat{m}$ è quella che viene mandata a $\infty$ nella teoria elettrica)
+$$
+ m_1  = \frac{k}{k(N_f+1) - N_c} \hat{m} \qquad m_2 = - \frac{k N_f - N_c}{k(N_f+1)-N_c} \hat{m}
+$$
+
+Per ottenere la teoria duale con $N_f$ sapori è necessario anche rompere la simmetria di gauge: $SU(k(N_f+1) -N_c) \rightarrow U( k N_F - N_C) \times (qualcosa)$. Inoltre bisogna fare in modo che i primi $N_f$ flavour rimangano leggeri nel limite a massa infinita. Come si vede dalle masse reali, è necessario bilanciare i fattori pari a $m_1$ ed $m_2$ (che sono proporzionali a $m$) dando un contributo opposto con la massa reale data da $\tilde{\sigma}$\footnote{La corretta normalizzazione della carica barionica verrà effettuata in seguito, tanto è uno shift finito e farlo ora complica solo i calcoli.}
+\begin{equation}
+ \sigma = 
+ \begin{pmatrix}
+  - m_1 \bold{ 1}_{ k N_f - N_c} & 0 \\
+  0 &  - m_2 \bold{ 1}_{k}
+ \end{pmatrix}
+\end{equation}
+Si può vedere che questa scelta per il vev rispetta la condizione tr $\tilde{\sigma} = 0$.
+Con questa scelta l'ultimo quark rimane leggero e carico sotto $U(k)$ (dovrebbe esser giusto)\\
+Nota che non riesco a trovare $SU( k N_f - N_c)$ perchè dovendo andare all'infinito è dura soddisfare il constraint $ \hbox{tr} \sigma = 0$ (avendo anche l'ultimo flavour leggero) ..
+\subsection{Calcoli per limite a massa divergente}
+A differenza del caso elettrico, tutte le masse reali e tutte le componenti di $\tilde{\sigma}$ divergono.
+Utilizziamo anche in questo caso la formula 
+\begin{align}
+&\lim_{ m \rightarrow \infty } \Gamma_h ( a +  m) = \\
+& \exp \bigg( \mbox{sign} (m) \frac{\pi i }{2 \omega_1 \omega_2} \bigg( ( a - \omega + m)^2 - \frac{\omega_1^2 + \omega_2^2}{12} \bigg) \bigg)
+\label{eqn:gamma_lim_m}
+\end{align}
+\subsubsection{Mesoni}
+Dobbiamo calcolare il contributo dei mesoni. Notare che siccome la simmetria di sapore è rotta solo parzialmente, solo i contributi con il flavour $N_f + 1$-esimo divergeranno. Inoltre ricordiamo che le masse reali per i mesoni non sono uguali a quelle dei quark che sono scritte sopra, differiscono per R-Carica e per il fatto che sono scarichi sotto l'$U(1)_B$. Inoltre sono in rappresentazioni di flavour opposte rispetto ai quark.
+\begin{align*}
+	\mu_a &  = \begin{cases}
+	m_a + m_A - M + \omega \Delta \\
+	M N_f - m_A N_f + \omega \Delta_M\\
+	\end{cases}
+	\\
+\nu_a & = 	\begin{cases}
+	- \tilde{m}_a + m_A + M + \omega \Delta \\
+	- M N_f - m_A N_f + \omega \Delta_M \\
+	\end{cases}
+\end{align*}
+NOTA BENE: non ci sono $m_1$ e $m_2$ come per i quark dato che esse sono costruite anche da una parte barionica divergente. 
+$M$ è lo stesso della teoria elettrica (ricordo che $\hat{m} = (N_f+1) M$).
+\begin{align*}
+ & \prod_i^{N_f+1} \prod_j^{N_f+1}  \prod_{l=0}^{k-1}    \Gamma_h \big( \mu_i+  \nu_i + l \omega \Delta_X) \big)  = \\ &
+\bigg( \prod_a^{N_f} \prod_b^{N_f}  \prod_{l=0}^{k-1} \Gamma_h \big(   \mu_a + \nu_b + l \omega \Delta_X \big)  \bigg)   \bigg( \prod_{l=0}^{k-1} \Gamma_h( \mu_{N_f+1} \nu_{N_f+1}  l \Delta_X) \bigg) \\
+&  \bigg(  \prod_{l=0}^{k-1} \prod_a^{N_f} \Gamma_h ( \mu_a + \nu_{N_f+1} + \omega l \Delta_X) \Gamma_h(  \mu_{N_f+1} + \nu_{a} + \omega l \Delta_X)  \bigg) 
+\end{align*}
+I primi due termini non dipendono da $m$ e quindi non danno luogo ad una fase. Si può riscrivere il risultato come: 
+\begin{align*}
+& \prod_i^{N_f+1} \prod_j^{N_f+1}  \prod_{l=0}^{k-1}   \Gamma_h \big( \mu_i+  \nu_i + l \omega \Delta_X) \big)  = \\
+& \bigg(  \prod_{l=0}^{k-1}  \bigg ( \prod_a^{N_f} \prod_b^{N_f} \Gamma_h \big( \mu_a + \nu_b + l \omega \Delta_X) \big)  \bigg)\Gamma_h( - 2 m_A N_f + \omega ( 2 \Delta_M +  l \Delta_X) \bigg)  \\
+ &  \bigg(  \prod_{l=0}^{k-1} \prod_a^{N_f} \Gamma_h (m_a - m_A (N_f-1) - \underbrace{M(N_f+1)}_m  + \omega ( \Delta_Q + \Delta_M + l \Delta_X))\\
+ & \Gamma_h(  - \tilde{m}_a + \underbrace{M (N_f +1)}_m - m_A ( N_f-1) + \omega ( \Delta_Q + \Delta_M + l \Delta_X) ) \bigg) 
+\end{align*}
+Utilizziamo ora \ref{eqn:gamma_lim_m} per le $\Gamma_h$ divergenti.\\
+Ottengo (strippo i fattori banali e quello che si cancella e con un po' di occhio sulla parità dei termini):
+\begin{equation}
+\sum_{l=0}^{k-1} \sum_a^{N_f}  - m_a^2 + \tilde{m}_a^2  -  m_a(\dots) + \tilde{m}_a(\dots) + 4  m ( m_A (N_f - 1)  + \omega( \Delta_Q +  \Delta_M + l\Delta_X  -1)  )
+\label{eqn:contributo_mesoni}
+\end{equation}
+
+\subsubsection{Chirali}
+Per i campi chirali bisogna sviluppare questi termini. Ricordiamo che $\mu_i$ e $\sigma_j$ hanno vev tali che le prime $N_f$ componenti e il singoletto rimangono leggere, solo i termini "misti" saranno da sviluppare.  
+\begin{equation}
+\prod_{i=1}^{N_f} \prod_{j=1}^{(k+1)N_f - N_c } \Gamma_h \big( \tilde \mu_i + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_i - \tilde{\sigma_j} \big)  
+\end{equation}
+D'ora in poi chiameremo $\rho_j$ con $j= 1 \dots k$ le componenti di $\sigma_j$ per $ j = k N_f - N_c + 1 \dots k(N_f+1) -N_c$:
+\begin{align*}
+\bigg( \prod_{i=1}^{N_f} \prod_{j=1}^{k N_f - N_c } \Gamma_h \big( \tilde \mu_i + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_i - \tilde{\sigma_j} \big) \bigg)
+\bigg(\prod_{j=1}^{k} \Gamma_h \big( \tilde \mu_{N_f+1} + \rho_j \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \rho_j \big) \bigg)\\
+\bigg( \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big( \tilde \mu_{N_f+1} + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \tilde{\sigma_j} \big) \bigg)
+\bigg( \prod_{i=1}^{N_f} \prod_{j=1}^{k } \Gamma_h \big( \tilde \mu_i + \rho_j \big) \Gamma_h \big( \tilde \nu_i - \rho_j \big) \bigg)
+\end{align*}
+I termini della prima riga non hanno divergenze, mentre quelli nella seconda riga sono da "sistemare".\\
+Primo termine:
+\begin{align*}
+\lim_{m \rightarrow \infty} \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big(& \tilde \mu_{N_f+1} + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \tilde{\sigma_j} \big) =  \\
+ \lim_{m \rightarrow \infty} \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big(& m_B \frac{N_c}{k(N_f+1)-N_c } + m_A N_f + m_2 + \omega ( \Delta_X - \Delta_M) + \\
+& - m_1   + \sigma'_j \big) 
+ \\
+ \Gamma_h \big( &-  m_B \frac{N_c}{k(N_f+1)-N_c } + m_A N_f - m_2 + \omega ( \Delta_X - \Delta_M)  \\
+&+ m_1  - \sigma'_j \big) 
+\end{align*}
+dove $\sigma'$ è l'espansione di $\tilde{\sigma}$ intorno al suo $vev$. Come prima $m_1 - m_2 = m $
+Ora utilizziamo la formula per il limite della $\Gamma_h$. I due termini si beccano un segno opposto davanti che contribuisce a cancellare i termini che non cambiano segno dopo aver fatto i quadrati. Nessun quadrato sopravvive e solo alcuni termini misti.\\
+Semplificando i prefattori e il secondo termine della formula (che si cancella per via della differenza di segno) ottengo dopo aver posto 
+$$
+ A = \frac{N_c}{k(N_f+1) - N_c} 
+$$
+\begin{align*}
+\sum_j^{k N_f - N_c}- &\big( m_B  A + m_A N_f + \underbrace{{(m_2 - m_1 )}}_{-m} + \omega( \Delta_X - \Delta_M - 1)  + \sigma'_j \big)^2  + \\
+& \big( - m_B  A + m_A N_f \underbrace{- (m_2 - m_1 )}_{m} + \omega( \Delta_X - \Delta_M - 1) - \sigma'_j \big)^2 = \\
+\sum_j^{k N_f - N_c} & 4 \big[  m_B A \left( -  m_A N_f - \omega( \Delta_X - \Delta_M - 1) \right) + m_A N_f ( m  - \sigma'_j ) +\\
+&+ m \, \omega( \Delta_X - \Delta_M - 1) +  \omega( \Delta_X - \Delta_M - 1)( - \sigma'_j) \big]
+\end{align*}
+Isoliamo ora i termini che dipendono da $j$ (che dovranno comunque rimanere sotto il segno di integrale):
+\begin{align*}
+\sum_j^{k N_f - N_c} 4 \sigma'_j \big( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \big) 
+\end{align*}
+Per gli altri termini invece avremo:
+\begin{align*}
+4 ( k N_f - N_c ) \big( & m_B A (  -  m_A N_f - \omega( \Delta_X - \Delta_M - 1)) +\\
+ +  & m ( m_A N_f + \omega( \Delta_X - \Delta_M - 1)) 
+\end{align*}
+
+Secondo termine:
+\begin{align*}
+\lim_{m \rightarrow \infty} \prod_{i=1}^{N_f} \prod_{j=1}^{k } \Gamma_h \big(& - m_a + m_B \frac{N_c}{k(N_f+1)-N_c }- m_A + m_1 + \omega ( \Delta_X - \Delta_Q)+\\
+&  - m_2  + \rho'_j \big) \\
+\Gamma_h \big( & \tilde{m_a} - m_B \frac{N_c}{k(N_f+1)-N_c }- m_A - m_1 + \omega ( \Delta_X - \Delta_Q) +\\
+& + m_2 - \rho'_j \big)
+\end{align*}
+Usando le stesse convenzioni di prima abbiamo abbiamo: 
+\begin{align*}
+\sum_a^{N_f} \sum_j^{k} &  \big(  - m_a + m_B A - m_A + (\underbrace{m_1 - m_2}_{m}) + \omega ( \Delta_X - \Delta_Q - 1) + \rho'_j \big)^2 +\\
+	- &\big(  + \tilde{m}_a - m_B A - m_A - ( \underbrace{m_1 - m_2}_{m})  + \omega ( \Delta_X - \Delta_Q - 1) - \rho'_j \big)^2 = \\
+\end{align*}
+Notiamo che rispetto al caso precedente qui abbiamo le masse reali, che sono diverse fra \emph{left} e \emph{right}, quindi sopravvivono i loro termini.
+\begin{align*}
+\sum_a^{N_f} \sum_j^{k} &  \big[  m_a^2 - \tilde{m}_a^2 + 2 m_a ( \dots )  - 2 \tilde{m	}_a ( \dots) + \\
+ + &4 \big( m_B A ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) - m_A ( m + \rho'_j)  + \\
++ &  m\omega ( \Delta_X - \Delta_Q - 1)  + \omega ( \Delta_X - \Delta_Q - 1) ( \rho'_j) \big)\big]
+\end{align*}
+
+Come fatto prima, esplicitiamo i termini con $\rho'_j$ ( i termini lineari in $m_a$ e $\tilde{m}_a$ non li considero perchè vanno a zero per la condizione $ \mbox{tr}\; m = 0$)
+\begin{align*}
+ 4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) )
+\end{align*}
+Gli altri termini invece sono dati da:
+\begin{align*}
+4 k N_f \big(&  m_B A (- m_A +  \omega ( \Delta_X - \Delta_Q - 1)) + m ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)+ \\
++ &  k \sum_a^{N_f} m_a^2 - \tilde{m}_a^2
+\end{align*}
+\subsubsection{Contributo della materia nell'aggiunta e campo vettoriale }
+Per la materia nell'aggiunta abbiamo:
+\begin{align*}
+& \prod_{ 1 \leq i<j \leq k(N_f+1)- N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} = \\
+& \prod_{ 1 \leq i<j \leq kN_f- N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} 
+ \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )} 
+ \prod_{ \overset{1 \leq i \leq kN_f- N_c }{ 1 \leq j \leq k }} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \rho_j)) }{ \Gamma_h ( \pm (\sigma_i - \rho_j) )} 
+\end{align*}
+I primi due termini rimangono così come sono perchè le parti divergenti si cancellano a vicenda.
+L'esponente dell'ultimo sarà dato da (a meno dei soliti prefattori..):
+\begin{align*}
+\sum_{1 \leq i \leq kN_f- N_c } \sum_{ 1 \leq j \leq k }  \bigg( &  - \left( \omega( \Delta_X -1) + ( -m_1 + m_2)  + \sigma'_i - \rho'_j \right)^2 \\
+& + \left(  \omega( \Delta_X -1) + ( m_1 - m_2)  - \sigma'_i + \rho'_j\right)^2 \\
+& + \left( -\omega  - m_1 + m_2  + \sigma'_i - \rho'_j \right)^2 + \\
+& - \left( -\omega +  m_1 - m_2  - \sigma'_i + \rho'_j\right)^2 
+\bigg)
+\end{align*}
+dove vale $ m_1 - m_2 = m$.\\
+Le ultime due righe hanno segno opposto perchè sono a denominatore nella formula.
+Quindi abbiamo:
+\begin{align*}
+\sum_{1 \leq i \leq kN_f- N_c } \sum_{ 1 \leq j \leq k }  \bigg( &  - \left( \omega( \Delta_X -1) -m  + \sigma'_i - \rho'_j \right)^2  + \left(  \omega( \Delta_X -1) + m  - \sigma'_i + \rho'_j\right)^2 \\
+& -\left(  -m  + \sigma'_i - \rho'_j \right)^2  + \left( m - \sigma'_i + \rho'_j\right)^2 
+\bigg)
+\end{align*}
+Per la prima riga invece abbiamo:
+\begin{align*}
+& \sum_{ \overset{1 \leq i \leq kN_f- N_c }{ 1 \leq j \leq k }} 4 \omega ( \Delta_X -1) ( m - \sigma'_i + \rho'_j)
+\end{align*} 
+Per la seconda riga abbiamo:
+\begin{align*}
+- 4 \omega \left( k ( k N_f - N_c )  ( - m ) + \sum_i^{k N_f - N_c} \sum_j^{k} ( \sigma_i - \rho_j) \right)
+\end{align*}
+Sommando i due contributi otteniamo:
+\begin{align*}
+&  4 \omega \Delta_X \left( k ( k N_f - N_c)   (m ) + \sum_i^{k N_f -N_c} \sum_k^{k }  ( \sigma'_i + \rho'_j)\right)
+\end{align*}
+
+\subsubsection{Somma dei contributi}
+
+
+I termini quadratici nelle masse reali si cancellano con il contributo dato dai mesoni di \ref{eqn:contributo_mesoni}.
+Ora mettiamo insieme tutti i contributi (lascio stare $\rho_i$ e $\sigma_i$:
+\begin{align*}
+\mbox{Mesons}  &\begin{cases}
+\sum_{j=0}^{k-1} 4 N_f   m (- m_A (N_f - 1)  + \omega( \Delta_Q +  \Delta_M + j \Delta_X -1  )  ) + 
+\end{cases}
+\\
+\mbox{Chiral 1}& \begin{cases}
++  4 ( k N_f - N_c ) \big(  m_B A (  -  m_A N_f - \omega( \Delta_X - \Delta_M - 1)) +\\
+ +  m ( m_A N_f + \omega( \Delta_X - \Delta_M - 1)) + \\ 
+   +  4 \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \big) \\
+\end{cases}\\
+\mbox{Chiral 2} & \begin{cases}
+  +    4 k N_f \big(  m_B A (- m_A +  \omega ( \Delta_X - \Delta_Q - 1)) + \\
+  +  m ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)+ \\
++  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) \\
+\end{cases}\\
+\mbox{Adj matter} & \begin{cases}
+	+ m( 4 \omega \Delta_X k ( k N_f - N_C) +\\
+	- 4 k \sum_i \sigma'_i (  \omega \Delta_X ) + \\
+	+ 4 (k N_f - N_c)  \sum_i \rho'_i(  \omega \Delta_X ) 
+\end{cases}
+\end{align*}
+
+
+\subsubsection{Contributi proporzionali a $m$}
+I contributi proporzionali ad $m$ sono:
+\begin{align*}
+ m  &\bigg( - 4 k N_f m_A ( N_f -1) - 4 N_f N_c m_A   + 4 k N_f m m_A (N_f -1)\bigg)  + \\
+  4 m \omega &  \bigg(   k N_f( \Delta_Q + \Delta_M -1 + \frac{(k-1)}{2} \Delta_X )  + (k N_f -N_c) ( \Delta_X - \Delta_M - 1) + k N_f ( \Delta_X - \Delta_Q -1) + \\ 
+  & +  \Delta_X  k ( k N_f - N_C) \bigg)
+ \end{align*}
+Ora usiamo la condizione sulle masse reali:
+\begin{equation}
+	\omega ( - N_c \Delta_X + N_f + 1  ) = \omega ( N_f \Delta_Q + \Delta_M)
+\end{equation}
+da cui:
+\begin{equation}
+	\Delta_M = -N_c \Delta_X + N_f ( 1 - \Delta_Q) + 1 
+\end{equation}
+Otteniamo usando il valore esplicito di $\Delta_X$ e scrivendo $ \frac{k-1}{2} = \frac{k+1}{2} - 1$
+\begin{align*}
+  4m \bigg(& -   N_f N_c m_A  +   \omega \big( k N_f ( \Delta_Q - N_c \Delta_X + N_f ( 1 - \Delta_Q)+ 1 + \overbrace{\frac{k+1}{2}\Delta_X}^{=1} - \Delta_X  -1 \big)  + \\
++& (k N_f -N_c) ( \Delta_X -( - N_c \Delta_X + N_f( 1-\Delta_Q) +1) - 1) +  k N_f (  \Delta_X -\Delta_Q - 1) \big)+ \\
++ &  \Delta_X  k ( k N_f - N_c)  \bigg) 
+\end{align*}
+Semplificando (utilizzando il valore esplicito di $\Delta_X$ primi termini otteniamo:
+\begin{align*}
+ 4 & m \omega N_c \bigg(   -   N_f  m_A 
+ -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
+ + & 4 m \omega (k N_f - N_c) \bigg(
+(\Delta_X - 2 + k \Delta_X )   \bigg)  = \\
+= 4 & m \omega N_c \bigg(    -   N_f  m_A  
+ -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
+ + 4 & m \omega ( k N_f - N_c) \bigg( \Delta_X ( k+1) -2 ) \bigg) = \\
+ = 4 & m \omega N_c \bigg(    -   N_f  m_A 
+ -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \bigg) + \\
+\end{align*}
+\subsubsection{Contribui  proporzionali a $m_B$}
+Il contributo proporzionale a $m_B$ invece è:
+\begin{align*}
+ 4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg( (k N_f - N_c ) ( -m_A N_f - \omega ( \Delta_X - \Delta_M -1) +\\
+ & +  k N_f ( -m_A + \omega ( \Delta_X - \Delta_Q -1) \bigg) = \\
+ =   4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1)  +\omega( \Delta_M - \Delta_Q)) +\\
+ & - N_c ( - m_A N_f - \omega( \Delta_X - \Delta_M-1) \bigg) = \\
+ = 4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1) + \omega ( - N_c \Delta_X + N_f( 1- \Delta_Q) + 1  - \Delta_Q) ) + \\
+ & + N_c (  m_A N_f +  \omega( \Delta_X - (- N_c \Delta_X + N_f( 1- \Delta_Q) + 1)-1) ) \bigg) = \\
+  =  4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1) +\omega( - N_c \Delta_X + N_f - (N_f+1) \Delta_Q) + 1)) +\\
+  & + m_A N_f N_c   + N_c \omega  (    \Delta_X (N_c+1) + N_f( \Delta_Q - 1) - 2) \bigg)
+\end{align*}
+Semplificando le frazioni ove possibile si ottiene:
+\begin{align*}
+& 4 m_B N_c N_f (-m_A) + 4 m_B N_c N_f ( - \omega \Delta_Q)  + 4 m_B N_c^2 \omega \Delta_X \bigg(- 1 + \frac{k+1}{k (N_f+1)-N_c} \bigg) \\
+& + 4 m_B N_c N_f   -8m_B N_c^2 \omega \frac{1}{k (N_f+1) - N_c}  \bigg)
+\end{align*}
+A questo punto esplicitando la R-Carica $\Delta_X$ otteniamo:
+\begin{equation}
+	4 m_B N_C ( - m_A N_f + \omega ( N_f ( 1 - \Delta_Q) - N_c \Delta_X )) \, + \, 4 m_B N_c^2 \omega \frac{1}{k (N_f+1)-N_c} \bigg( \overbrace{\frac{2}{k+1}}^{\Delta_X} (k+1) - 2 \bigg) 	
+\end{equation}
+Come si può vedere matcha esattamente con la fase ottenuta dalla teoria elettrica.
+\begin{equation}
+4 m_B N_C ( - m_A N_f + \omega ( N_f ( 1 - \Delta_Q) - N_c \Delta_X ))
+\end{equation}
+
+
+\subsubsection{Contributi con $\sigma$ e $\rho$}
+Ho anche contributi proporzionali a $\rho$ e a $\sigma$:
+\begin{align*}
+  & 4 \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( \Delta_X(1+k)  - \Delta_M - 1) \big) +  4 N_f \sum_{j=1}^k  \rho'_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) + \\
+  & + 4 (k N_f - N_c)  \sum_i \rho'_i(  \omega \Delta_X )  =  \\
+  = & 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f -  \omega( 1 - \Delta_M) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X( N_f + ( k N_f - N_c) ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f + \omega(  \Delta_M -1 ) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega ( \Delta_X N_f(k+1) - N_c \Delta_X ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \sigma'_j \big( - m_A N_f +  \omega( - N_c \Delta_X + N_f ( 1 - \Delta_Q)) \big) +  4  \sum_{j=1}^k  \rho'_j ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) ) =  \\
+    & = 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))
+\end{align*}
+
+
+
+\subsection{Funzione di partizione nel limite (riassumendo)}
+Vediamo ora di tirare le somme su quanto trovato dopo aver fatto il limite nella parte magnetica.\\
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
+ & c \left( 4 N_c m  ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1} 
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \bigg( \left( \tilde{\sigma}_j +  m_B \frac{N_c}{k(N_f+1)-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)   \bigg) \\
+ & &&\Gamma_h \bigg(  - \left( \tilde{\sigma}_j +m_B \frac{N_c}{k(N_f+1)-N_c} \right) + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  \bigg) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
+ &c \big( 4 ( m_B N_c +  \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  ) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
+ \end{align*}
+ Posso fare un ulteriore shift sul vev di $\sigma$ e $\rho$, a traccia nulla in modo da rinormalizzare le cariche barioniche a $ \frac{N_c}{k N_f - N_c}$ invece di $ \frac{N_c}{k (N_f+1) - N_c}$.
+Questo shift è dato da:
+\begin{align*}
+	& \sigma_i \quad \longrightarrow \quad \sigma_i + \frac{k N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B \\
+	& \rho_i \quad \longrightarrow \quad \rho_i - \frac{N_c }{(k (N_f+1) - N_c)} m_B  
+\end{align*}
+Questo shift non crea alcun problema in quanto è traceless e quindi non contribuisce all'esponenziale dell'ultima riga, l'unico effetto che ha è rinormalzizare le cariche barioniche.\\
+Notiamo che oltre a rinormalizzare le cariche dei quark ``giusti'' elimina la simmetria barionica dai quark della teoria $U(k)$ che sono ora scarichi.\\
+A questo punto la funzione di partizione diventa:
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
+ & c \left( 4 N_c m \, ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1} 
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & &&\Gamma_h \big(  -m_B \frac{N_c}{k N_f -N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
+  &c \big( 4 ( m_B N_c +  \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  ) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
+ \end{align*}
+
+Inoltre si può fare uno shift finito di $\xi$ in modo da eliminare l'ultima riga (eccetto il termine proporzionale alla massa barionica):
+\begin{equation}
+\xi \quad \longrightarrow \quad \xi - 4 \big( -m_a N_f + \omega ( ( -N_c \Delta_X + N_f ( 1 - \Delta_Q)) \big)
+\end{equation}
+ 
+\section{Analisi dualità}
+\subsection{Mirror symmetry del settore $U(k)$}
+A questo punto possiamo capire il rapporto fra le due teorie in questo limite.
+Utilizziamo la seguente identità integrale.\\
+Definendo prima:
+\begin{align*}
+W_{N_c , K } \, ( \mu_a, \nu_b , \tau, \lambda ) = & \frac{\Gamma_h (\tau)^{N_c}}{N_c !}
+\int \prod_{i=1}^{N_c} \, d \sigma_i \, e^{ \frac{i \pi}{2 \omega_1 \omega_2} \left( 2 \lambda
+\, \mbox{tr } \sigma - 2 K \mbox{ tr } \sigma^2 \right)} \prod_{1 \leq i < \leq N_c}
+\frac{ \Gamma_h ( \tau \pm ( \sigma_i - \sigma_j) }{ \Gamma_h  \left( \pm (\sigma_i - \sigma_j \right) } \\
+&  \prod_{i=1}^{N_c} \prod_{a,b=1}^{N_f} \Gamma_h ( \mu_a + \sigma_i) \Gamma_h(\nu_b- \sigma_i)
+\end{align*} 
+Abbiamo (da \citep{vanDeBult:2007}(5.3.15) \& \citep{Amariti:2014iza}(3.18)):
+\begin{align}
+W_{N_c , 0 } \, ( \mu_a, \nu_b , \omega \Delta_X, \lambda )  = \prod_{j=0}^{k-1} \Gamma_h \left( \omega  - j \omega \Delta_X  - \frac{\mu+\nu}{2} \pm \frac{\lambda}{2} \right) 
+\Gamma_h \left( \mu + \nu + j \omega \Delta_X \right)
+\label{dualization-mirror}
+\end{align}
+
+Possiamo utilizzare questa identità integrale sul settore $ U(k)$ (attenzione al fattore $k!$ da considerare).\\
+Prima di dualizzare il settore faccio uno shift in $\xi$ in modo da cancellare i termini dell'ultima riga (proporizonali a $ \sum \sigma + \sum \rho$).\\
+Inoltre bisogna effettuare una dilatazione in $\xi$ in modo da matchare con il termine FI dell'identità (cambia anche la misura).
+Utilizzando le seguenti cariche otteniamo:
+\begin{align*}
+	\mu_a & =  m_A N_f + \omega( \Delta_X - \Delta_M ) \\
+	\nu_a  &=  m_A N_f + \omega( \Delta_X -\Delta_M )\\
+	\tau  & =  \omega \Delta_X  \\
+	\lambda & = \xi
+\end{align*}
+Ottengo l'espressione:
+\begin{align*}
+\prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega(\Delta_X - \Delta_M)) \pm \frac{\xi}{2} \right) \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) 
+\end{align*}
+Il primo termine può essere riscritto come:
+\begin{align*}
+& \prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega( (N_c+1) \Delta_X - N_f (1 - \Delta_Q ) - 1) \pm \frac{\xi}{2} \right) = \\
+= & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+ 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + j)  \right) - m_A N_f 
+ \right) = \\
+ = & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+ 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + ( k - 1 - j )  \right) - m_A N_f \
+ \right) \\
+=   & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j - 1)  \right) - m_A N_f 
+ \right) 
+\end{align*}
+dove nell'ultima riga ho usato il valore esplicito di $\Delta_X$.\\
+Questi termini sono associati a dei singoletti (monopoli elettrici) che hanno le seguenti cariche ( $ j = 0 , \dots , k-1 $):
+\begin{table}[h]
+	\begin{tabular}{| c | c | c | c | c | }
+		\hline 
+			& $ U ( k N_f - N_c) \times U(1)_{mirror}$ & $U(1)_B$ & $U(1)_A$ 	  & $U(1)_R$ \\
+			\hline
+		$b_j$ 	& $ 1_{1}$							&	0		& $-  N_f$ & $ N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c) $ \\
+		$\tilde{b}_j$ 	& $ 1_{-1}$							&	0		& $- N_f$ & $ N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c) $\\	
+		\hline
+	\end{tabular}
+\centering
+\end{table}
+Confrontando con la tabella 6 di \citep{Nii:2014jsa} (vedi anche \citep{Kim:2013cma}) (ricordare che $\Delta_X = \frac{2}{k+1}$).\\
+Posso fare la stessa cosa anche per il secondo termine:
+\begin{align*}
+& \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) = \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + j) - 2 \Delta_M)\right) = \\
+= & \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + ( k - 1 - j) - 2 \Delta_M)\right) =  \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega( 2 -j \Delta_X  - 2 \Delta_M)\right) =
+\end{align*}
+Utilizzando ora l'identità matematica $ \Gamma_h ( 2 \omega - x  ) \Gamma_h ( x  ) =  1 $ otteniamo che questo termine e il singoletto generato dall'$N_f+1$-esima componente dei mesoni si cancellano a vicenda.\\
+Ciò deriva dal fatto che dualizzando il settore $U(k)$ viene generata una massa olomorfa per il singoletto. 
+\begin{equation}
+	W = m M^{\dagger} M \quad \longrightarrow \quad R(M^{\dagger}) = 2 - R (M)
+\end{equation}
+\subsubsection{Primo caso}
+A questo punto la funzione di partizione diventa ( strippando il fattore divergente):
+\begin{align*}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{(2 \pi i )^{k(N_f+1) - N_c}}\frac{k!}{ (k(N_f+1) - N_c)! }
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ k N_f - N_c -1}  \\
+  & c \left( 4 N_c m_B) ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1} 
+\prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \, 
+\frac{d \xi}{2 \omega_1 \omega_2} \, e^{ \frac{\pi i }{ 2 \omega_1 \omega_2} 2 \xi  \sum \sigma_i }  \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} 
+  \\&
+\begin{aligned}
+   &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  	
+   && \Gamma_h \big( m_B \frac{N_c}{ k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & && \Gamma_h \big(  -m_B \frac{N_c}{k N_f-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j \big)  \bigg)
+  \end{aligned}
+  \\
+  & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f 
+ \right) 
+\end{align*}
+Si può effettuare un ulteriore shift in $\sigma$:
+\begin{equation}
+	\tilde{\sigma} \; \longrightarrow \;  \tilde{\sigma }  -m_B \frac{N_c}{k N_f-N_c}  
+\end{equation}
+Con questo shift i quark si scaricano sotto  $U(1)_B$, ma si genera un termine di Chern-simons misto fra l'$U(1)_J$ e $U(1)_B$:
+\begin{equation}
+	e^{ \frac{\pi i }{ 2 \omega_1 \omega_2} 2 \xi \left( -m_B N_c   + \sum \tilde{\sigma} \right) }
+\end{equation}
+A questo punto le cariche si posson leggere direttamente dalla funzione di partizione e si può vedere che sono identiche alle cariche di \citep{Nii:2014jsa} (tenere conto che per me $j = 0, \dots ,k-1$, per lui $b_i$ partono da 1 (a caso!))
+\begin{table} [hb]
+\centering
+\begin{tabular}{|c |c |c |c |c |c |c |}
+\hline
+ $ j =0, \dots , k-1$& $SU(N_f)_L$ & $SU(N_f)_R$ & $U(1)_B$ & $U(1)_A$ & $U(1)_J$ & $U(1)_R $ \\
+\hline
+ Electric Fields  & & & & & & \\
+\hline
+$Q$ & $N_f$ & 0  &$ N_c $& $1 $& 0  & $\Delta_Q$ \\
+$\tilde{Q} $  & 0  &$\overline{N_f}$ & $ - N_c $& $1 $ & 0 & $\Delta_Q$ \\
+$X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
+\hline
+Magnetic Fields & & & & & & \\
+\hline 
+$q$ & $\overline{N_f}$ & 0  & $\frac{N_c}{k N_f - N_c} $ & $-1 $ & 0  & $\Delta_X - \Delta_Q$ \\
+$\tilde{q} $  & 0  &$N_f$ & $-\frac{N_c}{k N_f - N_c}$ & $- 1 $ & 0 &$\Delta_X - \Delta_Q$ \\
+$X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\ 
+$M_j $ & $N_f$ & $\overline{N_f}$ & 0 & 0 & 0 & $2 \Delta_Q + j \Delta_X$\\ 
+$b_j$ & 0  & 0 & 0  &  $ -N_f$ & $ \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j - N_c) $ \\
+ $\tilde{b} _j$ & 0  & 0 & 0  &  $ - N_f$ & $ - \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j - N_c) $ \\
+\hline
+\end{tabular}
+
+\end{table}
+
+\subsubsection{Secondo caso}
+Possiamo fare lo shift in $\sigma$ che abbiamo fatto poco sopra prima di dualizzare il settore $U(k)$ invece che dopo.
+A questo punto si può fare uno shift traceless che coinvolge anche $\rho$. Così facendo spostiamo la simmetria barionica sul quark del settore duale, scaricando come prima i quark "giusti". Notare che prima di fare ciò il quark $U(k)$ è scarico sotto la simmetria barionica dopo la rinormalizzazione della carica barionica.\\
+Lo shift è il seguente:
+\begin{equation}
+\sigma \; \longrightarrow \; \sigma - m_B \frac{N_c}{k N_f - N_c } \qquad \rho \; \longrightarrow \; \rho + m_B \frac{N_c}{k}
+\end{equation}
+Notare che $ \mbox{tr }  (\sigma + \rho ) = 0$.\\
+Vediamo come modifica la funzione di partizione (e le cariche) [ NOTA BENE, non ho ancora dualizzato!]:
+\begin{align*}
+ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
+ &  \left( \prod_{j=0}^{k-1} 
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big(  - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & &&\Gamma_h \big(  \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \left(\rho_i  + m_B \frac{N_c}{k} \right)+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
+  &c \big( 4  m_B N_c  ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
+ \end{align*}
+A questo punto si può dualizzare il settore $U(k)$ come fatto precedentemente.\\
+Analizzando la formula \ref{dualization-mirror} si vede come essa non risenta di termini di segno opposto nelle masse reali: compare sempre $\mu + \nu$ e quindi vediamo che dopo aver dualizzato non rimane alcune segno della simmetria barionica (come è giusto che sia).\\
+La funzione di partizione è ora molto simile a quella del primo caso con già l'ultimo shift in $\sigma$ effettuato. \\
+\textbf{ La differenza sta però nel fatto che non viene generato alcune fase di tipo $k_{BJ}$ e le cariche coincidono.}
+Se ora shifto $\sigma$ genero $k_{BJ}$ ma rimetto carichi i quark ``giusti''.
+
+\subsection{Contact terms e $k_{IJ}$}
+Posso controllare le fasi presenti nella funzione di partizione calcolando il livello di Chern-Simons misto $k_{IJ}$ di due simmetrie utilizzando la formula:
+\begin{equation}
+  k^{eff}_{IJ} = k + \frac{1}{2} \sum_{fermions f } q^f_I q^f_J \, \sign (\mu_{f})
+\end{equation}
+Nella somma sui fermioni va considerato la loro ``molteplicità'', ossia anche la dimensione delle rappresentazioni in cui stanno.\\
+
+\subsubsection{$k_{BA}$}
+Posso calcolare questo contact terms in entrambi i casi e il risultato è ovviamente uguale in entrambi e matcha con quello elettrico.
+Il segno di $\mu_f$ è quello tale per cui il livello rimane positivo ( stessa convenzione  di antonio).
+\begin{align*}
+  &\mbox{Elettrico:}\\
+  k^e_{BA} & = \frac{1}{2}  q^f_B q^f_A \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 \cdot 1 \, \sign (\mu) + 1 \cdot (-1) \sign ( - \mu) \right) \\
+  & = N_f N_c \\
+  & \mbox{Magnetico: primo caso}\\
+  k^{m_1}_{BA} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} = N_f N_c \\
+  & \mbox{Magnetico: secondo caso}\\
+  k^{m_2}_{BA} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right) (N_f)  = N_f N_c 
+\end{align*}
+I livelli sono uguali in tutti i casi e infatti le fasi nella funzione di partizione sono identiche in tutti e tre i casi (e dovrei dimostrare che le fasi son generate da questi livelli: c'è un fattore di (-4) di differenza, è dovuto a come entra nell'azione. CONTROLLARE)
+
+\subsubsection{$k_{BR}$}
+Utilizziamo la stessa formula per calcolare questo livello, che dovrebbe essere identico in tutti e tre i casi (come prima).
+\begin{align*}
+ &\mbox{Elettrico:}\\
+  k^e_{BR} & = \frac{1}{2}  q^f_B q^f_R \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 ( \Delta_Q - 1)  \, \sign (\mu) + -1 ( \Delta_Q - 1) \sign ( - \mu) \right) \\
+  & = N_f N_c ( \Delta_Q - 1)  \\
+  & \mbox{Magnetico: primo caso}\\
+  k^{m_1}_{BR} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} ( \Delta_X - \Delta_Q - 1) = N_f N_c ( \Delta_X - \Delta_Q - 1) \\
+  & \mbox{Magnetico: secondo caso}\\
+  k^{m_2}_{BR} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right)  (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q)) =  N_c (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q))
+\end{align*}
+
+
+\subsubsection{$k_{BJ}$}
+Non c'è modo di generare $k_{BJ}$ con quella formula, visto che nessun campo è carico sotto $U(1)_B$ e $U(1)_J$ insieme..
+
+
+\newpage
+\bibliographystyle{jhep}
+\bibliography{bibliografia}
+\end{document}
+ 

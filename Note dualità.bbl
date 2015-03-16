@@ -1,0 +1,38 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Amariti:2014iza}
+A.~Amariti and C.~Klare, {\it {A journey to 3d: exact relations for adjoint
+  SQCD from dimensional reduction}},
+  \href{http://arxiv.org/abs/1409.8623}{{\tt arXiv:1409.8623}}.
+
+\bibitem{Dolan:2008qi}
+F.~Dolan and H.~Osborn, {\it {Applications of the Superconformal Index for
+  Protected Operators and q-Hypergeometric Identities to N=1 Dual Theories}},
+  {\em Nucl.Phys.} {\bf B818} (2009) 137--178,
+  [\href{http://arxiv.org/abs/0801.4947}{{\tt arXiv:0801.4947}}].
+
+\bibitem{vanDeBult:2007}
+F.~van~de Bult, {\it Hyperbolic hypergeometric functions},  {\em Master thesis}
+  (2007).
+
+\bibitem{Spiridonov:2009za}
+V.~Spiridonov and G.~Vartanov, {\it {Elliptic Hypergeometry of Supersymmetric
+  Dualities}},  {\em Commun.Math.Phys.} {\bf 304} (2011) 797--874,
+  [\href{http://arxiv.org/abs/0910.5944}{{\tt arXiv:0910.5944}}].
+
+\bibitem{Aharony:2013dha}
+O.~Aharony, S.~S. Razamat, N.~Seiberg, and B.~Willett, {\it {3d dualities from
+  4d dualities}},  {\em JHEP} {\bf 1307} (2013) 149,
+  [\href{http://arxiv.org/abs/1305.3924}{{\tt arXiv:1305.3924}}].
+
+\bibitem{Nii:2014jsa}
+K.~Nii, {\it {3d duality with adjoint matter from 4d duality}},  {\em JHEP}
+  {\bf 1502} (2015) 024, [\href{http://arxiv.org/abs/1409.3230}{{\tt
+  arXiv:1409.3230}}].
+
+\bibitem{Kim:2013cma}
+H.~Kim and J.~Park, {\it {Aharony Dualities for 3d Theories with Adjoint
+  Matter}},  {\em JHEP} {\bf 1306} (2013) 106,
+  [\href{http://arxiv.org/abs/1302.3645}{{\tt arXiv:1302.3645}}].
+
+\end{thebibliography}\endgroup
