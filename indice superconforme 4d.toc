@@ -11,6 +11,7 @@
 \contentsline {subsection}{\numberline {1.4}Funzione di partizione}{11}{subsection.1.4}
 \contentsline {subsubsection}{\numberline {1.4.1}Masse reali e flow senza $\eta $}{11}{subsubsection.1.4.1}
 \contentsline {subsubsection}{\numberline {1.4.2}Limite per $m \rightarrow \infty $}{13}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Funzione di partizione finale}{14}{subsection.1.5}
 \contentsline {section}{\numberline {2} Teoria Magnetica}{15}{section.2}
 \contentsline {subsection}{\numberline {2.1}Calcolo dell'indice superconforme}{15}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Contributo dei campi chirali}{15}{subsubsection.2.1.1}
@@ -28,7 +29,9 @@
 \contentsline {subsubsection}{\numberline {2.6.4}Somma dei contributi}{29}{subsubsection.2.6.4}
 \contentsline {subsubsection}{\numberline {2.6.5}Contributi proporzionali a $m$}{30}{subsubsection.2.6.5}
 \contentsline {subsubsection}{\numberline {2.6.6}Contribui proporzionali a $m_B$}{31}{subsubsection.2.6.6}
-\contentsline {subsubsection}{\numberline {2.6.7}Contributo dei termini misti}{31}{subsubsection.2.6.7}
-\contentsline {subsubsection}{\numberline {2.6.8}Contributi con $\sigma $ e $\rho $}{32}{subsubsection.2.6.8}
+\contentsline {subsubsection}{\numberline {2.6.7}Contributi con $\sigma $ e $\rho $}{32}{subsubsection.2.6.7}
 \contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{32}{subsection.2.7}
 \contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{34}{section.3}
+\contentsline {subsection}{\numberline {3.1}Mirror symmetry del settore $U(k)$}{34}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Primo caso}{35}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Secondo caso}{37}{subsubsection.3.1.2}

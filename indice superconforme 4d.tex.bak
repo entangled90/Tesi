@@ -1152,7 +1152,11 @@ Questo shift è dato da:
 	& \sigma_i \quad \longrightarrow \quad \sigma_i + \frac{k N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B \\
 	& \rho_i \quad \longrightarrow \quad \rho_i - \frac{N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B  
 \end{align*}
-Questo shift non crea alcun problema in quanto è traceless e quindi non contribuisce all'esponenziale dell'ultima riga, l'unico effetto che ha è rinormalzizare le cariche barioniche.
+Questo shift non crea alcun problema in quanto è traceless e quindi non contribuisce all'esponenziale dell'ultima riga, l'unico effetto che ha è rinormalzizare le cariche barioniche.\\
+Inoltre si può fare uno shift finito di $\xi$ in modo da eliminare l'ultima riga:
+\begin{equation}
+\xi \quad \longrightarrow \quad \xi +  m_a N_f - \omega ( ( -N_c \Delta_X + N_f ( 1 - \Delta_Q))
+\end{equation}
 A questo punto la funzione di partizione diventa:
 \begin{align*}
 Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
@@ -1166,9 +1170,8 @@ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N
  &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
  & &&\Gamma_h \big(  -m_B \frac{N_c}{k N_f -N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
  \end{aligned}\\
- & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
- &c \big( 4 ( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big) 
-\end{align*}
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)
+ \end{align*}
 
 
  
@@ -1266,7 +1269,6 @@ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{(2 \p
   N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f 
  \right) 
 \end{align*}
-I campi di questa funzione di p
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{bibliografia}
