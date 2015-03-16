@@ -33,5 +33,9 @@
 \contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{32}{subsection.2.7}
 \contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{34}{section.3}
 \contentsline {subsection}{\numberline {3.1}Mirror symmetry del settore $U(k)$}{34}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Primo caso}{35}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Primo caso}{36}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Secondo caso}{37}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Contact terms e $k_{IJ}$}{38}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}$k_{BA}$}{39}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}$k_{BR}$}{39}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}$k_{BJ}$}{39}{subsubsection.3.2.3}

@@ -1,5 +1,4 @@
 \documentclass[a4paper,12pt]{article}
-\pdfoutput=1
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 %%\usepackage{mathtools}
@@ -1211,7 +1210,6 @@ W_{N_c , 0 } \, ( \mu_a, \nu_b , \omega \Delta_X, \lambda )  = \prod_{j=0}^{k-1}
 \label{dualization-mirror}
 \end{align}
 
-\subsubsection{Primo caso}
 Possiamo utilizzare questa identità integrale sul settore $ U(k)$ (attenzione al fattore $k!$ da considerare).\\
 Prima di dualizzare il settore faccio uno shift in $\xi$ in modo da cancellare i termini dell'ultima riga (proporizonali a $ \sum \sigma + \sum \rho$).\\
 Inoltre bisogna effettuare una dilatazione in $\xi$ in modo da matchare con il termine FI dell'identità (cambia anche la misura).
@@ -1263,6 +1261,7 @@ Ciò deriva dal fatto che dualizzando il settore $U(k)$ viene generata una massa
 \begin{equation}
 	W = m M^{\dagger} M \quad \longrightarrow \quad R(M^{\dagger}) = 2 - R (M)
 \end{equation}
+\subsubsection{Primo caso}
 A questo punto la funzione di partizione diventa ( strippando il fattore divergente):
 \begin{align*}
 Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{(2 \pi i )^{k(N_f+1) - N_c}}\frac{k!}{ (k(N_f+1) - N_c)! }
@@ -1329,7 +1328,6 @@ Vediamo come modifica la funzione di partizione (e le cariche) [ NOTA BENE, non 
 \begin{align*}
  Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{ (k(N_f+1) - N_c)! (2 \pi i )^{k(N_f+1) - N_c}}
  \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
- & c \left( 4 N_c m \, ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
  &  \left( \prod_{j=0}^{k-1} 
 \bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
 &\int_{T^{\tilde{N}_c}}  \prod_{i=1}^{ k N_f - N_c } d \sigma_i \,  \prod_{i=1}^{ k } d \rho_i \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
@@ -1346,6 +1344,45 @@ Analizzando la formula \ref{dualization-mirror} si vede come essa non risenta di
 La funzione di partizione è ora molto simile a quella del primo caso con già l'ultimo shift in $\sigma$ effettuato. \\
 \textbf{ La differenza sta però nel fatto che non viene generato alcune fase di tipo $k_{BJ}$ e le cariche coincidono.}
 Se ora shifto $\sigma$ genero $k_{BJ}$ ma rimetto carichi i quark ``giusti''.
+
+\subsection{Contact terms e $k_{IJ}$}
+Posso controllare le fasi presenti nella funzione di partizione calcolando il livello di Chern-Simons misto $k_{IJ}$ di due simmetrie utilizzando la formula:
+\begin{equation}
+  k^{eff}_{IJ} = k + \frac{1}{2} \sum_{fermions f } q^f_I q^f_J \, \sign (\mu_{f})
+\end{equation}
+Nella somma sui fermioni va considerato la loro ``molteplicità'', ossia anche la dimensione delle rappresentazioni in cui stanno.\\
+
+\subsubsection{$k_{BA}$}
+Posso calcolare questo contact terms in entrambi i casi e il risultato è ovviamente uguale in entrambi e matcha con quello elettrico.
+Il segno di $\mu_f$ è quello tale per cui il livello rimane positivo ( stessa convenzione  di antonio).
+\begin{align*}
+  &\mbox{Elettrico:}\\
+  k^e_{BA} & = \frac{1}{2}  q^f_B q^f_A \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 \cdot 1 \, \sign (\mu) + 1 \cdot (-1) \sign ( - \mu) \right) \\
+  & = N_f N_c \\
+  & \mbox{Magnetico: primo caso}\\
+  k^{m_1}_{BA} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} = N_f N_c \\
+  & \mbox{Magnetico: secondo caso}\\
+  k^{m_2}_{BA} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right) (N_f)  = N_f N_c 
+\end{align*}
+I livelli sono uguali in tutti i casi e infatti le fasi nella funzione di partizione sono identiche in tutti e tre i casi (e dovrei dimostrare che le fasi son generate da questi livelli: c'è un fattore di (-4) di differenza, è dovuto a come entra nell'azione. CONTROLLARE)
+
+\subsubsection{$k_{BR}$}
+Utilizziamo la stessa formula per calcolare questo livello, che dovrebbe essere identico in tutti e tre i casi (come prima).
+\begin{align*}
+ &\mbox{Elettrico:}\\
+  k^e_{BR} & = \frac{1}{2}  q^f_B q^f_R \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 ( \Delta_Q - 1)  \, \sign (\mu) + -1 ( \Delta_Q - 1) \sign ( - \mu) \right) \\
+  & = N_f N_c ( \Delta_Q - 1)  \\
+  & \mbox{Magnetico: primo caso}\\
+  k^{m_1}_{BR} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} ( \Delta_X - \Delta_Q - 1) = N_f N_c ( \Delta_X - \Delta_Q - 1) \\
+  & \mbox{Magnetico: secondo caso}\\
+  k^{m_2}_{BR} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right)  (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q)) =  N_c (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q))
+\end{align*}
+
+
+\subsubsection{$k_{BJ}$}
+Non c'è modo di generare $k_{BJ}$ con quella formula, visto che nessun campo è carico sotto $U(1)_B$ e $U(1)_J$ insieme..
+
+
 \newpage
 \bibliographystyle{jhep}
 \bibliography{bibliografia}
