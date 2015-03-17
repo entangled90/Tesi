@@ -537,7 +537,8 @@ Utilizziamo la condizione \ref{eqn:R-symm Anomaly} utilizzando questa assegnazio
 \end{equation}
 Utilizziamo questa relazione nell'esponenziale precedente (in modo da non avere termini che dipendono dal campo che ha massa che tende a infinito):
 \begin{align*}
-c \left( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) -  m_A N_f )\,  c( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big ( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f ) \big) \right)\\
+&c \left( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) -  m_A N_f )\right)\,  \\
+&c\left( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big ( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f ) \big) \right)\\
 \end{align*}
 
 
@@ -548,7 +549,7 @@ La funzione di partizione finale è data da:
  Z_{el} ( \mu_i , \nu_i ) = &
  \frac{1}{ (2 \ \pi i)^{N_c} }{1 \over N_c ! } 
 \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{N_c-1} \\
-& c \big( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) -  m_A N_f ) \big) \\
+& c \big( 4 N_c  ( m  + m_B ) (-  m_A N_f   + \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) ) \big) \\
 &\int_{T^{N_c-1}}  
 \prod_{i=1}^{N_c} d \sigma_i \, \delta( \sum_i \sigma_i) \,  c \left( 4\big( \sum_{i=1}^{N_c}	 \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right)\\
 & \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)\\
@@ -1309,8 +1310,8 @@ $q$ & $\overline{N_f}$ & 0  & $\frac{N_c}{k N_f - N_c} $ & $-1 $ & 0  & $\Delta_
 $\tilde{q} $  & 0  &$N_f$ & $-\frac{N_c}{k N_f - N_c}$ & $- 1 $ & 0 &$\Delta_X - \Delta_Q$ \\
 $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\ 
 $M_j $ & $N_f$ & $\overline{N_f}$ & 0 & 0 & 0 & $2 \Delta_Q + j \Delta_X$\\ 
-$b_j$ & 0  & 0 & 0  &  $ -N_f$ & $ \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j - N_c) $ \\
- $\tilde{b} _j$ & 0  & 0 & 0  &  $ - N_f$ & $ - \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j - N_c) $ \\
+$b_j$ & 0  & 0 & 0  &  $ -N_f$ & $ \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c) $ \\
+ $\tilde{b} _j$ & 0  & 0 & 0  &  $ - N_f$ & $ - \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c) $ \\
 \hline
 \end{tabular}
 
@@ -1349,8 +1350,18 @@ Se ora shifto $\sigma$ genero $k_{BJ}$ ma rimetto carichi i quark ``giusti''.
 Posso controllare le fasi presenti nella funzione di partizione calcolando il livello di Chern-Simons misto $k_{IJ}$ di due simmetrie utilizzando la formula:
 \begin{equation}
   k^{eff}_{IJ} = k + \frac{1}{2} \sum_{fermions f } q^f_I q^f_J \, \sign (\mu_{f})
+  \label{eqn:contact-terms}
 \end{equation}
 Nella somma sui fermioni va considerato la loro ``molteplicità'', ossia anche la dimensione delle rappresentazioni in cui stanno.\\
+Questa formula vale anche per simmetrie globali gauggiate con background gauging ( \citep{Aharony:1997bx}). Infatti gli stessi diagrammi che generano \ref{eqn:contact-terms} generano anche termini del tipo 
+$
+  \int d^4 \theta \Sigma_b V 
+$
+che non sono altro che FI terms per il supercampo di gauge $V$ (con il valore dello scalare nel multipletto lineare (ricorda che D ha 4 $\theta$)).
+
+
+
+
 
 \subsubsection{$k_{BA}$}
 Posso calcolare questo contact terms in entrambi i casi e il risultato è ovviamente uguale in entrambi e matcha con quello elettrico.
@@ -1384,6 +1395,7 @@ Non c'è modo di generare $k_{BJ}$ con quella formula, visto che nessun campo è
 
 
 \newpage
+\nocite{*}
 \bibliographystyle{jhep}
 \bibliography{bibliografia}
 \end{document}

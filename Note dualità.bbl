@@ -1,4 +1,4 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
 \bibitem{Amariti:2014iza}
 A.~Amariti and C.~Klare, {\it {A journey to 3d: exact relations for adjoint
@@ -34,5 +34,27 @@ K.~Nii, {\it {3d duality with adjoint matter from 4d duality}},  {\em JHEP}
 H.~Kim and J.~Park, {\it {Aharony Dualities for 3d Theories with Adjoint
   Matter}},  {\em JHEP} {\bf 1306} (2013) 106,
   [\href{http://arxiv.org/abs/1302.3645}{{\tt arXiv:1302.3645}}].
+
+\bibitem{Aharony:1997bx}
+O.~Aharony, A.~Hanany, K.~A. Intriligator, N.~Seiberg, and M.~Strassler, {\it
+  {Aspects of N=2 supersymmetric gauge theories in three-dimensions}},  {\em
+  Nucl.Phys.} {\bf B499} (1997) 67--99,
+  [\href{http://arxiv.org/abs/hep-th/9703110}{{\tt hep-th/9703110}}].
+
+\bibitem{Benini:2011mf}
+F.~Benini, C.~Closset, and S.~Cremonesi, {\it {Comments on 3d Seiberg-like
+  dualities}},  {\em JHEP} {\bf 1110} (2011) 075,
+  [\href{http://arxiv.org/abs/1108.5373}{{\tt arXiv:1108.5373}}].
+
+\bibitem{Closset:2012vp}
+C.~Closset, T.~T. Dumitrescu, G.~Festuccia, Z.~Komargodski, and N.~Seiberg,
+  {\it {Comments on Chern-Simons Contact Terms in Three Dimensions}},  {\em
+  JHEP} {\bf 1209} (2012) 091, [\href{http://arxiv.org/abs/1206.5218}{{\tt
+  arXiv:1206.5218}}].
+
+\bibitem{Amariti:2014lla}
+A.~Amariti and C.~Klare, {\it {Chern-Simons and RG Flows: Contact with
+  Dualities}},  {\em JHEP} {\bf 1408} (2014) 144,
+  [\href{http://arxiv.org/abs/1405.2312}{{\tt arXiv:1405.2312}}].
 
 \end{thebibliography}\endgroup
