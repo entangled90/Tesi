@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.3.4)  17 MAR 2015 11:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.3.4)  18 MAR 2015 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,7 +916,7 @@ Overfull \hbox (11.3876pt too wide) in paragraph at lines 1206--1206
  []
 
 [34]
-Overfull \hbox (33.85631pt too wide) in paragraph at lines 1227--1227
+Overfull \hbox (33.85631pt too wide) in paragraph at lines 1228--1228
 [] 
  []
 
@@ -924,87 +924,87 @@ Overfull \hbox (33.85631pt too wide) in paragraph at lines 1227--1227
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (53.3725pt too wide) in paragraph at lines 1259--1259
+Overfull \hbox (53.3725pt too wide) in paragraph at lines 1260--1260
 [] 
  []
 
 [35]
-Overfull \hbox (41.96983pt too wide) in paragraph at lines 1285--1285
+Overfull \hbox (41.96983pt too wide) in paragraph at lines 1286--1286
 [] 
  []
 
-[36]
-Overfull \hbox (94.75633pt too wide) in paragraph at lines 1297--1317
+
+Overfull \hbox (94.75633pt too wide) in paragraph at lines 1290--1310
  [][] 
  []
 
-
-Overfull \hbox (54.21385pt too wide) in paragraph at lines 1342--1342
+[36]
+Overfull \hbox (54.21385pt too wide) in paragraph at lines 1335--1335
 [] 
  []
 
 [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1349.
+(hyperref)                removing `math shift' on input line 1342.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1349.
+(hyperref)                removing `subscript' on input line 1342.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1349.
+(hyperref)                removing `math shift' on input line 1342.
 
 [38]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1366.
+(hyperref)                removing `math shift' on input line 1359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1366.
+(hyperref)                removing `subscript' on input line 1359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1366.
+(hyperref)                removing `math shift' on input line 1359.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1380.
+(hyperref)                removing `math shift' on input line 1373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1380.
+(hyperref)                removing `subscript' on input line 1373.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1380.
+(hyperref)                removing `math shift' on input line 1373.
 
 
-Overfull \hbox (21.47882pt too wide) in paragraph at lines 1390--1390
+Overfull \hbox (21.47882pt too wide) in paragraph at lines 1383--1383
 [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1393.
+(hyperref)                removing `math shift' on input line 1386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1393.
+(hyperref)                removing `subscript' on input line 1386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1393.
+(hyperref)                removing `math shift' on input line 1386.
 
 [39] (./Note dualità.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1401.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1394.
  [40]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1401.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1394.
  (./Note dualità.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1401.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1401.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1394.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1394.
 
 Package rerunfilecheck Info: File `"Note dualità".out' has not changed.
 (rerunfilecheck)             Checksum: 57DAB12A5AF0BB5FEC6A33ACE48CDE13;3131.
@@ -1014,9 +1014,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7833 strings out of 493108
- 107803 string characters out of 6140726
- 220012 words of memory out of 5000000
+ 7831 strings out of 493108
+ 107779 string characters out of 6140726
+ 221012 words of memory out of 5000000
  11031 multiletter control sequences out of 15000+600000
  17618 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1038,9 +1038,9 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Note dualità.pdf" (42 pages, 449762 bytes).
+Output written on "Note dualità.pdf" (42 pages, 449209 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
  313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

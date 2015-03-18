@@ -1219,7 +1219,8 @@ Utilizzando le seguenti cariche otteniamo:
 	\mu_a & =  m_A N_f + \omega( \Delta_X - \Delta_M ) \\
 	\nu_a  &=  m_A N_f + \omega( \Delta_X -\Delta_M )\\
 	\tau  & =  \omega \Delta_X  \\
-	\lambda & = \xi
+	\lambda & = \xi\\
+	\mbox{Seiberg usa: } & \lambda = 2 \xi
 \end{align*}
 Ottengo l'espressione:
 \begin{align*}
@@ -1279,19 +1280,11 @@ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} ) \,= & \, \frac{1}{(2 \p
  & && \Gamma_h \big(  -m_B \frac{N_c}{k N_f-N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j \big)  \bigg)
   \end{aligned}
   \\
-  & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
+  & \prod_{j'=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left( 
   N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j')  \right) - m_A N_f 
  \right) 
 \end{align*}
-Si può effettuare un ulteriore shift in $\sigma$:
-\begin{equation}
-	\tilde{\sigma} \; \longrightarrow \;  \tilde{\sigma }  -m_B \frac{N_c}{k N_f-N_c}  
-\end{equation}
-Con questo shift i quark si scaricano sotto  $U(1)_B$, ma si genera un termine di Chern-simons misto fra l'$U(1)_J$ e $U(1)_B$:
-\begin{equation}
-	e^{ \frac{\pi i }{ 2 \omega_1 \omega_2} 2 \xi \left( -m_B N_c   + \sum \tilde{\sigma} \right) }
-\end{equation}
-A questo punto le cariche si posson leggere direttamente dalla funzione di partizione e si può vedere che sono identiche alle cariche di \citep{Nii:2014jsa} (tenere conto che per me $j = 0, \dots ,k-1$, per lui $b_i$ partono da 1 (a caso!))
+A questo punto le cariche si posson leggere direttamente dalla funzione di partizione e si può vedere che sono diverse rispetto alle cariche di \citep{Nii:2014jsa}: lui ha tutti i campi scarichi secondo $U(1)_B$, ma è un po' ambiguo. (tenere conto che per me $j = 0, \dots ,k-1$, per lui $b_i$ partono da 1 (a caso!))
 \begin{table} [hb]
 \centering
 \begin{tabular}{|c |c |c |c |c |c |c |}
@@ -1300,8 +1293,8 @@ A questo punto le cariche si posson leggere direttamente dalla funzione di parti
 \hline
  Electric Fields  & & & & & & \\
 \hline
-$Q$ & $N_f$ & 0  &$ N_c $& $1 $& 0  & $\Delta_Q$ \\
-$\tilde{Q} $  & 0  &$\overline{N_f}$ & $ - N_c $& $1 $ & 0 & $\Delta_Q$ \\
+$Q$ & $N_f$ & 0  &$ 1 $& $1 $& 0  & $\Delta_Q$ \\
+$\tilde{Q} $  & 0  &$\overline{N_f}$ & $ - 1$& $1 $ & 0 & $\Delta_Q$ \\
 $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
 \hline
 Magnetic Fields & & & & & & \\
@@ -1309,7 +1302,7 @@ Magnetic Fields & & & & & & \\
 $q$ & $\overline{N_f}$ & 0  & $\frac{N_c}{k N_f - N_c} $ & $-1 $ & 0  & $\Delta_X - \Delta_Q$ \\
 $\tilde{q} $  & 0  &$N_f$ & $-\frac{N_c}{k N_f - N_c}$ & $- 1 $ & 0 &$\Delta_X - \Delta_Q$ \\
 $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\ 
-$M_j $ & $N_f$ & $\overline{N_f}$ & 0 & 0 & 0 & $2 \Delta_Q + j \Delta_X$\\ 
+$M_j $ & $N_f$ & $\overline{N_f}$ & 0 & 2 & 0 & $2 \Delta_Q + j \Delta_X$\\ 
 $b_j$ & 0  & 0 & 0  &  $ -N_f$ & $ \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c) $ \\
  $\tilde{b} _j$ & 0  & 0 & 0  &  $ - N_f$ & $ - \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c) $ \\
 \hline
@@ -1390,7 +1383,7 @@ Utilizziamo la stessa formula per calcolare questo livello, che dovrebbe essere 
 \end{align*}
 
 
-\subsubsection{$k_{BJ}$}
+\subsubsection{$k_{BJ}$} 
 Non c'è modo di generare $k_{BJ}$ con quella formula, visto che nessun campo è carico sotto $U(1)_B$ e $U(1)_J$ insieme..
 
 
