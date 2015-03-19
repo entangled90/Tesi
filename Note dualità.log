@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.3.4)  18 MAR 2015 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.3.4)  18 MAR 2015 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,40 +637,40 @@ Package JHEP Warning: E-mails are missing.
 
 [0
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Note dualità.toc
-[1])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Note dualità.toc)
 \tf@toc=\write4
 \openout4 = `"Note dualità.toc"'.
 
- [1]
+
+[1] [2]
 Overfull \hbox (33.28592pt too wide) in paragraph at lines 66--66
 [] 
  []
 
-[2]
+[3]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 104.
 
-[3] [4]
+[4] [5]
 Overfull \hbox (36.00584pt too wide) in paragraph at lines 175--175
 [] 
  []
 
-[5]
+[6]
 
 LaTeX Warning: Command \i invalid in math mode on input line 236.
 
 
 LaTeX Warning: Command \i invalid in math mode on input line 241.
 
-[6]
+[7]
 Overfull \hbox (62.5206pt too wide) in paragraph at lines 253--253
 [] 
  []
 
-[7]
+[8]
 Overfull \hbox (9.97978pt too wide) in paragraph at lines 291--291
 [] 
  []
@@ -680,7 +680,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
-[8]
+[9]
 Overfull \hbox (47.01854pt too wide) in paragraph at lines 336--336
 [] 
  []
@@ -690,7 +690,7 @@ Overfull \hbox (60.64447pt too wide) in paragraph at lines 361--361
 [] 
  []
 
-[9] [10]
+[10] [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 435.
@@ -713,12 +713,12 @@ Overfull \hbox (49.72446pt too wide) in paragraph at lines 446--446
 [] 
  []
 
-[11]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 493--497
 
  []
 
-[12]
+[13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 504.
@@ -740,17 +740,17 @@ Overfull \hbox (10.15468pt too wide) in paragraph at lines 528--528
 [] 
  []
 
-[13] [14] [15]
+[14] [15] [16]
 Overfull \hbox (8.51816pt too wide) in paragraph at lines 662--662
 [] 
  []
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 696--698
 
  []
 
-[17]
+[18]
 Overfull \hbox (29.0627pt too wide) in paragraph at lines 709--709
 [] 
  []
@@ -760,7 +760,7 @@ Overfull \hbox (50.90819pt too wide) in paragraph at lines 722--722
 [] 
  []
 
-[18]
+[19]
 Overfull \hbox (60.64447pt too wide) in paragraph at lines 744--744
 [] 
  []
@@ -770,7 +770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 748--750
 
  []
 
-[19]
+[20]
 Overfull \hbox (65.30449pt too wide) in paragraph at lines 759--759
 [] 
  []
@@ -790,12 +790,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 774--778
 
  []
 
-[20]
+[21]
 
-LaTeX Warning: Reference `eqn:R-charge_dual_quark' on page 21 undefined on inpu
+LaTeX Warning: Reference `eqn:R-charge_dual_quark' on page 22 undefined on inpu
 t line 786.
 
-[21]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 812--814
 
  []
@@ -805,17 +805,17 @@ Overfull \hbox (10.02315pt too wide) in paragraph at lines 826--826
 [] 
  []
 
-[22] [23]
+[23] [24]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 888.
 
-[24] [25] [26] [27]
+[25] [26] [27] [28]
 Overfull \hbox (56.39836pt too wide) in paragraph at lines 1016--1016
 [] 
  []
 
-[28]
+[29]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1075.
@@ -829,7 +829,7 @@ Overfull \hbox (54.3715pt too wide) in paragraph at lines 1081--1081
 [] 
  []
 
-[29]
+[30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1108.
@@ -847,7 +847,7 @@ Overfull \hbox (9.04721pt too wide) in paragraph at lines 1119--1119
 [] 
  []
 
-[30]
+[31]
 Overfull \hbox (19.41899pt too wide) detected at line 1128
 []\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 m[]N[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@
 \OML/cmm/m/it/12 m[]N[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 !\OT1/cmr/m/n/12 (\O
@@ -886,7 +886,7 @@ Overfull \hbox (104.19946pt too wide) in paragraph at lines 1144--1144
 [] 
  []
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
@@ -896,12 +896,12 @@ Overfull \hbox (95.59448pt too wide) in paragraph at lines 1164--1164
 [] 
  []
 
-[32]
+[33]
 Overfull \hbox (54.21385pt too wide) in paragraph at lines 1188--1188
 [] 
  []
 
-[33]
+[34]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1196.
@@ -915,7 +915,7 @@ Overfull \hbox (11.3876pt too wide) in paragraph at lines 1206--1206
 [] 
  []
 
-[34]
+[35]
 Overfull \hbox (33.85631pt too wide) in paragraph at lines 1228--1228
 [] 
  []
@@ -928,7 +928,7 @@ Overfull \hbox (53.3725pt too wide) in paragraph at lines 1260--1260
 [] 
  []
 
-[35]
+[36]
 Overfull \hbox (41.96983pt too wide) in paragraph at lines 1286--1286
 [] 
  []
@@ -938,12 +938,12 @@ Overfull \hbox (94.75633pt too wide) in paragraph at lines 1290--1310
  [][] 
  []
 
-[36]
+[37]
 Overfull \hbox (54.21385pt too wide) in paragraph at lines 1335--1335
 [] 
  []
 
-[37]
+[38]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1342.
@@ -956,71 +956,29 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1342.
 
-[38]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1359.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1359.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1359.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1373.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1373.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1373.
-
-
-Overfull \hbox (21.47882pt too wide) in paragraph at lines 1383--1383
-[] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1386.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1386.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1386.
-
-[39] (./Note dualità.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1394.
- [40]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1394.
+[39] [40] [41] (./Note dualità.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1413.
+ [42]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1413.
  (./Note dualità.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1394.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1413.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1413.
 
 Package rerunfilecheck Info: File `"Note dualità".out' has not changed.
-(rerunfilecheck)             Checksum: 57DAB12A5AF0BB5FEC6A33ACE48CDE13;3131.
+(rerunfilecheck)             Checksum: 127FEEF19FF6A7B08F157A9A1091EADE;2942.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7831 strings out of 493108
- 107779 string characters out of 6140726
- 221012 words of memory out of 5000000
- 11031 multiletter control sequences out of 15000+600000
+ 7837 strings out of 493108
+ 107783 string characters out of 6140726
+ 221013 words of memory out of 5000000
+ 11028 multiletter control sequences out of 15000+600000
  17618 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,22n,31p,800b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,22n,31p,800b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1038,9 +996,9 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Note dualità.pdf" (42 pages, 449209 bytes).
+Output written on "Note dualità.pdf" (43 pages, 449840 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 133 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 

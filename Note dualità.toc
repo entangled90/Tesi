@@ -1,41 +1,38 @@
 \select@language {italian}
 \select@language {italian}
-\contentsline {section}{\numberline {1}Teoria Elettrica}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Calcolo indice superconforme}{3}{subsection.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1}Contributo dalla parte vettoriale}{5}{subsubsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.2}Contributo della materia nell'aggiunta}{6}{subsubsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.3}Contributo materia nella fondamentale}{8}{subsubsection.1.1.3}
-\contentsline {subsection}{\numberline {1.2}Formula per Indice superconforme Kutasov-Schwimmer 4d}{8}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Riduzione dell'indice alla funzione di partizione}{9}{subsection.1.3}
-\contentsline {subsubsection}{\numberline {1.3.1}Contributo divergente}{10}{subsubsection.1.3.1}
-\contentsline {subsection}{\numberline {1.4}Funzione di partizione}{11}{subsection.1.4}
-\contentsline {subsubsection}{\numberline {1.4.1}Masse reali e flow senza $\eta $}{11}{subsubsection.1.4.1}
-\contentsline {subsubsection}{\numberline {1.4.2}Limite per $m \rightarrow \infty $}{13}{subsubsection.1.4.2}
-\contentsline {subsection}{\numberline {1.5}Funzione di partizione finale}{14}{subsection.1.5}
-\contentsline {section}{\numberline {2} Teoria Magnetica}{15}{section.2}
-\contentsline {subsection}{\numberline {2.1}Calcolo dell'indice superconforme}{15}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Contributo dei campi chirali}{15}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Contributo dei mesoni}{16}{subsubsection.2.1.2}
-\contentsline {subsection}{\numberline {2.2}Indice e funzione di partizione}{17}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Espressione dell'indice}{17}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Funzione di partizione}{18}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Contributi divergenti}{20}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Formula per la funzione di partizione}{22}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Vuoti e rotture di simmetria per il limite a massa infinita}{22}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Calcoli per limite a massa divergente}{24}{subsection.2.6}
-\contentsline {subsubsection}{\numberline {2.6.1}Mesoni}{24}{subsubsection.2.6.1}
-\contentsline {subsubsection}{\numberline {2.6.2}Chirali}{26}{subsubsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.3}Contributo della materia nell'aggiunta e campo vettoriale }{28}{subsubsection.2.6.3}
-\contentsline {subsubsection}{\numberline {2.6.4}Somma dei contributi}{29}{subsubsection.2.6.4}
-\contentsline {subsubsection}{\numberline {2.6.5}Contributi proporzionali a $m$}{30}{subsubsection.2.6.5}
-\contentsline {subsubsection}{\numberline {2.6.6}Contribui proporzionali a $m_B$}{31}{subsubsection.2.6.6}
-\contentsline {subsubsection}{\numberline {2.6.7}Contributi con $\sigma $ e $\rho $}{32}{subsubsection.2.6.7}
-\contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{32}{subsection.2.7}
-\contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{34}{section.3}
-\contentsline {subsection}{\numberline {3.1}Mirror symmetry del settore $U(k)$}{34}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Primo caso}{36}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Secondo caso}{37}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Contact terms e $k_{IJ}$}{38}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}$k_{BA}$}{39}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}$k_{BR}$}{39}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}$k_{BJ}$}{39}{subsubsection.3.2.3}
+\contentsline {section}{\numberline {1}Teoria Elettrica}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Calcolo indice superconforme}{4}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Contributo dalla parte vettoriale}{6}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Contributo della materia nell'aggiunta}{7}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Contributo materia nella fondamentale}{9}{subsubsection.1.1.3}
+\contentsline {subsection}{\numberline {1.2}Formula per Indice superconforme Kutasov-Schwimmer 4d}{9}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Riduzione dell'indice alla funzione di partizione}{10}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Contributo divergente}{11}{subsubsection.1.3.1}
+\contentsline {subsection}{\numberline {1.4}Funzione di partizione}{12}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Masse reali e flow senza $\eta $}{12}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Limite per $m \rightarrow \infty $}{14}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Funzione di partizione finale}{15}{subsection.1.5}
+\contentsline {section}{\numberline {2} Teoria Magnetica}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Calcolo dell'indice superconforme}{16}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Contributo dei campi chirali}{16}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Contributo dei mesoni}{17}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Indice e funzione di partizione}{18}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Espressione dell'indice}{18}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Funzione di partizione}{19}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Contributi divergenti}{21}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Formula per la funzione di partizione}{23}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Vuoti e rotture di simmetria per il limite a massa infinita}{23}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Calcoli per limite a massa divergente}{25}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Mesoni}{25}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Chirali}{27}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Contributo della materia nell'aggiunta e campo vettoriale }{29}{subsubsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.4}Somma dei contributi}{30}{subsubsection.2.6.4}
+\contentsline {subsubsection}{\numberline {2.6.5}Contributi proporzionali a $m$}{31}{subsubsection.2.6.5}
+\contentsline {subsubsection}{\numberline {2.6.6}Contribui proporzionali a $m_B$}{32}{subsubsection.2.6.6}
+\contentsline {subsubsection}{\numberline {2.6.7}Contributi con $\sigma $ e $\rho $}{33}{subsubsection.2.6.7}
+\contentsline {subsection}{\numberline {2.7}Funzione di partizione nel limite (riassumendo)}{33}{subsection.2.7}
+\contentsline {section}{\numberline {3}Analisi dualit\IeC {\`a}}{35}{section.3}
+\contentsline {subsection}{\numberline {3.1}Mirror symmetry del settore $U(k)$}{35}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Primo caso}{37}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Secondo caso}{38}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Contact terms e $k_{IJ}$}{39}{subsection.3.2}

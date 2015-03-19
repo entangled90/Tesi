@@ -1289,7 +1289,7 @@ A questo punto le cariche si posson leggere direttamente dalla funzione di parti
 \centering
 \begin{tabular}{|c |c |c |c |c |c |c |}
 \hline
- $ j =0, \dots , k-1$& $SU(N_f)_L$ & $SU(N_f)_R$ & $U(1)_B$ & $U(1)_A$ & $U(1)_J$ & $U(1)_R $ \\
+ & $SU(N_f)_L$ & $SU(N_f)_R$ & $U(1)_B$ & $U(1)_A$ & $U(1)_J$ & $U(1)_R $ \\
 \hline
  Electric Fields  & & & & & & \\
 \hline
@@ -1307,7 +1307,7 @@ $b_j$ & 0  & 0 & 0  &  $ -N_f$ & $ \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delt
  $\tilde{b} _j$ & 0  & 0 & 0  &  $ - N_f$ & $ - \frac{1}{2}$   & $N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c) $ \\
 \hline
 \end{tabular}
-
+\caption{Tabella delle cariche per il primo caso}
 \end{table}
 
 \subsubsection{Secondo caso}
@@ -1355,38 +1355,60 @@ che non sono altro che FI terms per il supercampo di gauge $V$ (con il valore de
 
 
 
+ \subsection*{Contact Terms vari}
+ \subsubsection*{ AA }
+  \begin{align*}
+    k^e_{AA} =& \frac{1}{2}  2 N_f N_c =  N_c N_f\\
+    k^m_{AA} =& - \frac{1}{2}  2  (k N_f - N_c) N_f (-1)^2  + \frac{1}{2} k N_f^2 (2)^2 - \frac{1}{2} 2 (- N_f)^2 k = \\
+	   =& N_c N_F 
+  \end{align*}
+  \textbf{matchano} 
+  \subsubsection*{AR}
+  \begin{align*}
+   k^e_{AR} = & N_c N_f (\Delta_Q - 1) \\
+   k^m_{AR} = & - N_f( k N_f - N_c) (-1) ( \Delta_X - \Delta_Q - 1 ) + \sum_{j=0}^{k-1} \frac{1}{2} N_f^2 (2) ( 2 \Delta_Q + j \Delta_X - 1) \\
+   & - \frac{1}{2} 2 (-N_f) \left( N_f (1-\Delta_Q) + \Delta_X( j+1 - N_c) -1 \right) \\ =
+   & N_c N_f ( \Delta_Q -1 )
+  \end{align*}
+  dove nella fase magnetica è stato utilizzato $\Delta_X = \frac{2}{k+1}$ per il matching.\\
+  \textbf{matchano}
 
-\subsubsection{$k_{BA}$}
-Posso calcolare questo contact terms in entrambi i casi e il risultato è ovviamente uguale in entrambi e matcha con quello elettrico.
-Il segno di $\mu_f$ è quello tale per cui il livello rimane positivo ( stessa convenzione  di antonio).
-\begin{align*}
-  &\mbox{Elettrico:}\\
-  k^e_{BA} & = \frac{1}{2}  q^f_B q^f_A \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 \cdot 1 \, \sign (\mu) + 1 \cdot (-1) \sign ( - \mu) \right) \\
-  & = N_f N_c \\
-  & \mbox{Magnetico: primo caso}\\
-  k^{m_1}_{BA} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} = N_f N_c \\
-  & \mbox{Magnetico: secondo caso}\\
-  k^{m_2}_{BA} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right) (N_f)  = N_f N_c 
-\end{align*}
-I livelli sono uguali in tutti i casi e infatti le fasi nella funzione di partizione sono identiche in tutti e tre i casi (e dovrei dimostrare che le fasi son generate da questi livelli: c'è un fattore di (-4) di differenza, è dovuto a come entra nell'azione. CONTROLLARE)
+  \subsubsection*{RR}
+  
+  MEGASBATTI DA CALCOLARE 
+  
+  \subsubsection*{BR}
+  \begin{align*}
+  k^e_{BR} &= N_f N_c ( \Delta_Q -1) \\
+  k^m_{BR} &= - N_f (k N_f - N_c) \frac{N_c}{k N_f - N_c} ( \Delta_X -
+  \end{align*}
 
-\subsubsection{$k_{BR}$}
-Utilizziamo la stessa formula per calcolare questo livello, che dovrebbe essere identico in tutti e tre i casi (come prima).
-\begin{align*}
- &\mbox{Elettrico:}\\
-  k^e_{BR} & = \frac{1}{2}  q^f_B q^f_R \, sign (\mu_{f})  \; = \; \frac{1}{2} N_f N_c \left( 1 ( \Delta_Q - 1)  \, \sign (\mu) + -1 ( \Delta_Q - 1) \sign ( - \mu) \right) \\
-  & = N_f N_c ( \Delta_Q - 1)  \\
-  & \mbox{Magnetico: primo caso}\\
-  k^{m_1}_{BR} & =\frac{1}{2} 2 N_f (kN_f - N_c) \frac{N_c}{k N_f -N_c} ( \Delta_X - \Delta_Q - 1) = N_f N_c ( \Delta_X - \Delta_Q - 1) \\
-  & \mbox{Magnetico: secondo caso}\\
-  k^{m_2}_{BR} & = \frac{1}{2} ( 2  k ) \left( \frac{1}{k} \right)  (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q)) =  N_c (\Delta_X - (-N_c \Delta_X + N_f ( 1-\Delta_Q))
-\end{align*}
-
-
-\subsubsection{$k_{BJ}$} 
-Non c'è modo di generare $k_{BJ}$ con quella formula, visto che nessun campo è carico sotto $U(1)_B$ e $U(1)_J$ insieme..
-
-
+  \begin{align*}
+   k^e_{BR} = & N_f N_c ( \Delta_Q - 1)\\
+   k^m_{BR} = & - N_f (k N_f - N_c) \frac{N_c}{k N_f - N_c} ( \Delta_X - \Delta_Q -1) = - N_c N_f ( \Delta_X - \Delta_Q -1)
+  \end{align*}
+  \textbf{Non matchano}
+    
+  \subsubsection*{AB}
+  \begin{align*}
+   k^e_{AB} = & \frac{1}{2} 2 N_c N_f = N_c N_f \\
+   k^m_{AB} = & - \frac{1}{2} 2 (k N_f - N_c) N_f ( -1) \frac{N_c}{k N_f - N_c} = N_c N_f 
+  \end{align*}
+  \textbf{matchano}
+  
+  \subsubsection*{BB}
+  \begin{align*}
+   k^e_{BB} = & \frac{1}{2} 2 N_c N_f (1)^2 = N_c N_f \\
+   k^m_{BB} = & - \frac{1}{2} N_f (k N_f - N_c) \left( \frac{N_c}{k N_f - N_c} \right)^2 = - N_f \frac{N_c^2}{k N_f - N_c}   
+  \end{align*}
+  \textbf{Dura che matchino}
+  \subsection*{AJ}
+  
+  \subsection*{JJ}
+  
+  \subsection*{BJ}
+  
+  
 \newpage
 \nocite{*}
 \bibliographystyle{jhep}
