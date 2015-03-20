@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+%%\usepackage{mathtools}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fullpage}
+%%\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+%%\usepackage{natbib}
+\usepackage{jheppub}
+\usepackage{verbatim}
+\title{Note per riduzione dualità Kutasov-Schwimmer 4d $\rightarrow$ 3d}
+\author{Carlo Sana}
+%%% Comando per far le matrici con le barre verticali
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+%%Comando per sottolineare testo con linea colorata in math mode
+\newsavebox\MBox
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
+  
+%% comando per aligned nestati
+\newlength{\myleftlen}
+\newcommand{\setmyleftlen}[1]{\settowidth{\myleftlen}{\( \displaystyle
+#1\)}}
+\newcommand{\backup}{\hskip-\myleftlen\mkern-7mu}
+  
+  
+  
+%%comando per funzione segno
+\newcommand{\sign}{\mbox{sign}}
+
+\title{To be defined}
+
+\begin{document}
+
+\chapter{Introduction}
+
+\chapter{Physics}
+
+
+
+
+\chapter{Math}
+
+
+\chapter{My work}
+
+
+\chapter{conclusions}
+
+\chapter{Appendix}
+
+
+\end{document}
