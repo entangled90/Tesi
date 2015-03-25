@@ -1,9 +1,51 @@
+%!TEX root = tesi.tex
 
-\section{4D dualities}
+\section{Four dimensional dualities}
+
+\subsection*{Seiberg Duality}
+%%%%% DEVO aver già parlato di elettrico/magnetico come termini.
+This is the duality originally found by Seiberg \cite{Seiberg:1994pq}.\\
+\textbf{POSSO DIRE ALTRO!!}\\
+The electric theory is a $SU(N_c) $ supersymmetric non-chiral gauge theory with $N_f$ flavours global symmetry group $SU(N_f) \times SU(N_f) \times U(1)_B \times U(1)_R $. The charges of the matter content of the theory are summarized in the table below.
+
+\begin{table}[h!]
+ \begin{tabular}{c | c |  c c c c }
+ & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$Q$ & $N_c$ & $N_F$ & $1$   &  $1$  & $ \frac{N_f - N_c}{N_f}$  \\
+$\tilde{Q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $-1$   &  $\frac{N_f - N_c}{N_f}$   \\	 
+ \end{tabular}
+	\centering
+ \caption{Charge of matter content of the electric theory}
+\end{table}
+The \emph{R-Charge} is fixed by requiring that the \emph{R-Symmetry} is non anomalous. \\
+\textbf{Da spiegare meglio.}\\
+What really happens is that $U(1)_A$ symmetry (which is anomalous) mixes with the classical (anomalous) $U(1)_{R'}$ R-symmetry. Their mixing result in a non anomalous $U(1)_R$ R-symmetry and the disappearance of $U(1)_A$.\\ The triangular graph corresponding to this anomaly constrains the R-charge of the quarks imposing
+\begin{align*}
+R_{gaugino} T (\hbox{Ad}) + \sum_{fermions \; f} (& R_{f} - 1)  T(r)   = 0 \\
+N_c + \frac{1}{2}\,  2 N_f (R_Q -1)  = 0 \quad & \rightarrow \quad R_Q = \frac{N_f - N_c}{N_f}
+\end{align*}
+
+The magnetic theory is a theory with the same global symmetries as the electric theory, but the gauge group is now $SU(N_f - N_c)$ and in addition there are $N_f^2$ fields, that we will call mesons. 
+Dual quarks will be represented as $q,\tilde{q}$ and mesons as $M^i_{\tilde{j}} $
+The charges for the magnetic theory are given by
 
 
-\subsection{Seiberg Duality}
+\begin{table}[h!]
+ \begin{tabular}{c | c |  c c c c }
+ & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$q$ & $N_c$ & $N_F$ & $1$   &  $ \frac{N_c}{N-f-N_c} $  & $ \frac{N_c}{N_f}$  \\
+$\tilde{q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $- \frac{N_c}{N-f-N_c}$   &  $ \frac{N_c}{N_f}$   \\	 
+$M^i_{\tilde{j}} $ & $1$ & $N_f$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c}{N_f} $
+ \end{tabular}
+	\centering
+ \caption{Charge of matter content of the magnetic theory}
+\end{table}
+
+
+\subsection*{Kutasov-Schwimmer duality}
 
 
 
-\subsection{Kutasov-Schwimmer duality}
+%\bibliography{bibliografia}
