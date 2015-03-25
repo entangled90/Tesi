@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+%%\usepackage{mathtools}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fullpage}
+%%\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+%%\usepackage{natbib}
+\usepackage{verbatim}
+
+
+
+\author{Carlo Sana}
+\date{}
+\title{4D to 3D reduction of Seiberg duality for SU(N) susy gauge theories with adjoint matter: a partition function approach}
+
+%%% Comando per far le matrici con le barre verticali
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+%%Comando per sottolineare testo con linea colorata in math mode
+\newsavebox\MBox
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
+  
+%% comando per aligned nestati
+\newlength{\myleftlen}
+\newcommand{\setmyleftlen}[1]{\settowidth{\myleftlen}{\( \displaystyle
+#1\)}}
+\newcommand{\backup}{\hskip-\myleftlen\mkern-7mu}
+  
+  
+  
+%%comando per funzione segno
+\newcommand{\sign}{\mbox{sign}}

@@ -1,50 +1,23 @@
-\documentclass[a4paper,12pt]{book}
-\usepackage[italian]{babel}
-\usepackage{amsmath}
-%%\usepackage{mathtools}
-\usepackage{amstext}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{fullpage}
-%%\usepackage{mathrsfs}
-\usepackage[utf8]{inputenc}
-%%\usepackage{natbib}
-%\usepackage{jheppub}
-\usepackage{verbatim}
-\author{Carlo Sana}
-%%% Comando per far le matrici con le barre verticali
-\makeatletter
-\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-  \hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{#1}}
-\makeatother
-
-%%Comando per sottolineare testo con linea colorata in math mode
-\newsavebox\MBox
-\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
-  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
-  
-%% comando per aligned nestati
-\newlength{\myleftlen}
-\newcommand{\setmyleftlen}[1]{\settowidth{\myleftlen}{\( \displaystyle
-#1\)}}
-\newcommand{\backup}{\hskip-\myleftlen\mkern-7mu}
-  
-  
-  
-%%comando per funzione segno
-\newcommand{\sign}{\mbox{sign}}
-
-\title{To be defined}
+\include{header_tesi}
 
 \begin{document}
 \maketitle
 \chapter{Introduction}
-prova
+
+
 \chapter{Physics}
 
 
+\section{Introduction to dualities}
+
+
+\input{4d_dualities}
+
+
+\section{3D dualities}
+
+\subsection{Aharony duality}
+\subsection{Kutasov-Schwimmer duality}
 
 
 \chapter{Math}
