@@ -1,21 +1,19 @@
 %!TEX root = tesi.tex
 \begin{lstlisting}
 ---- INTRODUCTION OUTLINE-----
-***Supersymmetry:
-~ + symmetry = +tools for studying theories
+~ More symmetry = more tools for studying theories
 ~ State structure: multiplet & superspace
-~ milder divergences 
+~ Milder divergences 
 ~ Renormalization constraints
 ~ Non renormalization theorems (perturbative)
-~ exact results (superpotential, witten index , exact beta function )
+~ Exact results (superpotential, witten index , exact beta function )
 ~ Holomorphicity, couplings as background fields 
-(important s moothness of weak coupling limits, e.g. classic imit g in  well defined.
+  (important smoothness of weak coupling limits, e.g. classic imit g in  well defined.
 ~Use of wilsonian action: no IR divergences)
-~moduli spaces
---Superconformal group-- more relations, r charge, dimensions ecc
+~Superconformal group more relations, r charge, dimensions ecc
 ~Superconformal index
 ~Localization
-~brane constructions?
+~Moduli space
 \end{lstlisting}
 
 \section{Introduction}
@@ -28,26 +26,28 @@ In this chapter we will analyse the new features of supersymmetric field theorie
 
 \subsection{ States and their representation}
 
-Being a symmetry between bosons and fermions, supersymmetry imposes that states need to be organized in multiplets containing different representations of the \emph{Lorentz group} i.e different particles.
-Different multiplets exist and their properties depend on their explicit construction and on the number of supercharges of the theory. 
+Being a symmetry between bosons and fermions, supersymmetry imposes that states are organized in multiplets containing different representations of the \emph{Lorentz group} i.e different type of  particles.
+Various multiplets exist and their properties depend on the number of supercharges of the theory and on what they represent e.g matter, glue or gravity. 
+
 We will introduce the multiplets that can be defined for $4d \; \mathcal{N} = 1$ theories and only later we will explain the small differences with $3d \; \mathcal{N} = 2$ theories.
+For four dimensional theories, we can define two different multiplet that are invariant under supersymmetry transformation.
 
-For four dimensional theories, we can define three different multiplet that are invariant under supersymmetry transformation.
 The matter or chiral multiplet contains a complex scalar and a weyl fermion. Its name indicates that it is used for the matter content of the theory (quark and squark for example).
-The vector or gauge multiplet contains a weyl fermion and a vector. 
-Notice that in order to preserve supersymmetry the weyl fermion has to transform in the same representation of the vector, i.e. the adjoint representation.
-For this reason the fermion does not represent matter as is usually intended.
 
-For the theories we will consider, spins greater than one are not present.
-This requirement imposes that no other multiplets are present in the theories.
+The vector or gauge multiplet contains a Weyl fermion and a vector. 
+Notice that in order to preserve supersymmetry the Weyl fermion has to transform in the same representation of the vector, i.e. the adjoint representation.
+For this reason the fermion in this multiplet does not represent matter and in fact is called \emph{gaugino} .
+
+The theories we will consider will not contain particle with spin greater than one.
+This requirement imposes that no other multiplets can be present in these kind of theories.
 
 A representation of these multiplets on fields can be easily found using the \emph{superspace} formalism.
-In this formalism it is possible to represent fields  that are \emph{off-shell}, in contrast with multiplets that we introduced before that are \emph{on-shell} since they represent states in Hilbert space.\\
+In this formalism it is possible to represent fields  that are \emph{off-shell}, in contrast with multiplets that we introduced previously that are \emph{on-shell} since they represent states in Hilbert space.\\
 Matter and gauge multiplets are represented by (anti)chiral and real superfields respectively.
 
 
 
-\subsection{ Renormalization }
+\subsection{ General renormalization properties}
 
 A remarkable feature of supersymmetry is the constraints that the additional symmetry imposes on the renormalization properties of the theories.
 
@@ -59,4 +59,20 @@ In order to preserve supersymmetry, the renormalization process has to preserve 
 Moreover, in the supersymmetry algebra $P^2$ is still a Casimir operator i.e. it commutes with every operator in the algebra: particles in the same multiplet must have the same mass.
 Renormalization cannot break this condition, otherwise it would break supersymmetry.
 
-These consequence of supersymmetry are easier understood using the superspace formalism. 
+For a \emph{Super Yang Mills} theory with $\mathcal{N} = 1$ we have the additional requirement that $g V$, where $g$ is the coupling and $V$ is the vector superfield, cannot be renormalized by symmetry considerations. This is equivalent to require that 
+$ Z_g = Z_V^{-1}$.
+
+Adding more supercharges the wave function renormalization of the various field are even more constrained by symmetry.
+For $\mathcal{N}=4$ \emph{SYM}, which is the  theory with maximum amount of supersymmetry in four dimensions without gravity, the fields and the coupling are not renormalized at all.
+This means that the $\beta$ function of the theory is zero and the theory is invariant under dilatations also at the quantum level.
+Indeed the theory has a even larger symmetry: it is superconformal invariant.
+
+The superconformal group is the supersymmetric extension of the classical conformal group and because of this larger symmetry it constrains even more the dynamics of the theory. 
+We will encounter other superconformal theories and we will use some of their properties while studying electric magnetic duality. 
+
+
+\subsection{Non renormalization}
+
+
+
+\newpage
