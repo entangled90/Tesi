@@ -1,38 +1,62 @@
 %!TEX root = tesi.tex
-\begin{comment}
-	---- OUTLINE-----
-	***Supersimmetria:
-		~ + simmetria = + strumenti per studiare teorie
-		~Non renormalization theorems (perturbative)
-		~ milder divergence 
-		~exact results (e.g. superpotential, witten index , exact beta function )
-		~Holomorphicity, couplings as background fields (important is smoothness of weak coupling limits, e.g. classic limit g in 0 well defined.
-		Use of wilsonian action: no IR divergences)
-		~moduli spaces
-		--Superconformal group-- more relations, r charge, dimensions ecc
-		~brane constructions?
-		~Superconformal index
-		~Localizations
+\begin{lstlisting}
+---- INTRODUCTION OUTLINE-----
+***Supersymmetry:
+~ + symmetry = +tools for studying theories
+~ State structure: multiplet & superspace
+~ milder divergences 
+~ Renormalization constraints
+~ Non renormalization theorems (perturbative)
+~ exact results (superpotential, witten index , exact beta function )
+~ Holomorphicity, couplings as background fields 
+(important s moothness of weak coupling limits, e.g. classic imit g in  well defined.
+~Use of wilsonian action: no IR divergences)
+~moduli spaces
+--Superconformal group-- more relations, r charge, dimensions ecc
+~Superconformal index
+~Localization
+~brane constructions?
+\end{lstlisting}
 
-\end{comment}
 \section{Introduction}
 Supersymmetric quantum field theories enjoy an enlarged group of  symmetries compared to other field theories. 
 Since the symmetry group is a non trivial combination of internal and spacetime symmetries, they have many unexpected features and new techniques were found to study them.
 On top of that \emph{superstring theory} provided many insights and explanations that were not clear from a field theory perspective only. 
 Almost all of the new tools found are available only for supersymmetric field theories, making them the theater for exciting discoveries in physics.
 
+In this chapter we will analyse the new features of supersymmetric field theories that made possible the discovery and the analysis of electric magnetic duality and its generalisations.
 
-\subsection{ Renormalization (and non-renormalization)}
+\subsection{ States and their representation}
 
-A remarkable feature of supersymmetry is the constraints that imposes on the renormalization properties of the theories.
+Being a symmetry between bosons and fermions, supersymmetry imposes that states need to be organized in multiplets containing different representations of the \emph{Lorentz group} i.e different particles.
+Different multiplets exist and their properties depend on their explicit construction and on the number of supercharges of the theory. 
+We will introduce the multiplets that can be defined for $4d \; \mathcal{N} = 1$ theories and only later we will explain the small differences with $3d \; \mathcal{N} = 2$ theories.
+
+For four dimensional theories, we can define three different multiplet that are invariant under supersymmetry transformation.
+The matter or chiral multiplet contains a complex scalar and a weyl fermion. Its name indicates that it is used for the matter content of the theory (quark and squark for example).
+The vector or gauge multiplet contains a weyl fermion and a vector. 
+Notice that in order to preserve supersymmetry the weyl fermion has to transform in the same representation of the vector, i.e. the adjoint representation.
+For this reason the fermion does not represent matter as is usually intended.
+
+For the theories we will consider, spins greater than one are not present.
+This requirement imposes that no other multiplets are present in the theories.
+
+A representation of these multiplets on fields can be easily found using the \emph{superspace} formalism.
+In this formalism it is possible to represent fields  that are \emph{off-shell}, in contrast with multiplets that we introduced before that are \emph{on-shell} since they represent states in Hilbert space.\\
+Matter and gauge multiplets are represented by (anti)chiral and real superfields respectively.
+
+
+
+\subsection{ Renormalization }
+
+A remarkable feature of supersymmetry is the constraints that the additional symmetry imposes on the renormalization properties of the theories.
 
 One of the first aspects that brought attention to supersymmetry was that divergences coming from loop diagrams were milder because of the cancellation between diagrams with bosons and fermions running in the loops. 
-Even if this looks like a very promising feature, now it is a property that is exploited by even more powerful theorems about the renormalization properties of the theory.
+Nowadays we know more powerful theorems that restrict the behaviours of supersymmetric field theories under the process of renormalization.
 
+In order to preserve supersymmetry, the renormalization process has to preserve the Hilbert space structure. For example the wave function renormalization of different \emph{ particles} inside a multiplet must be the same, otherwise the renormalized lagrangian is not supersymmetric invariant anymore. 
 
-\subsection{Renormalization}
-Being a symmetry between bosons and fermions, supersymmetry imposes that states need be organized in multiplets containing different representations of the \emph{Lorentz group} such as scalars and spinors for example. Different multiplets exist and their properties depend on their explicit construction and on the number of supercharges of the theory.
+Moreover, in the supersymmetry algebra $P^2$ is still a Casimir operator i.e. it commutes with every operator in the algebra: particles in the same multiplet must have the same mass.
+Renormalization cannot break this condition, otherwise it would break supersymmetry.
 
-
-In order to preserve supersymmetry, the renormalization process has to preserve the Hilbert Space structure i.e. for example the wave function renormalization of different \emph{ particles} inside a multiplet must be the same. 
-With the same reasoning, the masses of different particles of the same multiplet must be the same (supersymmetry algebra requires this explicitly). 
+These consequence of supersymmetry are easier understood using the superspace formalism. 
