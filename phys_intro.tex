@@ -47,7 +47,7 @@ Matter and gauge multiplets are represented by (anti)chiral and real superfields
 
 
 
-\subsection{ General renormalization properties}
+\subsection{ SupGeneral renormalization properties}
 
 A remarkable feature of supersymmetry is the constraints that the additional symmetry imposes on the renormalization properties of the theories.
 
@@ -75,36 +75,43 @@ The superconformal group is the supersymmetric extension of the classical confor
 We will encounter other superconformal theories and we will use some of their properties while studying electric magnetic duality. 
 
 
-\subsection{Holomorphy and non-renormalization theorem}
+\subsection{Superpotential: holomorphy and non-renormalization}
 Even though supersymmetry imposes strong constraints on the renormalization properties of a theory we will be much more interest in theorems that prohibit the renormalization of some objects in the theory.
 
-The first non-renormalization stated that the superpotential was tree-level exact, i.e. it does not receive correction in perturbation theory. However it usually receive contributions from non perturbative corrections.
-This theorem was demonstrated in 1979 in \cite{Grisaru:1979wc} using complicated \emph{supergraph} calculations.
-This kind of calculations allows to work directly with superfields using Feynman graph, keeping supersymmetry explicit: in this way the cancellations between loops with fermions and bosons are trivial and many semplifications occur during the calculations.
+The first non-renormalization theorem, demonstrated in 1979 in \cite{Grisaru:1979wc}, stated that the superpotential was tree-level exact, i.e. it does not receive correction in perturbation theory. 
+However it usually receive contributions from non perturbative dynamics.
+ It was demonstrated using \emph{supergraph} calculations that allow to work directly with superfields using Feynman graph, keeping supersymmetry explicit. 
+ Cancellations between loops with fermions and bosons are trivial and many semplifications occur during calculations.
 
-They demonstrated that for general field theories supergraph loops diagram yield a term that can be written in the form
+They demonstrated that for general field theories, supergraph loops diagrams yield a term that can be written in the form
 \begin{equation}
 \int  d^4 x_1 \dots d^4 x_n d^2 \theta d^2 \bar{\theta} \; G (x_1 , \dots , x_n) \,F_1 ( x_1, \theta, \bar{\theta}) \dots  F_n ( x_n, \theta, \bar{\theta}) 
 \end{equation} 
+where $G (x_1 , \dots , x_n) $ is traslationally invariant function.\\
 The importance of this result is that is given by a single integral in the superspace coordinates $d^2 \theta d^2 \bar{\theta }$.
 A term integrated in full superspace is called \emph{D-term}.
 Supersymmetry requires that superpotential can be written only as an integral over $d^2 \theta $ (\emph{F-term}) and is a holomorphic object.
 In this context, a holomorphic functions of superfields is given by
 \begin{equation}
- W (\lambda, \Phi) = \sum_{n=1}^{\infty}  \int d^2 \theta \lambda_n \Phi^n  \; +\; \int d^2 \bar{\theta} \bar{\lambda}_n {\bar{\Phi}}^n
+ W (\lambda, \Phi) = \sum_{n=1}^{\infty}  \int d^2 \theta \lambda_n \Phi^n  \; +\; h.c. 
+ %\int d^2 \bar{\theta} \bar{\lambda}_n {\bar{\Phi}}^n
  \end{equation} 
  where $\Phi$ is a chiral field and $\lambda_n$ are coupling constants.\\
  The second term of the superpotential is added in order to give a real lagrangian after the integration in superspace.
  In the superpotential only chiral fields and coupling constants can appear: terms with product of chiral and antichiral fields break supersymmetry.
 
 
- Fifteen years later, Seiberg provided a more elegant proof of this theorem, without using perturbative results.
-Coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with kinetic terms with infinite coefficient.
-They are classical fields and their dimensions does not receive quantum corrections maintaining intact the renormalizability of the theory (if it was renormalizable). 
+Fifteen years later, Seiberg provided a more elegant proof of this theorem in \cite{Seiberg:1993vc}, without relying on the calculation of Feynman diagrams.
+He noted that coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with kinetic terms with infinite coefficient.
 This situation is similar to string theory where there are no parameters except the string tension and every other coupling or mass is given by an expectation value of a scalar field. 
-The most famous example is that of the dilaton, whose \emph{vev} is given the perturbative expansion of the theory.  
+The most immediate example is that of the dilaton, whose \emph{vev} governs the perturbative expansion of the theory.
+%% DAVEDERE
+Using this "trick" we can assign transformation laws to the fields and the coupling constants: in this way the superpotential acquires a bigger symmetry under which the effective lagrangian has to be invariant. 
+Because of these transformation laws, non zero values for these background fields break the additional symmetry we introduced.
+However addition selection rules are present, remnants of the unbroken symmetry.\\
+In addition, we know that in the limit of null coupling, the limit of the effective superpotential is the tree-level one. 
+Using the holomorphicity of the superpotential and the properties discussed above, he demonstrated the non-renormalization theorem for the superpotential. 
 
 
 
-
-\newpage
+\subsection{Exact results}
