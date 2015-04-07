@@ -30,11 +30,8 @@ Various multiplets exist and their properties depend on the number of supercharg
 
 We will introduce the multiplets that can be defined for $4d \; \mathcal{N} = 1$ theories and only later we will explain the differences with $3d \; \mathcal{N} = 2$ theories.
 For four dimensional theories, we can define two different multiplet that are invariant under supersymmetry transformation.
-
-The matter or chiral multiplet contains a complex scalar (\emph{squark} ) and a Weyl fermion. It identifies the matter content of the theory.
-
-The vector or gauge multiplet contains a Weyl fermion (\emph{gaugino} and a vector.
-
+The matter or chiral multiplet contains a complex scalar (\emph{squark}) and a Weyl fermion. It identifies the matter content of the theory.
+The vector or gauge multiplet contains a Weyl fermion (\emph{gaugino}) and a vector.
 Particles in the same multiplet transform in the same representation of global or gauge symmetries. For this reason the gaugino cannot represent matter.
 
 %%The theories we will consider will not contain particle with spin greater than one.
@@ -57,7 +54,7 @@ One of the first aspects that brought attention to supersymmetry was that diverg
 %For this reason this is not believed to be the actual solution to the \emph{hierarchy problem.} 
 
 Nowadays we know powerful theorems that restrict the behaviour of supersymmetric field theories under the process of renormalization.
-In order to preserve supersymmetry, the renormalization process has to preserve the Hilbert space structure. For example the wave function renormalization of different \emph{ particles} inside a multiplet must be the same, otherwise the renormalized lagrangian is not supersymmetric invariant anymore. 
+In order to preserve supersymmetry, the renormalization process has to preserve the Hilbert space structure. For example the wave function renormalization of different \emph{particles} inside a multiplet must be the same, otherwise the renormalized lagrangian is not supersymmetric invariant anymore. 
 
 Moreover, in the supersymmetry algebra $P^2$ is still a Casimir operator i.e. it commutes with every operator in the algebra: particles in the same multiplet must have the same mass.
 Renormalization cannot break this condition, otherwise it would break supersymmetry.
@@ -78,21 +75,20 @@ Other than renormalization constraints, supersymmetry provides non-renormalizati
 In \cite{Grisaru:1979wc} was demonstrated that the superpotential is tree-level exact, i.e. it does not receive correction in perturbation theory. 
 However it usually receive contributions from non perturbative dynamics.
 It was demonstrated using \emph{supergraph} calculations that allow to work directly with superfields using Feynman graph, keeping supersymmetry explicit. 
-Cancellations between loops with fermions and bosons are trivial and many semplifications occur during calculations.
 
 The demonstration is based on the fact that for general supersymmetric field theories, supergraph loops diagrams yield a term that can be written in the form
 \begin{equation}
 \int  d^4 x_1 \dots d^4 x_n d^2 \theta d^2 \bar{\theta} \; G (x_1 , \dots , x_n) \,F_1 ( x_1, \theta, \bar{\theta}) \dots  F_n ( x_n, \theta, \bar{\theta}) 
 \end{equation} 
 where $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
-The importance of this result is that is given by a single integral over full superspace ( $d^2 \theta d^2 \bar{\theta} $) whereas the superpotential must be written as an integral in half-superspace( $d^2 \theta $ only) of chiral fields.
+The importance of this result is that all contribution from Feynman diagrams are given by a single integral over full superspace ($d^2 \theta d^2 \bar{\theta} $) whereas the superpotential must be written as an integral in half-superspace($d^2 \theta $ only) of chiral fields.
 Exploiting the fact that a product of chiral fields is a chiral field, the most general form of a superpotential is the following
 \begin{equation}
  W (\lambda, \Phi) = \sum_{n=1}^{\infty} \left( \int d^2 \theta \, \lambda_n \Phi^n  \; +\;  \int d^2 \bar{\theta} \, \lambda_n^{\dagger} \bar{\Phi}^n \right)
  %\int d^2 \bar{\theta} \bar{\lambda}_n {\bar{\Phi}}^n
  \end{equation} 
  The second term of the superpotential is added in order to give a real lagrangian after the integration in superspace.
-From the definition, we can see that the superpotential is holomorphic: it does not depend on conjugate fields or coupling constants.
+From the definition, we can see that the superpotential is holomorphic in the fields and in the coupling constants.
 
 Fifteen years later, Seiberg \cite{Seiberg:1993vc} provided a proof of this theorem using a different approach.
 He noted that the coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with no dynamics.
@@ -103,9 +99,22 @@ He noted that the coupling constants $\lambda_n$ can be treated as background fi
 
 %% DAVEDERE
 
-Using this "trick" we can assign transformation laws to the fields and the coupling constants: in this way the superpotential acquires a bigger symmetry under which the effective lagrangian has to be invariant. 
-In the limit of weak coupling, the effective superpotential must  flow to the tree-level superpotential. 
-The holomorphicity condition of the superpotential in addition to these requirements, force the effective superpotential to be equal to the tree-level superpotential.
+Using this observation we can assign transformation laws to the coupling constants, making the lagrangian invariant under a bigger symmetry.
+Fields and coupling constants are charged under this symmetry and only certain combinations of them can appear in the superpotential.
+%The superpotential in the weak coupling limit is subject to the constraints imposed by holomorphy and symmetry.
+In addition, in a suitable weak coupling limit the effective superpotential must be identical with the tree-level one.
+These conditions, taken together, fix the expansion of the superpotential to the expression of the tree-level potential.
+A more detailed discussion can be found in \cite{Seiberg:1994bp} and \cite{Intriligator:1995au}
+
+
+
 
 
 \subsection{Exact results}
+
+
+
+
+
+
+
