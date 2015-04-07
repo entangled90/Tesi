@@ -10,7 +10,6 @@
   (important smoothness of weak coupling limits, e.g. classic imit g in  well defined.
 ~ Exact results (superpotential, witten index , exact beta function )
 ~Use of wilsonian action: no IR divergences)
-~Superconformal group more relations, r charge, dimensions ecc
 ~Superconformal index
 ~Localization
 ~Moduli space
@@ -19,27 +18,27 @@
 \section{Introduction}
 Supersymmetric quantum field theories enjoy an enlarged group of  symmetries compared to other field theories. 
 Since the symmetry group is a non trivial combination of internal and spacetime symmetries, they have many unexpected features and new techniques were found to study them.
-On top of that \emph{superstring theory} provided many insights and explanations that were not clear from a field theory perspective only. 
-Almost all of the new tools found are available only for supersymmetric field theories, making them the theater for exciting discoveries in physics.
+%%On top of that \emph{superstring theory} provided many insights and explanations that were not clear from a field theory perspective only. 
+Almost all of the new tools found are available only for supersymmetric field theories, making them the theater for many advances in physics. 
 
-In this chapter we will analyse the new features of supersymmetric field theories that made possible the discovery and the analysis of electric magnetic duality and its generalisations.
+In this section we will analyse the features of supersymmetric field theories that are crucial to the discovery of electric magnetic duality and its generalisations.
 
-\subsection{ States and their representation}
+\subsection{States and their representation}
 
 Being a symmetry between bosons and fermions, supersymmetry imposes that states are organized in multiplets containing different representations of the \emph{Lorentz group} i.e different type of  particles.
 Various multiplets exist and their properties depend on the number of supercharges of the theory and on what they represent e.g matter, glue or gravity. 
 
-We will introduce the multiplets that can be defined for $4d \; \mathcal{N} = 1$ theories and only later we will explain the small differences with $3d \; \mathcal{N} = 2$ theories.
+We will introduce the multiplets that can be defined for $4d \; \mathcal{N} = 1$ theories and only later we will explain the differences with $3d \; \mathcal{N} = 2$ theories.
 For four dimensional theories, we can define two different multiplet that are invariant under supersymmetry transformation.
 
-The matter or chiral multiplet contains a complex scalar and a weyl fermion. Its name indicates that it is used for the matter content of the theory (quark and squark for example).
+The matter or chiral multiplet contains a complex scalar (\emph{squark} ) and a Weyl fermion. It identifies the matter content of the theory.
 
-The vector or gauge multiplet contains a Weyl fermion and a vector. 
-Notice that in order to preserve supersymmetry the Weyl fermion has to transform in the same representation of the vector, i.e. the adjoint representation.
-For this reason the fermion in this multiplet does not represent matter and in fact is called \emph{gaugino} .
+The vector or gauge multiplet contains a Weyl fermion (\emph{gaugino} and a vector.
 
-The theories we will consider will not contain particle with spin greater than one.
-This requirement imposes that no other multiplets can be present in these kind of theories.
+Particles in the same multiplet transform in the same representation of global or gauge symmetries. For this reason the gaugino cannot represent matter.
+
+%%The theories we will consider will not contain particle with spin greater than one.
+%%This requirement imposes that no other multiplets can be present in these kind of theories.
 
 A representation of these multiplets on fields can be easily found using the \emph{superspace} formalism.
 In this formalism it is possible to represent fields  that are \emph{off-shell}, in contrast with multiplets that we introduced previously that are \emph{on-shell} since they represent states in Hilbert space.\\
@@ -47,71 +46,66 @@ Matter and gauge multiplets are represented by (anti)chiral and real superfields
 
 
 
-\subsection{ SupGeneral renormalization properties}
+\subsection{General renormalization properties}
 
-A remarkable feature of supersymmetry is the constraints that the additional symmetry imposes on the renormalization properties of the theories.
+A remarkable feature of supersymmetry is the constraint that the additional symmetry imposes on the renormalization properties of the theories.
 
-One of the first aspects that brought attention to supersymmetry was that divergences coming from loop diagrams were milder because of the cancellation between diagrams with bosons and fermions running in the loops. 
-This feature was thought to provide a nice way of solving the \emph{hierarchy problem} which is related to the fine tuning of UV-scale that is needed in order to keep under control radiative correction for the Higgs mass.
-The mass correction in the \emph{Standard Model} is quadratic in the cut-off scale and with the addition of supersymmetry it becomes a protected, non renormalized quantity. 
-On the other hand, the Higgs mass is still a parameter in the lagrangian whose value is not fixed by anything else.
-For this reason this is not believed to be the actual solution to the \emph{hierarchy problem.} 
+One of the first aspects that brought attention to supersymmetry was that divergences of loop diagrams were milder because of the cancellation between diagrams with bosons and fermions running in the loops. 
+%%This feature was thought to provide a nice way of solving the \emph{hierarchy problem} which is related to the fine tuning of UV-scale that is needed in order to keep under control radiative correction for the Higgs mass.
+%The mass correction in the \emph{Standard Model} is quadratic in the cut-off scale and with the addition of supersymmetry it becomes a protected, non renormalized quantity. 
+%On the other hand, the Higgs mass is still a parameter in the lagrangian whose value is not fixed by anything else.
+%For this reason this is not believed to be the actual solution to the \emph{hierarchy problem.} 
 
-Nowadays we know more powerful theorems that restrict the behaviours of supersymmetric field theories under the process of renormalization.
+Nowadays we know powerful theorems that restrict the behaviour of supersymmetric field theories under the process of renormalization.
 In order to preserve supersymmetry, the renormalization process has to preserve the Hilbert space structure. For example the wave function renormalization of different \emph{ particles} inside a multiplet must be the same, otherwise the renormalized lagrangian is not supersymmetric invariant anymore. 
 
 Moreover, in the supersymmetry algebra $P^2$ is still a Casimir operator i.e. it commutes with every operator in the algebra: particles in the same multiplet must have the same mass.
 Renormalization cannot break this condition, otherwise it would break supersymmetry.
 
-For a \emph{Super Yang Mills} theory with $\mathcal{N} = 1$ we have the additional requirement that $g V$, where $g$ is the coupling and $V$ is the vector superfield, cannot be renormalized by symmetry considerations. This is equivalent to require that 
-$ Z_g = Z_V^{-1}$.
+For a \emph{Super Yang Mills} theory with $\mathcal{N} = 1$ we have the additional requirement that $g V$, where $g$ is the coupling and $V$ is the vector superfield, cannot be renormalized by symmetry considerations. 
+%This is equivalent to require that  $ Z_g = Z_V^{-1}$.
 
-Adding more supercharges the wave function renormalization of the various field are even more constrained by symmetry.
-For $\mathcal{N}=4$ \emph{SYM}, which is the  theory with maximum amount of supersymmetry in four dimensions without gravity, the fields and the coupling are not renormalized at all.
-This means that the $\beta$ function of the theory is zero and the theory is invariant under dilatations also at the quantum level.
-Indeed the theory has a even larger symmetry: it is superconformal invariant.
+Adding more supersymmetry the wave function renormalization of the various field are even more constrained by symmetry.
+For example, for $\mathcal{N}=4$ \emph{SYM}  the fields and the coupling are not renormalized at all.
 
-The superconformal group is the supersymmetric extension of the classical conformal group and because of this larger symmetry it constrains even more the dynamics of the theory. 
-We will encounter other superconformal theories and we will use some of their properties while studying electric magnetic duality. 
+%The superconformal group is the supersymmetric extension of the classical conformal group and because of this larger symmetry it constrains even more the dynamics of the theory. 
+%We will encounter other superconformal theories and we will use some of their properties while studying electric magnetic duality. 
 
 
 \subsection{Superpotential: holomorphy and non-renormalization}
-Even though supersymmetry imposes strong constraints on the renormalization properties of a theory we will be much more interest in theorems that prohibit the renormalization of some objects in the theory.
-
-The first non-renormalization theorem, demonstrated in 1979 in \cite{Grisaru:1979wc}, stated that the superpotential was tree-level exact, i.e. it does not receive correction in perturbation theory. 
+%Even though supersymmetry imposes strong constraints on the renormalization properties of a theory we will be more interest in theorems that prohibit the renormalization of some objects in the theory.
+Other than renormalization constraints, supersymmetry provides non-renormalization theorems for certain objects, such as the superpotential.
+In \cite{Grisaru:1979wc} was demonstrated that the superpotential is tree-level exact, i.e. it does not receive correction in perturbation theory. 
 However it usually receive contributions from non perturbative dynamics.
- It was demonstrated using \emph{supergraph} calculations that allow to work directly with superfields using Feynman graph, keeping supersymmetry explicit. 
- Cancellations between loops with fermions and bosons are trivial and many semplifications occur during calculations.
+It was demonstrated using \emph{supergraph} calculations that allow to work directly with superfields using Feynman graph, keeping supersymmetry explicit. 
+Cancellations between loops with fermions and bosons are trivial and many semplifications occur during calculations.
 
-They demonstrated that for general field theories, supergraph loops diagrams yield a term that can be written in the form
+The demonstration is based on the fact that for general supersymmetric field theories, supergraph loops diagrams yield a term that can be written in the form
 \begin{equation}
 \int  d^4 x_1 \dots d^4 x_n d^2 \theta d^2 \bar{\theta} \; G (x_1 , \dots , x_n) \,F_1 ( x_1, \theta, \bar{\theta}) \dots  F_n ( x_n, \theta, \bar{\theta}) 
 \end{equation} 
-where $G (x_1 , \dots , x_n) $ is traslationally invariant function.\\
-The importance of this result is that is given by a single integral in the superspace coordinates $d^2 \theta d^2 \bar{\theta }$.
-A term integrated in full superspace is called \emph{D-term}.
-Supersymmetry requires that superpotential can be written only as an integral over $d^2 \theta $ (\emph{F-term}) and is a holomorphic object.
-In this context, a holomorphic functions of superfields is given by
+where $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
+The importance of this result is that is given by a single integral over full superspace ( $d^2 \theta d^2 \bar{\theta} $) whereas the superpotential must be written as an integral in half-superspace( $d^2 \theta $ only) of chiral fields.
+Exploiting the fact that a product of chiral fields is a chiral field, the most general form of a superpotential is the following
 \begin{equation}
- W (\lambda, \Phi) = \sum_{n=1}^{\infty}  \int d^2 \theta \lambda_n \Phi^n  \; +\; h.c. 
+ W (\lambda, \Phi) = \sum_{n=1}^{\infty} \left( \int d^2 \theta \, \lambda_n \Phi^n  \; +\;  \int d^2 \bar{\theta} \, \lambda_n^{\dagger} \bar{\Phi}^n \right)
  %\int d^2 \bar{\theta} \bar{\lambda}_n {\bar{\Phi}}^n
  \end{equation} 
- where $\Phi$ is a chiral field and $\lambda_n$ are coupling constants.\\
  The second term of the superpotential is added in order to give a real lagrangian after the integration in superspace.
- In the superpotential only chiral fields and coupling constants can appear: terms with product of chiral and antichiral fields break supersymmetry.
+From the definition, we can see that the superpotential is holomorphic: it does not depend on conjugate fields or coupling constants.
+
+Fifteen years later, Seiberg \cite{Seiberg:1993vc} provided a proof of this theorem using a different approach.
+He noted that the coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with no dynamics.
+%This situation is similar to string theory where there are no parameters except the string tension and every other coupling or mass is given by an expectation value of a scalar field. 
+%The most immediate example is that of the dilaton, whose \emph{vev} governs the perturbative expansion of the theory.
 
 
-Fifteen years later, Seiberg provided a more elegant proof of this theorem in \cite{Seiberg:1993vc}, without relying on the calculation of Feynman diagrams.
-He noted that coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with kinetic terms with infinite coefficient.
-This situation is similar to string theory where there are no parameters except the string tension and every other coupling or mass is given by an expectation value of a scalar field. 
-The most immediate example is that of the dilaton, whose \emph{vev} governs the perturbative expansion of the theory.
+
 %% DAVEDERE
-Using this "trick" we can assign transformation laws to the fields and the coupling constants: in this way the superpotential acquires a bigger symmetry under which the effective lagrangian has to be invariant. 
-Because of these transformation laws, non zero values for these background fields break the additional symmetry we introduced.
-However addition selection rules are present, remnants of the unbroken symmetry.\\
-In addition, we know that in the limit of null coupling, the limit of the effective superpotential is the tree-level one. 
-Using the holomorphicity of the superpotential and the properties discussed above, he demonstrated the non-renormalization theorem for the superpotential. 
 
+Using this "trick" we can assign transformation laws to the fields and the coupling constants: in this way the superpotential acquires a bigger symmetry under which the effective lagrangian has to be invariant. 
+In the limit of weak coupling, the effective superpotential must  flow to the tree-level superpotential. 
+The holomorphicity condition of the superpotential in addition to these requirements, force the effective superpotential to be equal to the tree-level superpotential.
 
 
 \subsection{Exact results}
