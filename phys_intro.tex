@@ -9,9 +9,6 @@
 ~ Holomorphicity, couplings as background fields 
   (important smoothness of weak coupling limits, e.g. classic imit g in  well defined.
 ~ Exact results (superpotential, witten index , exact beta function )
-~Use of wilsonian action: no IR divergences)
-~Superconformal index
-~Localization
 ~Moduli space
 \end{lstlisting}
 
@@ -65,8 +62,44 @@ For a \emph{Super Yang Mills} theory with $\mathcal{N} = 1$ we have the addition
 Adding more supersymmetry the wave function renormalization of the various field are even more constrained by symmetry.
 For example, for $\mathcal{N}=4$ \emph{SYM}  the fields and the coupling are not renormalized at all.
 
-%The superconformal group is the supersymmetric extension of the classical conformal group and because of this larger symmetry it constrains even more the dynamics of the theory. 
-%We will encounter other superconformal theories and we will use some of their properties while studying electric magnetic duality. 
+
+\subsubsection{Beta function for SYM and SQCD}
+Four dimensional $\mathcal{N} =  1 $ \emph{Super Yang Mills} and \emph{Super QCD} theories exhibit an additional peculiarity: their $\beta$ function is known exactly.
+It is given by the \emph{NSVZ $\beta$ function} 
+\begin{equation}
+  \beta (\alpha) = - \frac{\alpha^2}{2 \pi} \left[ 3 \; T(Adj) - \sum_i T( R_i) ( 1 - \gamma_i ) \right]  \left( 1 - \frac{ \alpha \; T(Adj)  }{2 \pi} \right)^{-1} \qquad \alpha = \frac{g^2}{4 \pi}
+\label{beta-exact}
+\end{equation} 
+where $\gamma_i$ are the anomalous dimensions of the matter fields and $T(R_i)$ are the dynkin indices of their representation.\\
+The anomalous dimensions are defined as
+\begin{equation}
+ \gamma_i = - \frac{d \, \log(Z_i) }{d \, \log( \mu)}
+\end{equation}
+where $Z_i$ is the wave function renormalization coefficient.
+For example for gauge group $SU(N)$ we have
+\begin{equation*}
+ T(N) = \frac{1}{2} \qquad T(Adj) = N 
+\end{equation*}
+The \emph{NSVZ $\beta$ function} was first calculated using instanton methods in \cite{Novikov:1985rd}. 
+Over the years it has been calculated in other ways using the fact that the action is holomorphic in the complexified coupling
+\begin{equation}
+	\frac{1}{g_h^2} = \frac{1}{g^2 } + i \frac{\theta}{8 \pi^2} 
+\end{equation}
+Using the holomorphic coupling the action for the vector field is written as
+\begin{equation}
+ \mathcal{L}_h ( V_h) = \frac{1}{16} \int d^2 \theta \frac{1}{g_h^2} W^a ( V_h) W^a(V_h) 
+\end{equation}
+whereas with the canonical normalization for the vector field is
+\begin{equation}
+ \mathcal{L}_c ( V_c) = \frac{1}{16} \int d^2 \theta \left( \frac{1}{g_c^2}  +i \frac{\theta}{8 \pi^2} \right) W^a ( g_c V_c) W^a(g_c V_c) 
+\end{equation}
+Using the canonical normalization $g_c V_c$ is a real superfield, imposing that $g_c$ is real. For this reason with the canonical normalization the lagrangian is not holomorphic in the combination $ \frac{1}{g^2 } + i \frac{\theta}{8 \pi^2} $.
+Thanks to holomorphy, the holomorphic coupling is only renormalized at one-loop and the $\beta$ function can be computed but its expression is different from \emph{NSVZ $\beta$ function}.
+In fact, the \emph{NSVZ $\beta$ function} is defined using the canonical (or physical) coupling constant and receives contribution from all orders in perturbation theory.
+
+At first sight, one should expect that the expressions should match since the first two orders in $\alpha$ of the $\beta$ function are scheme independent. 
+The reason why the two expressions differ is that the Jacobian of the transformation between canonical and holomorphic normalization is anomalous. 
+Once the anomaly is taken into account the two expressions for the $\beta$ function agree \cite{ArkaniHamed:1997mj}.
 
 
 \subsection{Superpotential: holomorphy and non-renormalization}
@@ -108,9 +141,12 @@ A more detailed discussion can be found in \cite{Seiberg:1994bp} and \cite{Intri
 
 
 
+\subsection{Moduli space}
 
 
-\subsection{Exact results}
+
+
+\subsection{Other exact results}
 
 
 
