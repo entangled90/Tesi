@@ -85,7 +85,7 @@ In this formalism it is possible to represent fields  that are \emph{off-shell},
 
 
 
-\subsection{Superfields and superspace}
+\subsection{Superfields and superspace in four dimensions}
 
 Supersymmetry representations on fields can be found more sistematically using the formulation of \emph{superspace} instead of acting directly with supercharges and verifying that the algebra closes.
 
@@ -239,7 +239,7 @@ We will use the property we introduced in \ref{eqn:inv_superfields} to generate 
 We start our analysis with chiral superfields.
 Since lagrangians are quadratic in the fields and must be real, our best shot at finding the correct superfield to integrate is given by $ \bar{\Phi} \Phi$. 
 \begin{equation}
- \mathcal{L}_{kin} \, = \, \int d^2 \theta d^2 \bar{\theta} \bar{\Phi} \Phi = \dem \bar{\phi} \deM \phi + \frac{i}{2} \left( \dem \psi \sigma^{\mu} \bar{\psi} - \psi \sigma^{\mu} \dem \bar{\psi} \right) + \bar{F} F + \hbox{total derivative}
+ \mathcal{L}_{kin} \, = \, \int d^2 \theta d^2 \bar{\theta} \; \bar{\Phi} \Phi = \dem \bar{\phi} \deM \phi + \frac{i}{2} \left( \dem \psi \sigma^{\mu} \bar{\psi} - \psi \sigma^{\mu} \dem \bar{\psi} \right) + \bar{F} F + \hbox{total derivative}
 \end{equation}		
 We found the correct kinetic terms for the scalar and spinor field.
 The auxiliary field doesn't have kinetic terms as predicted.
@@ -250,7 +250,7 @@ K ( \bar{\Phi} , \Phi) = \sum_{m,n=1}^{\infty} c_{m,n} \bar{\Phi}^m \Phi^n \qqua
 The condition on the coefficient is imposed by the requirement of a real action. 
 
 Actually we can produce supersymmetric actions also integrating \emph{chiral} superfields in half-superspace coordinates.
-Using the property that the product of chiral superfields is still a chiral superfield, we define the \emph{superpotential} to be a general holomorphic function of $\Phi$ 
+We define the \emph{superpotential} to be a holomorphic function of $\Phi$ 
 \begin{equation}
  \mathcal{L}_{int} = \int  d^2 \theta d^2  \; W ( \Phi)  +  \int d^2 \bar{\theta} \; \bar{W} ( \bar{\Phi} ) = \sum_{i=1}^\infty  \int  d^2 \theta \; \lambda_n \Phi^n + \int d^2 \bar{\theta}\;  \lambda_n^{\dagger} \bar{\Phi}^n
 \end{equation} 
@@ -264,7 +264,7 @@ In fact if $W(\Phi)$ is holomorphic and $\Phi$ is a chiral superfield, $W(\Phi)$
 and yield a proper lagrangian upon integration in $ d^2 \theta$.
 
 Since the superpotential is integrated only in half superspace coordinates it need to be charged in an opposite way in order to provide a lagrangian invariant under R-symmetry.
-Remember that
+Remembering  that
 \begin{equation}
 R[\theta] = 1 \qquad [\bar{\theta}] = - 1 \qquad R[d\theta] = -1 \qquad R [d \bar{\theta}] = 1 \qquad
 \end{equation}
@@ -272,7 +272,39 @@ It's easy to see that
 \begin{equation}
 R[W(\Phi)] = 2 \qquad R[\bar{W}(\bar{\Phi})] = -2
 \end{equation}
-For this reason in most situations the superpotentialfix the supercharges of the fields.
+For this reason in most situations the superpotential fix the supercharges of the fields.
+\\
+The lagrangian of super Yang-Mills theories is given by
+\begin{align}
+\mathcal{L}_{SYM} \, = \, & \frac{1}{32 \pi i  } \left( \int d^2 \theta \; \left( \frac{\theta_{YM}}{2 \pi}   + \frac{4 \pi i}{g^2} \right) W_{\alpha} W^{\alpha} \right) 
+= 
+\\
+= \; & \hbox{Tr} \left[ -\frac{1}{4} F_{ \mu \nu} F^{\mu nu } - i \lambda \sigma^{\mu} D_{\mu} \bar{\lambda}  + \frac{1}{2} D^2 \right] + \frac{\theta_{YM}}{32 \pi^2 }g^2 \hbox{Tr} F_{ \mu \nu} \tilde{F}^{\mu nu } 
+\end{align}
+where we the chiral superfield as
+\begin{equation}
+ W_{\alpha} = - \frac{1}{4} \bar{D} \bar{D}\left(e^{-2 g V}  D_{\alpha}  e^{2g V} \right) \qquad  
+\bar{W}_{\dot{\alpha}} = - \frac{1}{4} D D \left(   e^{2gV} \bar{D}_{\dot{\alpha}} V e^{-2gV} \right)  
+\end{equation}
+It can be demonstrated that $W_{\alpha}$ is chiral and is invariant under the supergauge transformation $V \; \rightarrow \; V + \bar{\Phi} + \Phi$ while the vector superfield $V$ was not.
+
+From a perturbative point of view the inclusion of the term proportional to $\theta_{YM} {Tr} F_{ \mu \nu} \tilde{F}^{\mu nu }  $ has no effect since it is proportional to a total derivative. 
+It is a parity violating term that differs from zero in non trivial topological configurations of the field (instantons).
+\\
+The matter lagrangian we introduced is not invariant under gauge transformation.
+The correct invariant lagrangian is given by
+\begin{equation}
+ \mathcal{L}_{matter} \, = \, \int d^2 \theta d^2 \bar{\theta} \; \bar{\Phi} e^{ 2 g V} \Phi 
+\end{equation}
+The superpotential is not automatically invariant under gauge transformation. As a result only certain expression are allowed.
+\\
+There's an additional supersymmetric invariant lagrangian that can be constructed in a gauge theory when the gauge group contains abelian factors. 
+There can be a term for every abelian factor.
+It is called Fayet-Iliopulos term and is given by
+\begin{equation}
+ \mathcal{L}_{FI} \, = \, \sum_{A} \xi_A \int d^2 \theta d^2 \bar{\theta} V^{A} \, = \, \frac{1}{2} \sum_{A} \xi_A D^A
+ \end{equation}
+
 
 
 
