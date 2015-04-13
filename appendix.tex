@@ -299,12 +299,45 @@ The correct invariant lagrangian is given by
 The superpotential is not automatically invariant under gauge transformation. As a result only certain expression are allowed.
 \\
 There's an additional supersymmetric invariant lagrangian that can be constructed in a gauge theory when the gauge group contains abelian factors. 
-There can be a term for every abelian factor.
-It is called Fayet-Iliopulos term and is given by
+It is called Fayet-Iliopulos term and can be present for every ideal $A$ of the gauge group
 \begin{equation}
  \mathcal{L}_{FI} \, = \, \sum_{A} \xi_A \int d^2 \theta d^2 \bar{\theta} V^{A} \, = \, \frac{1}{2} \sum_{A} \xi_A D^A
  \end{equation}
 
+
+
+\section{Supersymmetry and superfields in three dimensions}
+\subsection{Spinor properties in three-dimensions}
+Spinors in three dimensions have different properties than their four dimension counterpart.\\
+The dimension of the representation in an arbitrary dimension $D$  is given by $2^{\frac{D}{2}} $
+for $D$ even, while $2^{\frac{D-1}{2}} $ for $D$ odd.
+Hence, in three dimension we have a two dimensional representation.
+
+In odd dimensions representations are irreducible and Weyl spinors do not exist: in odd dimensions the chirality operator ($\gamma_{D+1}$ or $\gamma^*$ ) is proportional to the identity.
+This is related to the fact that representations in odd dimensions are constructed by taking the representation in one dimension less, which is even, and adding the chirality operator as the $D$-th matrix in the Clifford algebra.\\
+Gamma matrices can be chosen to be real and we can impose Majorana condition, lowering the degress of freedom of the representation from four (two complex numbers) to two.\\
+Because minimal spinors in three dimensions have half the degrees of freedom of their four dimensional counterpart, the $4d \; \mN=1$ superspace formalism can be easily extended to $3d \; \mN=2$ theories.
+\\
+The supersymmetry algebra can be found by dimensional reduction from  the $d=4 \; \mN=1$ supersymmetry algebra. 
+\begin{equation}
+ \{ Q_{\alpha},Q_{\beta} \} =  \{ \bar{Q}_{\alpha},\bar{Q}_{\beta} \}= 0 \qquad \{ Q_{\alpha} , \bar{Q}_{\beta}   \} = 2 \sigma^{\mu}_{\alpha \beta} P_{\mu} + 2 i \epsilon_{\alpha \beta} Z
+ \end{equation} 
+Since minimal spinors in four dimension are complex these relations include twice the number of minimal supercharges for three dimensional theories.
+The central charge $Z$ is the component $P_3$ of the momentum, along the reduced direction.
+Because of the presence of the central charge in the algebra, now states must satisfy a BPS bound of the form $M \geq Z $, which imply that for massless representations have null central charge.
+\\
+The automorphism of this algebra is $U(1)_R \simeq SO(2)_R$, as in four dimensions.
+
+\subsection{Superspace and superfields}
+
+Superspace formalism is similar to what we introduced previously.
+Covariant derivatives are defined in the same way as in $4D$, with proper changes (e.g. gamma matrices).  
+Chiral and real superfield can be defined in three dimensions in the same way we did in four dimensions. 
+
+(Anti)Chiral superfields contains \emph{on-shell} one complex scalar and a complex spinor.
+Vector superfield contains an additional real scalar field with respect from the four dimensional superfield.
+The scalar field is just the last component of the vector field of the superfield, after dimensional reduction. 
+Its variation under a supersymmetry transformation match those of the vector field because of this reason.
 
 
 
