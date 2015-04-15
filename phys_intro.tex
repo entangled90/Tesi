@@ -79,13 +79,13 @@ It is given by the \emph{NSVZ $\beta$ function}
   \beta (\alpha) = - \frac{\alpha^2}{2 \pi} \left[ 3 \; T(Adj) - \sum_i T( R_i) ( 1 - \gamma_i ) \right]  \left( 1 - \frac{ \alpha \; T(Adj)  }{2 \pi} \right)^{-1} \qquad \alpha = \frac{g^2}{4 \pi}
 \label{beta-exact}
 \end{equation} 
-where $\gamma_i$ are the anomalous dimensions of the matter fields and $T(R_i)$ are the dynkin indices of their representation.\\
+where $\gamma_i$ are the anomalous dimensions of the matter fields and $T(R_i)$ are the Dynkin indices of their representation.\\
 The anomalous dimensions are defined as
 \begin{equation}
  \gamma_i = - \frac{d \, \log(Z_i) }{d \, \log( \mu)}
 \end{equation}
-where $Z_i$ is the wave function renormalization coefficient.
-For example for gauge group $SU(N)$ we have
+where $Z_i$ is the wave function renormalization coefficient. In general, anomalous dimensions are not know exactly.\\
+The Dynkin index of the gauge group $SU(N)$ are 
 \begin{equation*}
  T(N) = \frac{1}{2} \qquad T(Adj) = N 
 \end{equation*}
@@ -96,16 +96,16 @@ Over the years it has been calculated in other ways using the fact that the acti
 \end{equation}
 Using the holomorphic coupling the action for the vector field is written as
 \begin{equation}
- \mathcal{L}_h ( V_h) = \frac{1}{32 \pi i } \int d^2 \theta \frac{1}{g_h^2} W^a ( V_h) W^a(V_h)  + h.c.
+ \mathcal{L}_h ( V_h) = \frac{1}{16 \pi i } \int d^2 \theta \frac{1}{g_h^2} W^a ( V_h) W^a(V_h)  + h.c.
 \end{equation}
 whereas with the canonical normalization for the vector field is
 \begin{equation}
- \mathcal{L}_c ( V_c) = \frac{1}{32 \pi i } \int d^2 \theta \left( \frac{4 \pi i }{g_c^2 } + \frac{\theta_{YM}}{2 \pi} \right) W^a ( g_c V_c) W^a(g_c V_c) + h. c.  
+ \mathcal{L}_c ( V_c) = \frac{1}{16 \pi i } \int d^2 \theta \left( \frac{4 \pi i }{g_c^2 } + \frac{\theta_{YM}}{2 \pi} \right) W^a ( g_c V_c) W^a(g_c V_c) + h. c.  
 \end{equation}
 Using the canonical normalization $g_c V_c$ is a real superfield, imposing that $g_c$ is real.
 For this reason with the canonical normalization the lagrangian is not holomorphic in the combination $ \frac{4 \pi i }{g^2 } +  \frac{\theta}{ 2\pi} $.
-Thanks to holomorphy, the holomorphic coupling is only renormalized at one-loop and the $\beta$ function can be computed but its expression is different from \emph{NSVZ $\beta$ function}.
-In fact, the \emph{NSVZ $\beta$ function} is defined using the canonical (or physical) coupling constant and receives contribution from all orders in perturbation theory.
+Thanks to holomorphicity, the holomorphic coupling is only renormalized at one-loop and the $\beta$ function can be computed exactly at one loop but its expression is different from \emph{NSVZ $\beta$ function}.
+The cause of this mismatch is that the \emph{NSVZ $\beta$ function} is defined using the canonical (or physical) coupling constant and receives contribution from all orders in perturbation theory.
 
 At first sight, one should expect that the expressions should match since the first two orders in $\alpha$ of the $\beta$ function are scheme independent. 
 The reason why the two expressions differ is that the Jacobian of the transformation between canonical and holomorphic normalization is anomalous. 
@@ -131,6 +131,7 @@ An explicit calculation relating the comparison between the two different approa
 
 
 \subsection{Superpotential: holomorphy and non-renormalization}
+\label{sec:superpotential_hol_renorm}
 Other than renormalization constraints, supersymmetry provides non-renormalization theorems for certain objects, such as the superpotential.
 In \cite{Grisaru:1979wc} it has been demonstrated that the superpotential is tree-level exact, i.e. it does not receive correction in perturbation theory. 
 However it usually receive contributions from non perturbative dynamics.
@@ -186,7 +187,7 @@ For $4D \; \mN=1$ gauge theories with matter, the scalar potential (involving on
  V ( \phi_i, \bar{\phi}_j) = F \bar{F} + \frac{1}{2} D^2  \quad \overset{\mathclap{on-shell}}=   \quad \frac{\partial W}{\partial \phi_i} F^i \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \bar{F}^i + \frac{g^2}{2} \sum_a | \bar{\phi}_j (T^a)^j_i \phi^j + \xi^a | ^2  \geq 0
 \end{equation} 
 $\xi^a$ is the Fayet-Iliopulos coefficient and differs from zero only for abelian factors of the gauge group.
-The last equality is valid since $D$ and $F$ are auxiliary scalar field of vector and chiral fields respectively.
+The last equality is valid since $D$ and $F$ are auxiliary fields with no dynamics.
 Their value is set by their equations of motion
 \begin{equation}
  \bar{F}_i  = \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \qquad D^a = - g \bar{\phi} T^a \phi - g \xi^a 
@@ -196,13 +197,16 @@ This requirement is equivalent to two different sets of equations, called $D-ter
 \begin{equation}
 \bar{F}^i ( \phi) = 0 \qquad D^a (\phi , \bar{\phi}) = 0
 \end{equation}
-\emph{F-term} equations are present only if there is a superpotential.\\
-Some theories do not have supersymmetric vacua and in these cases supersymmetry is spontaneously broken. \\
+\emph{F-term} equations are present only if there is a superpotential while the \emph{D-term} equations are always present.\\
+If the minimum of the scalar potential is different from zero the vacuum is not supersymmetric. 
+In this case supersymmetry is spontaneously broken.
+Another possible situation is that the scalar potential has no minimum at all: the theory does not have any stable vacua.
+
 The \emph{classical moduli space} is the set of solution of these equations for scalar \emph{VEVs} and represents the classical supersymmetric vacua of the theory. 
 Gauge transformation should be taken into account in order to avoid redundance in the description.
 The moduli space describe physically inequivalent vacua, since the mass spectrum of the theory depends on the \emph{VEVs} of the scalar fields, that differ in every point of the moduli space. 
 
-Thanks to supersymmetry radiative corrections do not lift the energy of the ground state and the vacuum remains supersymmetric.
+Because of supersymmetry radiative corrections do not lift the energy of the ground state and the vacuum remains supersymmetric.
 As a result, only superpotentials generated from non perturbative dynamics can lift the moduli space. 
 We will see examples of this phenomenon in the analysis of SQCD.
 

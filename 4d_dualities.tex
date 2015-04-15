@@ -19,12 +19,11 @@ electric and magnetic
 
 \end{comment}
 
-\section{Electric-magnetic duality in three and four dimensions}
 
 
 \begin{comment}
-\subsubsection{Moduli space of $4D \; \mN=1$ SQCD with $SU(N_c)$ gauge group and $N_f$ flavors}
-As a concrete example of moduli space we will analyse $SU(N_c)$ SQCD with $N_f$ flavors.
+\subsubsection{Moduli space of $4D \; \mN=1$ SQCD with $SU(N_c)$ gauge group and $N_f$ flavourssis }
+As a concrete example of moduli space we will analyse $SU(N_c)$ SQCD with $N_f$ flavourssis .
 Its classical lagrangian contains no superpotential and is given by two terms, generating \emph{D-terms} equations
 \begin{equation}
 \mathcal{L } =  \mathcal{L }_{SYM} + \mathcal{L }_{matter} 
@@ -32,9 +31,8 @@ Its classical lagrangian contains no superpotential and is given by two terms, g
 we refer to appendix \ref{appendice_susy} for their explicit form.
 
 The global non anomalous symmetry group of the theory is $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R$. 
-The matter content of the theory consists of $N_f$ $(Q_i, \tilde{Q}^{\tilde{j}})$ pairs of chiral fields, charged under \emph{left}  \emph{right} flavor symmetries respectively. 
+The matter content of the theory consists of $N_f$ $(Q_i, \tilde{Q}^{\tilde{j}})$ pairs of chiral fields, charged under \emph{left}  \emph{right} flavours is symmetries respectively. 
 
-\end{comment}
 \begin{lstlisting}
 -------- Roba da dire nel capitolo ---------
  ~Phases of gauge theories?(asympt. free, non abelian coulomb/magnetic..)
@@ -47,6 +45,7 @@ The matter content of the theory consists of $N_f$ $(Q_i, \tilde{Q}^{\tilde{j}})
  ~'t'Hooft anomalies
  ~Different group con be used
 	\end{lstlisting}
+\end{comment}
 
 
 \section{Four dimensional dualities}
@@ -54,7 +53,7 @@ The matter content of the theory consists of $N_f$ $(Q_i, \tilde{Q}^{\tilde{j}})
 We will start our analysis on eletric-magnetic duality studying the first pair of theories that were discovered to be dual in \cite{Seiberg:1994pq}.  
 We are gonna analyse the properties of these theory in order to better understand the features of the duality.
 
-\subsection*{Seiberg Duality --- $SUN(N)$ SQCD with $N_f$ flavors}
+\subsection*{Seiberg Duality --- $SUN(N)$ SQCD with $N_f$ flavourssis }
 The electric theory is a $SU(N_c) $ supersymmetric gauge theory with $N_f$ flavours.
 Its non anomalous global symmetry group is $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R $. 
 
@@ -95,7 +94,7 @@ They can be read from the on-shell lagrangian and are given by
 \begin{equation}
  D^a = g \left( Q^{*i} T^a Q_i - \tilde{Q}^{* i} T^a \tilde{Q}_i \right) = 0
 \end{equation}
-where $T^a$ are the gauge group generators in fundamental or antifundamental representation, color indices are suppressed and $i$ is a flavour index.
+where $T^a$ are the gauge group generators in fundamental or antifundamental representation and $i$ is a flavour index.
 
 After considering gauge and global symmetries, the squark \emph{VEVs}, represented as $N_f \times N_c$ matrices, that satisfy the D-term equation are
 \begin{equation}
@@ -128,10 +127,12 @@ Q  =
 	 \dots & \dots & \dots & \dots\\ 
 \end{pmatrix} 
 \end{equation}
-for $N_f \geq N_c$ and $ | a_i|^2 - | \tilde{a}_i |^2 = a $ indepdent of $i$.
+for $N_f \geq N_c$ and $ | a_i|^2 - | \tilde{a}_i |^2 = a $ independent of $i$.
 
-We can try to understand why for different number of flavors the theory has qualitatively different moduli spaces. 
-As we said in the previous section, we can solve the D-term equation by finding holomorphic gauge invariant polynomial in the operators and modding out classical relations between them.
+For $N_f \le N_c$ in a generic point of the moduli space the gauge group is broken to $SU(N_c - N_f)$ while for $N_f \geq N_c$ is broken completely.
+The gauge group breaks through the super Higgs mechanism, where every broken generator gets absorbed by the vector superfield in order to make a massive vector superfield.   
+
+As we said in the previous section, we can  study the classical moduli space by finding holomorphic gauge invariant polynomial in the operators and modding out classical relations between them.
 For $N_f \le N_c$ we can only construct \emph{mesons} out of squarks
 \begin{equation}
   M^i_j = Q^i \tilde{Q}_j
@@ -146,7 +147,7 @@ There are additional gauge invariant operators that can be constructed: \emph{ba
  \\
  \tilde{B}_{ i_1, \dotsc, i_{N_f - N_c}} = \epsilon^{i_1, \dotsc, i_{N_f - N_c}, j_1 , \dotsc, j_{N_c}} \epsilon_{a_1 , \dotsc, a_{N_c}} \tilde{Q}_{j_1}^{a_1} \dots \tilde{Q}_{j_{N_c}}^{a_{N_c}}
 \end{align}
-Mesons and baryons can be written down explicitly (ignoring null components for baryons)
+Mesons and baryons can be written down using the \emph{VEVs} we found solving the \emph{D-term} equations (ignoring null components for baryons)
 \begin{align}
 M =& \begin{pmatrix}
 a_1 \tilde{a_1} & & & & & \\
@@ -156,14 +157,75 @@ a_1 \tilde{a_1} & & & & & \\
 				& & & & & \\	
 \end{pmatrix}
 \\
-B_{1 2 \dots {N_c}} =& a_1 a_2 \dots a_{N_c} 
+B  \simeq & \;  a_1 a_2 \dots a_{N_c} 
 \\
-\tilde{B}_{1 2 \dots {N_c}} =& \tilde{a_1} \tilde{a_2}\dots \tilde{a_{N_c}}
+\tilde{B} \simeq & \;  \tilde{a_1} \tilde{a_2}\dots \tilde{a_{N_c}}
 \end{align}
-We can see that if the meson has rank less than $N_c$, then $B$ or $\tilde{B}$ (or both) has to vanish and the other has rank one. If the meson rank is $N_c$ both $B$ and $\tilde{B}$ have rank one.
+We can see that if the mesons have rank less than $N_c$, then $B$ or $\tilde{B}$ (or both) has to vanish and the other has rank one. If the mesons' rank is $N_c$ both $B$ and $\tilde{B}$ have rank one.
 
-Moreover that are classical constraints between mesons and baryons, but depend on the number of flavor.
-For example for $N_f = N_c$ we have $ det \,( M) - B \tilde{B} = 0$
+That are classical constraints that should be imposed between mesons and baryons, but depend on the number of flavourssis .
+For example for $N_f = N_c$ the classical constraint  is $ det \,( M) - B \tilde{B} = 0$.
+
+Singularities of the moduli space can be investigated using the gauge invariant description we just introduced.
+The part of the lagrangian that describes flat directions can be written in terms of mesons and baryons. 
+The lagrangian involving mesons features a non trivial Kahler potential that reads
+\begin{equation}
+  K = 2 \Tr \sqrt{ M^{\dagger} M}
+ \end{equation} 
+that generate a singular metric whenever the meson matrix is not invertible. 
+This happens when some of the VEVs are zero, i.e. in points of the moduli space of enhanced gauge symmetry.
+The appearance of this singularities is related to the fact that
+some (or all) gluons are now massless and should be included in the low-energy description.
+
+
+
+
+\subsubsection{Quantum moduli space}
+
+Quantum dynamics modifies the structure of the moduli space of the theory in a different way depending on the number of flavours.
+\\
+
+For pure \emph{Super Yang Mills}, i.e. no quarks, the theory exihibit a discrete set of $N_c$ vacua. 
+Without quarks a non anomalous R-symmetry cannot be found,
+and the R-symmetry is broken down to the discreet symmetry $\mathbb{Z}_{2 N_c}$.
+Using holomorphy and symmetry arguments, the form of the non perturbative potential can be found and it can be shown that induces the gaugino to condensate, meaning that 
+\begin{equation}
+\langle \lambda \lambda \rangle = - \frac{32 \pi^2}{N_c} a \, \Lambda^3
+\end{equation}
+where $\Lambda$ is the dynamically generated scale of the theory.
+The gaugino condensation breaks R-symmetry to $\mathbb{Z}_2$ and in fact there are $N_c$ physically different vacua labelled by different phases of the gaugino condensate.
+\\
+
+The quantum corrections for \emph{SQCD} with $N_f \le N_c$ flavours completely lift the moduli space through the Affleck-Dine-Seiberg (ADS) superpotential (\cite{Davis:1983mz}\cite{Affleck:1983mk}) which reads
+\begin{equation}
+W_{eff} = \left( N_c - N_f  \right)\left( 
+\frac{\Lambda^{3N_c -  N_f }}
+{\mathrm{det} {M}}
+\right)^{ \frac{1}{N_c - N_f}}
+\end{equation}
+It is the only superpotential that is compatible with the symmetries of the theory and with the other properties of the superpotential we introduced in section \ref{sec:superpotential_hol_renorm}.
+We can see that the ADS superpotential do not exist for $N_F \geq N_c$ since the exponent diverges for $N_f = N_c$ or the determinant vanishes for $N_f \ge N_c$ since the mesons do not have maximal rank.
+Note that this superpotential is non perturbative and thus it is not in contrast with the renormalization theorem of section \ref{sec:superpotential_hol_renorm}.
+The superpotential is generated either by instantons for $N_f = N_C -1$ or by gaugino condensation for other number or flavours.
+The effect of this superpotential is that the theory does not have ground state.
+The slope of the potential goes to zero only for $\mathrm{det} \, {M}  \rightarrow \infty $.
+\begin{center}
+\includegraphics[scale=0.5]{ads_super.png}
+\end{center}
+This situation is the perfect example when, unlike the classical moduli space, quantum corrections lift completely the moduli space and the theory does not posses a vacuum anymore.
+\\
+
+When the number of flavours is equal the number of colours of the theory, the classical moduli space was subject to the constraint
+\begin{equation}
+ \Det{M} - B \tilde{B} = 0
+\end{equation}
+in the quantum corrected moduli space mesons and baryons satisfy
+\begin{equation}
+ \Det{M} - B \tilde{B} = \Lambda^{2 N_c}
+\end{equation}
+which flows to the classical constraint in the classical limit ($\Lambda \; \rightarrow \;0$).
+The effect of this relation is that the origin  does not belong to the moduli space anymore and is smoothed out
+Moreover, if $B$ or $\tilde{B}$ is zero, the meson matrix has full rank.
 
 
 
