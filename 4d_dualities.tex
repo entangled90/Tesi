@@ -1,8 +1,5 @@
 %!TEX root = tesi.tex
 
-
-
-
 \begin{comment}
 ~ "Classically, and to all orders of perturbation theory, the 
 \section{Electric-magnetic duality in three and four dimensions}
@@ -48,22 +45,27 @@ The matter content of the theory consists of $N_f$ $(Q_i, \tilde{Q}^{\tilde{j}})
 \end{comment}
 
 
-\section{Four dimensional dualities}
+\chapter{Four dimensional dualities}
+
+\input{phys_intro}
+
+
+\section{$SU(N)$ SQCD with $N_f$ flavours }
 
 We will start our analysis on eletric-magnetic duality studying the first pair of theories that were discovered to be dual in \cite{Seiberg:1994pq}.  
 We are gonna analyse the properties of these theory in order to better understand the features of the duality.
 
-\subsection*{Seiberg Duality --- $SUN(N)$ SQCD with $N_f$ flavourssis }
+
+
 The electric theory is a $SU(N_c) $ supersymmetric gauge theory with $N_f$ flavours.
 Its non anomalous global symmetry group is 
 $$
 SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R 
 \label{eqn:seib_dual_global_symm_group}
 $$. 
-
 The classical lagrangian doesn't have a superpotential and in terms of superfield is written as
 \begin{equation}
- \mathcal{L} = \int d^2 \theta \; Tr ( W_{\alpha} W^{\alpha} ) + 
+ \mathcal{L} = \tau \int d^2 \theta \; Tr ( W_{\alpha} W^{\alpha} ) + 
  \int d^2 \theta \, d^2 \bar{\theta} \;  {Q}^{\dagger} e^{ V} Q +
  \int d^2 \theta \, d^2 \bar{\theta} \; {\tilde{Q}^{\dagger}} e^{- V} \tilde{Q}
  \end{equation} 
@@ -79,8 +81,13 @@ $\tilde{Q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $-1$   &  $\frac{N
 	\centering
  \caption{Charges of the electric theory}
 \end{table}
+
 Mixing the R-symmetry with the baryon symmetry we can set the quark R-charges to be equal.
-Moreover, the value of the R-charge is fixed by the triangle anomaly $SU(N_c)^2 \, U(1)_R $, given by diagrams with two exiting gluons and R-symmetry current inserted in the cross 
+Since there's no superpotential their R-charges are not fixed relative to each other.
+\\
+The axial symmetry $U(1)_A$ is anomalous and cannot be present.
+However it can mix with the \emph{natural} $U(1)_{R_0}$ R-symmetry of the theory, which is anomalous by itself, in order to give a non anomalous $U(1)_R$.\\
+In fact, the value of the R-charge is fixed by the triangle anomaly $SU(N_c)^2 \, U(1)_R $, given by diagrams with two exiting gluons and R-symmetry current inserted in the cross 
 \begin{center}
 \includegraphics[scale=0.6]{r-symm_anomlay.png}
 \end{center}
@@ -100,7 +107,7 @@ They can be read from the on-shell lagrangian and are given by
 \end{equation}
 where $T^a$ are the gauge group generators in fundamental or antifundamental representation and $i$ is a flavour index.
 
-After considering gauge and global symmetries, the squark \emph{VEVs}, represented as $N_f \times N_c$ matrices, that satisfy the D-term equation are
+After considering gauge and global symmetries, the squark \emph{VEVs}, represented as $N_f \times N_c$ matrices, that satisfy the D-term equation are for  $N_f \le N_c$ and $a_i$ generic
 \begin{equation}
 Q = \tilde{Q} = 
 \begin{pmatrix}
@@ -111,7 +118,9 @@ Q = \tilde{Q} =
 \end{pmatrix} 
  \\
 \end{equation}
-for  $N_f \le N_c$ and $a_i$ generic and
+
+for $N_f \geq N_c$ and $ | a_i|^2 - | \tilde{a}_i |^2 = a $ independent of $i$.
+
 \begin{equation}
 Q  = 
 \begin{pmatrix} 
@@ -131,10 +140,11 @@ Q  =
 	 \dots & \dots & \dots & \dots\\ 
 \end{pmatrix} 
 \end{equation}
-for $N_f \geq N_c$ and $ | a_i|^2 - | \tilde{a}_i |^2 = a $ independent of $i$.
+
 
 For $N_f \le N_c$ in a generic point of the moduli space the gauge group is broken to $SU(N_c - N_f)$ while for $N_f \geq N_c$ is broken completely.
-The gauge group breaks through the super Higgs mechanism, where every broken generator gets absorbed by the vector superfield in order to make a massive vector superfield.   
+The gauge group breaks through the super Higgs mechanism, where every broken generator gets absorbed by the (originally) massless vector superfield in order to make a massive vector superfield \footnote{Remember that massive representation of supersymmetry have twice the degrees of freedom of massless ones, because in the latter half of the supercharges are represented trivially.}
+The mass of the gauge superfield is given by the VEVs of the squarks.
 
 As we said in the previous section, we can  study the classical moduli space by finding holomorphic gauge invariant polynomial in the operators and modding out classical relations between them.
 For $N_f \le N_c$ we can only construct \emph{mesons} out of squarks
@@ -197,7 +207,13 @@ Using holomorphy and symmetry arguments, the form of the non perturbative potent
 \begin{equation}
 \langle \lambda \lambda \rangle = - \frac{32 \pi^2}{N_c} a \, \Lambda^3
 \end{equation}
-where $\Lambda$ is the dynamically generated scale of the theory.
+where $\Lambda$ is the dynamically generated scale of the theory defined as
+\begin{equation}
+\Lambda = \mu e^{-\frac{2 \pi i \tau}{b_0}} \qquad 
+\tau  = \frac{4 \pi i}{g^2 (\mu) } + \frac{\theta_{YM}}{2 \pi}  \qquad b_0 = 3 N_c - N_f
+\end{equation}
+where $\tau$ is the complexified gauge coupling.
+$|\Lambda|$ is defined as the scale at which the coupling constant blows up.\\
 The gaugino condensation breaks R-symmetry to $\mathbb{Z}_2$ and in fact there are $N_c$ physically different vacua labelled by different phases of the gaugino condensate.
 \\
 \\
@@ -247,8 +263,6 @@ Since the origin is not in the quantum moduli space the global symmetry group \r
 M^i_j = \Lambda^2 \delta^i_j \quad B=\tilde{B}= 0 \quad & \rightarrow  \quad SU(N_f)_V \times U(1)_B \times U(1)_R\\
 M^i_j = 0 \quad B=-\tilde{B}= \Lambda^{N_c} \quad & \rightarrow  \quad SU(N_f)_L \times SU(N_f)_R \times U(1)_R
 \end{align}
-\\
-\\
 $\mathbf{N_f = N_c +1}$
 \\
 In the case $N_f = N_c +1 $ the classical moduli space is constrained by
@@ -257,7 +271,7 @@ In the case $N_f = N_c +1 $ the classical moduli space is constrained by
  M^i_j B_i = M^i_j \tilde{B}^j = 0 
  \label{eqn:N_f__N_c_1_classical_constraints}
 \end{equation}
-and quantum correction do not modify it.
+and quantum corrections do not modify it.
 In the previous section we noted that the singularities in the classical moduli space are associated to the appearance of massless gluons.
 In the quantum picture, the interpretation of the singularities is different: they are associated with additional massless mesons and baryons.
 At the origin of the moduli space the theory is strongly coupled and the global symmetry \ref{eqn:seib_dual_global_symm_group} is unbroken and it can be checked with 't Hooft anomalies that mesons and baryons physical and contribute to the anomalies.\\
@@ -268,15 +282,19 @@ W_{eff} = \frac{1}{\Lambda^{2 N_c -1}} \left( M^i_j B_i \tilde{B}^j - \Det{M} \r
 that enforce the classical constraints \ref{eqn:N_f__N_c_1_classical_constraints} through the equations of motion. Moreover, the superpotential give large mass to mesons and baryons.
 \\
 \\
-$\mathbf{ N_f > N_c +1 }$
+$\mathbf{ N_f > N_c +1 }$\\
+Starting from $N_f = N_c +2$ it is not possible to construct a sensible physical superpotential out of gauge invariant operators, in analogy to the previous cases.
+The only $SU(N_f)_L \times SU(N_f)_R$ invariant superpotential that can be written is given by
+\begin{equation}
+ W_{eff} \sim \Det{M} - B_{ij} M^i_k M^j_l \tilde{B}^{kl} 
+ \end{equation} 
+since baryons have two flavour indices.
+However this superpotential does not have R-charge equal to two and if we add more flavours we should add other mesons to the superpotential.\\
+The classical constraints on mesons and baryons are satisfied quantum mechanically.
+Unlike the case with $N_f = N_c +1$ the singularities in the moduli space cannot be interpreted as massless mesons and baryons and an effective description of these operator is singular \cite{Seiberg:1994bz}.
+Since 't Hoof anomaly matching conditions are not satisfied in the singular points it is clear that a description using mesons and baryons is not correct.
 
-
-
-
-
-
-
-
+To find a description of the low-energy degrees of freedom of the theory we will use Seiberg duality, which provides an alternative description of the theory,
 
 
 
@@ -314,8 +332,7 @@ $M^i_{\tilde{j}} $ & $1$ & $N_f$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c
 
 
 
-\subsection*{Kutasov-Schwimmer duality}
-
+%%\subsection*{Kutasov-Schwimmer duality}
 
 
 %\bibliography{bibliografia}

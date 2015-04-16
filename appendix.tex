@@ -205,6 +205,21 @@ In this gauge the vector superfield can be written as
 \end{equation}
 The vector superfields represents the vector multiplet (which contains radiation) and similarly to the chiral superfields contains an auxiliary field ($D(x)$).
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{R-symmetry}
 R-symmetry was first introduced with the supersymmetry algebra.
 For the theories we will consider in superspace it is given by a global $U(1)_R$.
@@ -212,7 +227,7 @@ It is defined by as a transformation of the Grassmann coordinates
 \begin{equation}
 \theta \; \rightarrow \; e^{i \alpha} \theta \qquad \bar{\theta} \; \rightarrow \; e^{-i \alpha} \bar{\theta}
 \end{equation}
-$\alpha$ parametrized the transformation.
+$\alpha$ parametrizes the transformation.
 As a result supercharges transform under the transformation 
 \begin{equation}
  Q \rightarrow \; e^{-i \alpha} Q  \qquad \bar{Q} \; \rightarrow \; e^{+i \alpha} \bar{Q}
@@ -234,27 +249,37 @@ R[\phi] = R\left [{\Phi}\right] \qquad R[\psi] = R\left [{\Phi}\right] - 1 \qqua
 The corresponding antichiral field carry opposite charges.
 
 
+
+
+
+
+
+
+
+
+
+
 \section{Supersymmetric actions}
 We will use the property we introduced in \ref{eqn:inv_superfields} to generate supersymmetric invariant lagrangians.
 We start our analysis with chiral superfields.
-Since lagrangians are quadratic in the fields and must be real, our best shot at finding the correct superfield to integrate is given by $ \bar{\Phi} \Phi$. 
+Since lagrangians are quadratic in the fields and must be real, the simplest kinetic term for a chiral superfield is given by $ \bar{\Phi} \Phi$. 
 \begin{equation}
  \mathcal{L}_{kin} \, = \, \int d^2 \theta d^2 \bar{\theta} \; \bar{\Phi} \Phi = \dem \bar{\phi} \deM \phi + \frac{i}{2} \left( \dem \psi \sigma^{\mu} \bar{\psi} - \psi \sigma^{\mu} \dem \bar{\psi} \right) + \bar{F} F + \hbox{total derivative}
 \end{equation}		
-We found the correct kinetic terms for the scalar and spinor field.
+which gives the correct kinetic terms for a scalar and a spinor.
 The auxiliary field doesn't have kinetic terms as predicted.
 Many action can be find using a generalization of the equation above. It is called \emph{Kahler} potential   
 \begin{equation}
 K ( \bar{\Phi} , \Phi) = \sum_{m,n=1}^{\infty} c_{m,n} \bar{\Phi}^m \Phi^n \qquad \hbox{where} \quad c_{m,n} = c_{n,m}*
 \end{equation}
-The condition on the coefficient is imposed by the requirement of a real action. 
+The condition on the coefficient is imposed by the requirement of a real lagrangian. 
 
-Actually we can produce supersymmetric actions also integrating \emph{chiral} superfields in half-superspace coordinates.
+Another way of finding supersymmetric actions is by  integrating \emph{chiral} superfields in half-superspace coordinates.
 We define the \emph{superpotential} to be a holomorphic function of $\Phi$ 
 \begin{equation}
  \mathcal{L}_{int} = \int  d^2 \theta d^2  \; W ( \Phi)  +  \int d^2 \bar{\theta} \; \bar{W} ( \bar{\Phi} ) = \sum_{i=1}^\infty  \int  d^2 \theta \; \lambda_n \Phi^n + \int d^2 \bar{\theta}\;  \lambda_n^{\dagger} \bar{\Phi}^n
 \end{equation} 
-In order to have a real lagrangian we added the hermitian conjugate.
+The hermitian conjugate was added in order to have a real lagrangian.
 
 Mixed terms with product of chiral and anti-chiral superfield are not present since they would be generic superfields and would not yield a supersymmetric lagrangian.
 In fact if $W(\Phi)$ is holomorphic and $\Phi$ is a chiral superfield, $W(\Phi)$ is a chiral superfield
@@ -263,7 +288,7 @@ In fact if $W(\Phi)$ is holomorphic and $\Phi$ is a chiral superfield, $W(\Phi)$
 \end{equation}
 and yield a proper lagrangian upon integration in $ d^2 \theta$.
 
-Since the superpotential is integrated only in half superspace coordinates it need to be charged in an opposite way in order to provide a lagrangian invariant under R-symmetry.
+Since the superpotential is integrated only in half superspace coordinates it need to be charged in an opposite way with respect to the integration measure under R-symmetry.
 Remembering  that
 \begin{equation}
 R[\theta] = 1 \qquad [\bar{\theta}] = - 1 \qquad R[d\theta] = -1 \qquad R [d \bar{\theta}] = 1 \qquad
@@ -281,7 +306,7 @@ The lagrangian of super Yang-Mills theories is given by
 \\
 = \; & \hbox{Tr} \left[ -\frac{1}{4} F_{ \mu \nu} F^{\mu nu } - i \lambda \sigma^{\mu} D_{\mu} \bar{\lambda}  + \frac{1}{2} D^2 \right] + \frac{\theta_{YM}}{32 \pi^2 }g^2 \hbox{Tr} F_{ \mu \nu} \tilde{F}^{\mu nu } 
 \end{align}
-where we the chiral superfield as
+where we defined the chiral superfield $W_{\alpha}$ as
 \begin{equation}
  W_{\alpha} = - \frac{1}{4} \bar{D} \bar{D}\left(e^{-2 g V}  D_{\alpha}  e^{2g V} \right) \qquad  
 \bar{W}_{\dot{\alpha}} = - \frac{1}{4} D D \left(   e^{2gV} \bar{D}_{\dot{\alpha}} V e^{-2gV} \right)  
@@ -289,10 +314,10 @@ where we the chiral superfield as
 It can be demonstrated that $W_{\alpha}$ is chiral and is invariant under the supergauge transformation $V \; \rightarrow \; V + \bar{\Phi} + \Phi$ while the vector superfield $V$ was not.
 
 From a perturbative point of view the inclusion of the term proportional to $\theta_{YM} {Tr} F_{ \mu \nu} \tilde{F}^{\mu nu }  $ has no effect since it is proportional to a total derivative. 
-It is a parity violating term that differs from zero in non trivial topological configurations of the field (instantons).
+It is a parity violating term that differs from zero only in non trivial topological configurations of the field (instantons).
 \\
 The matter lagrangian we introduced is not invariant under gauge transformation.
-The correct invariant lagrangian is given by
+The correct gauge invariant lagrangian is given by
 \begin{equation}
  \mathcal{L}_{matter} \, = \, \int d^2 \theta d^2 \bar{\theta} \; \bar{\Phi} e^{ 2 g V} \Phi 
 \end{equation}
