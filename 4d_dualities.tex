@@ -80,6 +80,7 @@ $\tilde{Q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $-1$   &  $\frac{N
  \end{tabular}
 	\centering
  \caption{Charges of the electric theory}
+ \label{tab:suN_elect_charge}
 \end{table}
 
 Mixing the R-symmetry with the baryon symmetry we can set the quark R-charges to be equal.
@@ -295,19 +296,69 @@ Unlike the case with $N_f = N_c +1$ the singularities in the moduli space cannot
 Since 't Hoof anomaly matching conditions are not satisfied in the singular points it is clear that a description using mesons and baryons is not correct.
 
 To find a description of the low-energy degrees of freedom of the theory we will use Seiberg duality, which provides an alternative description of the theory,
+\\
+\\
+$\mathbf{  \frac{3}{2} N_c \geq N_f \geq  3 N_c}$\\
+In this range the theory is not asympotically free. This can be seen by using the \emph{NSVZ} $\beta$ function,using \ref{eqn:suN_Dynkin_indices}, reads
+\begin{align}
+ \beta (g) & \, = \,- \frac{g^3}{16 \pi^2} \frac{3 N_c - N_f + N_f \gamma(g^2)}{1 - N_c \frac{g^2}{8 \pi^2}} \\
+\gamma(g^2) &  \,= \, - \frac{g^2}{8 \pi^2} \frac{N_c^2 - 1}{N_c} + \mathcal{O} (g^4)
+\end{align} 
+Even though the $\beta$ function is exact, the anomalous dimension is only known perturbatively.\\
+In \cite{Seiberg:1994pq} was shown that exist a non trivial fixed point in the renormalization group flow for $\frac{3}{2} N_c \geq N_f \geq  3 N_c$. 
+This is possible because one loop and two loop contribution to the beta function have opposite signs.
+As a result, the infrared red theory is a non-trivial four dimensional superconformal theory. 
+The infrared degrees of freedom are quarks and gluons that are not confining but are interacting as massless particles.
+The theory is in a free non-Abelian Coulomb phase.
+
+Since the theory is superconformal, we have further restriction on the algebra of operators \footnote{
+	R-symmetry is contained directly in the superconformal algebra instead of being an automorphism of the algebra, as in superPoincarè algebra.  
+}
+Superconformal algebra imposes that the dimension of every operator satisfy this inequality involving the R-charge
+\begin{equation}
+ D \geq \frac{3}{2} | R |
+\end{equation}
+where the bound is satured for chiral fields.
+The operator product expansion (\emph{OPE} ) of two chiral operator is constrained by this fact.
+Since $R( O_1 O_2) = R(O_1) + R(O_2)$, we have that for chiral operators, $D(O_1 O_2) = D(O_1) + D(O_2)$.
+Therefore, the OPE is not singular and the product of operators is well-defined. Because of this fact, chiral operators form the \emph{chiral ring}. 
+
+Since the superconformal R-symmetry is not anomalous and commutes with the global symmetry group of the theory it must be the R-symmetry that appears in \ref{tab:suN_elect_charge}.
+The gauge invariant operators we defined previously must have
+\begin{align}
+ D(Q \tilde{Q}) &= \frac{3}{2} R(Q \tilde{Q}) = 3 \frac{N_f - N_c}{N_f}\\
+ D(B) & = D(\tilde{B})  = \frac{3}{2} N_c \frac{N_f - N_c}{N_c}
+\end{align}
+
+Gauge invariant operators should be in unitary representation of the superconformal algebra.
+Unitarity imposes that in general $D\geq 1$ and the equality holds for free fields.
+From the previous equation we can verify that $D(M) \geq 1$ for $ N_f \geq \frac{3}{2}N_c$ and it becomes a free field for $N_f = \frac{3}{2}N_c$. 
+
+For fewer number of flavours, the meson field is inconsistend with the unitarity bound.
+The theory is conjecture to flow to a different phase.
+\\
+\\
+$\mathbf{ N_f > N_c}$\\
+In this range, quarks prevails on glouns and change the sign of the $\beta$ function. 
+This is caused by the \emph{charge screening} effect of quarks, that make the coupling constant smaller at larger distances.\\
+The theory is in a free non-Abelian electric phase.
+Its behaviour is not very well defined at high energies because of the presence of a Landau pole at $R \sim \Lambda^{-1}$, although the theory can be a very good description of a low energy limit of another theory. 
+
+\section{Seiberg duality}
+Electric magnetic duality relates the dynamics of two different gauge theories in their infrared fixed point.
+
+In the case of Seiberg duality, the electric theory is given by the theory we analysed previously. 
 
 
-
-
-
-
-\newpage
-\begin{comment}
-The magnetic theory is a theory with the same global symmetries as the electric theory, but the gauge group is now $SU(N_f - N_c)$ and in addition there are $N_f^2$ fields, that we will call mesons. 
-Dual quarks will be represented as $q,\tilde{q}$ and mesons as $M^i_{\tilde{j}} $
-The charges for the magnetic theory are given by
-
-
+The magnetic theory is a theory with the same global symmetries as the electric theory, but with gauge group $SU(N_f - N_c)$. 
+In addition there are $N_f^2$ chargeless fields, that we will call mesons, since they have the same properties as the mesons we can construct in the electric theory.
+In the magnetic theory they are fundamental fields i.e. they are not written as gauge invariant operators from quarks. 
+Since they are gauge invariant, they interact only through the superpotential
+\begin{equation}
+ W  = M^i_{\tilde{j}}  q_i \tilde{q}^{\tilde{j}}
+\end{equation}
+where we represented dual quarks as $q,\tilde{q}$ and mesons as $M^i_{\tilde{j}} $.\\
+The charges for the magnetic theory are
 \begin{table}[h!]
  \begin{tabular}{c | c |  c c c c }
  & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
@@ -319,10 +370,6 @@ $M^i_{\tilde{j}} $ & $1$ & $N_f$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c
 	\centering
  \caption{Charge of matter content of the magnetic theory}
 \end{table}
-
-
-
-\end{comment}
 
 
 
