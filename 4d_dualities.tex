@@ -305,7 +305,8 @@ In this range the theory is not asympotically free. This can be seen by using th
 \gamma(g^2) &  \,= \, - \frac{g^2}{8 \pi^2} \frac{N_c^2 - 1}{N_c} + \mathcal{O} (g^4)
 \end{align} 
 Even though the $\beta$ function is exact, the anomalous dimension is only known perturbatively.\\
-In \cite{Seiberg:1994pq} was shown that exist a non trivial fixed point in the renormalization group flow for $\frac{3}{2} N_c \geq N_f \geq  3 N_c$. 
+The $\beta$ function is known to have a Banks-Zacks fixed point \cite{Banks:1981nn} in the 't Hooft limit with $\frac{N_f}{N_c} = 3 - \epsilon$ held fixed and $\epsilon \ll 1$.
+However, the fixed point exists in the range of values $\frac{3}{2} N_c \geq N_f \geq  3 N_c$ with $N_f$ and $N_c$ finite.
 This is possible because one loop and two loop contribution to the beta function have opposite signs.
 As a result, the infrared red theory is a non-trivial four dimensional superconformal theory. 
 The infrared degrees of freedom are quarks and gluons that are not confining but are interacting as massless particles.
@@ -320,7 +321,8 @@ Superconformal algebra imposes that the dimension of every operator satisfy this
 \end{equation}
 where the bound is satured for chiral fields.
 The operator product expansion (\emph{OPE} ) of two chiral operator is constrained by this fact.
-Since $R( O_1 O_2) = R(O_1) + R(O_2)$, we have that for chiral operators, $D(O_1 O_2) = D(O_1) + D(O_2)$.
+Since $R( O_1 O_2) = R(O_1) + R(O_2)$, we have that for chiral operators, $D(O_1 O_2) = D(O_1) + D(O_2)$. 
+Note that the dimension of the operator is quantum corrected, i.e. contains the anomalous dimension of the operator.
 Therefore, the OPE is not singular and the product of operators is well-defined. Because of this fact, chiral operators form the \emph{chiral ring}. 
 
 Since the superconformal R-symmetry is not anomalous and commutes with the global symmetry group of the theory it must be the R-symmetry that appears in \ref{tab:suN_elect_charge}.
@@ -338,7 +340,7 @@ For fewer number of flavours, the meson field is inconsistend with the unitarity
 The theory is conjecture to flow to a different phase.
 \\
 \\
-$\mathbf{ N_f > N_c}$\\
+$\mathbf{ N_f > 3 N_c}$\\
 In this range, quarks prevails on glouns and change the sign of the $\beta$ function. 
 This is caused by the \emph{charge screening} effect of quarks, that make the coupling constant smaller at larger distances.\\
 The theory is in a free non-Abelian electric phase.
@@ -346,40 +348,86 @@ Its behaviour is not very well defined at high energies because of the presence 
 
 \section{Seiberg duality}
 Electric magnetic duality relates the dynamics of two different gauge theories in their infrared fixed point.
+Even though the dual theories have different particle content, they describe the same IR physics. 
+Moreover, whenever one of the dual theories gets more strongly coupled, the other become more weakly coupled.
+This is particularly useful since it provides an alternative, weakly coupled description of the original theory.
 
-In the case of Seiberg duality, the electric theory is given by the theory we analysed previously. 
+In the case of Seiberg duality, the electric theory is given by the theory we analysed previously i.e. $SU(N) \;SQCD$ with $N_f$ flavours. 
 
-
-The magnetic theory is a theory with the same global symmetries as the electric theory, but with gauge group $SU(N_f - N_c)$. 
+\subsubsection{Msagnetic theory}
+The magnetic theory is \emph{SQCD} theory with the same global symmetries as the electric theory, but with gauge group $SU(N_f - N_c)$. 
 In addition there are $N_f^2$ chargeless fields, that we will call mesons, since they have the same properties as the mesons we can construct in the electric theory.
 In the magnetic theory they are fundamental fields i.e. they are not written as gauge invariant operators from quarks. 
 Since they are gauge invariant, they interact only through the superpotential
 \begin{equation}
- W  = M^i_{\tilde{j}}  q_i \tilde{q}^{\tilde{j}}
+ W  = M^i_{\tilde{j}} \; q_i \, \tilde{q}^{\tilde{j}}
+ \label{eqn:seiberg_duality_mag_super}
 \end{equation}
 where we represented dual quarks as $q,\tilde{q}$ and mesons as $M^i_{\tilde{j}} $.\\
-The charges for the magnetic theory are
-\begin{table}[h!]
+In principle, mesons constructed out of the dual quarks could enter in the superpotential but it's easy to see that this is equivalent to a shift in $M$.\\
+The charges of fields of the magnetic theory are
+\begin{table}[h]
  \begin{tabular}{c | c |  c c c c }
  & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
 \hline
-$q$ & $N_c$ & $N_F$ & $1$   &  $ \frac{N_c}{N-f-N_c} $  & $ \frac{N_c}{N_f}$  \\
-$\tilde{q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $- \frac{N_c}{N-f-N_c}$   &  $ \frac{N_c}{N_f}$   \\	 
-$M^i_{\tilde{j}} $ & $1$ & $N_f$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c}{N_f} $
+$q$ & $N_c$ & $N_F$ & $1$   &  $ \frac{N_c}{N_f-N_c} $  & $ \frac{N_c}{N_f}$  \\
+$\tilde{q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $- \frac{N_c}{N_f-N_c}$   &  $ \frac{N_c}{N_f}$   \\	 
+$M^i_{\tilde{j}} $ & $N_f$ & $\overline{N_f}$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c}{N_f} $
  \end{tabular}
 	\centering
- \caption{Charge of matter content of the magnetic theory}
+ \caption{Charges of the magnetic theory}
 \end{table}
+Dual quarks sit in opposite representation of flavour symmetries. 
+Similarly to the electric theory, the R-charges are chosen in order to be non anomalous. 
+This condition will grant that they are the same of the superconformal algebra.\\
+Mesons in the magnetic theory have the same charges of the mesons constructed from electric quarks.\\
+Using these charges the 't Hooft anomaly matching conditions are satisfied.\\
+Baryons constructed from dual quarks have the same baryonic charge as the electric baryons.
+Moreover, it can be demonstrated that they are proportional to each other.
 
-
-
-
+\subsubsection{Duality}
+In the \emph{conformal window} ($\frac{3}{2} N_c \geq N_f \geq  3 N_c$) the electric and magnetic theories we introduced previously give an equivalent description of the same physics in the infrared.
+In this range, the magnetic theory has a non trivial infrared fixed point too. 
+At this fixed point, the superpotential \ref{eqn:seiberg_duality_mag_super} is a relevant perturbation since it has dimension $D = 1 + 3 \frac{N_c}{N_f}  <3 $ and it drives the theory in a new fixed point.\\
+Electric mesons have different dimension in the UV from the magnetic ones since they are construct from a pair of quark.
+For this reason it's necessary to introduce a dimensionful scale $\mu$ in order to match their dimension in the UV: $ M = \mu M_m$, where $M_m$ are the magnetic mesons.\\
+The strong coupling scale of the electric $\Lambda$ and magnetic $\tilde{\Lambda}$ theories are related by the relation
+\begin{equation}
+ \Lambda^{3 N_c - N_f} \tilde{\L}^{3 (N_f - N_c) - N_f} = (-1)^{N_f - N_c} \mu^{N_f}
+ \label{eqn:seib_dual_matching_scales}
+\end{equation}
+This relation shows that when one theory is strongly coupled, the other is weakly coupled.
+Moreover, it ensures that the dual of the dual theory is the electric theory itself.
+The dual of the dual magnetic theory is a $SU(N_c) $ \emph{SQCD} theory with scale $\Lambda$, $d^i$ and $\tilde{d}_{\tilde{j}}$ quarks and additional singlets $M^i_{\tilde{j}}$ and $N^{\tilde{j}}_i= q_i q^{\tilde{j}} $ with superpotential
+\begin{equation}
+ W = \frac{1}{\tilde{\mu}} N^{\tilde{j}}_i d^i \tilde{d}_{\tilde{j}} + \frac{1}{\mu} M^i_{\tilde{j}} N^{\tilde{j}}_i = \frac{1}{\mu} N^{\tilde{j}}_i \left(  - d^i d_{\tilde{j}}  + M^i_{\tilde{j}}  \right) 
+\end{equation}
+since from the previous relation we have $\tilde{\mu} = - \mu$.\\
+Meson fields are massive and can be integrated out by using their equation of motion that result in
+\begin{equation}
+ N^{\tilde{j}}_i  = 0 \qquad  M^i_{\tilde{j}} = d^i d_{\tilde{j}}
+\end{equation}
+Since the dual theories describe the same physics, there should be a mapping of gauge invariant operators between them.
+We already saw that electric and magnetic mesons match in the infrared. 
+A mapping should exists also for baryonic operators. It does exists and it is given by
+\begin{align}
+ B^{i_1 \dots i_{N_c}} & = C \; \epsilon^{i_1 \dots i_{N_c} j_1 \dots i_{N_f - N_c}} b_{j_1 \dots j_{N_f - N_C}}\\
+ \tilde{B}^{i_1 \dots i_{N_c}} &= C \; \epsilon_{\tilde{i}_1 \dots \tilde{i}_{N_c} \tilde{j}_1 \dots \tilde{i}_{N_f - N_c}} b_{ \tilde{j}_1 \dots \tilde{j}_{N_f - N_C}}\\
+ \text{where} \qquad C & = \sqrt{ - (-\mu)^{N_c - N_f} \Lambda^{3 N_c - N_f}}
+\end{align}
+using \ref{eqn:seib_dual_matching_scales} it can shown that these mappings preserve the $\mathbb{Z}_2$ character of the duality. \\
+As an additional check of the duality 't Hooft anomaly matching conditions have been calculated  in \cite{Seiberg:1994pq} for the electric and magnetic theories for the various global symmetries and they are give by
+\begin{align}
+SU(N_f)^3 \qquad & N_c \\
+U(1)_R\, SU(N_f)^2 \qquad & -\frac{N_c^2}{2 N_f} \\
+U(1)_B\, SU(N_f)^2 \qquad & \frac{N_c}{2} \\
+U(1)_R \qquad & -N_c^2 - 1 \\
+U(1)_R^3 \qquad & -N_c^2 - 1 - 2 \frac{N_c^4}{N_f^2} \\
+U(1)_R^2 U(1)_B \qquad & - 2 N_c^2 \\
+\end{align}
 
 
 
 
 
 %%\subsection*{Kutasov-Schwimmer duality}
-
-
-%\bibliography{bibliografia}
