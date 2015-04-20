@@ -37,3 +37,12 @@ capire il mapping in teoria di campo, dalla Z è abb. chiaro
 
 
 
+Fai scaling integrando magnetico nell'origine sella dominante con sigma = 0 (el) nella duale non equivale a scegliere sigma= 0 nella magnetica, avrei scaling inferiore.
+
+questa cosa è vera dato un vincolo sulle R cariche che devo imporre. 
+
+
+
+Convergenza è un punto importante da discutere
+
+
