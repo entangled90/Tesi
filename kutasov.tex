@@ -1,0 +1,159 @@
+%!TEX root = tesi.tex
+
+
+
+\section{Kutasov-Schwimmer duality}
+
+
+A possible generalization of Seiberg duality can be found by adding matter fields in different representations of the gauge group. \\
+\subsection{Electric theory }
+Kutasov and Schwimmer (\cite{Kutasov:1995ve}, \cite{Kutasov:1995np}) considered $SU(N)$ SQCD with the addition of a matter fields in the adjoint representation of the gauge group and found its magnetic dual.
+
+The classical electric theory can be summarized by the following table of charges of the fields under the global symmetry group $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R
+$
+
+\begin{table}[h]
+\begin{tabular}{c | c | c c c c }
+ & $SU(N_c)$ &$SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$Q$ & $N_c$&$N_F$ & $1$   &  $1$  & $ 1 - \frac{2}{k+1} \frac{N_c}{N_f}$  \\
+$\tilde{Q}$ & $\overline{N_c} $&  $1$ & $\overline{ N_F}$   & $-1$   &  $ 1 - \frac{2}{k+1} \frac{N_c}{N_f} $   \\
+$X$ & \emph{Adjoint} & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+\end{tabular}
+\centering
+\caption{Charges for the electric theory}
+\label{table:charge_table_el_ks_4d}
+\end{table}
+
+
+
+and by the addition of the superpotential
+\begin{equation}
+	W_{Adj} = g_k \Tr{X^{k+1}}
+	\label{eqn:kutasov_superpotential_X}
+\end{equation}
+
+The theory posses two different R-symmetries but the superpotential breaks explicitly one of them and imposes that the adjoint matter has R-charge $\frac{2}{k+1}$.
+The scalar potential of the theory now includes the scalar field in the adjoint matter and therefore the moduli space is modified.
+The superpotential add \emph{F-term} equations that need to be satisfied on the moduli space.
+
+The remaining R-charges can be fixed by imposing that the R-symmetry can't be anomalous as we did previously.
+Using formula \eqref{eqn:r_symm_anom_condition}, considering also the fermion in the adjoint matter multiplet we have
+\begin{align}
+N_c + (R_Q -1) \frac{1}{2} 2 N_f + (R_X - 1 ) N_c = 0 \\
+(R_Q - 1 ) N_f = - R_X N_c \quad \longrightarrow \quad R_Q = 1 - R_X \frac{N_c}{N_f}
+\label{eqn:kutas_r_charge_non_anomalous}
+\end{align}
+
+Imposing this condition the R-charges of the theory were fixed completely, as in Seiberg duality.
+This has been possible because the superpotential \eqref{eqn:kutasov_superpotential_X} fixed independently the R-charge $\Delta_X$.
+Otherwise the condition \eqref{eqn:kutas_r_charge_non_anomalous} fixes $R_Q$ as a function of $R_X$ with $R_X$ generic.
+\\
+{\huge commento R-symmetry e superconformal?}
+When the superpotential \eqref{eqn:kutasov_superpotential_X} is relevant, the dimensions of the fields $X$,$Q,\tilde{Q}$ are given by the R-charges we found previously thanks to \eqref{eqn:superconformal_dimension_rcharge}.
+\\
+The gauge invariant operators that can be constructed are mesons and baryons multiplied with powers of the adjoint field.
+Mesons operators are given by
+\begin{equation}
+ (M_j)^i_{\tilde{i}} = \tilde{Q}_{\tilde{i}} X^{j} Q^i \qquad j = 0,1,\dotsc,k-1
+\end{equation}
+Baryons are more easily introduced by first defining "dressed quarks"
+
+\begin{equation}
+ Q_{(l)} = X^{l-1} Q \qquad l = 1, \dotsc, k
+\end{equation}
+Baryons are defined as
+\begin{equation}
+B^{i_1, i_2, \dotsc , i_k}) = Q_{(1)}^{i_1} \dots Q_{(k)}^{i_k} \qquad \hbox{with} \; \sum_{l=1}^k i_l = N_c 
+\end{equation}
+with color index contracted with an $\epsilon$ tensor.
+
+
+\subsubsection{Vacuum structure}
+
+The vacuum structure of this theory is complicated by the number of gauge invariant operators and the superpotential for the adjoint matter field.
+
+In analogy to the condition $N_f \geq N_c$ in \emph{SQCD} we would like to find a range of values of $N_f,N_c$ and $k$ such that the theory admits stable vacua.  
+We can add a weak deformation to the superpotential \eqref{eqn:kutasov_superpotential_X}, by adding terms with lower order powers in $X$
+\begin{equation}
+W(X) = \Tr \sum_{l=1}^k g_l X^{l+1} + \lambda \Tr X \qquad \hbox{with} \; g_l \ll 1
+\end{equation}
+where we introduced $\lambda$ to enforce the tracelessness of $X$.
+Since it is a weak perturbation, the large field behavior of W is not modified.
+Hence, if we can't find stable vacua with the weak perturbation, the original theory doesn't have any vacua too. 
+
+The theory has a large sets of multiple vacua for $Q=\tilde{Q} = 0$ and $X \neq 0 $. 
+$X$ can be diagonalized with eigenvalues $x_i$.
+The F-terms are given by setting $W'(x_i) = 0$. 
+Now, $W'(x_i)$ is a polynomial of degree $k$ in the eigenvalues $x_i$ admitting $k$ distinct solutions in general. 
+As a result, ground states are labeled by a set of $k$ integers $(i_1, \dotsc, i_k)$, describing how many eigenvalues are sitting in the $l$-th minimum. Clearly, since $X$ has $N_c$ eigenvalues we have 
+\begin{equation}
+ \sum_{l=1}^k i_l = N_c
+\end{equation}
+In every vacuum, $X$ has a quadratic potential, which correspond to a mass term and can be integrated out.
+The $X$ expectation values break the gauge group in the following way
+\begin{equation}
+	SU(N_c) \; \longrightarrow \; SU(i_1) \times SU(i_2) \times \dots \times SU(i_k) \times U(1)^{k-1}
+\end{equation}
+Each $SU({i_l})$ sector describes a \emph{SQCD} model which has stable vacua only if $N_f \geq N_c$, hence considering every sector we have 
+\begin{equation}
+i_l \leq N_f \qquad \forall 1 \leq l \leq k
+\end{equation}
+Taking the limit $g_l \rightarrow 0$ we find that we must have
+\begin{equation}
+ N_f \geq \frac{N_c}{k}
+\end{equation}
+
+
+
+\subsection{Magnetic theory}
+The magnetic theory is constructed in a similar way as the magnetic theory in Seiberg duality.
+The dual theory has gauge group $SU(k N_F - N_c)$. 
+The baryonic charge of the dual quarks is found by imposing that baryons in the electric theory are proportional to the baryons constructed from dual quark.
+\begin{table}[h!]
+\begin{tabular}{c  c c c c }
+ & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\hline
+$q$ & $\overline{N_F}$  & $1$   &  $ \frac{N_c}{k N_f - N_c }$  & $ 1 - \frac{2}{k+1} \frac{ k N_f  - N_c}{N_f}$  \\
+$\tilde{q}$  & $1 $ &  $N_F$  & $-\frac{N_c}{k N_f - N_c }$   &  $ 1 - \frac{2}{k+1} \frac{k N_f - N_c}{N_f}$   \\
+$Y$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+$ M_j$ & $N_f$ & $ \overline{N_f}$ & 0 & $2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1}$ \\
+\end{tabular}
+\centering
+\caption{Charges for the magnetic theory}
+\label{table:charge_table_mag_ks_4d}
+\end{table}
+The magnetic theory has a superpotential
+\begin{equation}
+W = \Tr Y^{k+1} + \sum_{j=0}^{k-1} M_j q Y^{k-j-1} \tilde{q} \qquad \hbox{dove} \; M_j = Q Y^j \tilde{Q}
+\label{eqn:kutasov_mag_superpote}
+\end{equation}
+The charges of the fields are easily found by requiring duality for the two theories.
+In this way, the charges of the mesons are given in terms of the electric quarks, which are fixed, and the superpotential fixes the charges for the remaining fields.
+Using this method, the R-charges of the dual quarks given by
+\begin{equation}
+   R_q = R_X - R_Q 
+ \label{eqn:R-charge_dual_quark}
+\end{equation}
+where we used that $R_X = R_Y = \frac{2}{k+1}$ because of \eqref{eqn:kutasov_mag_superpote} and \eqref{eqn:kutasov_superpotential_X}.
+
+
+
+\subsection{Duality}
+
+
+The 't Hooft anomaly matching conditions are satisfied and are given by
+
+\begin{align}
+SU(N_f)^3 \quad = \quad   & N_c d^{(3)}(N_f) \\
+U(1)_R\, SU(N_f)^2 \quad = \quad  & -\frac{2}{k+1} \frac{N_c^2}{N_f} d^{(2)} (N_f) \\
+SU(N_f)^2 U(1)_B\ \quad = \quad  & N_c d^{(2)}(N_f) \\
+U(1)_R \quad = \quad  & - \frac{2}{k+1} (N_c^2 + 1) \\
+U(1)_R^3 \quad = \quad  & \left( \left(\frac{2}{k+1} -1 \right)^3 +1 \right) (N_c^2-1) - \frac{16}{(k+1)^3} \frac{N_c^4}{N_f^2} \\
+U(1)_B^2 U(1)_R \quad = \quad  & - \frac{4}{k+1} N_c^2
+\end{align}
+
+
+
+
+
