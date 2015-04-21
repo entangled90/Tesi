@@ -49,8 +49,14 @@ Imposing this condition the R-charges of the theory were fixed completely, as in
 This has been possible because the superpotential \eqref{eqn:kutasov_superpotential_X} fixed independently the R-charge $\Delta_X$.
 Otherwise the condition \eqref{eqn:kutas_r_charge_non_anomalous} fixes $R_Q$ as a function of $R_X$ with $R_X$ generic.
 \\
-{\huge commento R-symmetry e superconformal?}
-When the superpotential \eqref{eqn:kutasov_superpotential_X} is relevant, the dimensions of the fields $X$,$Q,\tilde{Q}$ are given by the R-charges we found previously thanks to \eqref{eqn:superconformal_dimension_rcharge}.
+It is interesting to note that the condition \eqref{eqn:kutas_r_charge_non_anomalous} can be found independently by requiring that the $\beta$ function has a fixed point
+\begin{align}
+0 =\beta{g} \sim & 3 T(Adj) - \sum_i T(Repr_i) (1- \gamma_i) = \\
+ = & \,  T(Adj) + \sum_i T(Repr_i) ( R_i -1) = 0
+\end{align}
+where we have $\gamma_i + 2 = 2 D_i \;$ for chiral fields and at the superconformal fixed point  the dimension of an operator is related to its R-charge by $ \; R_i = \frac{3}{2} D_i$.
+\\
+The superpotential \eqref{eqn:kutasov_superpotential_X} drives the theory to a new IR point since it is either relevant or dangerously irrelevant, depending on the value of $k$.
 \\
 The gauge invariant operators that can be constructed are mesons and baryons multiplied with powers of the adjoint field.
 Mesons operators are given by
@@ -60,11 +66,11 @@ Mesons operators are given by
 Baryons are more easily introduced by first defining "dressed quarks"
 
 \begin{equation}
- Q_{(l)} = X^{l-1} Q \qquad l = 1, \dotsc, k
+ Q_{(l)} = X^{l} Q \qquad l =0, \dotsc, k-1
 \end{equation}
 Baryons are defined as
 \begin{equation}
-B^{i_1, i_2, \dotsc , i_k}) = Q_{(1)}^{i_1} \dots Q_{(k)}^{i_k} \qquad \hbox{with} \; \sum_{l=1}^k i_l = N_c 
+B^{i_1, i_2, \dotsc , i_k}) = Q_{(0)}^{i_1} \dots Q_{(k-1)}^{i_k} \qquad \hbox{with} \; \sum_{l=1}^k i_l = N_c 
 \end{equation}
 with color index contracted with an $\epsilon$ tensor.
 
@@ -95,7 +101,7 @@ The $X$ expectation values break the gauge group in the following way
 \begin{equation}
 	SU(N_c) \; \longrightarrow \; SU(i_1) \times SU(i_2) \times \dots \times SU(i_k) \times U(1)^{k-1}
 \end{equation}
-Each $SU({i_l})$ sector describes a \emph{SQCD} model which has stable vacua only if $N_f \geq N_c$, hence considering every sector we have 
+Each $SU({i_l})$ sector describes a decoupled \emph{SQCD} model which has stable vacua only if $N_f \geq N_c$, hence considering every sector we have 
 \begin{equation}
 i_l \leq N_f \qquad \forall 1 \leq l \leq k
 \end{equation}
@@ -103,6 +109,9 @@ Taking the limit $g_l \rightarrow 0$ we find that we must have
 \begin{equation}
  N_f \geq \frac{N_c}{k}
 \end{equation}
+
+For every choice of ${i_l}$ there is a moduli space obtained by giving expectation values of the quarks.
+Hence, the moduli space of the theory consists of different disconnected component, associated to different ${i_l}$ choice.
 
 
 
@@ -139,11 +148,8 @@ where we used that $R_X = R_Y = \frac{2}{k+1}$ because of \eqref{eqn:kutasov_mag
 
 
 
-\subsection{Duality}
-
-
+\subsubsection{Duality and mass deformations}
 The 't Hooft anomaly matching conditions are satisfied and are given by
-
 \begin{align}
 SU(N_f)^3 \quad = \quad   & N_c d^{(3)}(N_f) \\
 U(1)_R\, SU(N_f)^2 \quad = \quad  & -\frac{2}{k+1} \frac{N_c^2}{N_f} d^{(2)} (N_f) \\
@@ -153,7 +159,30 @@ U(1)_R^3 \quad = \quad  & \left( \left(\frac{2}{k+1} -1 \right)^3 +1 \right) (N_
 U(1)_B^2 U(1)_R \quad = \quad  & - \frac{4}{k+1} N_c^2
 \end{align}
 
-
-
-
-
+We consider now mass deformations of the electric theory in order to understand if duality is preserved under such deformations.
+Let's modify the electric superpotential by adding a mass term
+\begin{equation}
+W_{el} =  g_k \Tr X^{k+1} + m \tilde{Q}_{N_f} Q^{N_f}
+\end{equation}
+The number of flavours in the IR is reduced by one unit keeping the number of colours the same. 
+In order to preserve the duality, the magnetic theory should have gauge group $SU( k (N_f - 1) - N_c) = SU(k N_f - N_c - k)$.
+Let's see if this happens.
+The dual potential reads
+\begin{equation}
+W_{mag} = g_k \Tr Y^{k+1} + \sum_{j=1}^k M_j \tilde{q} Y^{k-j-1} q + m (M_0)^{N_f}_{N_f}
+\end{equation}
+Integrating out the massive fields we find 
+\begin{equation}
+ q_{N_f} Y^{l} \tilde{q}^{N_f} = - \delta_{l,k} m \quad l=0,\dotsc, k-1
+\end{equation}
+which fixes the expectation values to
+\begin{align}
+\tilde{q}_{\alpha}^{N_f} = & \delta_{\alpha,1} \\
+q_{\alpha}^{N_f} = & \delta^{\alpha,k}\\
+Y^{\alpha}_{\beta} = & 
+	\begin{cases}
+		\delta_{\beta+1}^{\alpha} \quad \beta = 1 , \dotsc, k-1 \\
+		0 \qquad \hbox{otherwise}
+	\end{cases}
+\end{align}
+These expectation values break the gauge group to $SU(k N_f - N_c) \rightarrow SU( k (N_f -1) - N_c) $ through the Higgs mechanism and reduces the number of flavours by one unit as required by duality.
