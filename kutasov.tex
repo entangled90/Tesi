@@ -4,11 +4,11 @@
 
 \section{Kutasov-Schwimmer duality}
 
-
 A possible generalization of Seiberg duality can be found by adding matter fields in different representations of the gauge group. \\
+
 \subsection{Electric theory }
 Kutasov and Schwimmer (\cite{Kutasov:1995ve}, \cite{Kutasov:1995np}) considered $SU(N)$ SQCD with the addition of a matter fields in the adjoint representation of the gauge group and found its magnetic dual.
-
+\\
 The classical electric theory can be summarized by the following table of charges of the fields under the global symmetry group $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R
 $
 
@@ -24,9 +24,6 @@ $X$ & \emph{Adjoint} & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
 \caption{Charges for the electric theory}
 \label{table:charge_table_el_ks_4d}
 \end{table}
-
-
-
 and by the addition of the superpotential
 \begin{equation}
 	W_{Adj} = g_k \Tr{X^{k+1}}
@@ -34,28 +31,30 @@ and by the addition of the superpotential
 \end{equation}
 
 The theory posses two different R-symmetries but the superpotential breaks explicitly one of them and imposes that the adjoint matter has R-charge $\frac{2}{k+1}$.
-The scalar potential of the theory now includes the scalar field in the adjoint matter and therefore the moduli space is modified.
-The superpotential add \emph{F-term} equations that need to be satisfied on the moduli space.
 
 The remaining R-charges can be fixed by imposing that the R-symmetry can't be anomalous as we did previously.
 Using formula \eqref{eqn:r_symm_anom_condition}, considering also the fermion in the adjoint matter multiplet we have
 \begin{align}
-N_c + (R_Q -1) \frac{1}{2} 2 N_f + (R_X - 1 ) N_c = 0 \\
-(R_Q - 1 ) N_f = - R_X N_c \quad \longrightarrow \quad R_Q = 1 - R_X \frac{N_c}{N_f}
+N_c + (R_Q -1) \frac{1}{2} 2 N_f + (R_X - 1 ) N_c = 0 
 \label{eqn:kutas_r_charge_non_anomalous}
+\\
+(R_Q - 1 ) N_f = - R_X N_c \quad \longrightarrow \quad R_Q = 1 - R_X \frac{N_c}{N_f}
 \end{align}
-
-Imposing this condition the R-charges of the theory were fixed completely, as in Seiberg duality.
-This has been possible because the superpotential \eqref{eqn:kutasov_superpotential_X} fixed independently the R-charge $\Delta_X$.
+Imposing this condition the R-charges of the fields were fixed completely, as in Seiberg duality.
+This has been possible because the superpotential 
+\eqref{eqn:kutasov_superpotential_X}
+fixed independently the R-charge $R_X$.
 Otherwise the condition \eqref{eqn:kutas_r_charge_non_anomalous} fixes $R_Q$ as a function of $R_X$ with $R_X$ generic.
 \\
+\begin{comment}
 It is interesting to note that the condition \eqref{eqn:kutas_r_charge_non_anomalous} can be found independently by requiring that the $\beta$ function has a fixed point
 \begin{align}
 0 =\beta{g} \sim & 3 T(Adj) - \sum_i T(Repr_i) (1- \gamma_i) = \\
  = & \,  T(Adj) + \sum_i T(Repr_i) ( R_i -1) = 0
 \end{align}
-where we have $\gamma_i + 2 = 2 D_i \;$ for chiral fields and at the superconformal fixed point  the dimension of an operator is related to its R-charge by $ \; R_i = \frac{3}{2} D_i$.
+where we have used $\gamma_i + 2 = 2 D_i \;$ for chiral fields and $ \; R_i = \frac{3}{2} D_i$ for chiral fields at the superconformal fixed point.
 \\
+\end{comment}
 The superpotential \eqref{eqn:kutasov_superpotential_X} drives the theory to a new IR point since it is either relevant or dangerously irrelevant, depending on the value of $k$.
 \\
 The gauge invariant operators that can be constructed are mesons and baryons multiplied with powers of the adjoint field.
@@ -70,14 +69,12 @@ Baryons are more easily introduced by first defining "dressed quarks"
 \end{equation}
 Baryons are defined as
 \begin{equation}
-B^{i_1, i_2, \dotsc , i_k}) = Q_{(0)}^{i_1} \dots Q_{(k-1)}^{i_k} \qquad \hbox{with} \; \sum_{l=1}^k i_l = N_c 
+B^{i_1, i_2, \dotsc , i_k} = Q_{(0)}^{i_1} \dots Q_{(k-1)}^{i_k} \qquad \hbox{with} \; \sum_{l=1}^k i_l = N_c 
 \end{equation}
 with color index contracted with an $\epsilon$ tensor.
 
 
 \subsubsection{Vacuum structure}
-
-The vacuum structure of this theory is complicated by the number of gauge invariant operators and the superpotential for the adjoint matter field.
 
 In analogy to the condition $N_f \geq N_c$ in \emph{SQCD} we would like to find a range of values of $N_f,N_c$ and $k$ such that the theory admits stable vacua.  
 We can add a weak deformation to the superpotential \eqref{eqn:kutasov_superpotential_X}, by adding terms with lower order powers in $X$
@@ -111,7 +108,7 @@ Taking the limit $g_l \rightarrow 0$ we find that we must have
 \end{equation}
 
 For every choice of ${i_l}$ there is a moduli space obtained by giving expectation values of the quarks.
-Hence, the moduli space of the theory consists of different disconnected component, associated to different ${i_l}$ choice.
+Hence, the moduli space of the theory consists of different disconnected components, associated to different choice of ${i_l}$ .
 
 
 
@@ -148,8 +145,32 @@ where we used that $R_X = R_Y = \frac{2}{k+1}$ because of \eqref{eqn:kutasov_mag
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsection{Duality and mass deformations}
-The 't Hooft anomaly matching conditions are satisfied and are given by
+Similarly to Seiberg duality, the duality is valid in a range of $(N_f,N_c)$ in which both the electric and magnetic theory are asymptotically free. 
+In that window, the superpotentials $\Tr X^{k+1}$ and $\Tr Y^{k+1}$ are both relevant in the infrared.
+An estimate of the values of the window is given in \cite{Kutasov:2003iy} through a-maximization.  
+
+
+
+The mapping of gauge invariant operators between the two theories is given by
+\begin{align}
+X \; & \longleftrightarrow \; Y \\
+Q X^j \tilde{Q} \; & \longleftrightarrow  \; M_j \\
+B^{(i_1, i_2, \dotsc, i_k)}_{el} \; & \longleftrightarrow \; B_{mag}^{(j_1, j_2 ,\dotsc, j_k) } \;  \, j_l = N_f - i_{k+1-l} \; l = 1,2,\dotsc,k
+\end{align}
+The charge assignment necessary for the mapping of the operators is consistent with 't Hooft anomaly matching conditions which are given by
 \begin{align}
 SU(N_f)^3 \quad = \quad   & N_c d^{(3)}(N_f) \\
 U(1)_R\, SU(N_f)^2 \quad = \quad  & -\frac{2}{k+1} \frac{N_c^2}{N_f} d^{(2)} (N_f) \\
