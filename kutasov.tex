@@ -4,11 +4,10 @@
 
 \section{Kutasov-Schwimmer duality}
 
-A possible generalization of Seiberg duality can be found by adding matter fields in different representations of the gauge group. \\
+A possible generalization of Seiberg duality can be found by adding matter fields in different representations of the gauge group.
+Kutasov and Schwimmer (\cite{Kutasov:1995ve}, \cite{Kutasov:1995np}) considered $SU(N)$ SQCD with the addition of a matter fields in the adjoint representation of the gauge group and found that it admitted a magnetic dual.
 
 \subsection{Electric theory }
-Kutasov and Schwimmer (\cite{Kutasov:1995ve}, \cite{Kutasov:1995np}) considered $SU(N)$ SQCD with the addition of a matter fields in the adjoint representation of the gauge group and found its magnetic dual.
-\\
 The classical electric theory can be summarized by the following table of charges of the fields under the global symmetry group $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R
 $
 
@@ -34,12 +33,14 @@ The theory posses two different R-symmetries but the superpotential breaks expli
 
 The remaining R-charges can be fixed by imposing that the R-symmetry can't be anomalous as we did previously.
 Using formula \eqref{eqn:r_symm_anom_condition}, considering also the fermion in the adjoint matter multiplet we have
-\begin{align}
+\begin{equation}
+\begin{aligned}
 N_c + (R_Q -1) \frac{1}{2} 2 N_f + (R_X - 1 ) N_c = 0 
 \label{eqn:kutas_r_charge_non_anomalous}
 \\
 (R_Q - 1 ) N_f = - R_X N_c \quad \longrightarrow \quad R_Q = 1 - R_X \frac{N_c}{N_f}
-\end{align}
+\end{aligned}
+\end{equation}
 Imposing this condition the R-charges of the fields were fixed completely, as in Seiberg duality.
 This has been possible because the superpotential 
 \eqref{eqn:kutasov_superpotential_X}
@@ -160,26 +161,30 @@ where we used that $R_X = R_Y = \frac{2}{k+1}$ because of \eqref{eqn:kutasov_mag
 \subsubsection{Duality and mass deformations}
 Similarly to Seiberg duality, the duality is valid in a range of $(N_f,N_c)$ in which both the electric and magnetic theory are asymptotically free. 
 In that window, the superpotentials $\Tr X^{k+1}$ and $\Tr Y^{k+1}$ are both relevant in the infrared.
-An estimate of the values of the window is given in \cite{Kutasov:2003iy} through a-maximization.  
+An estimate of the window is given in \cite{Kutasov:2003iy} through a-maximization.  
 
 
 
 The mapping of gauge invariant operators between the two theories is given by
-\begin{align}
+\begin{equation}
+\begin{aligned}
 X \; & \longleftrightarrow \; Y \\
 Q X^j \tilde{Q} \; & \longleftrightarrow  \; M_j \\
 B^{(i_1, i_2, \dotsc, i_k)}_{el} \; & \longleftrightarrow \; B_{mag}^{(j_1, j_2 ,\dotsc, j_k) } \;  \, j_l = N_f - i_{k+1-l} \; l = 1,2,\dotsc,k
-\end{align}
-The charge assignment necessary for the mapping of the operators is consistent with 't Hooft anomaly matching conditions which are given by
-\begin{align}
-SU(N_f)^3 \quad = \quad   & N_c d^{(3)}(N_f) \\
-U(1)_R\, SU(N_f)^2 \quad = \quad  & -\frac{2}{k+1} \frac{N_c^2}{N_f} d^{(2)} (N_f) \\
-SU(N_f)^2 U(1)_B\ \quad = \quad  & N_c d^{(2)}(N_f) \\
-U(1)_R \quad = \quad  & - \frac{2}{k+1} (N_c^2 + 1) \\
-U(1)_R^3 \quad = \quad  & \left( \left(\frac{2}{k+1} -1 \right)^3 +1 \right) (N_c^2-1) - \frac{16}{(k+1)^3} \frac{N_c^4}{N_f^2} \\
-U(1)_B^2 U(1)_R \quad = \quad  & - \frac{4}{k+1} N_c^2
-\end{align}
+\end{aligned}
+\end{equation}
 
+The charge assignment necessary for the mapping of the operators is consistent with 't Hooft anomaly matching conditions which are given by
+\begin{equation}
+\begin{aligned}
+SU(N_f)^3 \quad \longrightarrow \quad   & N_c d^{(3)}(N_f) \\
+U(1)_R\, SU(N_f)^2 \quad \longrightarrow \quad  & -\frac{2}{k+1} \frac{N_c^2}{N_f} d^{(2)} (N_f) \\
+SU(N_f)^2 U(1)_B\ \quad \longrightarrow \quad  & N_c d^{(2)}(N_f) \\
+U(1)_R \quad \longrightarrow \quad  & - \frac{2}{k+1} (N_c^2 + 1) \\
+U(1)_R^3 \quad \longrightarrow \quad  & \left( \left(\frac{2}{k+1} -1 \right)^3 +1 \right) (N_c^2-1) - \frac{16}{(k+1)^3} \frac{N_c^4}{N_f^2} \\
+U(1)_B^2 U(1)_R \quad \longrightarrow \quad  & - \frac{4}{k+1} N_c^2
+\end{aligned}
+\end{equation}
 We consider now mass deformations of the electric theory in order to understand if duality is preserved under such deformations.
 Let's modify the electric superpotential by adding a mass term
 \begin{equation}
@@ -197,7 +202,8 @@ Integrating out the massive fields we find
  q_{N_f} Y^{l} \tilde{q}^{N_f} = - \delta_{l,k} m \quad l=0,\dotsc, k-1
 \end{equation}
 which fixes the expectation values to
-\begin{align}
+\begin{equation}
+\begin{aligned}
 \tilde{q}_{\alpha}^{N_f} = & \delta_{\alpha,1} \\
 q_{\alpha}^{N_f} = & \delta^{\alpha,k}\\
 Y^{\alpha}_{\beta} = & 
@@ -205,6 +211,7 @@ Y^{\alpha}_{\beta} = &
 		\delta_{\beta+1}^{\alpha} \quad \beta = 1 , \dotsc, k-1 \\
 		0 \qquad \hbox{otherwise}
 	\end{cases}
-\end{align}
+\end{aligned}
+\end{equation}
 These expectation values break the gauge group to $SU(k N_f - N_c) \rightarrow SU( k (N_f -1) - N_c) $ through the Higgs mechanism and reduces the number of flavours by one unit as required by duality.
 As a result duality is preserved under mass deformations.
