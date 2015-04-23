@@ -17,7 +17,7 @@ $
 \hline
 $Q$ & $N_c$&$N_F$ & $1$   &  $1$  & $ 1 - \frac{2}{k+1} \frac{N_c}{N_f}$  \\
 $\tilde{Q}$ & $\overline{N_c} $&  $1$ & $\overline{ N_F}$   & $-1$   &  $ 1 - \frac{2}{k+1} \frac{N_c}{N_f} $   \\
-$X$ & \emph{Adjoint} & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+$X$ & $N_c^2-1$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
 \end{tabular}
 \centering
 \caption{Charges for the electric theory}
@@ -31,7 +31,7 @@ and by the addition of the superpotential
 
 The theory posses two different R-symmetries but the superpotential breaks explicitly one of them and imposes that the adjoint matter has R-charge $\frac{2}{k+1}$.
 
-The remaining R-charges can be fixed by imposing that the R-symmetry can't be anomalous as we did previously.
+The remaining R-charges can be fixed by imposing that the R-symmetry is anomaly free as we did previously.
 Using formula \eqref{eqn:r_symm_anom_condition}, considering also the fermion in the adjoint matter multiplet we have
 \begin{equation}
 \begin{aligned}
@@ -56,7 +56,7 @@ It is interesting to note that the condition \eqref{eqn:kutas_r_charge_non_anoma
 where we have used $\gamma_i + 2 = 2 D_i \;$ for chiral fields and $ \; R_i = \frac{3}{2} D_i$ for chiral fields at the superconformal fixed point.
 \\
 \end{comment}
-The superpotential \eqref{eqn:kutasov_superpotential_X} drives the theory to a new IR point since it is either relevant or dangerously irrelevant, depending on the value of $k$.
+The superpotential \eqref{eqn:kutasov_superpotential_X} drives the theory to a new IR point since it is either relevant or dangerously irrelevant, depending on the value of $k$ \cite{Kutasov:1995np}.
 \\
 The gauge invariant operators that can be constructed are mesons and baryons multiplied with powers of the adjoint field.
 Mesons operators are given by
@@ -80,9 +80,9 @@ with color index contracted with an $\epsilon$ tensor.
 In analogy to the condition $N_f \geq N_c$ in \emph{SQCD} we would like to find a range of values of $N_f,N_c$ and $k$ such that the theory admits stable vacua.  
 We can add a weak deformation to the superpotential \eqref{eqn:kutasov_superpotential_X}, by adding terms with lower order powers in $X$
 \begin{equation}
-W(X) = \Tr \sum_{l=1}^k g_l X^{l+1} + \lambda \Tr X \qquad \hbox{with} \; g_l \ll 1
+W(X) = \sum_{l=1}^k g_l  \Tr X^{l+1} + \lambda \Tr X \qquad \hbox{with} \; g_l \ll 1
 \end{equation}
-where we introduced $\lambda$ to enforce the tracelessness of $X$.
+where we introduced $\lambda$ as a Lagrange multiplier to enforce the tracelessness of $X$.
 Since it is a weak perturbation, the large field behavior of W is not modified.
 Hence, if we can't find stable vacua with the weak perturbation, the original theory doesn't have any vacua too. 
 
@@ -115,16 +115,16 @@ Hence, the moduli space of the theory consists of different disconnected compone
 
 \subsection{Magnetic theory}
 The magnetic theory is constructed in a similar way as the magnetic theory in Seiberg duality.
-The dual theory has gauge group $SU(k N_F - N_c)$. 
+The dual theory has gauge group $SU(\tilde N_c) = SU(k N_F - N_c)$. 
 The baryonic charge of the dual quarks is found by imposing that baryons in the electric theory are proportional to the baryons constructed from dual quark.
 \begin{table}[h!]
-\begin{tabular}{c  c c c c }
- & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\begin{tabular}{c c c c c c }
+ & $SU(\tilde{N_c}) $ & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
 \hline
-$q$ & $\overline{N_F}$  & $1$   &  $ \frac{N_c}{k N_f - N_c }$  & $ 1 - \frac{2}{k+1} \frac{ k N_f  - N_c}{N_f}$  \\
-$\tilde{q}$  & $1 $ &  $N_F$  & $-\frac{N_c}{k N_f - N_c }$   &  $ 1 - \frac{2}{k+1} \frac{k N_f - N_c}{N_f}$   \\
-$Y$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
-$ M_j$ & $N_f$ & $ \overline{N_f}$ & 0 & $2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1}$ \\
+$q$ & $ \tilde{N_c} $& $\overline{N_F}$  & $1$   &  $ \frac{N_c}{k N_f - N_c }$  & $ 1 - \frac{2}{k+1} \frac{ \tilde{N_c}}{N_f}$  \\
+$\tilde{q}$ & $\overline{\tilde{N_c}} $ & $1 $ &  $N_F$  & $-\frac{N_c}{k N_f - N_c }$   &  $ 1 - \frac{2}{k+1} \frac{\tilde{N_c}}{N_f}$   \\
+$Y$ & $1$  & $ \tilde{N_c}^2-1 $ &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
+$ M_j$ & $1 $& $N_f$ & $ \overline{N_f}$ & 0 & $2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1}$ \\
 \end{tabular}
 \centering
 \caption{Charges for the magnetic theory}
@@ -137,7 +137,7 @@ W = \Tr Y^{k+1} + \sum_{j=0}^{k-1} M_j q Y^{k-j-1} \tilde{q} \qquad \hbox{dove} 
 \end{equation}
 The charges of the fields are easily found by requiring duality for the two theories.
 In this way, the charges of the mesons are given in terms of the electric quarks, which are fixed, and the superpotential fixes the charges for the remaining fields.
-Using this method, the R-charges of the dual quarks given by
+Using this method, the R-charges of the dual quarks are given by
 \begin{equation}
    R_q = R_X - R_Q 
  \label{eqn:R-charge_dual_quark}

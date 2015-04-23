@@ -1,0 +1,20 @@
+
+
+linear multiplet in 3d serve a qualcosa, mentre in 4d solo x correnti conservate?
+
+
+definisci monopoli in 3d e contributi al superpotenziale su(2) basta per questa cosa 
+
+faccio vedee che nel caso del cerchio una teoria in 3 dim ha i kk monopoles e introduco il suo contributo con SYM
+
+aggiungo materia e vedo che la materia cambia la teoria del indice callias e atiyah singer
+
+con aggiunta non mi aspetto contributi perchè ho troppi modi zero, ma con il superpotenziale sta cosa non è più vera e i contributi ci sono
+
+si può vedere sta cosa rompendo il gauge aggiungo il pot. polinomiale e nel mandando a zero il coupling e devo trovare monopoli dressati 
+e le loro cariche e vedrò che nella funzione di partizione le cariche matchano.
+
+questa picture non viene cambiato dalle fondamentali, vedi chuck e terning.
+	
+	
+	
