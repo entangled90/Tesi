@@ -26,10 +26,54 @@ The automorphism of this algebra is $U(1)_R \simeq SO(2)_R$, as in four dimensio
 \\
 Superspace formalism is similar to what we introduced previously, with proper changes due to the different spinor representation in three dimension such as gamma matrices.
 \\
-Chiral superfields contains \emph{on-shell} one complex scalar and a complex spinor.
+Chiral superfields contain \emph{on-shell} one complex scalar and a complex spinor as in four dimensions.\\
 Vector superfield contains an additional real scalar field with respect to the four dimensional superfield.
-The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ along the reduced direction.  \\
-The action for super Yang Mills theories 
+The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ along the reduced direction.\\
+\subsubsection{Coulomb branch and dualized photon	}
+In three dimensions a free photon can be dualized to a scalar $\gamma$ since it has only one polarization. Instead of defining a potential $A$ in order to solve the Bianchi identity for the potential $d F = d^2 A = 0$, it can be defined a scalar such that
+\begin{equation}
+  * F = \frac{g^2}{\pi} d  \gamma  \quad \rightarrow \quad d * F  = 0  
+\end{equation} 
+where $*$ is the Hodge operator and $g$ is the gauge coupling.
+The Bianchi identity can be seen as a conservation law for the topological current, which is not a symmetry in four dimensions
+\begin{equation}
+ J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma
+\end{equation}
+The topological current acts as shifts of the dualized photon $\gamma \rightarrow \gamma + \alpha$.\\
+The quantization of the magnetic flux implies that the dualised foton is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.\\
+The  vacuum expectation values of scalar fields in the vector multiplet parametrize a subset of the moduli space of the theory which is called the \emph{Coulomb branch}.
+Using the dualized photon we can turn the vector multiplet into a chiral multiplet, whose lowest component is a good parametrization of the Coulomb branch 
+\begin{equation}
+ Y = \exp{ \frac{2 \pi \sigma}{g^2} + i \gamma}
+\end{equation}
+because of its periodicty, it's natural to assign $\gamma$ to a phase.\\
+The dualization of the photon was possible because there wasn't matter in the theory.
+However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and in a low-energy description we can still dualize the gauge field.\\
+We can generalize the dualization to non-Abelian gauge theories with a similar reasoning.
+In a generic point of the Coulomb branch, the VEV of $\sigma$ breaks the gauge group to its maximal torus $U(1)^{r_G}$, where $r_G$ is the rank of the gauge group. 
+We now have $r_G$ massless vector multiplets that can be dualized into chiral multiplets $Y_i$ with $i=1,\dotsc,r_G$.
+\\
+Note that since the definition of $Y$ depends on the gauge coupling, it will be modified by quantum corrections.
+
+For $U(N)$ or $ SU(N)$ theories it's better to use the following coordinates on the Coulomb branch, since they are related to the simple roots of the algebra
+\begin{equation}
+ Y_k \sim \exp \left( \frac{\sigma_j- \sigma_{j+1}}{\hat{g}^2} + i ( \gamma_j - \gamma_{j+1} )   \right) \qquad \hat{g}^2 =  \frac{g^2}{4 \pi}
+\end{equation}
+with $j = 1, \dotsc , N -1$ for $SU(N)$ or with $ j = 1, \dotsc, N$ for $U(N)$.
+From now on we will fix to a Weyl chamber by setting $\sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_N$ with a Weyl transformation.
+
+\subsubsection{Real masses}
+
+In $3 D \, \mN=2$ theories there's another way of giving a mass to a chiral multiplet other than the superpotential term $W_{mass}= m \Phi^2$, which correspond to a holomorphic mass.\\
+In these theories we can couple a global symmetry, which is not a R-symmetry, to a background vector multiplet.
+We will give a vacuum expectation value $\hat{m} $ to the scalar in the multiplet.
+As a result, every field charged under that symmetry will receive a mass $q \hat{m}$, where $q$ is the charge of the field under that symmetry.
+If a chiral field is charged under different global symmetry, its mass  mass is a sum of the real masses for every global symmetry that we gauged.
+Real masses are parity odd and belong to vector multiplets rather than chiral fields. For this reason they cannot appear in holomorphic objects such as the superpotential.
+
+
+
+
 
 
 
