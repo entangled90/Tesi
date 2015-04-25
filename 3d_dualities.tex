@@ -41,10 +41,21 @@ The Bianchi identity can be seen as a conservation law for the topological curre
 \end{equation}
 The topological current acts as shifts of the dualized photon $\gamma \rightarrow \gamma + \alpha$.\\
 The quantization of the magnetic flux implies that the dualised foton is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.\\
+From a vector superfield $V$ we can define a linear multiplet $\Sigma$, defined as
+\begin{equation}
+ \Sigma = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V
+\end{equation}
+It satisfies $D^2 \Sigma = 0$ and is gauge invariant under a transformation $V \rightarrow V + i (\Phi - \Phi^{\dagger})$.
+The lowest component of $\Sigma$ is the scalar in the vector multiplet and it contains also a term $ \bar{\theta} \sigma_{\rho} \theta \, \epsilon^{\mu \nu \rho} F_{\nu \rho}$, whose bosonic part is proportional to the topological current.
+The super Yang-Mills action can be written also as
+\begin{equation}
+S \sim \int d^4 \theta \; \Sigma^2
+\end{equation}
+
 The  vacuum expectation values of scalar fields in the vector multiplet parametrize a subset of the moduli space of the theory which is called the \emph{Coulomb branch}.
 Using the dualized photon we can turn the vector multiplet into a chiral multiplet, whose lowest component is a good parametrization of the Coulomb branch 
 \begin{equation}
- Y = \exp{ \frac{2 \pi \sigma}{g^2} + i \gamma}
+ Y = \exp{ \left( \frac{2 \pi \sigma}{g^2} + i \gamma \right)}
 \end{equation}
 because of its periodicty, it's natural to assign $\gamma$ to a phase.\\
 The dualization of the photon was possible because there wasn't matter in the theory.
@@ -69,7 +80,18 @@ In these theories we can couple a global symmetry, which is not a R-symmetry, to
 We will give a vacuum expectation value $\hat{m} $ to the scalar in the multiplet.
 As a result, every field charged under that symmetry will receive a mass $q \hat{m}$, where $q$ is the charge of the field under that symmetry.
 If a chiral field is charged under different global symmetry, its mass  mass is a sum of the real masses for every global symmetry that we gauged.
-Real masses are parity odd and belong to vector multiplets rather than chiral fields. For this reason they cannot appear in holomorphic objects such as the superpotential.
+Real masses are parity odd and belong to vector multiplets rather than chiral fields. For this reason they cannot appear in holomorphic objects such as the superpotential.\\
+In addition, real masses relative to global abelian symmetries contribute to the central charge of the supersymmetry algebra $Z$through
+\begin{equation}
+  Z = \sum q_i m_i
+ \end{equation} 
+ where $q_i$ is the charge of the field and $m_i$ the real masses under a global symmetry $U(1)_i$.\\
+ Moreover, the central charge $Z$ can be promoted to a background linear superfield whose lowest component is $Z$.\\
+ Another symmetry that can contribute to the central charge is $U(1)_J$, whose current is given by the linear multiplet we defined previously.
+ The added term is given by $\int d^4 \theta \; V_b \Sigma $ , where $V_b$ is a background vector multiplet.
+ Integrating by parts and defining  $\Sigma_b = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V_b$ we obtain $\int d^4 \theta \; \Sigma_b V  $.
+ Thus, the scalar component of the background vector field is a Fayet-Iliopulos term $\xi$, which contributes to the central charge $m_J = \xi $.
+
 
 
 
