@@ -1,8 +1,5 @@
 
 
-linear multiplet in 3d serve a qualcosa, mentre in 4d solo x correnti conservate?
-
-
 definisci monopoli in 3d e contributi al superpotenziale su(2) basta per questa cosa 
 
 faccio vedee che nel caso del cerchio una teoria in 3 dim ha i kk monopoles e introduco il suo contributo con SYM

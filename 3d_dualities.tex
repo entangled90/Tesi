@@ -7,11 +7,10 @@ Spinors in three dimensions have different properties than their four dimension 
 The dimension of the representation in an arbitrary dimension $D$  is given by $2^{\frac{D}{2}} $
 for $D$ even, while $2^{\frac{D-1}{2}} $ for $D$ odd.
 Hence, in three dimension we have a two dimensional representation.
-
 In odd dimensions representations are irreducible and Weyl spinors do not exist: the chirality operator ($\gamma_{D+1}$ or $\gamma^*$ ) is proportional to the identity.
-
+\\
 %This is related to the fact that representations in odd dimensions are constructed by taking the representation in one dimension less, which is even, and adding the chirality operator as the $D$-th matrix in the Clifford algebra.\\
-Gamma matrices can be chosen real and the Majorana condition can be imposed, lowering the degress of freedom of the representation from four (two complex numbers) to two.\\
+Gamma matrices can be chosen real and the Majorana condition can be imposed, lowering the degress of freedom of the representation from four to two.\\
 Since $3d \; \mN=2$ theories have four supercharges, we can use the $4d \; \mN=1$ superspace formalism. 
 \\
 The supersymmetry algebra and its representations can be found by dimensional reduction from four dimensions. 
@@ -20,7 +19,7 @@ The reduced algebra reads
  \{ Q_{\alpha},Q_{\beta} \} =  \{ \bar{Q}_{\alpha},\bar{Q}_{\beta} \}= 0 \qquad \{ Q_{\alpha} , \bar{Q}_{\beta}   \} = 2 \sigma^{\mu}_{\alpha \beta} P_{\mu} + 2 i \epsilon_{\alpha \beta} Z
  \end{equation} 
 The central charge $Z$ is the component of the momentum  along the reduced direction.
-Because of the presence of the central charge in the algebra, now states must satisfy a BPS bound of the form $M \geq Z $, which imply that for massless representations have null central charge.
+Because of the presence of the central charge in the algebra, now states must satisfy a BPS bound of the form $M \geq Z $, which imply that massless representations have null central charge.
 \\
 The automorphism of this algebra is $U(1)_R \simeq SO(2)_R$, as in four dimensions.
 \\
@@ -28,19 +27,30 @@ Superspace formalism is similar to what we introduced previously, with proper ch
 \\
 Chiral superfields contain \emph{on-shell} one complex scalar and a complex spinor as in four dimensions.\\
 Vector superfield contains an additional real scalar field with respect to the four dimensional superfield.
-The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ along the reduced direction.\\
+The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ along the reduced direction.
+
+
+
+
+
+
+
+
+
 \subsubsection{Coulomb branch and dualized photon	}
-In three dimensions a free photon can be dualized to a scalar $\gamma$ since it has only one polarization. Instead of defining a potential $A$ in order to solve the Bianchi identity for the potential $d F = d^2 A = 0$, it can be defined a scalar such that
+In three dimensions a free photon can be dualized to a scalar $\gamma$ since it has only one polarization.
+Instead of defining a potential $A$ in order to solve the Bianchi identity for the potential $d F = d^2 A = 0$, we can define a scalar such that
 \begin{equation}
   * F = \frac{g^2}{\pi} d  \gamma  \quad \rightarrow \quad d * F  = 0  
 \end{equation} 
-where $*$ is the Hodge operator and $g$ is the gauge coupling.
-The Bianchi identity can be seen as a conservation law for the topological current, which is not a symmetry in four dimensions
+where $*$ is the Hodge operator and $g$ is the gauge coupling.\\
+The Bianchi identity $d F = 0$ can be seen as a conservation law for the topological current, which is defined as
 \begin{equation}
- J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma
+ J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma \qquad \partial^{\mu} J_{\mu} 
 \end{equation}
 The topological current acts as shifts of the dualized photon $\gamma \rightarrow \gamma + \alpha$.\\
-The quantization of the magnetic flux implies that the dualised foton is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.\\
+The quantization of the magnetic flux implies that the dualised photon is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.
+
 From a vector superfield $V$ we can define a linear multiplet $\Sigma$, defined as
 \begin{equation}
  \Sigma = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V
@@ -51,15 +61,14 @@ The super Yang-Mills action can be written also as
 \begin{equation}
 S \sim \int d^4 \theta \; \Sigma^2
 \end{equation}
-
 The  vacuum expectation values of scalar fields in the vector multiplet parametrize a subset of the moduli space of the theory which is called the \emph{Coulomb branch}.
 Using the dualized photon we can turn the vector multiplet into a chiral multiplet, whose lowest component is a good parametrization of the Coulomb branch 
 \begin{equation}
  Y = \exp{ \left( \frac{2 \pi \sigma}{g^2} + i \gamma \right)}
 \end{equation}
-because of its periodicty, it's natural to assign $\gamma$ to a phase.\\
+because of its periodicty, it's natural to assign $\gamma$ to a phase factor.\\
 The dualization of the photon was possible because there wasn't matter in the theory.
-However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and in a low-energy description we can still dualize the gauge field.\\
+However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and can be integrated out and in a low-energy description we can still dualize the gauge field.\\
 We can generalize the dualization to non-Abelian gauge theories with a similar reasoning.
 In a generic point of the Coulomb branch, the VEV of $\sigma$ breaks the gauge group to its maximal torus $U(1)^{r_G}$, where $r_G$ is the rank of the gauge group. 
 We now have $r_G$ massless vector multiplets that can be dualized into chiral multiplets $Y_i$ with $i=1,\dotsc,r_G$.
@@ -100,7 +109,7 @@ However, the metric for $\gamma$ receives quantum correction and thus the topolo
 The Higgs branch intersects the Coulomb branch for $\sigma=0$ and since it is invariant under $U(1)_J$, they radius of the circle must shrink to zero where they meet, since the topological symmetry acts as shifts on the circle $\gamma$.
 \\
 Therefore, near the origin the moduli space looks like the intersection of three cones: the Higgs branch and two cones corresponding to two distinct parts of the Coulomb branch.
-Half of the Coulomb branch is parametrized semi-classically by the field $X_+ \sim e^{\frac{\Phi}{g^2}}$, while the other half by $V_- \sim e^{ -\frac{\Phi}{g^2} }$. 
+Half of the Coulomb branch is parametrized semi-classically by the field $V_+ \sim e^{\frac{\Phi}{g^2}}$, while the other half by $V_- \sim e^{ -\frac{\Phi}{g^2} }$. 
 Two different chiral fields are needed since near the origin the moduli space shrinks to a point and $V_+ \rightarrow 0$. 
 The Higgs branch is not modified by quantum corrections and the mesons can still be used to parametrize it.\\
 The charges of the fields under the symmetries are given by
@@ -122,7 +131,7 @@ The superpotential is singular at the origin of the moduli space, indicating tha
 We can give real masses $\bar{m}_i$ ($-\bar{m}_i$) to the quarks $Q_i$ ($\tilde{Q}_i$).
 The Higgs branch is parametrised by the diagonal elements of $M^i_{\tilde{i}}$ which intersects the Coulomb branch at $\sigma = \bar{m}_i$.
 At every intersection, we have $U(1)$ theory with one flavour.
-The coulomb branch is parametrised, at every intersection, by $X_{i,\pm} = e^{\pm \frac{\Phi - \bar{m}_i}{g^2}} $ with a superpotential given by
+The coulomb branch is parametrised, at every intersection, by $V_{i,\pm} = e^{\pm \frac{\Phi - \bar{m}_i}{g^2}} $ with a superpotential given by
 \begin{equation}
 W = - \sum_{i = 1}^{N_f} M^i_i V_{i,+} V_{i,-} + \sum_{i=1}^{N_f - 1} \lambda_i \left(    V_{i,+} V_{i+1,-} - 1\right)
 \end{equation}
@@ -131,17 +140,19 @@ where $\lambda_i$ are Lagrange multipliers in order the enforce the semiclassica
 {\huge Aggiungi foto sennò non si capisce niente}
 
 
+
+\begin{comment}
 \subsubsection{Moduli space of $SU(2)$ gauge theories with flavours}
 
 We will consider a $SU(2) $ gauge theories with an even number of quarks, in order to avoid the addition of Chern Simons terms.
 The charges are given by
 \begin{equation}
  \begin{array}{ c | c c c  c }
-  & U(1)_R  & U(1)_A & SU(2 N_f)_R \\
+  & U(1)_R  & U(1)_A & SU(2 N_f)\\
  \hline
  Q & 0  & 1 & 2 N_f \\  
    M & 0 & 2 & N_f (2 N_f-1)  & \\  
-   V_{\pm} & 2 N_f  -2 &  - 2 N_f & 1 \\
+   X_{\pm} & 2 N_f  -2 &  - 2 N_f & 1 \\
  \end{array}
 \end{equation}
 and $Y$ is defined in \eqref{eqn:Y_def_sun_theories} and parametrizes the Coulom branch.
@@ -164,15 +175,67 @@ For $N_f \geq 2 $, there is a unique superpotential consistent with the symmetri
 For $N_f = 2$ the Higgs and Coulomb branch are distinct and they touch at $M=0 \, , \, Y=0$ instead of the point with $\sigma = 0$.
 The superpotential is relevant and drives the theory to a interacting fixed point.
 
+\end{comment}
 
+\subsubsection{Moduli spaces for $SU(N_c)$ theories with $N_f$ flavours}
 
+The simmetries of the theory are given by the following table
+\begin{equation}
+\begin{array}{ c | c c c c c}
+  & U(1)_R & U(1)_B & U(1)_A & SU(N_f)_L & SU(N_f)_R \\
+ \hline
+ Q & 0 &1 & 1 & N_f \\  
+ \tilde{Q}& 0 &-1 & 1 & \overline{N_f} \\  
+   M & 0 & 0 & 2 & N_f  & \overline{N_f}\\  
+   Y_{j \neq K} & -2 & 0  & 0 &  1 & 1 \\
+   Y_{K} & 2 (N_f -1 ) & 0 & - 2 N_f & 1 & 1 \\
+   Y & 2 ( N_f -N_c +1) & 0 & - 2 N_f & 1 & 1 \\
+\end{array}
+\end{equation}
+where $Y_j$ are defined as in \eqref{eqn:Y_def_sun_theories} and $Y$ is defined as $Y = \prod_{j=1}^{N_c -1} Y_j \sim e^{\frac{( \Phi_1 - \Phi_{N_c}}   ) }{g^2}$.
+The adjoint scalar VEV is ordered in such a way that $ \sigma_1 \geq \sigma_2 \geq \dotsc \geq \sigma_{N_c}$. The value of $j$ for which $\sigma$ changes sign is called $K$ and the associated instanton is $Y_K$.
+For $N_f > 1$ the theory has a Higgs branch, which break the gauge group in a generic point to $SU(N_f -N_c)$ for $N_f <N_c -1 $ and completely for $N_f \geq N_c - 1$. 
+The Higgs branch is parametrised as in four dimensions by mesons and for $N_f \geq N_c$ also by baryons.
 
+For theory withouth quarks, instantons generate a superpotential 
+\begin{equation}
+W = \sum_{j=1}^{N_c - 1} \frac{1}{Y_j}
+\end{equation}
+which prohibits the theory to have stable supersymmetric vacuas.
 
+The theory with massless quarks features a superpotential generated by $N_c - 2$ instantons 
+\begin{equation}
+W_{inst} = \sum_{j \neq K} \frac{1}{Y_j}
+\end{equation}
+which doesn't completely lift the Coulomb branch.
+In fact, the following subspace is classically unlifted
+\begin{equation}
+ \sigma_1 > \sigma_2 = \dots = 0 > \sigma_{N_c} = - \sigma_1
+\end{equation}
+The quantum corrected moduli space is different from the classical one and for $N_f < N_c -1 $ the effective superpotential is given by
+\begin{equation}
+ W_{eff} = (N_c - N_f - 1) ( Y \Det{M} ) ^{\frac{1}{N_f - N_c +1}}
+\end{equation}
+which admits no stable vacuum.\\
+For $N_f = N_c - 1 $ we obtain a constraint on the moduli space given by 
+\begin{equation}
+Y \Det M = 1
+\end{equation}
+which results in a merging between the Higgs and the Coulomb branch.
 
-
+For $N_f \geq N_c $, the low-energy description contains baryons.
+In the $N_f = N_c$ case the superpotential is 
+\begin{equation}
+W = - Y ( \Det{M} - B \tilde{B})
+\end{equation}
+which forces the theory to flow to a non-trivial fixed point in the infrared.
 
 
 
 
 \section{Aharony duality}
+
+
+
+
 \section{Kutasov-Schwimmer duality}
