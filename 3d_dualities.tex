@@ -137,9 +137,11 @@ W = - \sum_{i = 1}^{N_f} M^i_i V_{i,+} V_{i,-} + \sum_{i=1}^{N_f - 1} \lambda_i 
 \end{equation}
 where $\lambda_i$ are Lagrange multipliers in order the enforce the semiclassical identification  $ V_{i,+} V_{i+1,-} = 1 $.
 
-{\huge Aggiungi foto sennò non si capisce niente}
-
-
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{u1_moduli_space_flavours.png}
+\caption{Moduli space of vacua for SQED with four flavours}
+\end{figure}
 
 \begin{comment}
 \subsubsection{Moduli space of $SU(2)$ gauge theories with flavours}
@@ -192,7 +194,7 @@ The simmetries of the theory are given by the following table
    Y & 2 ( N_f -N_c +1) & 0 & - 2 N_f & 1 & 1 \\
 \end{array}
 \end{equation}
-where $Y_j$ are defined as in \eqref{eqn:Y_def_sun_theories} and $Y$ is defined as $Y = \prod_{j=1}^{N_c -1} Y_j \sim e^{\frac{( \Phi_1 - \Phi_{N_c}}   ) }{g^2}$.
+where $Y_j$ are defined as in \eqref{eqn:Y_def_sun_theories} and $Y$ is defined as $Y = \prod_{j=1}^{N_c -1} Y_j \sim e^{ \frac{ \Phi_1 - \Phi_{N_c}  }{g^2}}$.
 The adjoint scalar VEV is ordered in such a way that $ \sigma_1 \geq \sigma_2 \geq \dotsc \geq \sigma_{N_c}$. The value of $j$ for which $\sigma$ changes sign is called $K$ and the associated instanton is $Y_K$.
 For $N_f > 1$ the theory has a Higgs branch, which break the gauge group in a generic point to $SU(N_f -N_c)$ for $N_f <N_c -1 $ and completely for $N_f \geq N_c - 1$. 
 The Higgs branch is parametrised as in four dimensions by mesons and for $N_f \geq N_c$ also by baryons.
@@ -212,6 +214,7 @@ In fact, the following subspace is classically unlifted
 \begin{equation}
  \sigma_1 > \sigma_2 = \dots = 0 > \sigma_{N_c} = - \sigma_1
 \end{equation}
+The last equality holds since for $SU(N_c)$ we have $\sum_i \sigma_i = 0$.
 The quantum corrected moduli space is different from the classical one and for $N_f < N_c -1 $ the effective superpotential is given by
 \begin{equation}
  W_{eff} = (N_c - N_f - 1) ( Y \Det{M} ) ^{\frac{1}{N_f - N_c +1}}
@@ -227,9 +230,29 @@ For $N_f \geq N_c $, the low-energy description contains baryons.
 In the $N_f = N_c$ case the superpotential is 
 \begin{equation}
 W = - Y ( \Det{M} - B \tilde{B})
+\label{eqn:3d_sun_nf__n_c_superpot}
 \end{equation}
 which forces the theory to flow to a non-trivial fixed point in the infrared.
 
+The above analysis can be extended to theories with $U(N_c)$ gauge group with $N_f \leq N_c$.
+We will discuss the theory with $N_f = N_c$ since the results with lower number of flavours can be obtained by integrating out quarks.
+The theory with $U(N_c)$ is obtained by gauging the global $U(1)_B$ factor.
+Since we have $N_f=N_c$ the superpotential \eqref{eqn:3d_sun_nf__n_c_superpot} from the $SU(N_c)$ part of the group and for the $U(1)$ factor we have one flavour given by $X = B \tilde{B}$ 
+and with chiral fields $V_+ \, , \,V_-$ with superpotential $W = - X V_+ V_-$.
+The fields $V_+ \, , \, V_-$ are defined as 
+\begin{equation}
+V_+ \sim \exp{ \left(  \frac{\Phi_1}{g^2} + i \gamma_1 \right) } \qquad \quad V_- \sim \exp{ \left( \frac{\Phi_{N_c}}{g^2} + i \gamma_{N_c} \right) }
+\end{equation}
+since the null trace condition does not hold anymore.\\
+The complete superpotential now reads
+\begin{equation}
+ W = - Y ( \Det{M}  - X) - X V_+ V_- 
+ \end{equation} 
+Integrating out the massive field $Y$  we obtain a superpotential
+
+\begin{equation}
+W = - \Det{M} V_+ V_- 
+\end{equation}
 
 \subsubsection{Monopole operators}
 
