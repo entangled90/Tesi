@@ -101,7 +101,36 @@ In addition, real masses relative to global abelian symmetries contribute to the
  The added term is given by $\int d^4 \theta \; V_b \Sigma $ , where $V_b$ is a background vector multiplet.
  Integrating by parts and defining  $\Sigma_b = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V_b$ we obtain $\int d^4 \theta \; \Sigma_b V  $.
  Thus, the scalar component of the background vector field is a Fayet-Iliopulos term $\xi$, which contributes to the central charge $m_J = \xi $.
-\subsection{Moduli spaces of gauge theories}
+
+ 
+ 
+\subsubsection{Monopoles}
+In three dimensions there exist finite energy solutions that can be understood in terms of four dimensional monopoles.
+The scalar $\sigma$ will play the role of the scalar Higgs field in the adjoint representation typically used to introduce monopoles \cite{Weinberg:2006rq}.
+Different topological solutions can be found since the scalar field at infinity must approach a vaccum solution.
+Such solution doesn't have to be identical in every direction and as a result we find different topological solutions depending on how we choose to map the two-sphere at infinity to the gauge group $G$.
+The mapping relates $S^2_{\infty}$ to the gauge group rather than $S^3_{\infty}$ since monopoles are localized in space rather than in space-time.\\
+For a generic vacuum expectation value of $\sigma$, with $\sigma_i \neq \sigma_j$, the gauge group breaks to its maximal torus $U(1)^{r_G}$.
+The possible windings around $S^2_{\infty}$ are then characterised by
+\begin{equation}
+ \Pi_{2} \left( G / U(1)^{r_G} \right) = \Pi_1 (U(1)^{r_G}) = \mathbb{Z}^{r_G}
+\end{equation}
+The equality holds if $\Pi_2(G) = 0$ which is true for every semisimple gorup and if $\Pi_1(G) = 0$ which is true if the group is the covering group of the Lie algebra.
+As a result there are $r_G$ different topological solutions.
+Each of these solutions carry a magnetic charge for each of the $U(1)^{r_G}$ unbroken gauge fields. 
+For example, for $G= SU(N_c)$ we have $N_c-1$ different topological solutions.
+\\
+For $SU(2)$ gauge group one solution to the equation is given by the 't Hooft-Polyakov monopole, which in singular gauge reads
+\begin{equation}
+  \sigma = \left( v \, \coth (v r) - \frac{1}{r} \right)  \tau^3 \qquad A_{\mu} = \epsilon_{i j 3} \hat{r}^i \left( \frac{1}{r} + \frac{v}{\sinh (vr)} \right)
+\end{equation}
+This solution can be easily extended to $SU(N)$ gauge group in the following way
+ 
+ 
+ 
+ 
+ 
+ \subsection{Moduli spaces of gauge theories}
 
 \subsubsection{Moduli space of $U(1)$ gauge theory with $N_f$ massless flavours }
 For large values of $\sigma$ the Coulomb branch of the theory can be parametrized by the chiral superfield we defined before $X = e^{\frac{\Phi}{g^2}} $ which correspond to a cylinder.
@@ -235,10 +264,11 @@ W = - Y ( \Det{M} - B \tilde{B})
 which forces the theory to flow to a non-trivial fixed point in the infrared.
 
 The above analysis can be extended to theories with $U(N_c)$ gauge group with $N_f \leq N_c$.
-We will discuss the theory with $N_f = N_c$ since the results with lower number of flavours can be obtained by integrating out quarks.
-The theory with $U(N_c)$ is obtained by gauging the global $U(1)_B$ factor.
-Since we have $N_f=N_c$ the superpotential \eqref{eqn:3d_sun_nf__n_c_superpot} from the $SU(N_c)$ part of the group and for the $U(1)$ factor we have one flavour given by $X = B \tilde{B}$ 
-and with chiral fields $V_+ \, , \,V_-$ with superpotential $W = - X V_+ V_-$.
+We will discuss the theory with $N_f = N_c$ since the results with lower number of flavours can be obtained by integrating out quarks.\\
+The theory with $U(N_c)$ is obtained by gauging the global $U(1)_B$ factor.\\
+Since we have $N_f=N_c$ the superpotential \eqref{eqn:3d_sun_nf__n_c_superpot} from the $SU(N_c)$ part of the group is presenet  and for the $U(1)$ factor we have one flavour given by $X = B \tilde{B}$ 
+and chiral fields $V_+ \, , \,V_-$ which results in a superpotential given by
+ $$ W = - X V_+ V_-$$.
 The fields $V_+ \, , \, V_-$ are defined as 
 \begin{equation}
 V_+ \sim \exp{ \left(  \frac{\Phi_1}{g^2} + i \gamma_1 \right) } \qquad \quad V_- \sim \exp{ \left( \frac{\Phi_{N_c}}{g^2} + i \gamma_{N_c} \right) }
@@ -251,10 +281,10 @@ The complete superpotential now reads
 Integrating out the massive field $Y$  we obtain a superpotential
 
 \begin{equation}
-W = - \Det{M} V_+ V_- 
+W = -  V_+ V_-  \Det{M}
 \end{equation}
 
-\subsubsection{Monopole operators}
+
 
 \section{Aharony duality}
 
