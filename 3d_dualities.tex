@@ -174,7 +174,7 @@ The charges of the fields under the symmetries are given by
 \end{equation}
 The symmetries force the superpotential to have the form
 \begin{equation}
-W = - N_f \left(  V_+ V_- \Det{ M} \right)^{\frac{1}{N_f}}
+W = - N_f \left(  V_+ V_- \Det{ (M)} \right)^{\frac{1}{N_f}}
 \end{equation}
 The superpotential is singular at the origin of the moduli space, indicating that there are massless degrees of freedom that need to be taken into account.\\
 We can give real masses $\bar{m}_i$ ($-\bar{m}_i$) to the quarks $Q_i$ ($\tilde{Q}_i$).
@@ -264,19 +264,19 @@ In fact, the following subspace is classically unlifted
 The last equality holds since for $SU(N_c)$ we have $\sum_i \sigma_i = 0$.
 The quantum corrected moduli space is different from the classical one and for $N_f < N_c -1 $ the effective superpotential is given by
 \begin{equation}
- W_{eff} = (N_c - N_f - 1) ( Y \Det{M} ) ^{\frac{1}{N_f - N_c +1}}
+ W_{eff} = (N_c - N_f - 1) ( Y \Det{(M)} ) ^{\frac{1}{N_f - N_c +1}}
 \end{equation}
 which admits no stable vacuum.\\
 For $N_f = N_c - 1 $ we obtain a constraint on the moduli space given by 
 \begin{equation}
-Y \Det M = 1
+Y \Det( M) = 1
 \end{equation}
 which results in a merging between the Higgs and the Coulomb branch.
 
 For $N_f \geq N_c $, the low-energy description contains baryons.
 In the $N_f = N_c$ case the superpotential is 
 \begin{equation}
-W = - Y ( \Det{M} - B \tilde{B})
+W = - Y ( \Det{(M)} - B \tilde{B})
 \label{eqn:3d_sun_nf__n_c_superpot}
 \end{equation}
 which forces the theory to flow to a non-trivial fixed point in the infrared.
@@ -294,11 +294,12 @@ since the null trace condition does not hold anymore.\\
  $$ W = - X V_+ V_-$$
 As a result, the superpotential for the theory is given by
 \begin{equation}
- W = - Y ( \Det{M}  - X) - X V_+ V_- 
+ W = - Y ( \Det{(M)}  - X) - X V_+ V_- 
  \end{equation} 
 Integrating out the massive field $Y$  we obtain a superpotential
 \begin{equation}
-W = -  V_+ V_-  \Det{M}
+W = -  V_+ V_-  \Det{(M)}
+\label{eqn:aharony_dual_description_NcNf}
 \end{equation}
 
 
@@ -319,7 +320,7 @@ The charges of the fields are given by the following table
 where $V_{\pm} $ are defined as in the previous section and parametrize the unlifted Coulomb branch.
 The moduli space of this theory was described in the previous section.
 
-The dual theory is a $U(N_f - N_c) $ gauge theory with $N_f$ flavours $q\, ,\, \tilde{q}$ and with singlet fields  $M \,,  V_+ \, , V_-$ with the same quantum number of the electric theory. 
+The dual theory is a $U(\tilde{N}_c) = U(N_f - N_c) $ gauge theory with $N_f$ flavours $q\, ,\, \tilde{q}$ and with singlet fields  $M \,,  V_+ \, , V_-$ with the same quantum number of the electric theory. 
 The charges are chosen in order to be consistent with a potential $W = M \, q \tilde{q}$ as in four dimensional dualities.\\
 The global charges of the theory are given by
 \begin{equation}
@@ -334,9 +335,28 @@ The global charges of the theory are given by
 The magnetic theory features a superpotential of the form
 \begin{equation}
 W = M^{\tilde{i}}_i q^i \tilde{q}_{\tilde{i}} + V_+ \, \tilde{V}_- + V_- \, \tilde{V}_+
+\label{eqn:aharony_mag_superpotential}
 \end{equation}
+The dual theory now contains the fields $V_+ \, , \, V_-$ which are matched with the coordinate on the Coulomb branch of the original theory.
+Remember that in three dimensions the moduli space contains the Coulomb branch, which wasn't present in four dimensional theories.
+The introduction of the monopoles is crucial in order to have the same moduli space between the two theories.\\
+The dual theory exists only for $N_f > N_c$. 
+Starting with $N_f =N_c + 1$ we obtain a dual theory with $U(1)$ gauge group. Adding a mass term of the form $m M$ in the dual theory breaks the gauge group. After integrating out quarks and $\tilde{V}_{\pm}$ fields we obtain an effective description given only by mesons and $V_{\pm}$ with no other fields.
+The superpotential is constrained by symmetries to be of the form 
+\begin{equation}
+W = - V_+ V_- \Det{(M)}
+\end{equation}
+We found exactly the dual description of the theory we introduced in \eqref{eqn:aharony_dual_description_NcNf}.
+\\
 
 
+
+We can compare the moduli space between the dual theories by looking at specific vacua.
+For example, let's consider a point on the Higgs branch in the electric theory with  VEV of the mesons of rank $N_c$.
+The low-energy dual theory associated to such VEV is a $U(N_f - N_c)$ theory with $N_f - N_c$ massless flavours whose moduli space can be described by a superpotential of the form $W = \tilde{V}_+ \tilde{V}_- \, \Det{( q \tilde{q})} $ since $N_f = \tilde{N}_c$.
+\\
+The equation of motion resulting from the addition of this term to the superpotential \eqref{eqn:aharony_mag_superpotential} set $V_+ = V_-= 0$, as in the electric theory.\\
+%If the VEV of the mesons has rank $N_c -1 $ the original theory is not completely higgsed and the dual theory can be given an effective description through the superpotential $W = \left(  \tilde{V}_+ \tilde{V}_- \, \Det{q \tilde{q}} \right)^{\frac{1}{2}}$ since $N_f = \tilde{N_c} +1$
 
 
 
