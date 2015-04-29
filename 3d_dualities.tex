@@ -83,6 +83,19 @@ For $U(N)$ or $ SU(N)$ theories it's better to use the following coordinates on 
 with $j = 1, \dotsc , N -1$ for $SU(N)$ or with $ j = 1, \dotsc, N$ for $U(N)$.
 From now on we will fix to a Weyl chamber by setting $\sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_N$ with a Weyl transformation.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsection{Real masses}
 
 In $3 D \, \mN=2$ theories there's another way of giving a mass to a chiral multiplet other than the superpotential term $W_{mass}= m \Phi^2$, which correspond to a holomorphic mass.\\
@@ -103,12 +116,25 @@ In addition, real masses relative to global abelian symmetries contribute to the
  Thus, the scalar component of the background vector field is a Fayet-Iliopulos term $\xi$, which contributes to the central charge $m_J = \xi $.
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 \subsubsection{Monopoles}
-In three dimensions there exist finite energy solutions that can be understood in terms of four dimensional monopoles.
+In three dimensions there exist finite energy solutions that can be understood in terms of four dimensional monopoles after compactifying one direction.
 The scalar $\sigma$ will play the role of the scalar Higgs field in the adjoint representation typically used to introduce monopoles \cite{Weinberg:2006rq}.
 Different topological solutions can be found since the scalar field at infinity must approach a vaccum solution.
-Such solution doesn't have to be identical in every direction and as a result we find different topological solutions depending on how we choose to map the two-sphere at infinity to the gauge group $G$.
+Such solution doesn't have to be the same in every direction and as a result we find different topological solutions depending on how we choose to map the two-sphere at infinity to the gauge group $G$.
 The mapping relates $S^2_{\infty}$ to the gauge group rather than $S^3_{\infty}$ since monopoles are localized in space rather than in space-time.\\
 For a generic vacuum expectation value of $\sigma$, with $\sigma_i \neq \sigma_j$, the gauge group breaks to its maximal torus $U(1)^{r_G}$.
 The possible windings around $S^2_{\infty}$ are then characterised by
@@ -128,6 +154,8 @@ This solution can be easily extended to $SU(N)$ gauge group by embedding the abo
 Since the gauge group is broken in the vacuum, we cannot use $SU(N)$ gauge transformation to generate other solutions.
 As a results, each embedding of $SU(2)$ will result in a monopole charged under different $U(1)$ factors of the Cartan. 
 Note that there are $N-1$ special embeddings of $SU(2)$ into $SU(N)$ which result in monopoles charged only under one factor of the $U(1)$ in the Cartan subalgebra. They are given by the N-1 contiguous 2x2 blocks in the diagonal.\\
+The importance of monopole operators in three dimensions is due to the fact that flowing to the infrared, they flow to the coordinates on the Coulomb branch we introduced in \eqref{eqn:Y_def_sun_theories} for $SU(N)$ theories \cite{Aharony:2013dha}.
+\\
 The carges of the monopoles can be written as
 \begin{equation}
 \vec{g}  = 2 \pi \sum_a n_a \vec{\alpha_a}
@@ -138,12 +166,56 @@ Moreover, the mass of the monopoles is subject to the BPS bound which is given b
 M_{monopole} \geq \frac{| \vec{g} \cdot \sigma| }{e^2} = \frac{2 \pi}{e^2} \sum_i n_i \sigma_i
 \end{equation}
 where $\sigma_i$ are the vaccum expectation values of $\sigma$.
-Monopoles that satisfy the above condition are called BPS monopoles 
- \\
+Monopoles that satured the bound are called BPS monopoles.\\
+
+%Considering now a finite value of the radius along the compactified direction, the BPS bound require that the potential must satisfy self-duality equations
+%\begin{equation}
+% F_{\mu \nu} = * F_{\mu \nu}
+%\end{equation}
+
+
+
+
 {\huge Da finire}
  
  
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  \subsection{Moduli spaces of gauge theories}
 
 \subsubsection{Moduli space of $U(1)$ gauge theory with $N_f$ massless flavours }
@@ -191,6 +263,20 @@ where $\lambda_i$ are Lagrange multipliers in order the enforce the semiclassica
 \includegraphics[scale=0.5]{u1_moduli_space_flavours.png}
 \caption{Moduli space of vacua for SQED with four flavours}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsubsection{Moduli space of $SU(2)$ gauge theories with flavours}
 
@@ -304,16 +390,21 @@ W = -  V_+ V_-  \Det{(M)}
 
 
 
-\section{Aharony duality ----- WORK IN PROGRESS}
+
+
+
+
+
+\section{Aharony duality }
 One of the first three dimensional dualities was found by Aharony in \cite{Aharony:1997gp} for theories with $U(N_c) $ as gauge group and with non chiral matter in the fundamental representation.
 The charges of the fields are given by the following table
 \begin{equation}
 \begin{array}{ c | c c c c c}
   & U(1)_R & U(1)_A & U(1)_J  & SU(N_f)_L & SU(N_f)_R \\
  \hline
- Q & 0 & 1 & 0 & N_f & 1 \\  
- \tilde{Q}& 0  & 1 & 0  & 1 & \overline{N_f}  \\  
-   M & 0  & 2 & 0& N_f  & \overline{N_f}\\  
+ Q & 0 & 1& 0 & N_f& 1 \\ 
+ \tilde{Q} & 0  & 1&0 & \overline{N_f}&1  \\  
+   M & 0 & 2 & 0 & 1 & 1 \\ 
   V_{\pm} & N_f - N_c + 1 & - N_f  & \pm 1 &  1 & 1 \\
 \end{array}
 \end{equation}
@@ -348,9 +439,6 @@ W = - V_+ V_- \Det{(M)}
 \end{equation}
 We found exactly the dual description of the theory we introduced in \eqref{eqn:aharony_dual_description_NcNf}.
 \\
-
-
-
 We can compare the moduli space between the dual theories by looking at specific vacua.
 For example, let's consider a point on the Higgs branch in the electric theory with  VEV of the mesons of rank $N_c$.
 The low-energy dual theory associated to such VEV is a $U(N_f - N_c)$ theory with $N_f - N_c$ massless flavours whose moduli space can be described by a superpotential of the form $W = \tilde{V}_+ \tilde{V}_- \, \Det{( q \tilde{q})} $ since $N_f = \tilde{N}_c$.
@@ -359,7 +447,19 @@ The equation of motion resulting from the addition of this term to the superpote
 %If the VEV of the mesons has rank $N_c -1 $ the original theory is not completely higgsed and the dual theory can be given an effective description through the superpotential $W = \left(  \tilde{V}_+ \tilde{V}_- \, \Det{q \tilde{q}} \right)^{\frac{1}{2}}$ since $N_f = \tilde{N_c} +1$
 
 
+\section{Kim-Park duality}
+Aharony duality can be generalised similarly to Kutasov-Schwimmer duality with respect to Seiberg duality by the addition of a field in the adjoint representation.\\
+The electric theory contains $N_f$ flavours of chiral multiplets and a multiplet in the adjoint representation.
+The charges of the fields are given by
 
+\begin{equation}
+\begin{array}{ c | c c c c c }
+  & U(1)_R & U(1)_A & U(1)_J  & SU(N_f)_L & SU(N_f)_R \\
+ \hline
+ Q & \Delta_Q & 1 & 0 & N_f & 1 \\  
+ \tilde{Q}& \Delta_Q  & 1 & 0  & 1 & \overline{N_f}  \\  
+  X & \frac{2}{k+1} & 0 & 0 & 1 & 1 \\ 
+ v_{j,\pm} & N_f (1 - \Delta_Q) - \frac{2}{k+1} (N_c-1 - j) & - N_f & \pm 1 & 1  &1 \\
+\end{array}
+\end{equation}
 
-
-\section{Kutasov-Schwimmer duality}
