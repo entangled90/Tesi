@@ -390,11 +390,6 @@ W = -  V_+ V_-  \Det{(M)}
 
 
 
-
-
-
-
-
 \section{Aharony duality }
 One of the first three dimensional dualities was found by Aharony in \cite{Aharony:1997gp} for theories with $U(N_c) $ as gauge group and with non chiral matter in the fundamental representation.
 The charges of the fields are given by the following table
@@ -409,6 +404,7 @@ The charges of the fields are given by the following table
 \end{array}
 \end{equation}
 where $V_{\pm} $ are defined as in the previous section and parametrize the unlifted Coulomb branch.
+The R-charges of the quarks have been fixed to zero in order to have the fermion in the multiplet with R-charge $-1$.
 The moduli space of this theory was described in the previous section.
 
 The dual theory is a $U(\tilde{N}_c) = U(N_f - N_c) $ gauge theory with $N_f$ flavours $q\, ,\, \tilde{q}$ and with singlet fields  $M \,,  V_+ \, , V_-$ with the same quantum number of the electric theory. 
@@ -448,18 +444,58 @@ The equation of motion resulting from the addition of this term to the superpote
 
 
 \section{Kim-Park duality}
-Aharony duality can be generalised similarly to Kutasov-Schwimmer duality with respect to Seiberg duality by the addition of a field in the adjoint representation.\\
-The electric theory contains $N_f$ flavours of chiral multiplets and a multiplet in the adjoint representation.
+Aharony duality can be generalised with the addition of a field in the adjoint representation.\\
+The electric theory contains $N_f$ flavours and a multiplet in the adjoint representation. 
+The theory has a superpotential given by $W = tr X^{k+1}$ that fixes the R-charge of the field to $\Delta_X = \frac{2}{k+1}$.
+The R-charges of the quarks have been left unconstrained to generic the value $\Delta_Q$.\\
 The charges of the fields are given by
-
 \begin{equation}
 \begin{array}{ c | c c c c c }
-  & U(1)_R & U(1)_A & U(1)_J  & SU(N_f)_L & SU(N_f)_R \\
+  & SU(N_f)_L & SU(N_f)_R & U(1)_A & U(1)_J  & U(1)_R   \\
  \hline
- Q & \Delta_Q & 1 & 0 & N_f & 1 \\  
- \tilde{Q}& \Delta_Q  & 1 & 0  & 1 & \overline{N_f}  \\  
-  X & \frac{2}{k+1} & 0 & 0 & 1 & 1 \\ 
- v_{j,\pm} & N_f (1 - \Delta_Q) - \frac{2}{k+1} (N_c-1 - j) & - N_f & \pm 1 & 1  &1 \\
+ Q & N_f & 1& 1 & 0   & \Delta_Q  \\  
+ \tilde{Q} & 1 & \overline{N_f} & 1 & 0 & \Delta_Q      \\  
+  X & 1 & 1  & 0 & 0 & \frac{2}{k+1}  \\ 
+ v_{j,\pm} & 1  &1   & - N_f & \pm 1 & -N_f (\Delta_Q-1 ) - \frac{2}{k+1} (N_c-1 - j) \\
 \end{array}
 \end{equation}
+where $v_{j,\pm}$ with $j=0,\dotsc,k-1$ are the monopole operators dressed with powers of the adjoint field. 
+They are defined as 
+\begin{equation}
+v_{j,\pm} = \Tr{( v_{0,\pm} \, X^{j})}
+\end{equation}
+where $v_{0,\pm}$ is the bare monopole operator we defined in the previous section.\\
+To see the reason why there are $k$ different monopoles in this theory we can weakly deform the superpotential to a generic polynomial, as we did in \eqref{eqn:kutasov_deformed_superpotential}.
+The effect of this deformation is the breaking of the gauge group $U(N_c)$ in 
+\begin{equation}
+U(N_c) \; \rightarrow \; U(r_1) \times U(r_2) \times \dots \times U(r_k) \quad \hbox{with} \; \sum r_i = N_c
+\end{equation}
+Following the same reasoning, in the infrared we find $k$ distinct SQCD sector with gauge group $U(r_i)$ without adjoint matter, since it has been integrated out.\\
+Every sector must have a pair of monopoles since it is a $U(r_i)$ theory.\\
+Going in the limit of vanishing coupling we find that the original theory have $k$ pairs of monopole operators.\\
+{\Large Dici una ref che scrive perchè son vestiti in quel modo }
 
+The magnetic theory is a $U(k N_f - N_c)$ gauge theory with $N_f$ dual quarks $(q,\tilde{q})$, adjoint matter $Y$ and singlet fields $(M_j)^{i}_{\tilde{i}}$ and $v_{j,\pm}$. Mesons are constructed from the quarks and the adjoint matter in the electric theory and the $v_{j,\pm}$ are the electric monopole operators.\\
+The charges of the fields are given by
+\begin{equation}
+\begin{array}{ c | c c c c c }
+  & SU(N_f)_L & SU(N_f)_R & U(1)_A & U(1)_J  & U(1)_R   \\
+ \hline
+ q & N_f & 1& 1 & 0   & \Delta_Q  \\  
+ \tilde{q} & 1 & \overline{N_f} & 1 & 0 & \Delta_Q      \\  
+  Y & 1 & 1  & 0 & 0 & \frac{2}{k+1}  \\ 
+  M_j & N_f & \overline{N_f} & 2  &  0& 2 \Delta_Q + j \frac{2}{k+1} \\
+  v_{j,\pm} & 1  &1   & - N_f & \pm 1 & -N_f (\Delta_Q-1 ) - \frac{2}{k+1} (N_c-1 - j) \\
+ \tilde{v}_{j,\pm} & 1  &1   & N_f & \pm 1 & N_f (\Delta_Q-1 ) + \frac{2}{k+1} (N_c + 1 + j) \\
+\end{array}
+\end{equation}
+The fields $\tilde{v}_{j,\pm}$ are the monopole operators of the magnetic theory and are constructed in the same way of the electric ones.
+The charges of the dual quarks and of the adjoint matter are chosen in order to be compatible with a superpotential 
+\begin{equation}
+W = \Tr{ Y^{k+1}} + \sum_{j=0}^{k-1} M_j \tilde{q} Y^{k - j - 1} q 
+\end{equation}
+as Kutasov-Schwimmer duality in four dimensions.\\
+The charges of the monopole operators can be calculated by counting their fermion zero modes and are compatible with a superpotential of the form
+\begin{equation}
+W_{monopoles} = \sum_{j=0}^{k-1} \left(   v_{i,+} \, \tilde{v}_{k-j-1,-} + v_{j,-} \, \tilde{v}_{k-j-1,+} \right)
+\end{equation}
