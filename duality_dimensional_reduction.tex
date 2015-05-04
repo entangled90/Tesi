@@ -13,4 +13,35 @@ Moreover, in three dimensions the axial symmetry is not broken by anomalies and 
 The presence of scalars in the vector multiplets allows real mass terms for fields charged under global symmetries, whereas in four dimensions we could only generate holomorphic mass terms.\\
 Despite these differences we will be able to dimensionally reduce four dimensional dualities to three dimensional dualities and in some cases we will find dualities that weren't known before as stand-alone three dimensional dualities.\\
 
-
+\section{General procedure of reducing dualities}
+The n{\"a}ive dimensional reduction of the four dimensional dualities does not yield a three dimensional duality.
+The dimensional reduction of four dimensional theories can be achieved compactifying a spatial dimension into $S^1$ with radius $r$ and then going in the limit $r \, \rightarrow \, 0$. \\
+Let's analyse the behaviour of the the theory at finite radius.
+In four dimensional theories, the strong coupling scale is given by
+\begin{equation}
+ \Lambda^{b} = \exp{ \left(  - \frac{8 \pi^2}{g_4^2}\right)}
+ \end{equation} 
+where $b$ is the one-loop $\beta$ function coefficient.
+Recall the following relation for strong coupling scales between dual theories 
+\begin{equation}
+  \Lambda^{b}  \tilde{\Lambda}^{b} = (-1)^{N_f - N_c}
+  \label{eqn:4d_strong_scale_relation}
+\end{equation}
+After compactifying a dimension, the strong coupling scale is modified since we have 
+\begin{equation}
+g_4^2 =  2 \pi r g_3^2 \qquad \rightarrow \qquad \Lambda^{b} = \exp{ \left(  - \frac{4 \pi}{ r g_3^2}\right)}
+\end{equation}
+The result of this relation is that if we take the limit $r \, \rightarrow \, 0$,
+the strong coupling scale goes to zero very fast.
+Moreover, it's clear that the relation \eqref{eqn:4d_strong_scale_relation} cannot hold anymore, since $\Lambda \, , \, \tilde{\Lambda} \, \rightarrow 0$ at the same time.\\
+Thus, the $r \, \rightarrow \, 0$ limit does not commute with the infrared limit at fixed coupling needed in the duality.\\
+As a result, we can invert the order of the limits.
+We can take the limit in which we keep $\Lambda \, , \, \tilde{\Lambda}$ and $r$ fixed and look at energies $E \ll \Lambda \, , \, \tilde{\Lambda} \,, \, \frac{1}{r}$. 
+In this limit, we are in the infrared, at fixed coupling but with a finite radius.
+However, this is not a problem since the theory doesn't see the compactified dimensions since it hasn't enough energy to excite the modes associated to it.
+As a result, the dynamics of the theory is effectively three dimensional.\\
+The theories we find with this procedure have few properties that differentiate them to purely three-dimensional theories.
+The scalar associated to the compactified direction of $A_3$ is periodic, with period $\frac{1}{r}$ since the holonomy
+\begin{equation}
+ P \, \exp{ i \}
+\end{equation}
