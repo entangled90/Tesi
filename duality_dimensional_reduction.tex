@@ -7,16 +7,16 @@
 
 
 In the previous chapter we introduced few examples of electric-magnetic dualities in four and three spacetime dimensions.
-It is natural to wonder what is the relation between them since they show some similiraties but at the same time the dynamics of field theories in three and four dimensions is different.\\
+It is natural to wonder what is the relation between them since they show some similiraties but at the same time the dynamics of quantum field theories is different between different spacetime dimensionalities.\\
 For example, in three dimensions there are no anomalies and the moduli space features the Coulomb branch. 
-Moreover, in three dimensions the axial symmetry is not broken by anomalies and we have a topological symmetry, enforced by a Bianchi identity.\\
-The presence of scalars in the vector multiplets allows real mass terms for fields charged under global symmetries, whereas in four dimensions we could only generate holomorphic mass terms.\\
-Despite these differences we will be able to dimensionally reduce four dimensional dualities to three dimensional dualities and in some cases we will find dualities that weren't known before as stand-alone three dimensional dualities.\\
+Moreover, in three dimensions the axial symmetry is not broken by anomalies and we have a topological symmetry, which is enforced by a Bianchi identity.\\
+The presence of a scalar field in every vector multiplet allows real mass terms for fields charged under global symmetries, whereas in four dimensions we could only generate holomorphic mass terms through superpotential terms.\\
+Despite these differences we will be able to dimensionally reduce four dimensional dualities to three dimensions and in some cases we will find stand-alone three dimensional dualities that weren't known before.\\
 
 \section{General procedure of reducing dualities}
 The n{\"a}ive dimensional reduction of the four dimensional dualities does not yield a three dimensional duality.
-The dimensional reduction of four dimensional theories can be achieved compactifying a spatial dimension into $S^1$ with radius $r$ and then going in the limit $r \, \rightarrow \, 0$. \\
-Let's analyse the behaviour of the the theory at finite radius.
+It can be achieved compactifying a spatial dimension into $S^1$ with radius $r$ and then going in the limit $r \, \rightarrow \, 0$. \\
+Let's analyse the behaviour of the the theory at finite radius to understand why it doesn't work.\\
 In four dimensional theories, the strong coupling scale is given by
 \begin{equation}
  \Lambda^{b} = \exp{ \left(  - \frac{8 \pi^2}{g_4^2}\right)}
@@ -27,18 +27,17 @@ Recall the following relation for strong coupling scales between dual theories
   \Lambda^{b}  \tilde{\Lambda}^{b} = (-1)^{N_f - N_c}
   \label{eqn:4d_strong_scale_relation}
 \end{equation}
-After compactifying a dimension, the strong coupling scale is modified \cite{Aharony:2013dha} since  
+After compactifying a dimension, the strong coupling scale is modified \cite{Aharony:2013dha} since  $g_4^2 =  2 \pi r g_3^2$ and as a result
 \begin{equation}
-g_4^2 =  2 \pi r g_3^2 \qquad \rightarrow \qquad \Lambda^{b} = \exp{ \left(  - \frac{4 \pi}{ r g_3^2}\right)}
+  \Lambda^{b} = \exp{ \left(  - \frac{4 \pi}{ r g_3^2}\right)}
 \end{equation}
-The result of this relation is that if we take the limit $r \, \rightarrow \, 0$,
+The consequence of the compactification is that if we take the limit $r \, \rightarrow \, 0$,
 the strong coupling scale goes to zero very fast.
-Moreover, it's clear that the relation \eqref{eqn:4d_strong_scale_relation} cannot hold anymore, since $\Lambda \, , \, \tilde{\Lambda} \, \rightarrow 0$ at the same time.\\
+Moreover, it's clear that the four dimensional relation \eqref{eqn:4d_strong_scale_relation} cannot hold anymore, since both $\Lambda $ and $ \tilde{\Lambda} $ go to zero at the same time.\\
 Thus, the $r \, \rightarrow \, 0$ limit does not commute with the infrared limit at fixed coupling needed in the duality.\\
-As a result, we can invert the order of the limits.
 We can take the limit in which we keep $\Lambda \, , \, \tilde{\Lambda}$ and $r$ fixed and look at energies $E \ll \Lambda \, , \, \tilde{\Lambda} \,, \, \frac{1}{r}$. 
 In this limit, we are in the infrared, at fixed coupling but with a finite radius.
-However, this is not a problem since the theory doesn't see the compactified dimensions since it hasn't enough energy to excite the Kaluza-Klein modes associated to it.
+However, this is not a problem since the theory doesn't see the compactified dimension since it hasn't enough energy to excite the Kaluza-Klein modes associated to it.
 As a result, the dynamics of the theory is effectively three dimensional.\\
 The theories we find with this procedure have few properties that differentiate them to purely three-dimensional theories.
 The scalar associated to the compactified direction of $A_3$ is periodic, with period $\frac{1}{r}$ since the holonomy of the gauge field on the circle is gauge invariant
@@ -55,8 +54,9 @@ For this reason it's associated to a different topological sector with respect t
 The superpotential generated reads
 \begin{equation}
 W = \eta Y_{low}
+\label{eqn:W_eta_superpotential_first}
 \end{equation}
-where $\eta = \Lambda^b$ and $Y_{low}$ is the Coulomb branch coordinate we defined in  .\\
+where $\eta = \Lambda^b$ and $Y_{low}$ is the Coulomb branch coordinate we defined in \eqref{eqn:definition_of_Y_sun}.\\
 Theories obtained with this method are dual to each other and they differ from truly three-dimensional theories for the reasons we explained above.
 For example, the introduction of the $\eta$ superpotential breaks the axial symmetry that is anomalous in four dimensions, but is allowed in three-dimensional theories.\\
 After these consideration we would like to transform these dualities with finite radius $r$ into truly three-dimensional dualities, i.e. dualities for theories well-defined at high energies.
@@ -67,8 +67,8 @@ Using these operators it is possible to define the theories in the ultraviolet, 
 
 
 \section{Dimensional reduction of Seiberg duality with $SU(N_c)$ gauge group}
-We introduced Seiberg duality in four dimensions in section \ref{sec:seiberg_duality_4d} but we were its analog in three dimensions was discovered only by the procedure of dimensional reduction that we just introduced.\\
-The superpotential that is generated for four dimensional theories compactified is given by the sum of the AHW superpotential and the $\eta$ superpotential and together they lift the Coulomb branch completely.\\
+We introduced Seiberg duality in four dimensions in section \ref{sec:seiberg_duality_4d} but its analog in three dimensions was discovered only by the procedure of dimensional reduction that we will introduce more precisely in this section.\\
+The superpotential that is generated for four dimensional theories compactified is given by the sum of the AHW superpotential \eqref{eqn:def_AHW_Superpotential_Sun} and the $\eta$ superpotential \eqref{eqn:W_eta_superpotential_first} and together they lift the Coulomb branch completely.\\
 
 \subsubsection{Comparison of moduli spaces}
 %For $N_f \geq N_c$ the four dimensional theory admits a stable vacuum.
@@ -104,21 +104,23 @@ Let's consider a theory with $N_f + 1$ flavours and let's give a real mass $\hat
 We will set in the limit in which $\hat{m} \rightarrow \infty$ in order to integrate out the last flavour.
 This can be achieved by giving expectation values to the fields associated to the diagonal $SU(N_f +1 ) \times U(1)_B$ flavour symmetry given by
 \begin{equation}
-  \hbox{diag}(0, \dots , m ) = \mbox{diag} (m_B - M, \dots , m_B + N_f M) 
+  \hbox{diag}(0, \dots , m ) = \mbox{diag} (m_B - M, \dots , m_B + N_f M)  \quad \hbox{with } m_B = M 
    \end{equation}   
-   where $M$ is associated to $SU(N_f+1)$ and $m_B$ to $U(1)_B$.\\
- The real masses are easily mapped to the dual theory by considering the charges of the quarks under the global symmetries in question.
+   where $M$ is associated to the diagonal $SU(N_f+1)$ and $m_B$ to $U(1)_B$.\\
+ The real masses are easily mapped to the dual theory by considering the charges of the quarks under the global symmetries in question (cfr. tables \eqref{tab:suN_elect_charge} and \eqref{tab:sun_magnetich_charges}).
+ \begin{equation}
+  M \; \rightarrow \;  - M \qquad m_B \; \rightarrow \; \frac{N_c}{N_f - N_c +1} m_B
+ \end{equation}
  As a result the first $N_f$ flavours get a mass $\hat{m}_1$ and the last one a mass of $\hat{m}_2$
  \begin{equation}
   \hat{m}_1 = \frac{ \hat{m}}{N_f - N_c +1} \qquad \hat{m}_2 = \frac{ \hat{m} (N_c - N_f)}{N_f -N_c +1 }
  \end{equation}
-In the electric theory we will be interested in configrations that remain at a finite distance from the origin in the Coulomb branch
-, in the limit $\hat{m} \rightarrow 0 $.
+In the electric theory we will be interested in configrations that remain at a finite distance from the origin in the Coulomb branch in the limit $\hat{m} \rightarrow 0 $.
 For these type of vacua, the last flavour is massive and can be ignored at low energies, resulting in an effective $SU(N_c)$ theory with $N_f$ flavours.\\
-The monopole operator $Y_{high}$ is related to the low-energy coordinate $Y_{low}$ by the relation $Y_{low} = Y_{high}/ m $, where $m$ is the complex mass of quark.
+The monopole operator $Y_{high}$ is related to the low-energy coordinate $Y_{low}$ by the relation $Y_{low} = Y_{high}/ m $, where $m$ is the complex mass of quark \cite{Aharony:2013dha}.
 Since the real mass is given by a component of a vector multiplet, the superpotential $W = \eta Y_{high}$ vanishes, since we didn't assign any complex mass to the quark.\\
-As a result, we obtain a $SU(N_c)$ gauge theory with $N_f$ massless flavours and no $\eta$-superpotential as the electric theory. 
-The absence of the $\eta$-superpotential results in a theory with axial symmetry.
+As a result, the electric theory we obtain is a $SU(N_c)$ gauge theory with $N_f$ massless flavours and no $\eta$-superpotential. 
+The absence of the $\eta$-superpotential results in a theory with axial symmetry, since it was the only term that was breaking it.
 The charges of the fields are given by
 \begin{equation}
 \begin{array}{| c | c | c c c c c| }
@@ -143,7 +145,7 @@ We can view it as $U(N_f - N_c)$ with quarks in the representations
 \begin{equation}
 \begin{array} { | c | c | c | }
  \hline
- \hbox{component}& \hbox{quark} & U(N_f - N_c)_{U(1)}  \\
+ \hbox{component}& \hbox{quark} & U(N_f - N_c)  \\
 \hline
 1,\dotsc,N_f & q & (N_f - N_c)_{\;1}\\
 1,\dotsc,N_f & \tilde{q} & (\overline{N_f - N_c})_{\;1}\\
@@ -152,25 +154,27 @@ N_f +1 & \tilde{p} & 1_{\;(N_f-N_c)}\\
 \hline
 \end{array}
 \end{equation}
-The component of the mesons created from quarks with with the same real mass remain light, since left and right quarks have opposite charges and global symmetries. 
+The mesons' components created from quarks with with the same real mass remain light, since left and right quarks have opposite charges and global symmetries. 
+Thus, the massless mesons are a $N_f \times N_f$ matrix, that can be identified with the mesons $M$ of the electric theory, and a single singlet field $M^{N_f+1}_{N_f+1}$ which we will call $Y$.\\
 The off-diagonal components, i.e $M^i_{N_f+1}$ and $M^{N_f+1}_i$ with $i=1,\dotsc,N_f$ have a mass proportional to $\hat{m}$ and can be ignored.\\
-The remaining massless mesons are a $N_f \times N_f$ singlet matrix, that can be identified with the mesons $M$ of the electric theory, and a single component, which is $M^{N_f+1}_{N_f+1}$ which we will call $Y$.\\
 The $\eta$ superpotential can be written in terms of $U(N_f - N_c)$ Coulomb branch variables that we defined in \eqref{eqn:un_moduli_space_coordinates}.
 Since the gauge group comes from the breaking of $SU(N_f - N_c +1) $ the superpotential is written as
 \begin{equation}
- W = \tilde{\eta} \tilde{V_-}
+ W = \tilde{\eta} \tilde{V}_-
  \end{equation} 
-In addition to this superpotential, there's a AHW contribution to the superpotential, related to the breaking of the gauge group which is given by a term 
+In addition to this superpotential, there's a AHW contribution to the superpotential, related to the breaking of the gauge group from $SU(N_f - N_c +1)$ to $SU(N_f - N_c) \times U(1)$ which is given by a term 
 \begin{equation}
-W = \tilde{V_+}
+W = \tilde{V}_+
 \end{equation}
 The complete superpotential of the magnetic theory is given by
 \begin{equation}
-W_{mag} = M \, q \tilde{q} + Y \, p \tilde{p} + \tilde{\eta} \tilde{V_-} + \tilde{V_+}
+W_{mag} = M \, q \tilde{q} + Y \, p \tilde{p} + \tilde{\eta} \tilde{V}_- + \tilde{V}_+
 \label{eqn:sun_reduced_duality_superpotential}
 \end{equation}
+The Coulomb branch of this theory is completely lifted by the last two terms of the superpotential.\\
 The global symmetries of the theory consist of the $SU(N_f)_L \times SU(N_f)_R \times U(1)_R$ symmetries inherited from four dimensions, the topological symmetry $U(1)_J$ associated to the abelian factor in the gauge group and two abelian factors given by $U(1)_B$ and $U(1)_A$, that are not broken by the superpotential.\\
-From the matching of the gauge invariant operators between the two theories we can fix some of the quantum numbers.
+From the matching of the gauge invariant operators between the two theories we can fix most of the quantum numbers.
+The baryons of the electric theory are matched in the magnetic theory to $b = q^{N_f-N_c} p$ and $\tilde{b} = \tilde{q}^{N_f - N_c} \tilde{b}$.\\
 The $U(1)_B$ symmetry mixes with abelian term of the gauge group and it can be chosen arbitrarily.\\
 The charges are the following
 \begin{equation}
@@ -185,13 +189,44 @@ p & 1_{-(N_f - N_c)} & 1 &  1 & N_c & N_f & -(N_f - N_c) \\
 M & 1 & 1 & 1 & 0 & 2 & 0 \\
 Y & 1 & 1 & 1 & 0 & - 2 N_f & 2 (N_f - N_c+1)\\
 \hline
-V_{\pm} & 1 & 1 & 1 &0 & 0 &2\\
+\tilde{V}_{\pm} & 1 & 1 & 1 &0 & 0 &2\\
 \hline
 \end{array}
+\label{tab:seiberg_3d_charge_mag}
 \end{equation}
 The meson field $Y$ has the same quantum numbers of the $Y$ field in the electric and for this reason is natural to identify them.
-The quantum numbers of $V_{\pm}$ are calculated by counting zero modes and the fact that are consistent with the superpotential \eqref{eqn:sun_reduced_duality_superpotential} is nice check of the result.\\
-The Coulomb branch of this theory is completely lifted by the last two terms of the superpotential.\\
+The quantum numbers of $V_{\pm}$ are calculated by counting zero modes and the fact that are consistent with the superpotential \eqref{eqn:sun_reduced_duality_superpotential} is a nice check of the result.\\
 As a result of this process we found a three-dimensional duality that wasn't known as a standalone duality before the method of dimensional reduction was discovered in \cite{Aharony:2013dha}.
 The duality can be checked by the matching of the partition functions between the two theories. 
-We will focus on this approach in the next chapters. 
+We will focus on this approach in the next chapters. \\
+As an additional check of this duality we can use it to the derive Aharony duality. 
+Since it is a duality involving $U(N)$ gauge theories, we can achieve this by gauging the baryonic symmetry, since it has opposite charges for left and right quarks. \\
+The Coulomb branch coordinates are now given by the independent operators $V_{\pm}$.
+The $U(N_c)$ theory has an additional global symmetry $U(1)_J$ associated to the $U(1)$ factor in the gauge group. Monopole operators are charged under this symmetry.\\
+The duality maps the electric $U(N_c)$ theory with $N_f$ flavours with superpotential
+\begin{equation}
+W_{el} = \eta V_+ V_-
+\end{equation}
+to a $U(N_f - N_c)$ theory with $N_f $ flavours and mesons $M$ with
+\begin{equation}
+W_{mag} = \tilde{\eta} \tilde{X}_+ \tilde{X}_- + M q \tilde{q}
+\end{equation}
+Both theories have a one-dimensional Coulomb branch which is not lifted by the superpotential, since it only affects the $SU(N)$ factor of the group and a matching between the two is possible.\\
+The same procedure can be applied to the duality we found without the $\eta$ superpotential.
+The steps on the electric theory are already described in the previous discussion, while the charges of the magnetic theory we used in \eqref{tab:seiberg_3d_charge_mag} was chosen in such a way that the only fields charged under the baryonic symmetry were $p,\tilde{p}$.
+As a result, the new sector of the theory is a $U(1)$ gauge theory with only one flavour.
+Its low-energy description is given by a superpotential, relating its monopole operators $V_+,V_-$ with the meson $N=b \tilde{b}$ by
+\begin{equation}
+W = - V_+ V_- N
+\end{equation}
+The superpotential we obtained by the reduction \eqref{eqn:sun_reduced_duality_superpotential} contains a term given by $W = Y N $. The equation of motion of $N$ sets $Y= \tilde{V}_+ \tilde{V}_-$.
+Integrating out the massive fields the monopole operators $\hat{X}_{\pm}$ of the low-energy theory $U(N_f - N_c)$ can be related to the high-energy monopoles$\tilde{X}_{pm}$ of $U(N_f - N_c) \times U(1)_B$ by the relation \cite{Aharony:2013dha}
+\begin{equation}
+\tilde{X}_{\pm} \simeq \hat{X}_{\pm} \tilde{V}_{\mp}
+\end{equation}
+As a result the superpotential is given by
+\begin{equation}
+W_{mag} = M q \tilde{q} + \hat{X}_- \tilde{V}_+ + \hat{X}_+ \tilde{V}_-
+\end{equation}
+which is the same superpotential of the magnetic theory in Aharony duality, after the identification of the singlets $\tilde{V}_{\pm}$ with the fields $V_{\pm}$ of the electric theory.
+\section{Reduction of Kutasov-Schwimmer duality}
