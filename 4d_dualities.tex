@@ -5,8 +5,6 @@
 \input{phys_intro}
 
 \section{Seiberg duality}
-\label{sec:seiberg_duality_4d}
-
 Electric magnetic duality relates the dynamics of two different gauge theories in their infrared fixed point.
 Even though the dual theories have different particle content, they describe the same IR physics. 
 Moreover, whenever one of the dual theories gets more strongly coupled, the other become more weakly coupled.
@@ -36,17 +34,19 @@ The classical lagrangian is written in terms of superfield as
  \int d^2 \theta \, d^2 \bar{\theta} \; {\tilde{Q}^{\dagger}} e^{- V} \tilde{Q}
  \end{equation} 
 $Q$ and $\tilde{Q}$ represent left and right quark superfield respectively.
-\begin{table}[h!]
- \begin{tabular}{c | c |  c c c c }
- & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\begin{equation}
+ \begin{array}{| c | c |  c c c c |}
+ \hline
+ & SU(N_c) & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
-$Q$ & $N_c$ & $N_F$ & $1$   &  $1$  & $ \frac{N_f - N_c}{N_f}$  \\
-$\tilde{Q}$ &$\overline{N_c} $ &  $1$ & $\overline{ N_F}$   & $-1$   &  $\frac{N_f - N_c}{N_f}$   \\	 
- \end{tabular}
-	\centering
- \caption{Charges of the electric theory}
+Q & N_c & N_F & 1   &  1  &  \frac{N_f - N_c}{N_f}  \\
+\tilde{Q} &\overline{N_c}  &  1 & \overline{ N_F}   & -1   &  \frac{N_f - N_c}{N_f}   \\	 
+\hline
+ \end{array} 
+%	\centering
+% \caption{Charges of the electric theory}
  \label{tab:suN_elect_charge}
-\end{table}
+\end{equation}
 \\
 The charges of the fields are given in the table below.
 The value of the R-charge is fixed by the triangle anomaly $SU(N_c)^2 \, U(1)_R $, given by diagrams with two exiting gluons and R-symmetry current inserted in the cross.
@@ -326,17 +326,19 @@ Since they are gauge invariant, they interact only through the superpotential
 \end{equation}
 where we represented dual quarks as $q,\tilde{q}$ and mesons as $M^i_{\tilde{j}} $.\\
 The charges of fields of the magnetic theory are
-\begin{table}[h]
- \begin{tabular}{c | c |  c c c c }
- & $SU(N_c) $& $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\begin{equation}
+ \begin{array}{| c | c |  c c c c |  }
+ \hline
+ & SU(N_c) & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
-$q$ & $N_c$ & $\overline{N_F}$ & $1$   &  $ \frac{N_c}{N_f-N_c} $  & $ \frac{N_c}{N_f}$  \\
-$\tilde{q}$ &$\overline{N_c} $ &  $1$ & ${ N_F}$   & $- \frac{N_c}{N_f-N_c}$   &  $ \frac{N_c}{N_f}$   \\	 
-$M^i_{\tilde{j}} $ & $ 1 $ & $N_f$ & $\overline{N_f} $ & $0$ & $ 2 \frac{N_f - N_c}{N_f} $
- \end{tabular}
-	\centering
- \caption{Charges of the magnetic theory}
-\end{table}\\
+q & N_c & \overline{N_F} & 1   &   \frac{N_c}{N_f-N_c}   &  \frac{N_c}{N_f}  \\
+\tilde{q} &\overline{N_c}  &  1 & { N_F}   & - \frac{N_c}{N_f-N_c}   &   \frac{N_c}{N_f}   \\	 
+M^i_{\tilde{j}}  &  1  & N_f & \overline{N_f}  & 0 &  2 \frac{N_f - N_c}{N_f}\\ 
+\hline
+ \end{array}
+	%\centering
+ %\caption{Charges of the magnetic theory}
+\end{equation}\\
 Dual quarks sit in opposite representation of flavour symmetries. 
 
 Mesons in the magnetic theory have the same charges of the mesons constructed from electric quarks.

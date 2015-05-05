@@ -11,18 +11,20 @@ Kutasov and Schwimmer (\cite{Kutasov:1995ve}, \cite{Kutasov:1995np}) considered 
 The classical electric theory can be summarized by the following table of charges of the fields under the global symmetry group $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R
 $
 
-\begin{table}[h]
-\begin{tabular}{c | c | c c c c }
- & $SU(N_c)$ &$SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\begin{equation}
+\begin{array}{| c | c | c c c c | }
 \hline
-$Q$ & $N_c$&$N_F$ & $1$   &  $1$  & $ 1 - \frac{2}{k+1} \frac{N_c}{N_f}$  \\
-$\tilde{Q}$ & $\overline{N_c} $&  $1$ & $\overline{ N_F}$   & $-1$   &  $ 1 - \frac{2}{k+1} \frac{N_c}{N_f} $   \\
-$X$ & $N_c^2-1$ & $1$   &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
-\end{tabular}
+ & SU(N_c) &SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
+\hline
+Q & N_c&N_F & 1   &  1  &  1 - \frac{2}{k+1} \frac{N_c}{N_f}  \\
+\tilde{Q} & \overline{N_c} &  1 & \overline{ N_F}   & -1   &   1 - \frac{2}{k+1} \frac{N_c}{N_f}    \\
+X & N_c^2-1 & 1   & 1    & 0   &  \frac{2}{k+1} \\
+\hline
+\end{array}
 \centering
-\caption{Charges for the electric theory}
+%\caption{Charges for the electric theory}
 \label{table:charge_table_el_ks_4d}
-\end{table}
+\end{equation}
 and by the addition of the superpotential
 \begin{equation}
 	W_{Adj} = g_k \Tr{X^{k+1}}
@@ -120,19 +122,21 @@ Hence, the moduli space of the theory consists of different disconnected compone
 The magnetic theory is constructed in a similar way as the magnetic theory in Seiberg duality.
 The dual theory has gauge group $SU(\tilde N_c) = SU(k N_F - N_c)$. 
 The baryonic charge of the dual quarks is found by imposing that baryons in the electric theory are proportional to the baryons constructed from dual quark.
-\begin{table}[h!]
-\begin{tabular}{c c c c c c }
- & $SU(\tilde{N_c}) $ & $SU(N_f)_L$  &$SU(N_f)_R $  & $U(1)_B$ &  $U(1)_R$ \\
+\begin{equation}
+\begin{array}{|c |  c | c c c c |}
 \hline
-$q$ & $ \tilde{N_c} $& $\overline{N_F}$  & $1$   &  $ \frac{N_c}{k N_f - N_c }$  & $ 1 - \frac{2}{k+1} \frac{ \tilde{N_c}}{N_f}$  \\
-$\tilde{q}$ & $\overline{\tilde{N_c}} $ & $1 $ &  $N_F$  & $-\frac{N_c}{k N_f - N_c }$   &  $ 1 - \frac{2}{k+1} \frac{\tilde{N_c}}{N_f}$   \\
-$Y$ & $1$  & $ \tilde{N_c}^2-1 $ &$ 1$    &$ 0$   &  $\frac{2}{k+1}$ \\
-$ M_j$ & $1 $& $N_f$ & $ \overline{N_f}$ & 0 & $2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1}$ \\
-\end{tabular}
-\centering
-\caption{Charges for the magnetic theory}
+ & SU(\tilde{N_c})  & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
+\hline
+q &  \tilde{N_c} & \overline{N_F}  & 1   &   \frac{N_c}{k N_f - N_c }  &  1 - \frac{2}{k+1} \frac{ \tilde{N_c}}{N_f}  \\
+\tilde{q} & \overline{\tilde{N_c}}  & 1  &  N_F  & -\frac{N_c}{k N_f - N_c }   &   1 - \frac{2}{k+1} \frac{\tilde{N_c}}{N_f}   \\
+Y & 1  &  \tilde{N_c}^2-1  & 1    & 0   &  \frac{2}{k+1} \\
+ M_j & 1 & N_f &  \overline{N_f} & 0 & 2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1} \\
+ \hline
+\end{array}
+%\centering
+%\caption{Charges for the magnetic theory}
 \label{table:charge_table_mag_ks_4d}
-\end{table}
+\end{equation}
 The magnetic theory has a superpotential
 \begin{equation}
 W = \Tr Y^{k+1} + \sum_{j=0}^{k-1} M_j q Y^{k-j-1} \tilde{q} \qquad \hbox{dove} \; M_j = Q Y^j \tilde{Q}
