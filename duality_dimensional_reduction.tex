@@ -121,17 +121,71 @@ As a result, we obtain a $SU(N_c)$ gauge theory with $N_f$ massless flavours and
 The absence of the $\eta$-superpotential results in a theory with axial symmetry.
 The charges of the fields are given by
 \begin{equation}
-\begin{array}{ c | c | c c c c c}
+\begin{array}{| c | c | c c c c c| }
+ \hline 
   & SU(N_c) & U(1)_R & U(1)_A & U(1)_B  & SU(N_f)_L & SU(N_f)_R \\
  \hline
- & \\
+
  Q &N_c & 1 & -1 & 1 & \overline{N_f} & 1 \\  
  \tilde{Q}& \overline{N_c} & 1  & -1 & -1  & 1 & {N_f}  \\  
  Y & 1 & 2(N_c - N_f -1 ) & -2 N_f  & 0 &  1 & 1 \\
+ \hline
 \end{array}
 \end{equation}
 The magnetic theory does not have vacuum at the origin of the Coulomb branch since every flavour gets a mass proportional to $\hat{m}$.
-The vacuum configuration that has the bigger number of massless quarks is given by following the vacuum expectation value of $\tilde{\sigma}$
+The vacuum configuration with most massless quarks is given by following the vacuum expectation value of $\tilde{\sigma}$
 \begin{equation}
   \tilde{\sigma} = \diag(\overbrace{- \tilde{m}_1, \dotsc,-\tilde{m}_1}^{N_f - N_c \; \hbox{values}}, -\tilde{m}_2 )
+ \end{equation}
+Note that this expectation value is traceless, as it should be.\\
+This vacuum breaks the gauge symmetry $SU(N_f-N_c + 1) \, \rightarrow \, SU(N_f - N_c) \times U(1)$. 
+We can view it as $U(N_f - N_c)$ with quarks in the representations
+\begin{equation}
+\begin{array} { | c | c | c | }
+ \hline
+ \hbox{component}& \hbox{quark} & U(N_f - N_c)_{U(1)}  \\
+\hline
+1,\dotsc,N_f & q & (N_f - N_c)_{\;1}\\
+1,\dotsc,N_f & \tilde{q} & (\overline{N_f - N_c})_{\;1}\\
+N_f +1 & p & 1_{-(N_f-N_c)}\\
+N_f +1 & \tilde{p} & 1_{\;(N_f-N_c)}\\ 
+\hline
+\end{array}
+\end{equation}
+The component of the mesons created from quarks with with the same real mass remain light, since left and right quarks have opposite charges and global symmetries. 
+The off-diagonal components, i.e $M^i_{N_f+1}$ and $M^{N_f+1}_i$ with $i=1,\dotsc,N_f$ have a mass proportional to $\hat{m}$ and can be ignored.\\
+The remaining massless mesons are a $N_f \times N_f$ singlet matrix, that can be identified with the mesons $M$ of the electric theory, and a single component, which is $M^{N_f+1}_{N_f+1}$ which we will call $Y$.\\
+The $\eta$ superpotential can be written in terms of $U(N_f - N_c)$ Coulomb branch variables that we defined in \eqref{eqn:un_moduli_space_coordinates}.
+Since the gauge group comes from the breaking of $SU(N_f - N_c +1) $ the superpotential is written as
+\begin{equation}
+ W = \tilde{\eta} \tilde{V_-}
  \end{equation} 
+In addition to this superpotential, there's a AHW contribution to the superpotential, related to the breaking of the gauge group which is given by a term 
+\begin{equation}
+W = \tilde{V_+}
+\end{equation}
+The complete superpotential of the magnetic theory is given by
+\begin{equation}
+W_{mag} = M \, q \tilde{q} + Y \, p \tilde{p} + \tilde{\eta} \tilde{V_-} + \tilde{V_+}
+\end{equation}
+The global symmetries of the theory consist of the $SU(N_f)_L \times SU(N_f)_R \times U(1)_R$ symmetries inherited from four dimensions, the topological symmetry $U(1)_J$ associated to the abelian factor in the gauge group and two abelian factors given by $U(1)_B$ and $U(1)_A$, that are not broken by the superpotential.\\
+From the matching of the gauge invariant operators between the two theories we can fix some of the quantum numbers.
+The $U(1)_B$ symmetry mixes with abelian term of the gauge group and it can be chosen arbitrarily.
+The charges are the following
+
+\begin{equation}
+\begin{array} {| c | c | c c c c c |}
+\hline
+& U(N_f - N_c) & SU(N_f)_L & SU(N_f)_R & U(1)_B & U(1)_A & U(1)_R \\
+\hline
+q & (N_f - N_c)_{\; 1} & \overline{N_f} & 1 & 0 & -1 & 1 \\
+\tilde{q} & (\overline{N_f - N_c})_{\;- 1} &   1& \overline{N_f} & 0 & -1 & 1 \\
+p & 1_{-(N_f - N_c)} & 1 &  1 & N_c & N_f & -(N_f - N_c) \\
+\tilde{p} & 1_{(N_f - N_c)} & 1 &  1 & - N_c & N_f & -(N_f - N_c) \\
+M & 1 & 1 & 1 & 0 & 2 & 0 \\
+Y & 1 & 1 & 1 & 0 & - 2 N_f & 2 (N_f - N_c+1)\\
+\hline
+V_{\pm} & 1 & 1 & 1 &0 & 0 &2\\
+\hline
+\end{array}
+\end{equation}
