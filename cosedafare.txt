@@ -46,3 +46,8 @@ questa cosa è vera dato un vincolo sulle R cariche che devo imporre.
 Convergenza è un punto importante da discutere
 
 
+######Correzioni 6/05
+~Disegni vari copiati
+U(1)_J e fayet-iliopoulos
+29 moduli spaces piu' sintetici
+33 Cita katz 
