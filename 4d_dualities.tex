@@ -68,7 +68,6 @@ N_c + \frac{1}{2}\,  2 N_f (R_Q -1)  = 0 \quad & \rightarrow \quad R_Q = \frac{N
 where we set the gaugino R-charge to $1$ in order to have gluons not charged under R-symmetry.
 
 Since the non anomalous R-symmetry condition leads to a unique set of R-charges, we found the R-charges at the superconformal infrared point of the theory.
-This is peculiar to \emph{SQCD} with matter in the fundamental representation. 
 
 
 \subsubsection{Classical moduli space}
@@ -115,16 +114,18 @@ Q  =
 
 
 For $N_f \le N_c$ in a generic point of the moduli space the gauge group is broken to $SU(N_c - N_f)$ while for $N_f \geq N_c$ is broken completely.
-The gauge group breaks through the super Higgs mechanism, where every broken generator gets absorbed by the (originally) massless vector superfield in order to make a massive vector superfield \footnote{Remember that massive representation of supersymmetry have twice the degrees of freedom of massless ones, because in the latter half of the supercharges are represented trivially.}
+The gauge group breaks through the super Higgs mechanism: every broken generator is absorbed by the associated massless vector superfield.
+This process gives mass to the vector superfield.  
+\footnote{Remember that massive representation of supersymmetry have twice the degrees of freedom of massless ones, because in the latter half of the supercharges are represented trivially.}
 The mass of the gauge superfield is given by the VEVs of the squarks.
 
-As we said in the previous section, we can  study the classical moduli space by finding holomorphic gauge invariant polynomial in the operators and modding out classical relations between them.
-For $N_f \le N_c$ we can only construct \emph{mesons} out of squarks
+As we said in the previous section, we can  study the classical moduli space by finding holomorphic gauge invariant polynomials in the operators and modding out classical relations between them.
+For $N_f < N_c$ we can only construct \emph{mesons} out of squarks
 \begin{equation}
   M^i_j = Q^i \tilde{Q}_j
  \end{equation} 
 where color indices are summed. 
-Mesons have maximal rank since $N_f \le N_c$ and there are no  classical constraints to impose on them. \\
+Mesons have maximal rank since $N_f < N_c$ and there are no  classical constraints to impose on them. \\
 When $N_f \geq N_c$ the mesons cannot have maximal rank anymore, it can be at most $N_c$.
 There are additional gauge invariant operators that can be constructed: \emph{baryons}, that are defined as
 \begin{align}
@@ -197,7 +198,7 @@ W_{eff} = \left( N_c - N_f  \right)\left(
 \right)^{ \frac{1}{N_c - N_f}}
 \end{equation}
 It is the only superpotential that is compatible with the symmetries of the theory and with the other properties of the superpotential we introduced in section \ref{sec:superpotential_hol_renorm}.
-We can see that the ADS superpotential do not exist for $N_F \geq N_c$ since the exponent diverges for $N_f = N_c$ or the determinant vanishes for $N_f \ge N_c$ since the mesons do not have maximal rank.
+We can see that the ADS superpotential do not exist for $N_f \geq N_c$ since the exponent diverges for $N_f = N_c$ or the determinant vanishes for $N_f \ge N_c$ since the mesons do not have maximal rank.
 Note that this superpotential is non perturbative and thus it is not in contrast with the renormalization theorem of section \ref{sec:superpotential_hol_renorm}.
 The effect of this superpotential is that the theory does not have ground state.
 The slope of the potential goes to zero only for $\mathrm{det} \, {M}  \rightarrow \infty $.
@@ -254,7 +255,7 @@ For large VEVs of the fields, mesons and baryons acquire large mass through the 
 \\
 \\
 $\mathbf{ N_f > N_c +1 }$\\
-Starting from $N_f = N_c +2$ it is not possible to construct a sensible physical superpotential out of gauge invariant operators, in analogy to the previous cases.
+Starting from $N_f = N_c +2$ it is not possible to construct a physical superpotential out of gauge invariant operators, in analogy to the previous cases.
 The only $SU(N_f)_L \times SU(N_f)_R$ invariant superpotential that can be written is given by
 \begin{equation}
  W_{eff} \sim \Det{M} - B_{ij} M^i_k M^j_l \tilde{B}^{kl} 
@@ -274,7 +275,7 @@ In this range the theory is not asympotically free. This can be seen by using th
  \beta (g) & \, = \,- \frac{g^3}{16 \pi^2} \frac{3 N_c - N_f + N_f \gamma(g^2)}{1 - N_c \frac{g^2}{8 \pi^2}} \\
 \gamma(g^2) &  \,= \, - \frac{g^2}{8 \pi^2} \frac{N_c^2 - 1}{N_c} + \mathcal{O} (g^4)
 \end{align} 
-The $\beta$ function is known to have a Banks-Zacks fixed point \cite{Banks:1981nn} in the 't Hooft limit with $\frac{N_f}{N_c} = 3 - \epsilon$ held fixed and $\epsilon \ll 1$.
+The $\beta$ function is known to have a Banks-Zaks fixed point \cite{Banks:1981nn} in the 't Hooft limit with $\frac{N_f}{N_c} = 3 - \epsilon$ held fixed and $\epsilon \ll 1$.
 However, the fixed point exists in the range of values $\frac{3}{2} N_c \geq N_f \geq  3 N_c$ with $N_f$ and $N_c$ finite.
 This is possible because one loop and two loop contribution to the beta function have opposite signs.
 As a result, the infrared red theory is a non-trivial four dimensional superconformal theory. 
@@ -282,7 +283,7 @@ The infrared degrees of freedom are quarks and gluons that are not confining but
 The theory is in a free non-Abelian Coulomb phase.
 
 Since the theory is superconformal, we have further restriction on the algebra of operators \footnote{
-	R-symmetry is contained directly in the superconformal algebra instead of being an automorphism of the algebra, as in superPoincarè algebra.  
+	R-symmetry is part of the superconformal algebra instead of being an automorphism of the algebra, as in superPoincarè algebra.  
 	}.
 Superconformal algebra imposes that the dimension of every operator satisfy this inequality involving the R-charge
 \begin{equation}
@@ -314,7 +315,7 @@ $\mathbf{ N_f > 3 N_c}$\\
 In this range, quarks prevails on glouns and change the sign of the $\beta$ function. 
 This is caused by the \emph{charge screening} effect of quarks, that make the coupling constant smaller at larger distances.\\
 The theory is in a free non-Abelian electric phase.
-Its behaviour is not very well defined at high energies because of the presence of a Landau pole at $R \sim \Lambda^{-1}$, although the theory can be a good description of a low-energy limit of another theory. 
+Its behaviour is not well defined at high energies because of the presence of a Landau pole at $R \sim \Lambda^{-1}$, although the theory can be a good description of a low-energy limit of another theory. 
 
 \subsubsection{Magnetic theory}
 The magnetic theory is a \emph{SQCD} theory with the same global symmetries as the electric theory, but with gauge group $SU(N_f - N_c)$. 
@@ -384,7 +385,7 @@ A mapping should exists also for baryonic operators. Indeed it does and it is gi
  \text{where} \qquad C & = \sqrt{ - (-\mu)^{N_c - N_f} \Lambda^{3 N_c - N_f}}
 \end{aligned}
 \end{equation}
-using \eqref{eqn:seib_dual_matching_scales} it can be shown that these mappings preserve the $\mathbb{Z}_2$ character of the duality. 
+using \eqref{eqn:seib_dual_matching_scales} it can be shown that these mappings preserve the involutive action of the duality. 
 
 As an additional check of the duality 't Hooft anomaly matching conditions have been calculated  in \cite{Seiberg:1994pq} for the electric and magnetic theories for the various global symmetries and they are given by
 \begin{equation}
@@ -402,7 +403,7 @@ Suppose to add a superpotential term that give mass to the quark in the last fla
 \begin{equation}
 	W_{mass}^{el} = m \; Q_{N_f} \tilde{Q}^{N_f}
 \end{equation}
-Flowing to the IR the number of quark is decreased by one, driving the theory to a more strongly coupled fixed point\footnote{Since matter in the fundamental representation contribute with a positve term it is easy to see that this is true.}.
+Flowing to the IR the number of quark is decreased by one, driving the theory to a more strongly coupled fixed point\footnote{Since matter in the fundamental representation contributes with a positve term it is easy to see that this is true.}.
 The new scale of the theory is given in terms of the old one by
 \begin{equation}
  \Lambda_{L}^{3 N_c - (N_f - 1)} = m \; \Lambda^{3 N_c - N_f}

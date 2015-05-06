@@ -38,6 +38,8 @@ The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ alon
 
 
 \subsubsection{Coulomb branch and dualized photon	}
+
+%%%%% Devo far passare il messaggio che FI è carica di U(1)_J
 In three dimensions a free photon can be dualized to a scalar $\gamma$ since it has only one polarization.
 Instead of defining a potential $A$ in order to solve the Bianchi identity for the potential $d F = d^2 A = 0$, we can define a scalar such that
 \begin{equation}
@@ -54,6 +56,7 @@ The quantization of the magnetic flux implies that the dualised photon is period
 From a vector superfield $V$ we can define a linear multiplet $\Sigma$, defined as
 \begin{equation}
  \Sigma = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V
+ \label{eqn:linear_multiplet_gauge}
 \end{equation}
 It satisfies $D^2 \Sigma = 0$ and is gauge invariant under a transformation $V \rightarrow V + i (\Phi - \Phi^{\dagger})$.
 The lowest component of $\Sigma$ is the scalar in the vector multiplet and it contains also a term $ \bar{\theta} \sigma_{\rho} \theta \, \epsilon^{\mu \nu \rho} F_{\nu \rho}$, whose bosonic part is proportional to the topological current.
@@ -69,7 +72,7 @@ Using the dualized photon we can turn the vector multiplet into a chiral multipl
 because of its periodicty, it's natural to assign $\gamma$ to a phase factor.\\
 The dualization of the photon was possible because there wasn't matter in the theory.
 However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and can be integrated out and in a low-energy description we can still dualize the gauge field.\\
-We can generalize the dualization to non-Abelian gauge theories with a similar reasoning.
+A similar reasoning can be applied to non-Abelian gauge theories.
 In a generic point of the Coulomb branch, the VEV of $\sigma$ breaks the gauge group to its maximal torus $U(1)^{r_G}$, where $r_G$ is the rank of the gauge group. 
 We now have $r_G$ massless vector multiplets that can be dualized into chiral multiplets $Y_i$ with $i=1,\dotsc,r_G$.
 \\
@@ -109,16 +112,17 @@ We will give a vacuum expectation value $\hat{m} $ to the scalar in the multiple
 As a result, every field charged under that symmetry will receive a mass $q \, \hat{m}$, where $q$ is the charge of the field under that symmetry.
 If a chiral field is charged under different global symmetry, its mass  mass is a sum of the real masses for every global symmetry that we gauged.
 Real masses are parity odd and belong to vector multiplets rather than chiral fields. For this reason they cannot appear in holomorphic objects such as the superpotential.\\
-In addition, real masses relative to global abelian symmetries contribute to the central charge of the supersymmetry algebra $Z$through
+In addition, real masses relative to global abelian symmetries contribute to the central charge of the supersymmetry algebra $Z$ through
 \begin{equation}
   Z = \sum q_i m_i
  \end{equation} 
  where $q_i$ is the charge of the field and $m_i$ the real masses under a global symmetry $U(1)_i$.\\
  Moreover, the central charge $Z$ can be promoted to a background linear superfield whose lowest component is $Z$.\\
- Another symmetry that can contribute to the central charge is $U(1)_J$, whose current is given by the linear multiplet we defined previously.
+ Another symmetry that can contribute to the central charge is $U(1)_J$, whose current is given by the linear multiplet $\Sigma $ we defined in \eqref{eqn:linear_multiplet_gauge}.\\
  The added term is given by $\int d^4 \theta \; V_b \Sigma $ , where $V_b$ is a background vector multiplet.
- Integrating by parts and defining  $\Sigma_b = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V_b$ we obtain $\int d^4 \theta \; \Sigma_b V  $.
- Thus, the scalar component of the background vector field is a Fayet-Iliopulos term $\xi$, which contributes to the central charge $m_J = \xi $ \cite{Aharony:1997bx}.
+ Integrating by parts and defining  $\Sigma_b = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V_b$ we obtain $\int d^4 \theta \; \Sigma_b V  $.\\
+ Thus, the scalar component of the background vector field $\xi$ is a Fayet-Iliopulos term for the vector superfield .
+ It contributes to the central charge with a mass $ m_J = \xi $ \cite{Aharony:1997bx}.
 
  
 
@@ -146,12 +150,12 @@ The possible windings around $S^2_{\infty}$ are then characterised by
 \begin{equation}
  \Pi_{2} \left( G / U(1)^{r_G} \right) = \Pi_1 (U(1)^{r_G}) = \mathbb{Z}^{r_G}
 \end{equation}
-The equality holds if $\Pi_2(G) = 0$, which is true for every semisimple gorup and if $\Pi_1(G) = 0$, which is satisfied if the group is the covering group of the Lie algebra.
+The equality holds if $\Pi_2(G) = 0$, which is true for every semisimple group and if $\Pi_1(G) = 0$, which is satisfied if the group is the covering group of the Lie algebra.
 As a result there are $r_G$ different topological solutions.
 Each of these solutions carry a magnetic charge for each of the $U(1)^{r_G}$ unbroken gauge fields. 
 For example, for $G= SU(N_c)$ we have $N_c-1$ different topological solutions.
 \\
-For $SU(2)$ gauge group one solution to the equation is given by the 't Hooft-Polyakov monopole, which in singular gauge reads
+For $SU(2)$ gauge group one solution to the equation is given by the 't Hooft-Polyakov monopole, which in singular gauge reads \cite{Csaki:2014cwa}
 \begin{equation}
   \sigma = \left( v \, \coth (v r) - \frac{1}{r} \right)  \tau^3 \qquad A_{\mu} = \epsilon_{i j 3} \hat{r}^i \left( \frac{1}{r} + \frac{v}{\sinh (vr)} \right)
 \end{equation}
@@ -161,7 +165,7 @@ As a results, each embedding of $SU(2)$ will result in a monopole charged under 
 Note that there are $N-1$ special embeddings of $SU(2)$ into $SU(N)$ which result in monopoles charged only under one factor of the $U(1)$ in the Cartan subalgebra. They are given by the N-1 contiguous 2x2 blocks in the diagonal.\\
 The importance of monopole operators in three dimensions is due to the fact that flowing to the infrared, they flow to the coordinates on the Coulomb branch we introduced in \eqref{eqn:Y_def_sun_theories} for $SU(N)$ theories \cite{Aharony:2013dha}.
 \\
-The carges of the monopoles can be written as
+The charges of the monopoles can be written as
 \begin{equation}
 \vec{g}  = 2 \pi \sum_a n_a \vec{\alpha_a}
 \end{equation}
@@ -176,28 +180,8 @@ Monopoles that sature the bound are called BPS monopoles.\\
 %Considering now a finite value of the radius along the compactified direction, the BPS bound require that the potential must satisfy self-duality equations
 %\begin{equation}
 % F_{\mu \nu} = * F_{\mu \nu}
-%\end{equation}
-
-
-
-
-{\huge Da finire}
+%\end{equation} 
  
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -224,7 +208,7 @@ Monopoles that sature the bound are called BPS monopoles.\\
  \subsection{Moduli spaces of gauge theories}
 
 \subsubsection{Moduli space of $U(1)$ gauge theory with $N_f$ massless flavours }
-For large values of $\sigma$ the Coulomb branch of the theory can be parametrized by the chiral superfield we defined before $X = e^{\frac{\Phi}{g^2}} $ which correspond to a cylinder.
+For large values of $\sigma$ the Coulomb branch of the theory can be parametrized by the chiral superfield we defined before $X = \exp{ \left( \frac{ 2 \pi \sigma}{g^2} + i \gamma  \right) } $, which correspond to a cylinder.
 However, the metric for $\gamma$ receives quantum correction and thus the topology of moduli space is changed perturbatively.
 The Higgs branch intersects the Coulomb branch for $\sigma=0$ and since it is invariant under $U(1)_J$, the radius of the circle must shrink to zero where they meet, since the topological symmetry acts as shifts on the circle $\gamma$.
 \\
@@ -284,7 +268,7 @@ where $\lambda_i$ are Lagrange multipliers in order the enforce the semiclassica
 
 
 
-
+\begin{comment}
 \subsubsection{Moduli space of $SU(2)$ gauge theories with flavours}
 
 We will consider a $SU(2) $ gauge theories with an even number of quarks, in order to avoid the addition of Chern Simons terms.
@@ -320,6 +304,9 @@ For $N_f \geq 2 $, there is a unique superpotential consistent with the symmetri
 \end{equation}
 For $N_f = 2$ the Higgs and Coulomb branch are distinct and they touch at $M=0 \, , \, Y=0$ instead of the point with $\sigma = 0$.	\\
 The superpotential is relevant and drives the theory to a interacting fixed point.
+\end{comment}
+
+
 
 \subsubsection{Moduli spaces for $SU(N_c)$ theories with $N_c >2 $ and with $N_f$ flavours }
 We will consider a $SU(N_c)$ gauge theory with equal number of $Q$ and $\tilde{Q}$ in order to avoid Chern-Simons term. 
@@ -499,7 +486,8 @@ U(N_c) \; \rightarrow \; U(r_1) \times U(r_2) \times \dots \times U(r_k) \quad \
 Following the same reasoning, in the infrared we find $k$ distinct SQCD sector with gauge group $U(r_i)$ without adjoint matter, since it has been integrated out.\\
 Every sector must have a pair of monopoles since it is a $U(r_i)$ theory.\\
 Going in the limit of vanishing coupling we find that the original theory have $k$ pairs of monopole operators.\\
-{\Large Dici una ref che scrive perchè son vestiti in quel modo }
+%%%% DICO perchè son vestiti così
+
 
 The magnetic theory is a $U(k N_f - N_c)$ gauge theory with $N_f$ dual quarks $(q,\tilde{q})$, adjoint matter $Y$ and singlet fields $(M_j)^{i}_{\tilde{i}}$ and $v_{j,\pm}$. Mesons are constructed from the quarks and the adjoint matter in the electric theory and the $v_{j,\pm}$ are the electric monopole operators.\\
 The charges of the fields are given by
