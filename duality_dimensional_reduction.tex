@@ -245,26 +245,75 @@ W_{\eta} = \eta \sum_{j=0}^{k-1} \, t_{j,+} \, t_{k-1-j,-}
 \end{equation}
 In the magnetic theory a similar superpotential is generated, involving magnetic monopoles $\tilde{t}_{i,\pm}$ of the dual theory.
 The addition of these superpotential guarantees that the duality is consistent with the compactification.\\
-Since we are interested in the reduction to the Kim-Park duality, we will add real masses to some quarks as we did in section \ref{sec:seib_4dto3d_flow_massive}.\\
-Since the baryonic symmetry is gauged, we need to start from $N_f +2 $ flavours and assign masses $(m,\tilde{m})$ associated to the $SU(N_f+2)_L \times SU(N_f +2 )_R$ global symmetry
-\begin{equation}
- m = \diag \left(0,\dotsc,0,M,-M \right) \qquad \tilde{m} = \diag \left(  0 , \dotsc, -M , M\right)
-\end{equation}
-We will take the limit in which $M$ is very large. As a result, the $\eta$-superpotential vanish in this flow since the quarks don't have complex masses \cite{Aharony:2013dha}.
-Then, the theory flows to the electric theory of Kim-Park duality.\\
-The magnetic theory is now a $U(k(N_f + 2) - N_c)$ gauge theory with $N_f +2$ flavours.
+Since we are interested in the reduction to the Kim-Park duality without $\eta$-superpotential, we will add real masses to some quarks as we did in section \ref{sec:seib_4dto3d_flow_massive}.\\
+Since the baryonic symmetry is gauged, we need to start from $N_f +2 $ flavours and assign masses $(m,\tilde{m})$ associated to the background gauging of the $SU(N_f+2)_L \times SU(N_f +2 )_R$ global symmetry
+\begin{align}
+ m_{el} = & \diag \left( \underbrace{m_A,\dotsc,m_A}_{N_f}, M - \frac{m_A N_f}{2},-M +\frac{m_A N_f}{2}\right) \qquad \\
+ \tilde{m}_{el} = & \diag \left( 
+ \underbrace{
+ m_A , \dotsc, m_A
+ }_{N_f}
+ ,-M +\frac{m_A N_f}{2}, M - \frac{m_A N_f}{2} \right)
+\end{align}
+This mass assignment breaks the symmetry group to $SU(N_f)_L \times SU(N_f)_R \times U(1)_A $, where $U(1)_A$ is the axial symmetry that the $\eta$-superpotential breaks. 
+However, since we are in the limit in which $M $ is large, the $\eta$-superpotential vanish in this flow since the quarks don't have complex masses as in\cite{Aharony:2013dha}.
+As a result, the theory flows to the electric theory of Kim-Park duality.\\
+The magnetic theory is now a $U(k(N_f + 2) - N_c)$ gauge theory with $N_f +2$ flavours. 
 The real masses of the electric theory are easily mapped to the magnetic theory by comparing the global symmetries
+\begin{align}
+ m_{mag} =&    \diag \left(  \underbrace{m_A , \dotsc, m_A}_{N_f} ,  M- \frac{m_A N_f}{2} , -M -\frac{m_A N_f}{2}\right)  \\
+  \tilde{m}_{mag} =& \diag \left(
+  \underbrace{
+  m_A,\dotsc,m_A
+}_{N_f}
+  , -M - \frac{m_A N_f}{2}, M - \frac{m_A N_f}{2}\right)
+\end{align}
+The vacuum expectation value for $\tilde{\sigma}$ for which we have the greater number of massless particles 
+\footnote{Potrei scegliere anceh quello con $M$ e $-M$ invertiti no?}
+ is given by
 \begin{equation}
- m_{mag} =   \diag \left(  0 , \dotsc, -M , M\right)  \qquad \tilde{m}_{mag} = \diag \left(0,\dotsc,0,M,-M \right)
+\sigma = \diag 
+\left(   
+\underbrace{0,\dotsc,0}_{k N_f - N_c},
+\underbrace{M, \dotsc,0}_{k},
+\underbrace{-M, \dotsc, -M}_{k} 
+\right)
 \end{equation}
+As a result the gauge group is broken into $U(k (N_f +2) - N_c) \; \rightarrow \; U(k N_f - N_c) U(k)^2$.
+The fields that remain massless in the large $M$ limit are the following
+\begin{itemize}
+\item $N_f$ dual quarks $(q,\tilde{q})$ 
+\item 2 pairs of dual quarks $ (p,\tilde{p})$ coming from the last two flavours, charged under respectively under one of the $U(k)$ gauge groups.
+\item $k N_f^2$ mesons $M^j$, constructed from the first $N_f$ flavours of the electric quark and with power of the adjoint.
+\item $2k$ mesons $N^j$, constructed with $ Q ^{N_f+1}\tilde{Q}_{N_f+1}$ or $ Q ^{N_f+2}\tilde{Q}_{N_f+2}$, with powers of the adjoint.
+\item 2 matter fields $Y_1,Y_2$ charged under respectively under one of the two $U(k)$ sectors in the adjoint representation
+\end{itemize}
+The other non-diagonal part of the fields are massive and disappear in the large $M$ limit.
+
+
+\begin{comment}
 The magnetic theory can be weakly perturbed by a polynomial superpotential in the adjoint matter \eqref{eqn:kutasov_deformed_superpotential} which has the effect of breaking the gauge group 
 \begin{equation}
  U(k (N_f + 2) - N_c ) \; \longrightarrow \; U(r_1) \times \dots \times U(r_k) \quad \sum_{j=1}^k r_i = k (N_f + 2) - N_c
   \end{equation}
-  As in section \ref{sec:kutasov_vacuum_struct_deformed}, in every vacuum the adjoint matter is massive and is integrated out, resulting in $k$ different SQCD sectors withouth adjoint matter.
+As in section \ref{sec:kutasov_vacuum_struct_deformed}, in every vacuum the adjoint matter is massive and is integrated out, resulting in $k$ different SQCD sectors withouth adjoint matter.
+ \\
+{\Large In order to preserve duality} 
+the adjoint scalar must acquire a vacuum expectation value that breaks the gauge group further in every sector $U(r_i)$
+\begin{equation}
+   \tilde{\sigma}_{U(r_i)} = \diag \left(  0, \dots, - M , M \right)
+  \end{equation}
+that results in the breaking pattern
+\begin{equation}
+U(r_1) \times \dots U(r_k) \; \longrightarrow \; \left( U(r_1-2) \times U(1)^2 \right) \times  \dots \times \left( U(r_k-2) \times U(1)^2 \right) 
+\end{equation}
+The $2k$ $U(1)$ subsectors resulting from the breaking can be dualized using mirror symmetry \cite{Aharony:1997bx} into $2k \; XYZ$ models, made of gauge singlets. 
+They interact with the monopole operators of the $U(r_i)$ sector they belonged to.\\
+The weak perturbation can be turned off while taking the $M \rightarrow \infty$ limit.
+In this way we find the magnetic theory of Kim-Park duality, where the electric monopoles are given by the singlets of the dualised $XYZ$ models with the correct superpotential with the monopoles of the magnetic theory \eqref{eqn:kimpark_superpotential_monopoles}.
 
 
-
+\end{comment}
 
 
 
