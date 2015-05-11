@@ -307,9 +307,7 @@ The magnetic theory can be weakly perturbed by a polynomial superpotential in th
  U(k (N_f + 2) - N_c ) \; \longrightarrow \; U(r_1) \times \dots \times U(r_k) \quad \sum_{j=1}^k r_i = k (N_f + 2) - N_c
   \end{equation}
 As in section \ref{sec:kutasov_vacuum_struct_deformed}, in every vacuum the adjoint matter is massive and is integrated out, resulting in $k$ different SQCD sectors withouth adjoint matter.
- \\
-{\Large In order to preserve duality} 
-the adjoint scalar must acquire a vacuum expectation value that breaks the gauge group further in every sector $U(r_i)$
+The vacuum configuration for the adjoint scalar such that we have the greater number of massless particles is
 \begin{equation}
    \tilde{\sigma}_{U(r_i)} = \diag \left(  0, \dots, - M , M \right)
   \end{equation}
@@ -317,14 +315,28 @@ that results in the breaking pattern
 \begin{equation}
 U(r_1) \times \dots U(r_k) \; \longrightarrow \; \left( U(r_1-2) \times U(1)^2 \right) \times  \dots \times \left( U(r_k-2) \times U(1)^2 \right) 
 \end{equation}
-The $2k$ $U(1)$ subsectors resulting from the breaking can be dualized using mirror symmetry \cite{Aharony:1997bx} into $2k \; XYZ$ models, made of gauge singlets. 
-They interact with the monopole operators of the $U(r_i)$ sector they belonged to.\\
-The weak perturbation can be turned off while taking the $M \rightarrow \infty$ limit.
-In this way we find the magnetic theory of Kim-Park duality, where the electric monopoles are given by the singlets of the dualised $XYZ$ models with the correct superpotential with the monopoles of the magnetic theory \eqref{eqn:kimpark_superpotential_monopoles}.
-
-
-
-
+%The $2k$ $U(1)$ subsectors resulting from the breaking can be dualized using mirror symmetry \cite{Aharony:1997bx} into $2k \; XYZ$ models, made of gauge singlets. 
+%They interact with the monopole operators of the $U(r_i)$ sector they belonged to.\\
+%The weak perturbation can be turned off while taking the $M \rightarrow \infty$ limit.
+%In this way we find the magnetic theory of Kim-Park duality, where the electric monopoles are given by the singlets of the dualised $XYZ$ models with the correct superpotential with the monopoles of the magnetic theory \eqref{eqn:kimpark_superpotential_monopoles}.
+The fields that remain massless in this vacuum are the following
+\begin{itemize}
+\item $\left(q_j^{i} , \tilde{q}_j^{i}\right)$ dual quarks with $i=1,\dotsc,k$ and$j=1,\dotsc,N_f$ which corresponds to the first $N_f$ flavours of quarks for every $U(r_i-2)$ sector tha remain massless
+\item $\left(p_a^i , \tilde{p}_a^i\right)$ with $a=1,2$. They are the last two flavours of quarks charged under one of the two $U(1)$ sector for each value of $i$
+\item $(M_j)^{i}_{\tilde{i}}$ mesons with $j=0,\dotsc,k-1$ coming from the first $N_f$ flavours of electric quarks.
+\item $N_j^a$ mesons associated to $M^{N_f+1}_{N_f+1}$ and $M^{N_f+2}_{N_f+2}$
+\end{itemize}
+and the other fields obtain a large mass in this limit.\\
+The superpotential can be rewritten (omitting the $\eta$ term) and is given by
+\begin{equation}
+W = \sum_{j=0}^{k-1} \sum_{i=1}^{k} M_j q^i Y^{k-j-1} \tilde{q}^i +
+\sum_{a=1}^{2}  \sum_{i=1}^{k} \sum_{j=0}^{k-1} N_j^a p^a Y^{k-j-1} \tilde{p}^a
+\end{equation}
+The two $U(1)$ sectors add a term \eqref{eqn:moduli_space_u1_nfsuperpotential}  to superpotential given by
+\begin{equation}
+W_{U(1)} = \sum_{a=1,2} \sum_{i=1,\dotsc,k} \tilde{p}_a^i p^i_a \tilde{v}^a_+ \tilde{v}^a_-
+\end{equation}
+where $\tilde{v}^{i,a}_{\pm}$ are the Coulomb branch coordinates of the $i$  $U(1)$ sectors.
 
 
 
