@@ -283,12 +283,21 @@ As a result the gauge group is broken into $U(k (N_f +2) - N_c) \; \rightarrow \
 The fields that remain massless in the large $M$ limit are the following
 \begin{itemize}
 \item $N_f$ dual quarks $(q,\tilde{q})$ 
-\item 2 pairs of dual quarks $ (p,\tilde{p})$ coming from the last two flavours, charged under respectively under one of the $U(k)$ gauge groups.
+\item 2 pairs of dual quarks $ (p,\tilde{p})_{1,2}$ coming from the last two flavours, charged under respectively under one of the $U(k)$ gauge groups.
 \item $k N_f^2$ mesons $M^j$, constructed from the first $N_f$ flavours of the electric quark and with power of the adjoint.
-\item $2k$ mesons $N^j$, constructed with $ Q ^{N_f+1}\tilde{Q}_{N_f+1}$ or $ Q ^{N_f+2}\tilde{Q}_{N_f+2}$, with powers of the adjoint.
+\item $2k$ mesons $N_{1,2}^j$, constructed with $ Q ^{N_f+1}\tilde{Q}_{N_f+1}$ or $ Q ^{N_f+2}\tilde{Q}_{N_f+2}$, with powers of the adjoint.
 \item 2 matter fields $Y_1,Y_2$ charged under respectively under one of the two $U(k)$ sectors in the adjoint representation
 \end{itemize}
-The other non-diagonal part of the fields are massive and disappear in the large $M$ limit.
+The other non-diagonal part of the fields are massive and disappear in the large $M$ limit.\\
+From these reduction we cann see that each $U(k)$ sectors has a pair of quarks, an adjoint field and $k$ mesons.
+Each of these sector has a superpotential given by
+\begin{equation}
+W_{1,2} = \Tr{ Y_{1,2}^{k+1}} + \sum_{j=0}^{k-1} N^j_{1,2} \, \tilde{p}_{1,2} Y_{1,2}^{k-j-1} p_{1,2}
+\end{equation}
+
+
+
+
 
 
 \begin{comment}
@@ -311,8 +320,6 @@ The $2k$ $U(1)$ subsectors resulting from the breaking can be dualized using mir
 They interact with the monopole operators of the $U(r_i)$ sector they belonged to.\\
 The weak perturbation can be turned off while taking the $M \rightarrow \infty$ limit.
 In this way we find the magnetic theory of Kim-Park duality, where the electric monopoles are given by the singlets of the dualised $XYZ$ models with the correct superpotential with the monopoles of the magnetic theory \eqref{eqn:kimpark_superpotential_monopoles}.
-
-
 \end{comment}
 
 
