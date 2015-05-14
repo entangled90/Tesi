@@ -341,11 +341,16 @@ W = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, q Y^{k-j-1} \tilde{q} + \sum_
  which is the same as the one appearing in the magnetic theory of Kim-Park duality.
 
 
+
+
+
+
+
 \subsection{ $SU(N_c)$ duality }
 This duality first appeared in \cite{Park:2013wta} and it was obtained from the duality of the previous section by ungauging the $U(1)$ factor.
 In order to derive the duality with $SU(N_c)$ gauge group we do not gauge the baryonic symmetry as in the previous case and we start directly from Kutasov-Schwimmer duality in four dimensions.
 \\
-The Coulomb branch of this theory is different from a $U(N_c)$ theory and the monopole operators are now given by
+The Coulomb branch of this theory is different from a $U(N_c)$ theory and the monopole operators are now given by \cite{Nii:2014jsa}
 \begin{align}
 Y_i \, \sim \, & \exp \left(   \frac{ \Phi_i - \Phi_{i+1}}{g^2}  \right) \qquad 
 Y = \prod_i Y_i
@@ -397,13 +402,17 @@ By giving a large value to $m$ we flow to a theory withouth $\eta$ superpotentia
 In the electric side, the deformation breaks the gauge group $SU(N_c) \rightarrow SU(i_1) \times \dots \times SU(i_k) \times U(1)^{k-1}$ with $\sum_j i_j = N_c$.\\
 Taking the vacuum expectation value for $\sigma$ at the origin, the last quark flavour gets integrated out and we find a theory with $N_f$ flavours and no $\eta$ superpotential which is the three dimensional version of the electric theory of Kutasov-Schwimmer duality.
 \\
-In the magnetic side, the perturbation breaks the gauge group in a similar way, from $SU( k (N_f+1) - N_c)$ to $SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k-1} $ with $\sum_l j_k = k (N_f+1) - N_c$. 
-However, since every quark gets a large real mass, the vacuum cannot be at the origin and we need to choose it such that we have the greater number of massless fields. 
+In the magnetic side, the perturbation breaks the gauge group in a similar way, from $SU( k (N_f+1) - N_c)$ to
+\begin{align} 
+U(j_1) \times \dots \times U(j_k) / U(1) &  \simeq  SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k}/U(1) \\  
+\hbox{with} \sum_l j_l = k N_f - N_c  \; & \simeq  SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k-1}
+\end{align} 
+However, since every quark gets a large real mass, the vacuum cannot be chosen at the origin and we need to choose it in such a way we have the greater number of massless fields.
 As a result, the gauge group is broken further into
 \begin{equation}
-SU(i_1 -1 ) \times \dots \times SU(i_k -1 ) \times U(1)^{k-1} \times U(1)\times U(1)^{k-1}
+SU(i_1 -1 ) \times \dots \times SU(i_k -1 ) \times U(1)^{k} \times U(1)^{k-1}
 \end{equation}
-where the vacuum expectation values of $\tilde{\sigma}$ are 
+since the vacuum of $\tilde{\sigma}$ in every $SU(i_k)$ sector is given by  
 \begin{equation}
 \tilde{\sigma}_{i_1} = 
 \begin{pmatrix}
@@ -412,7 +421,10 @@ where the vacuum expectation values of $\tilde{\sigma}$ are
   & & - m_1 & \\
   & & & - m_2 \\
 \end{pmatrix}
-\quad \dots 
+ \; ,
+ \dotsc 
+,
+\;
 \tilde{\sigma}_{i_k} = 
 \begin{pmatrix}
  - m_1 & \\
@@ -421,6 +433,10 @@ where the vacuum expectation values of $\tilde{\sigma}$ are
   & & & - m_2 \\
 \end{pmatrix}
 \end{equation}
+One of the $U(1)^{k-1}$ factor is associated to the breaking of the group from the vacuum expectation values of $\tilde{X}$ and corresponds to the lower $k\times k$. The other factor results from the breaking caused by the vacuum choice of $\til{\sigma}$ and correspond the upper $(k N_f - N_c) \times (k N_f - N_c)$ part.\\
+
+
+
 
 
 
