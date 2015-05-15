@@ -275,12 +275,12 @@ The magnetic theory can be weakly perturbed by a polynomial superpotential in th
 \begin{equation}
 W = \sum_{j=2}^{k+1} s_j \, \Tr{\tilde{X}^{j}}
 \end{equation}
-which in this case doesn't contain a term proportional to $\Tr{\tilde{X}}$ as in the $SU(N) $ case since it would force $Y$ to be traceless.\\
+which in this case doesn't contain a term proportional to $\Tr{\tilde{X}}$ as in the $SU(N) $ case since it would force $\tilde{X}$ to be traceless.\\
 The superpotential triggers a breaking of the gauge group 
 \begin{equation}
  U(k (N_f + 2) - N_c ) \; \longrightarrow \; U(r_1) \times \dots \times U(r_k) \quad \sum_{j=1}^k r_i = k (N_f + 2) - N_c
   \end{equation}
-As in section \ref{sec:kutasov_vacuum_struct_deformed}, in every vacuum the adjoint matter is massive and is integrated out, resulting in $k$ different SQCD sectors withouth adjoint matter.
+As in section \ref{sec:kutasov_vacuum_struct_deformed}, in every vacuum the adjoint matter is massive and is integrated out, resulting in $k$ different SQCD sectors without adjoint matter.
 The vacuum configuration for the adjoint scalar such that we have the greater number of massless particles is
 \begin{equation}
    \tilde{\sigma}_{U(r_i)} = \diag \left(  0, \dots, - M , M \right)
@@ -319,7 +319,7 @@ M_j^a
 \end{equation}
 The two $U(1)$ sectors can be given an effective description using \eqref{eqn:moduli_space_u1_nfsuperpotential} which results in
 \begin{equation}
-W_{U(1)} = \sum_{a=1,2} \sum_{i=1,\dotsc,k} \hat{(N_0)}_a^i {v}^{i,a}_+ {v}^{i,a}_-
+W_{U(1)} = \sum_{a=1,2} \sum_{i=1}^{k} \hat{(N_0)}_a^i {v}^{i,a}_+ {v}^{i,a}_-
 \end{equation}
 where ${v}^{i,a}_{\pm}$ are the Coulomb branch coordinates of the $i$  $U(1)$ sectors.\\
 The breaking of every gauge group factor from $U(r_i) \rightarrow U(r_i-2) \times U(1)^2$ generates two Affleck-Harvey-Witten terms in the superpotential
@@ -332,7 +332,7 @@ After sending the mass $M$ to infinity, we can weakly switch off the deformation
 As a result, the $U(r_i-2)$ factors recombine to $U(k N_f - N_c)$ with adjoint matter $Y$.\\
 While removing the deformation, the 2k $U(1)$ factors become $U(k) \times U(k)$ each with one flavour and one adjoint matter field. 
 Such a theory should not have a vacuum \eqref{eqn:kutasov_vacuum_condition} but the additional terms in the superpotential should modify this condition.
-In order to find Kim-Park duality we must suppose that this enhancement to $U(k)$ does not invalidate our reasoning and we will see in the next chapter with an independent argument on the partition function that our supposition is indeed correct.\\
+We suppose that this enhancement to $U(k)$ does not modify the results and we will see in the next chapter with an independent argument on the partition function that our supposition is indeed correct.\\
 The Coulomb branch coordinates of the $U(r_i-2)$ terms give the Coulomb branch coordinates of the gauge group $U(k N_f -N_c)$ while the coordinates of the $U(1)^2$ factors are identified with the chiral fields $v_{j,\pm}$ \eqref{tab:kim-park-magnetic} that are mapped to the Coulomb branch coordinates of the electric theory.
 The superpotential is then given by
 \begin{equation}
@@ -484,10 +484,12 @@ The $U(1)^{k-1}$ factor is associated to the breaking of the group from the vacu
 Before doing so, we are going to use $3D \, \mN=2$ mirror symmetry \cite{Aharony:1997bx} in the $U(1)^{k-1}$ sector of the deformed theory.
 As a result, this sector will be described by a $ U(1)$  gauge theory with $k$ flavours $(b_i, \tilde{b}_i)$.\\
 %We used mirror symmetry in order to dualize the $U(1)^{k-1}$ gauge sector in the deformed theory.
-We need to strees that we used mirror symmetry in the deformed theory and when switching off the deformation, the gauge group becomes $U(k)$ and a mirror dual is not known in this case.
-We suppose that this enhancement to $U(k)$ in the undeformed theory does not invalidate our argument and we will show an independent derivation of the duality through the partition function as a support of our supposition.
+We need to stress that we used mirror symmetry applied to the $U(1)^{k-1}$ gauge sector in the deformed theory but after switching off the deformation, the gauge group becomes $U(k)$ and a mirror dual is not known.\\
+We suppose that this enhancement to $U(k)$ in the undeformed theory does not modify the results we obtained. 
+We will show an independent method to reduce the duality through the partition function which does not rely on the deformation of the superpotential.
+This method will yield the same result we found using this assumption.
 \\
-After doing so in order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
+In order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
 In the electric side, the gauge group recovers the original $SU(N_c)$ and we find the electric theory of Kim-Park duality, without $\eta$ superpotential.
 The charges of the fields are given by
 \begin{equation}
@@ -538,7 +540,11 @@ b_j & 0  & 0 & 0  &   -N_f &
 \end{array}
 %\caption{Tabella delle cariche per il primo caso}
 \end{equation}
-where $\tilde{v}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.\\
+where $\tilde{v}_{i,\pm}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.\\
+Note that the fields $(b_i,\tilde{b}_i)$ are charged under the topological symmetry and have the right quantum numbers to couple with the monopole operators $\tilde{v}_{i,\pm}$.\\
+The baryonic symmetry can mix with the $U(1)$ factor in the $U(k N_f -N_c)$ gauge group and as a result its definition is ambiguous.
+We chose to remove this ambiguity by leaving all the fields uncharged under it.
+Another possibility is to give opposite charges to the quarks $(q,\tilde{q})$.\\
 The $\eta$ superpotential can be rewritten using monopole operators at high energy through the identification \cite{Nii:2014jsa}
 \begin{equation}
  \tilde{V}_{j, k-1-j} = b_{j} \tilde{v}_{k-1-j,-}
