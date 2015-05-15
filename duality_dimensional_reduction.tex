@@ -332,13 +332,17 @@ After sending the mass $M$ to infinity, we can weakly switch off the deformation
 As a result, the $U(r_i-2)$ factors recombine to $U(k N_f - N_c)$ with adjoint matter $Y$.\\
 While removing the deformation, the 2k $U(1)$ factors become $U(k) \times U(k)$ each with one flavour and one adjoint matter field. 
 Such a theory should not have a vacuum \eqref{eqn:kutasov_vacuum_condition} but the additional terms in the superpotential should modify this condition.
-In order to find Kim-Park duality we must suppose that this enhancement to $U(k)$ does not invalidate our reasoning and we will see in the next chapter with an independent argument on the partition function that our supposition is correct.\\
+In order to find Kim-Park duality we must suppose that this enhancement to $U(k)$ does not invalidate our reasoning and we will see in the next chapter with an independent argument on the partition function that our supposition is indeed correct.\\
 The Coulomb branch coordinates of the $U(r_i-2)$ terms give the Coulomb branch coordinates of the gauge group $U(k N_f -N_c)$ while the coordinates of the $U(1)^2$ factors are identified with the chiral fields $v_{j,\pm}$ \eqref{tab:kim-park-magnetic} that are mapped to the Coulomb branch coordinates of the electric theory.
 The superpotential is then given by
 \begin{equation}
 W = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, q Y^{k-j-1} \tilde{q} + \sum_{j=0}^{k-1} \left(  v_{j,+} \tilde{v_{k-1-j,-}} + v_{j,-} \tilde{v}_{k-1-j,+} \right)
 \end{equation}
  which is the same as the one appearing in the magnetic theory of Kim-Park duality.
+
+
+
+
 
 
 
@@ -400,7 +404,7 @@ We can introduce a deformation to the superpotential for both theories
 Where the term $ \Tr{X}$ is to be intended as a Lagrange multiplier to enforce the traceless of $X,\tilde{X}$.\\
 By giving a large value to $m$ we flow to a theory withouth $\eta$ superpotential, as in the previous cases.
 In the electric side, the deformation breaks the gauge group $SU(N_c) \rightarrow SU(i_1) \times \dots \times SU(i_k) \times U(1)^{k-1}$ with $\sum_j i_j = N_c$.\\
-Taking the vacuum expectation value for $\sigma$ at the origin, the last quark flavour gets integrated out and we find a theory with $N_f$ flavours and no $\eta$ superpotential which is the three dimensional version of the electric theory of Kutasov-Schwimmer duality.
+Taking the vacuum expectation value for $\sigma$ at the origin, the last quark flavour gets integrated out and we find a theory with $N_f$ flavours and no $\eta$ superpotential.
 \\
 In the magnetic side, the perturbation breaks the gauge group in a similar way, from $SU( k (N_f+1) - N_c)$ to
 \begin{align} 
@@ -434,6 +438,60 @@ since the vacuum of $\tilde{\sigma}$ in every $SU(i_k)$ sector is given by
 \end{pmatrix}
 \end{equation}
 The $U(1)^{k-1}$ factor is associated to the breaking of the group from the vacuum expectation values of $\tilde{X}$ while the $U(1)^k$ factor results from the breaking caused by the vacuum choice of $\til{\sigma}$.\\
+Before doing so, we are going to use $3D \, \mN=2$ mirror symmetry \cite{Aharony:1997bx} in the $U(1)^{k-1}$ sector of the deformed theory.
+As a result, this sector will be described by a $ U(1)$  gauge theory with $k$ flavours $(b_i, \tilde{b}_i)$.\\
+After doing so we in order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
+In the electric side, the gauge group recovers the original $SU(N_c)$ and we find the electric theory of Kim-Park duality, without $\eta$ superpotential.
+The charges of the fields are given by
+\begin{equation}
+\begin{array}{| c | c c c c c c | }
+\hline
+\hbox{Fields} & SU(N_f)_L & SU(N_f)_R & U(1)_B & U(1)_A & U(1)_J & U(1)_R  \\
+\hline
+Q & N_f & 0  & N_c & 1 & 0  & \Delta_Q \\
+\tilde{Q}   & 0  &\overline{N_f} &  - N_c & 1  & 0 & \Delta_Q \\
+X & 0 & 0 & 0 & 0 &0 & \Delta_X \\
+\hline
+\end{array}
+\end{equation}
+In the magnetic side, we recover $SU(k N_f - N_c) \times U(1) \times U(1)_{mirror} \simeq U(k N_f - N_c) \times U(1)_{mirror}$ with the following massless fields
+\begin{itemize}
+\item $U(k N_f - N_c)$ quarks in the (anti)fundamental representation $(q,\tilde{q}$
+\item $U(k N_f - N_c)$ adjoint matter $\tilde{X}$
+\item $U(k N_f - N_c)$ singlets $M_j$ with $N_f \times N_f$ flavours indices.
+% Goes away with mirror symmetry
+%\item $U(k N_f - N_c)$ and flavour singlet $\tilde{M}_j$, originating from the last component of $M_j$
+\item $U(1) $ quarks with $k$ flavours $(b,\tilde{b})$, obtained by mirror symmetry 
+\end{itemize}
+The quantum numbers of these fields are obtained by the matching of the mesons and baryons.
+In the magnetic theory the baryons contain the Coulomb branch coordinate of the mirror $U(1)$ theory $V_-^{mirror}$ since it is identified with the quarks of the mirror sector \cite{Nii:2014jsa}.\\
+
+
+\begin{equation}
+\centering
+\begin{array}{|c |c c c c c c |}
+\hline
+ & SU(N_f)_L & SU(N_f)_R & U(1)_B & U(1)_A & U(1)_J & U(1)_R  \\
+\hline
+q & \overline{N_f} & 0  & 
+0 %\frac{N_c}{k N_f - N_c}
+  & -1  & 0  & \Delta_X - \Delta_Q \\
+\tilde{q}   & 0  &N_f &
+ 0 % -\frac{N_c}{k N_f - N_c}
+ & - 1  & 0 &\Delta_X - \Delta_Q \\
+\tilde{X} & 0 & 0 & 0 & 0 &0 & \Delta_X \\
+M_j  & N_f & \overline{N_f} & 0 & 2 & 0 & 2 \Delta_Q + j \Delta_X\\
+b_j & 0  & 0 & 0  &   -N_f &  \frac{1}{2}   & N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c)  \\
+ \tilde{b} _j & 0  & 0 & 0  &   - N_f &  - \frac{1}{2}   & N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c)  \\
+\hline
+\end{array}
+%\caption{Tabella delle cariche per il primo caso}
+\end{equation}
+
+\
+\begin{equation}
+W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} 
+\end{equation}
 
 
 
