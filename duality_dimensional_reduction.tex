@@ -440,7 +440,11 @@ since the vacuum of $\tilde{\sigma}$ in every $SU(i_k)$ sector is given by
 The $U(1)^{k-1}$ factor is associated to the breaking of the group from the vacuum expectation values of $\tilde{X}$ while the $U(1)^k$ factor results from the breaking caused by the vacuum choice of $\til{\sigma}$.\\
 Before doing so, we are going to use $3D \, \mN=2$ mirror symmetry \cite{Aharony:1997bx} in the $U(1)^{k-1}$ sector of the deformed theory.
 As a result, this sector will be described by a $ U(1)$  gauge theory with $k$ flavours $(b_i, \tilde{b}_i)$.\\
-After doing so we in order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
+%We used mirror symmetry in order to dualize the $U(1)^{k-1}$ gauge sector in the deformed theory.
+We need to strees that we used mirror symmetry in the deformed theory and when switching off the deformation, the gauge group becomes $U(k)$ and a mirror dual is not known in this case.
+We suppose that this enhancement to $U(k)$ in the undeformed theory does not invalidate our argument and we will show an independet derivation of the duality through the partition function as a support of our supposition.
+\\
+After doing so in order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
 In the electric side, the gauge group recovers the original $SU(N_c)$ and we find the electric theory of Kim-Park duality, without $\eta$ superpotential.
 The charges of the fields are given by
 \begin{equation}
@@ -465,8 +469,13 @@ In the magnetic side, we recover $SU(k N_f - N_c) \times U(1) \times U(1)_{mirro
 \end{itemize}
 The quantum numbers of these fields are obtained by the matching of the mesons and baryons.
 In the magnetic theory the baryons contain the Coulomb branch coordinate of the mirror $U(1)$ theory $V_-^{mirror}$ since it is identified with the quarks of the mirror sector \cite{Nii:2014jsa}.\\
-
-
+As in the previous cases, there is a Affleck-Harvey-Witten superpotential
+associated to the gauge symmetry breaking $SU(k (N_f +1) - N_c) \rightarrow U(k N_f - N_c) \times U(1)^{mirror}$ given by
+\begin{equation}
+W_{AHW} = \sum_{j=0}^{k-1} \tilde{b}_{j+1} \tilde{V}_{k-1-j,+}
+\end{equation}
+where $\tilde{V}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.
+The charges of the fields are the following
 \begin{equation}
 \centering
 \begin{array}{|c |c c c c c c |}
@@ -475,23 +484,29 @@ In the magnetic theory the baryons contain the Coulomb branch coordinate of the 
 \hline
 q & \overline{N_f} & 0  & 
 0 %\frac{N_c}{k N_f - N_c}
-  & -1  & 0  & \Delta_X - \Delta_Q \\
+  & -1  & 0  & \Delta_{\tilde{X}} - \Delta_Q \\
 \tilde{q}   & 0  &N_f &
  0 % -\frac{N_c}{k N_f - N_c}
- & - 1  & 0 &\Delta_X - \Delta_Q \\
-\tilde{X} & 0 & 0 & 0 & 0 &0 & \Delta_X \\
-M_j  & N_f & \overline{N_f} & 0 & 2 & 0 & 2 \Delta_Q + j \Delta_X\\
-b_j & 0  & 0 & 0  &   -N_f &  \frac{1}{2}   & N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c)  \\
- \tilde{b} _j & 0  & 0 & 0  &   - N_f &  - \frac{1}{2}   & N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c)  \\
+ & - 1  & 0 &\Delta_{\tilde{X}} - \Delta_Q \\
+\tilde{{\tilde{X}}} & 0 & 0 & 0 & 0 &0 & \Delta_{\tilde{X}} \\
+M_j  & N_f & \overline{N_f} & 0 & 2 & 0 & 2 \Delta_Q + j \Delta_{\tilde{X}}\\
+b_j & 0  & 0 & 0  &   -N_f &  
+1 %\frac{1}{2}
+   & N_f ( 1 - \Delta_Q) + \Delta_{\tilde{X}} (- N_c+ j +1  )  \\
+ \tilde{b} _j & 0  & 0 & 0  &   - N_f &  
+ -1%- \frac{1}{2} 
+   & N_f ( 1 - \Delta_Q) + \Delta_{\tilde{X}} (- N_c + j +1 )  \\
+ \tilde{V}_{j,\pm} & 1 & 1 & 0 & N_f & \pm 1 & -(1 - \Delta_Q) N_f + \Delta_{\tilde{X}} (N_c+1 + j)\\
 \hline
 \end{array}
 %\caption{Tabella delle cariche per il primo caso}
 \end{equation}
-
-\
+where the superpotential of the theory is
 \begin{equation}
-W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} 
+W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} \left( b_{j} \tilde{V_{k-j-1,},+} + \tilde{b}_{j} \tilde{V_{k-j-1,},-}    \right) 
 \end{equation}
+which is consistent with what was found with ungauging technique from the $U(N_c)$ duality in \cite{Park:2013wta}.
+
 
 
 
