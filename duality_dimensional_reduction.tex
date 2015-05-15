@@ -365,31 +365,73 @@ These monopole operators are related to the $U(N_c)$ ones by the relations
 \begin{equation}
  V = V_+ V_- \qquad V_{i,j} = V_{i,+} V_{-,j}
  \end{equation} 
-After the compactification on the circla a term in the superpotential induced by Kaluza-Klein monopoles is generated \cite{Nii:2014jsa}
+After the compactification on the circle, Kaluza-Klein monopoles generate a term \cite{Nii:2014jsa}
 \begin{equation}
 W_{\eta, el} = \sum_{j=0}^{k-1} \eta \, V_{j,k-1-j} \qquad W_{\tilde{\eta}, mag} = \sum_{j=0}^{k-1 } \tilde{\eta} \, \tilde{V}_{j,k-1-j} 
 \end{equation}  
 which can be verified by the counting of the zero modes.\\
 The electric theory is the reduction of the electric theory in four dimensions with the addition of the $\eta$ superpotential defined above.
 The same is true for the magnetic theory too.\\
-As in the previous cases, we can flow to a duality withouth these terms in the superpotential by a suitable assignment of real masses. 
-We start with $N_f+1$ flavours and we will give a large to only one of them.
+As in the previous cases, we can flow to a duality withouth these terms in the superpotential by a suitable assignment of real masses.\\ 
+We start our reduction with $N_f+1$ flavours.
 In the electric theory we assign the following values for real masses associated to the $SU(N_f+1)_L \times SU(N_f+1)_R \times U(1)_B$ global symmetry
 \begin{align}
-m_{el} &= \diag \left(  M_B - M  + m_A, \dotsc,M_B - M  + m_A,  M_B + N_f M - m_A N_f     \right) \\
-&= \diag \left(  m_A, \dotsc, m_A, m - m_A N_f     \right) \quad m= N_F M + M_B\\
-\tilde{m}_{el} &= \diag \left(   M -M_B   + m_A, \dotsc, M -M_B   + m_A,  - M_B -  N_f M - m_A N_f     \right) \\
-&= \diag \left(  m_A, \dotsc, m_A, - m - m_A N_f     \right) 
+m_{el} &= 
+%\diag \left(
+\begin{pmatrix}
+   (M_B - M)  + m_A \\ &  \ddots 
+   \\ 
+   %& \ddots  \\s
+   &  & (M_B - M)  + m_A \\
+   &  &  & (M_B + N_f M) - m_A N_f  \\
+   %   \right) \\
+  \end{pmatrix} \\
+%&= \diag \left(  m_A, \dotsc, m_A, m - m_A N_f     \right) \quad m= N_F M + M_B\\
+& = 
+\begin{pmatrix}
+   m_A \\ &  \ddots 
+   \\ 
+    & & m_A \\
+    & &  & - m_A N_f + m  \\
+   %   \right) \\
+  \end{pmatrix} \qquad m = M_B + N_f M\\
+\tilde{m}_{el} &= 
+\begin{pmatrix}
+%\diag \left(   
+%
+M -M_B   + m_A \\ & \ddots \\ & &  M -M_B   + m_A \\
+& & &  - M_B -  N_f M - m_A N_f \\
+%     \right) \\
+\\
+\end{pmatrix}
+\\
+&= 
+%\diag \left(
+ \begin{pmatrix}
+  m_A \\ & \ddots \\ & &  m_A \\ & &  &  - m - m_A N_f \\     
+ \end{pmatrix}
+  \qquad m = M_B + N_f M
+ %\right) 
 \end{align}
 This mass assignment breaks the global symmetry group to $SU(N_f)_L \times SU(N_f)_R \times U(1)_A) \times U(1)_B$.\\
 By comparison of the charges of the fields under the global symmetries, we can map the masses to the magnetic theory
 \begin{equation}
- \tilde{M} \, = \, - M \qquad \tilde{M}_B \, \rightarrow \, \frac{N_c}{k (N_f+1) - N_c} M_B
+ \tilde{M} \, = \, - M \qquad \tilde{M}_B \, \rightarrow \, \frac{N_c}{k (N_f+1) - N_c} M_B \qquad \tilde{m}_A = m_A
 \end{equation}
 which results in
 \begin{align}
-m_{mag} & = \diag \left( m_1 - m_A \dotsc, m_1 - m_A, m_2 + m_A N_f     \right)\\
-\tilde{m}_{mag} & =\diag \left(    - m_1 - m_A ,\dotsc, - m_1 - m_A, -m_2 + m_A N_f    \right)
+m_{mag} & = 
+\begin{pmatrix}
+ m_1 - m_A \\
+& \ddots \\
+&&  m_1 - m_A\\
+&&& m_2 + m_A N_f\\
+\end{pmatrix}
+\\
+\tilde{m}_{mag} & =\
+\begin{pmatrix}
+     - m_1 - m_A \\ & \ddots \\ &&  - m_1 - m_A \\ &&& -m_2 + m_A N_f\\   
+      \end{pmatrix}
 \end{align}
 where we defined
 \begin{align}
@@ -399,9 +441,9 @@ m_2 & = \tilde{M_B} + N_f \tilde{M} = - \frac{ k N_f - N_c}{k (N_f +1) - N_c} m
 The global symmetries in the magnetic theory are broken in the same way as in the electric one.\\
 We can introduce a deformation to the superpotential for both theories
 \begin{equation}
- W_{el}= \sum_{j=1}^{k} \Tr{ X^{j} } \qquad W_{mag} = \sum_{j=1}^{k} \Tr{ \tilde{X}^{j}}
+ W_{el}= \sum_{j=1}^{k} s_j \Tr{ X^{j} } \qquad W_{mag} = \sum_{j=1}^{k}\tilde{s}_j \Tr{ \tilde{X}^{j}}
 \end{equation}
-Where the term $ \Tr{X}$ is to be intended as a Lagrange multiplier to enforce the traceless of $X,\tilde{X}$.\\
+Where the terms proportional to $ \Tr{X},\Tr{\tilde{X}}$ are Lagrange multipliers to enforce the traceless of $X$ and $\tilde{X}$.\\
 By giving a large value to $m$ we flow to a theory withouth $\eta$ superpotential, as in the previous cases.
 In the electric side, the deformation breaks the gauge group $SU(N_c) \rightarrow SU(i_1) \times \dots \times SU(i_k) \times U(1)^{k-1}$ with $\sum_j i_j = N_c$.\\
 Taking the vacuum expectation value for $\sigma$ at the origin, the last quark flavour gets integrated out and we find a theory with $N_f$ flavours and no $\eta$ superpotential.
@@ -409,7 +451,8 @@ Taking the vacuum expectation value for $\sigma$ at the origin, the last quark f
 In the magnetic side, the perturbation breaks the gauge group in a similar way, from $SU( k (N_f+1) - N_c)$ to
 \begin{align} 
 U(j_1) \times \dots \times U(j_k) / U(1) &  \simeq  SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k}/U(1) \\  
-\hbox{with} \sum_l j_l = k N_f - N_c  \; & \simeq  SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k-1}
+ & \simeq  SU(j_1) \times \dots \times SU(j_k) \times U(1)^{k-1}\\
+ & \hbox{with} \quad\sum_l j_l = k (N_f+1) - N_c  \;
 \end{align} 
 However, since every quark has a large real mass, the vacuum cannot be chosen at the origin and we need to choose it in order to have the greater number of massless fields.
 As a result, the gauge group is broken further into
@@ -468,13 +511,8 @@ In the magnetic side, we recover $SU(k N_f - N_c) \times U(1) \times U(1)_{mirro
 \item $U(1) $ quarks with $k$ flavours $(b,\tilde{b})$, obtained by mirror symmetry 
 \end{itemize}
 The quantum numbers of these fields are obtained by the matching of the mesons and baryons.
-In the magnetic theory the baryons contain the Coulomb branch coordinate of the mirror $U(1)$ theory $V_-^{mirror}$ since it is identified with the quarks of the mirror sector \cite{Nii:2014jsa}.\\
-As in the previous cases, there is a Affleck-Harvey-Witten superpotential
-associated to the gauge symmetry breaking $SU(k (N_f +1) - N_c) \rightarrow U(k N_f - N_c) \times U(1)^{mirror}$ given by
-\begin{equation}
-W_{AHW} = \sum_{j=0}^{k-1} \tilde{b}_{j+1} \tilde{V}_{k-1-j,+}
-\end{equation}
-where $\tilde{V}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.
+%In the magnetic theory the baryons contain the Coulomb branch coordinate of the mirror $U(1)$ theory $V_-^{mirror}$ since it is identified with the quarks of the mirror sector \cite{Nii:2014jsa}.\\
+
 The charges of the fields are the following
 \begin{equation}
 \centering
@@ -501,9 +539,15 @@ b_j & 0  & 0 & 0  &   -N_f &
 \end{array}
 %\caption{Tabella delle cariche per il primo caso}
 \end{equation}
+As in the previous cases, there is a Affleck-Harvey-Witten superpotential
+associated to the gauge symmetry breaking $SU(k (N_f +1) - N_c) \rightarrow U(k N_f - N_c) \times U(1)^{mirror}$ given by
+\begin{equation}
+W_{AHW} = \sum_{j=0}^{k-1} \tilde{b}_{j+1} \tilde{V}_{k-1-j,+}
+\end{equation}
+where $\tilde{V}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.\\
 where the superpotential of the theory is
 \begin{equation}
-W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} \left( b_{j} \tilde{V_{k-j-1,},+} + \tilde{b}_{j} \tilde{V_{k-j-1,},-}    \right) 
+W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} \left( b_{j} \tilde{V}_{k-j-1,+} + \tilde{b}_{j} \tilde{V}_{k-j-1,-}    \right) 
 \end{equation}
 which is consistent with what was found with ungauging technique from the $U(N_c)$ duality in \cite{Park:2013wta}.
 
