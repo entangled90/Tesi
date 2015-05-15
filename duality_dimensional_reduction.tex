@@ -485,7 +485,7 @@ Before doing so, we are going to use $3D \, \mN=2$ mirror symmetry \cite{Aharony
 As a result, this sector will be described by a $ U(1)$  gauge theory with $k$ flavours $(b_i, \tilde{b}_i)$.\\
 %We used mirror symmetry in order to dualize the $U(1)^{k-1}$ gauge sector in the deformed theory.
 We need to strees that we used mirror symmetry in the deformed theory and when switching off the deformation, the gauge group becomes $U(k)$ and a mirror dual is not known in this case.
-We suppose that this enhancement to $U(k)$ in the undeformed theory does not invalidate our argument and we will show an independet derivation of the duality through the partition function as a support of our supposition.
+We suppose that this enhancement to $U(k)$ in the undeformed theory does not invalidate our argument and we will show an independent derivation of the duality through the partition function as a support of our supposition.
 \\
 After doing so in order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
 In the electric side, the gauge group recovers the original $SU(N_c)$ and we find the electric theory of Kim-Park duality, without $\eta$ superpotential.
@@ -510,9 +510,8 @@ In the magnetic side, we recover $SU(k N_f - N_c) \times U(1) \times U(1)_{mirro
 %\item $U(k N_f - N_c)$ and flavour singlet $\tilde{M}_j$, originating from the last component of $M_j$
 \item $U(1) $ quarks with $k$ flavours $(b,\tilde{b})$, obtained by mirror symmetry 
 \end{itemize}
-The quantum numbers of these fields are obtained by the matching of the mesons and baryons.
+The quantum numbers of these fields are obtained by the matching of the mesons and baryons.\\
 %In the magnetic theory the baryons contain the Coulomb branch coordinate of the mirror $U(1)$ theory $V_-^{mirror}$ since it is identified with the quarks of the mirror sector \cite{Nii:2014jsa}.\\
-
 The charges of the fields are the following
 \begin{equation}
 \centering
@@ -526,7 +525,7 @@ q & \overline{N_f} & 0  &
 \tilde{q}   & 0  &N_f &
  0 % -\frac{N_c}{k N_f - N_c}
  & - 1  & 0 &\Delta_{\tilde{X}} - \Delta_Q \\
-\tilde{{\tilde{X}}} & 0 & 0 & 0 & 0 &0 & \Delta_{\tilde{X}} \\
+\tilde{X} & 0 & 0 & 0 & 0 &0 & \Delta_{\tilde{X}} \\
 M_j  & N_f & \overline{N_f} & 0 & 2 & 0 & 2 \Delta_Q + j \Delta_{\tilde{X}}\\
 b_j & 0  & 0 & 0  &   -N_f &  
 1 %\frac{1}{2}
@@ -534,20 +533,24 @@ b_j & 0  & 0 & 0  &   -N_f &
  \tilde{b} _j & 0  & 0 & 0  &   - N_f &  
  -1%- \frac{1}{2} 
    & N_f ( 1 - \Delta_Q) + \Delta_{\tilde{X}} (- N_c + j +1 )  \\
- \tilde{V}_{j,\pm} & 1 & 1 & 0 & N_f & \pm 1 & -(1 - \Delta_Q) N_f + \Delta_{\tilde{X}} (N_c+1 + j)\\
+ \tilde{v}_{j,\pm} & 1 & 1 & 0 & N_f & \pm 1 & -(1 - \Delta_Q) N_f + \Delta_{\tilde{X}} (N_c+1 + j)\\
 \hline
 \end{array}
 %\caption{Tabella delle cariche per il primo caso}
 \end{equation}
+where $\tilde{v}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.\\
+The $\eta$ superpotential can be rewritten using monopole operators at high energy through the identification \cite{Nii:2014jsa}
+\begin{equation}
+ \tilde{V}_{j, k-1-j} = b_{j} \tilde{v}_{k-1-j,-}
+\end{equation}
 As in the previous cases, there is a Affleck-Harvey-Witten superpotential
 associated to the gauge symmetry breaking $SU(k (N_f +1) - N_c) \rightarrow U(k N_f - N_c) \times U(1)^{mirror}$ given by
 \begin{equation}
-W_{AHW} = \sum_{j=0}^{k-1} \tilde{b}_{j+1} \tilde{V}_{k-1-j,+}
+W_{AHW} = \sum_{j=0}^{k-1} \tilde{b}_{j+1} \tilde{v}_{k-1-j,+}
 \end{equation}
-where $\tilde{V}_{i,+}$ is one of the two Coulomb branch coordinates of the $U(k N_f - N_c)$ gauge group.\\
-where the superpotential of the theory is
+Adding all these terms we obtain the superpotential of the theory which reads
 \begin{equation}
-W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} \left( b_{j} \tilde{V}_{k-j-1,+} + \tilde{b}_{j} \tilde{V}_{k-j-1,-}    \right) 
+W_{mag} = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, \tilde{q} \tilde{X}^{k-1-j} q + \sum_{j=0}^{k-1} \left( b_{j} \tilde{v}_{k-j-1,-} + \tilde{b}_{j} \tilde{v}_{k-j-1,+}    \right) 
 \end{equation}
 which is consistent with what was found with ungauging technique from the $U(N_c)$ duality in \cite{Park:2013wta}.
 
