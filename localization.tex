@@ -21,29 +21,28 @@ However, the energy $E$ can be substituted with any operator with positive eigen
 There can be added other operators that commute with the supercharges in order to resolve the degeneracies.
 \\
 We are interested in four dimensional superconformal field theories which are naturally quantized in radial quantization on $\mathbb{S}^3 \times \mathbb{R}$. 
-As a result, the isometry group is now $SU(2)_L \times SU(2)_R \times \mathcal{R}$ and the eight supercharges split into doublets of $SU(2)_L$ for $Q_{\alpha}$ and of $SU(2)_R$ for $S_{\alpha}$.\\
+As a result, the isometry group is now $SU(2)_L \times SU(2)_R \times \mathbb{R}$ and the eight supercharges split into doublets of $SU(2)_L$ for $Q_{\alpha}$ and of $SU(2)_R$ for $S_{\alpha}$.\\
 We can pick one of the supercharges, e.g. $Q_1$, and from the superconformal algebra we have the relation
 \begin{equation}
- \{Q_1, Q_1^{\dagger} \} = H + \frac{3}{2} R - 2 J_1 = \Delta
+ \{Q_1, Q_1^{\dagger} \} = H - \frac{3}{2} R - 2 J_1 = \Delta
  \end{equation} 
- where $H$ is the hamiltonian in radial quantization, $R$ is the R-charge generator and $J_1$ is one of the generators of $SU(2)_L$. 
+ where $H$ is the Hamiltonian in radial quantization, $R$ is the R-charge generator and $J_1$ is one of the generators of $SU(2)_L$. 
  However, in a free theory $\Delta$ has an infinite number of ground states. 
  For this reason the operator used as a regulator is \cite{Romelsberger:2005eg}
  \begin{equation}
  	\Xi = H - \frac{1}{2} R \geq \frac{2}{3} H 
  \end{equation}
 As we said before, we can add other terms in order to differentiate the various states.
-Such terms are given by the Cartan generators $J_1, J_2$ of the $SU(2)_L \times SU(2)_R$ isometry of the three sphere and by the generators $e_a$ of the internal symmetry group.\\
+Such terms are given by the Cartan generators $J_1, J_2$ of the $SU(2)_L \times SU(2)_R$ isometry of the three-sphere and by the generators $e_a$ of the internal symmetry group.\\
 The superconformal index on the sphere $\mathbb{S}^3 \times \mathbb{S}^1$ is then defined as \cite{Romelsberger:2007ec}
 \begin{align}
- i( \mu, x, h_a) =&
+ i( x, h_a) =&
 %  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
-\Tr \left[ (-1)^F t^{g} e^{- \mu \Xi} x^{2 J_2} \prod_a h_a^{e_a} \right] \\= &
-\Tr \left[ (-1)^F t^{g} e^{- \mu \Delta} e^{-\mu (2 J_1 - R)} x^{2 J_2} \prod_i h_a^{e_a} \right] 
+\Tr \left[ (-1)^F  e^{ - \mu \Xi} x^{2 J_2} \prod_a h_a^{e_a} \right] \\= &
+\Tr \left[ (-1)^F  t^{\Delta} t^{ 2 J_1 - R} x^{2 J_2} \prod_i h_a^{e_a} \right] 
  \end{align} 
-The index is independent on $\mu$ since the combinations of the operators present in the index commutes with $\Delta$.
-As a result, the index can be computed on states with $\Delta =0$.\\
-The superconformal index can be generalized in such a way that is is well defined on a squashed three sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ \cite{Aharony:2013dha}
+ where we defined $t = e^{- \mu}$.
+WIth a change of variables, the superconformal index can be written as 
 \begin{equation}
  i( p, q, h_a) =
  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
@@ -52,18 +51,19 @@ where $p,q$ are defined by
 \begin{equation}
 p = t x \quad q = t x^{-1}
 \end{equation}
-The values of $p,q$ must to satisfy the following conditions for convergence and reality of the index
+The values of $p,q$ must satisfy the following conditions for convergence and reality of the index
 \begin{equation}
 \hbox{Im} (pq) =0 \qquad |p/q| =  1 \qquad | pq| < 1
+\label{eqn:reality_convergence_condition_index}
 \end{equation}
-For $p=q$ the index on the squashed three sphere reduces to the index on a round three sphere.
+The superconformal index receives contribution only from states with $\Delta=0$, since $J_1 \pm J_2 - \frac{R}{2}$ and the internal generators commute with $\Delta$.
+%For $p=q$ the index on the squashed three-sphere reduces to the index on a round three-sphere.
 %The index is invariant under continuous deformation of the theory that preserve the operators appearing in the formula.
 %It may seems a trivial fact, but the index is invariant under some non-conformal deformation.
 %As a result, it may be computed in a weakly coupled UV theory that flows to a non trivial conformal fixed point, such as the theories appearing in electric magnetic dualities \cite{Romelsberger:2007ec}. \\
-
 The superconformal index can be calculated in two steps.
 First, we need to obtain the index on \emph{single particle states}.\\
-After defining $t = e^{-\mu}$, the index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
+The index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
 \begin{equation}
 i_{\Phi}(t,x,h,g) = \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(g) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(g)}{ (1-tx) (1- t x^{-1})}
 \end{equation}
@@ -78,22 +78,41 @@ Then, the superconformal index can be calculated by taking the Plethystic expone
   I(t,x,h) = \int_{G} \hbox{d} \mu(g)\,  \exp{ \left(  \sum_{n=1}^{\infty}i(t^n,x^n,h^n,g^n) \right)}
   \end{equation}  
 where $\hbox{d} \mu(g)$ is a $G$ invariant measure.\\
-The calculation of the index can be performed using the following mathematical identities involving the elliptic Gamma function
+The definition of the superconformal index can be extended to the manifold $\mathbb{S}_b^3 \times \mathbb{S}^1$, where $\mathbb{S}_b^3$ is the squashed three-sphere whose isometry group is only $U(1)_L \times U(1)_R$ \cite{Hama:2011ea}.
+The squashed sphere is defined by considering the metric 
+\begin{align}
+ d s^2 =& a^2 ( d x_0^2 + d x_1^2 ) + b^2 ( d x_2^2 + d x_3^2) \\
+ & \; \hbox{with} \qquad  x_0^2 + x_1^2 + x_2^2 + x_3^2 = 1
+\end{align}
+With the change of coordinates 
+\begin{align}
+x_0  & =  \cos \theta \cos \phi \\
+x_1  & = \cos \theta \sin \phi \\
+x_2  & = \sin \theta \cos \chi \\
+x_3  & = \sin \theta \sin \chi 
+\end{align}
+we obtain the metric of the squashed sphere
+\begin{align}
+ d s^2 = f(\theta)^2 d \theta^2 + a^2 \cos^2 \theta d \phi ^2 + b^2 \sin^2 \theta d \chi^2 \\
+\hbox{with} \quad f( \theta) = \sqrt{ a^2 \sin^2 \theta + b^2 \cos^2 \theta}
+\end{align}
+The index on the squashed sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ should coincide with the index on the round sphere $\mathbb{S}^3 \times \mathbb{S}^1$ since they have the same topology and the indices receive contributions from the same BPS states.
+An explicit calculation \cite{Agarwal:2012hs} shows that this is indeed true. \\
+The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ which does not modify the physical content of the index since they are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.\\
+
+An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$
 \begin{align}
 \Gamma_e ( y; p, q) \overset{def}{=} & \prod_{j,k \geq 0} \frac{1 - y^{-1}p^{j+1}q^{k+1}}{1 - y p^j q^k} = \exp \left(  
 \sum_{n=1}^{\infty} \frac{1}{n} \, i_S(p^n,q^n,y^n)
 \right)\\
 & \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)}
 \end{align}
-The \emph{single particle index} for a generic chiral field can be written as $i_S$ with the generic change of variables, including a generic chemical potential $z$ for the global symmetries. 
+The \emph{single particle index} for a generic chiral field can be written as $i_S$ in the variables $(p,q)$ introduced before and the addition of a generic chemical potential $z$ for the global symmetries. \\
+With the same substitution we can write the \emph{single particle index} of a vector multiplet into
 \begin{equation}
-p = tx \qquad q = t x^{-1} \qquad y = t^r z
+i_V(p,q) = - \left( \frac{p}{1-p} + \frac{q}{1-q} \right)
 \end{equation}
-With the same substitution we can cast the \emph{single particle index} for a vector multiplet into
-\begin{equation}
-i_V(p,q) = - \frac{p}{1-p} - \frac{q}{1-q}
-\end{equation}
-and use the following identities, containing the chemical potential associated to the gauge group $z$
+and use the following identities, where $z$ is the chemical potential associated to the gauge group
 \begin{align}
 \exp \left(  
 \sum_{n=1}^{\infty} \frac{1}{n}\, i_V(p^n,q^n) ( z^n + z^{-n}) \right) & = \frac{1}{(1-z)(1-z^{-1}) \Gamma_e(z;p,q) \Gamma_e(z^{-1};p,q)}
@@ -105,9 +124,11 @@ and the \emph{Q-Pochhammer symbol} is defined as
 \begin{equation}
 (x;p) = \prod_{j \geq 0} ( 1- x p^j)
 \end{equation}
-Using these identities we can reduce the calculation of the superconformal index to a integral over the gauge group of products of elliptic Gamma functions.\\
-The superconformal index can be calculated for pairs of dual theories and many mathematical integral identities are known that demonstrate the equality of their indices \cite{rains309252transformations} \cite{Dolan:2008qi}. 
-This is a rather important point, since it will be the starting point of our analysis.\\
+Using these identities we can reduce the calculation of the superconformal index to a integral over the gauge group of products of elliptic Gamma functions.
+We will provide an explicit calculation for the electric and magnetic theories of Kutasov-Schwimmer duality in the next chapter.
+\\
+The equality of the superconformal index for pairs of dual theories can be demonstrated using integral identities of elliptic Gamma functions that were first demonstrated by Rains in \cite{rains309252transformations}.
+Moreover, the 
 Our interest in the superconformal index follows from the fact that we can reduce the index of a four dimensional theory compactified on $\mathbb{S}^3 \times \mathbb{S}^1$ to the partition function of the three dimensional theory obtained in the limit $r_{\mathbb{S}^1} \rightarrow 0$.
 % and with $\eta$ superpotential.  
 
