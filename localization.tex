@@ -100,15 +100,23 @@ The index on the squashed sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ should coi
 An explicit calculation \cite{Agarwal:2012hs} shows that this is indeed true. \\
 The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ which does not modify the physical content of the index since they are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.\\
 
-An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$
+An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$.
+The index of a chiral field in general can be written as
+\begin{equation}
+i_{\Phi} (p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \qquad \hbox{with} \quad p=tx \; q=t x^{-1} \; y = t^R z 
+\end{equation}
+where $z$ is the fugacity associated to gauge and/or global symmetries.
+It can be written as an elliptic gamma function through
 \begin{align}
-\Gamma_e ( y; p, q) \overset{def}{=} & \prod_{j,k \geq 0} \frac{1 - y^{-1}p^{j+1}q^{k+1}}{1 - y p^j q^k} = \exp \left(  
-\sum_{n=1}^{\infty} \frac{1}{n} \, i_S(p^n,q^n,y^n)
-\right)\\
-& \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)}
+ \exp \left(  
+\sum_{n=1}^{\infty} \frac{1}{n} \, i_S(p^n,q^n,y^n) \right)=
+& \prod_{j,k \geq 0} \frac{1 - y^{-1}p^{j+1}q^{k+1}}{1 - y p^j q^k}
+\overset{def}{=} 
+\Gamma_e ( y; p, q) 
+\\
+& \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \quad
 \end{align}
-The \emph{single particle index} for a generic chiral field can be written as $i_S$ in the variables $(p,q)$ introduced before and the addition of a generic chemical potential $z$ for the global symmetries. \\
-With the same substitution we can write the \emph{single particle index} of a vector multiplet into
+In the same variables we can write the \emph{single particle index} of a vector multiplet into
 \begin{equation}
 i_V(p,q) = - \left( \frac{p}{1-p} + \frac{q}{1-q} \right)
 \end{equation}
@@ -124,13 +132,12 @@ and the \emph{Q-Pochhammer symbol} is defined as
 \begin{equation}
 (x;p) = \prod_{j \geq 0} ( 1- x p^j)
 \end{equation}
-Using these identities we can reduce the calculation of the superconformal index to a integral over the gauge group of products of elliptic Gamma functions.
-We will provide an explicit calculation for the electric and magnetic theories of Kutasov-Schwimmer duality in the next chapter.
+Using these identities we can reduce the calculation of the superconformal index to a integral over the gauge group of products of elliptic Gamma functions.\\
+We will provide a more detailed calculation for the electric and magnetic theories of Kutasov-Schwimmer duality in the next chapter.
 \\
 The equality of the superconformal index for pairs of dual theories can be demonstrated using integral identities of elliptic Gamma functions that were first demonstrated by Rains in \cite{rains309252transformations}.
-Moreover, the 
-Our interest in the superconformal index follows from the fact that we can reduce the index of a four dimensional theory compactified on $\mathbb{S}^3 \times \mathbb{S}^1$ to the partition function of the three dimensional theory obtained in the limit $r_{\mathbb{S}^1} \rightarrow 0$.
-% and with $\eta$ superpotential.  
+We will use this fact as a starting point in our discussion on the dimensional reduction of electric magnetic dualities.
+In fact, shrinking the radius of $\mathbb{S}^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $\mathbb{S}_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
 
 \subsection{Localization}
 
