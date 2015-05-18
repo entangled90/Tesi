@@ -137,9 +137,28 @@ We will provide a more detailed calculation for the electric and magnetic theori
 \\
 The equality of the superconformal index for pairs of dual theories can be demonstrated using integral identities of elliptic Gamma functions that were first demonstrated by Rains in \cite{rains309252transformations}.
 We will use this fact as a starting point in our discussion on the dimensional reduction of electric magnetic dualities.
-In fact, shrinking the radius of $\mathbb{S}^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $\mathbb{S}_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
+In fact, if we shrink the radius of $\mathbb{S}^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $\mathbb{S}_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
 
 \subsection{Localization}
+The partition function in three dimensions can be calculated alternatively using \emph{localization}, which reduces the the path integral to finite dimensional integral over the Cartan of the gauge group.\\
+Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $\mathbb{S}^3$ and $\mathbb{S}_b^3$ for $\mN=2$ theories in \cite{Kapustin:2010mh} and \cite{Hama:2011ea}.\\
+The basic principle about localization is the following.
+Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leave the measure of the path integral invariant.
+Suppose that this transformation $\delta$ squares to a \emph{bosonic} symmetry such as a Lorentz or gauge transformation.\\
+Consider the following partition function, which correspond to the partition function we want to calculate for $t=0$
+\begin{equation}
+Z(t) = \int \mathcal{D} \phi \; e^{- S(\phi) - t (\delta V)}
+\end{equation}
+where $V$ is a fermionic operator invariant under $\delta^2$.\\
+This partition function is independent of $t$ since
+\begin{equation}
+ \frac{d Z}{d t} = - \int \mathcal{D} \phi \; \delta V \, e^{- S(\phi) - t (\delta V)} =  - \int  \mathcal{D} \phi \; \delta \left( e^{- S(\phi) - t (\delta V)  }\right) = 0
+\end{equation}
+Where the last equality holds if the fields decay sufficiently fast at infinity.\\
+Since $Z(t)$ is independent of $t$ we can calculate it at $t=0$, which is the original partition function or at $t=\infty$, where the integral localizes on the saddle points of the integral if the bosonic part of $\delta V$ is positive definite.\\
+In three dimensions, these saddle points are parametrized by the values of the scalar field in the vector multiplet and through gauge symmetry the integral can be reduced to the Cartan subalgebra. 
+The other fields are set to zero by the saddle points conditions.\\
+The fields can be rescaled around these points by 
 
 
 
