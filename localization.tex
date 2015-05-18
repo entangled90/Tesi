@@ -34,22 +34,36 @@ We can pick one of the supercharges, e.g. $Q_1$, and from the superconformal alg
  \end{equation}
 As we said before, we can add other terms in order to differentiate the various states.
 Such terms are given by the Cartan generators $J_1, J_2$ of the $SU(2)_L \times SU(2)_R$ isometry of the three sphere and by the generators $e_a$ of the internal symmetry group.\\
-The superconformal index on the squashed sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ is then defined as \cite{Aharony:2013dha}
+The superconformal index on the sphere $\mathbb{S}^3 \times \mathbb{S}^1$ is then defined as \cite{Romelsberger:2007ec}
+\begin{align}
+ i( \mu, x, h_a) =&
+%  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
+\Tr \left[ (-1)^F t^{g} e^{- \mu \Xi} x^{2 J_2} \prod_a h_a^{e_a} \right] \\= &
+\Tr \left[ (-1)^F t^{g} e^{- \mu \Delta} e^{-\mu (2 J_1 - R)} x^{2 J_2} \prod_i h_a^{e_a} \right] 
+ \end{align} 
+The index is independent on $\mu$ since the combinations of the operators present in the index commutes with $\Delta$.
+As a result, the index can be computed on states with $\Delta =0$.\\
+The superconformal index can be generalized in such a way that is is well defined on a squashed three sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ \cite{Aharony:2013dha}
 \begin{equation}
- i( \mu, \gamma,h) =
-  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
- \end{equation} 
-When we have $p=q$ the index reduces to the index on the round sphere $\mathbb{S}^3 \times \mathbb{S}^1$ \cite{Dolan:2008qi}.\\
+ i( p, q, h_a) =&
+ \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
+\end{equation}
+where $p,q$ are defined by
+\begin{equation}
+p = t x \quad q = t x^{-1}
+\end{equation}
 In order for the index to be real and for convergence, the values $p,q$ are taken to satisfy the following conditions
 \begin{equation}
-\hbox{Im} (pq) =0 \qquad |p/q| = 1 \qquad | pq| < 1
+\hbox{Im} (pq) =0 \qquad |p/q| =  1 \qquad | pq| < 1
 \end{equation}
-The index is invariant under continuous deformation of the theory that preserve the operators appearing in the formula.
-It may seems a trivial fact, but the index is invariant under some non-conformal deformation.
-As a result, it may be computed in a weakly coupled UV theory that flows to a non trivial conformal fixed point, such as the theories appearing in electric magnetic dualities \cite{Romelsberger:2007ec}. \\
+For $p=q$ the index on the squashed three sphere reduces to the index on a round three sphere.
+%The index is invariant under continuous deformation of the theory that preserve the operators appearing in the formula.
+%It may seems a trivial fact, but the index is invariant under some non-conformal deformation.
+%As a result, it may be computed in a weakly coupled UV theory that flows to a non trivial conformal fixed point, such as the theories appearing in electric magnetic dualities \cite{Romelsberger:2007ec}. \\
+
 The superconformal index can be calculated in two steps.
 First, we need to obtain the index on \emph{single particle states}.\\
-After defining $t = e^{-\mu}$, the index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads
+After defining $t = e^{-\mu}$, the index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
 \begin{equation}
 i_{\Phi}(t,x,h,g) = \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(g) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(g)}{ (1-tx) (1- t x^{-1})}
 \end{equation}
