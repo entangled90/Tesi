@@ -64,13 +64,14 @@ The superconformal index receives contribution only from states with $\Delta=0$,
 The superconformal index can be calculated in two steps.
 First, we need to obtain the index on \emph{single particle states}.\\
 The index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
-\begin{equation}
-i_{\Phi}(t,x,h,g) = \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(g) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(g)}{ (1-tx) (1- t x^{-1})}
-\end{equation}
-where $h$ and $g$ are the chemical potential for the global and gauge symmetry group respectively. $\chi_{F_i}(h)$ and $\chi_{G_i}(g)$ are the characters of the representation of $\Phi_i$.\\
+\begin{align}
+i_{\Phi}(t,x,h,g) =&  \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(z) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-tx) (1- t x^{-1})} = \\
+=& \sum_{i} \frac{ (pq)^{\frac{r_i}{2}} \chi_{F_i}(h) \, \chi_{G_i}(z) - (pq)^{1-\frac{r_i}{2}} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-p) (1- q)} 
+\end{align}
+where $h$ and $z$ are the chemical potential for the global and gauge symmetry group respectively. $\chi_{F_i}(h)$ and $\chi_{G_i}(g)$ are the characters of the representation of $\Phi_i$.\\
 The index for a vector superfield in the adjoint representation of a gauge group $G$ is given by \cite{Dolan:2008qi}
 \begin{equation}
-i_{V} (t,x,g) = \frac{2 t^2 - t(x + x^{-1})}{(1-tx) (1 - tx^{-1})} \chi_{adj}(g)
+i_{V} (t,x,g) = \frac{2 t^2 - t(x + x^{-1})}{(1-tx) (1 - tx^{-1})} \chi_{adj}(z) =  \frac{2 (pq) - (p+q )}{(1-p) (1 - q)} \chi_{adj}(z)
 \end{equation}
 The index on the single particle states for the complete theory is given by the sum of indices for every field. 
 Then, the superconformal index can be calculated by taking the Plethystic exponential \cite{Feng:2007ur} of the full single particle index
@@ -98,7 +99,7 @@ we obtain the metric of the squashed sphere
 \end{align}
 The index on the squashed sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ should coincide with the index on the round sphere $\mathbb{S}^3 \times \mathbb{S}^1$ since they have the same topology and the indices receive contributions from the same BPS states.
 An explicit calculation \cite{Agarwal:2012hs} shows that this is indeed true. \\
-The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ which does not modify the physical content of the index since they are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.\\
+The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ which does not modify the physical content of the index since they are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.
 
 An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$.
 The index of a chiral field in general can be written as
@@ -163,7 +164,7 @@ The partition function can be written
 \begin{equation}
  Z (\mu_a , \nu_b) \sim \int \, d^{r_G} \sigma \; e^{S_{saddle}(\sigma)} Z_{gauge}^{1-loop}(\sigma ) \prod_{a,b} Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
 \end{equation}
-where $\mu_a,\nu_b$ are the real masses associated to global symmetries for left and right fermions. 
+where $\mu_a,\nu_b$ are the real masses associated to global symmetries for left and right quarks. 
 The one loop contribution for matter fields is given by a hyperbolic gamma function, sometimes called \emph{double-sine} function \cite{Hama:2011ea} which depends on the charges of the field under the global and gauge symmetries.
 For the vector multiplet the result is similar but it is only charged only under gauge symmetry.
 \\
