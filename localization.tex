@@ -20,7 +20,7 @@ The exponential term in the energy can be seen as a regulator, otherwise the cou
 However, the energy $E$ can be substituted with any operator with positive eigenvalues that commutes with the supercharges. 
 There can be added other operators that commute with the supercharges in order to resolve the degeneracies.
 \\
-We are interested in four dimensional superconformal field theories which are naturally quantized in radial quantization on $\mathbb{S}^3 \times \mathbb{R}$. 
+We are interested in four dimensional superconformal field theories which are naturally quantized in radial quantization on $S^3 \times \mathbb{R}$. 
 As a result, the isometry group is now $SU(2)_L \times SU(2)_R \times \mathbb{R}$ and the eight supercharges split into doublets of $SU(2)_L$ for $Q_{\alpha}$ and of $SU(2)_R$ for $S_{\alpha}$.\\
 We can pick one of the supercharges, e.g. $Q_1$, and from the superconformal algebra we have the relation
 \begin{equation}
@@ -34,7 +34,7 @@ We can pick one of the supercharges, e.g. $Q_1$, and from the superconformal alg
  \end{equation}
 As we said before, we can add other terms in order to differentiate the various states.
 Such terms are given by the Cartan generators $J_1, J_2$ of the $SU(2)_L \times SU(2)_R$ isometry of the three-sphere and by the generators $e_a$ of the internal symmetry group.\\
-The superconformal index on the sphere $\mathbb{S}^3 \times \mathbb{S}^1$ is then defined as \cite{Romelsberger:2007ec}
+The superconformal index on the sphere $S^3 \times S^1$ is then defined as \cite{Romelsberger:2007ec}
 \begin{align}
  i( x, h_a) =&
 %  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
@@ -45,7 +45,9 @@ The superconformal index on the sphere $\mathbb{S}^3 \times \mathbb{S}^1$ is the
 WIth a change of variables, the superconformal index can be written as 
 \begin{equation}
  i( p, q, h_a) =
- \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
+ \Tr  \left[  (-1)^F 
+ (pq)^{ \frac{\Xi}{2}} %e^{ - \mu \Xi }
+  p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
 \end{equation}
 where $p,q$ are defined by
 \begin{equation}
@@ -68,7 +70,7 @@ The index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmet
 i_{\Phi}(t,x,h,g) =&  \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(z) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-tx) (1- t x^{-1})} = \\
 =& \sum_{i} \frac{ (pq)^{\frac{r_i}{2}} \chi_{F_i}(h) \, \chi_{G_i}(z) - (pq)^{1-\frac{r_i}{2}} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-p) (1- q)} 
 \end{align}
-where $h$ and $z$ are the chemical potential for the global and gauge symmetry group respectively. $\chi_{F_i}(h)$ and $\chi_{G_i}(g)$ are the characters of the representation of $\Phi_i$.\\
+where $h$ and $z$ are the chemical potential for the global and gauge symmetry group respectively. $\chi_{F_i}(h)$ and $\chi_{G_i}(z)$ are the characters of the representation of $\Phi_i$.\\
 The index for a vector superfield in the adjoint representation of a gauge group $G$ is given by \cite{Dolan:2008qi}
 \begin{equation}
 i_{V} (t,x,g) = \frac{2 t^2 - t(x + x^{-1})}{(1-tx) (1 - tx^{-1})} \chi_{adj}(z) =  \frac{2 (pq) - (p+q )}{(1-p) (1 - q)} \chi_{adj}(z)
@@ -76,13 +78,13 @@ i_{V} (t,x,g) = \frac{2 t^2 - t(x + x^{-1})}{(1-tx) (1 - tx^{-1})} \chi_{adj}(z)
 The index on the single particle states for the complete theory is given by the sum of indices for every field. 
 Then, the superconformal index can be calculated by taking the Plethystic exponential \cite{Feng:2007ur} of the full single particle index
 \begin{equation}
-  I(t,x,h) = \int_{G} \hbox{d} \mu(g)\,  \exp{ \left(  \sum_{n=1}^{\infty}i(t^n,x^n,h^n,g^n) \right)}
+  I(t,x,h) = \int_{G} \hbox{d} \mu(g)\,  \exp{ \left(  \sum_{n=1}^{\infty}i(t^n,x^n,h^n,z^n) \right)}
   \end{equation}  
 where $\hbox{d} \mu(g)$ is a $G$ invariant measure.\\
-The definition of the superconformal index can be extended to the manifold $\mathbb{S}_b^3 \times \mathbb{S}^1$, where $\mathbb{S}_b^3$ is the squashed three-sphere whose isometry group is only $U(1)_L \times U(1)_R$ \cite{Hama:2011ea}.
+The definition of the superconformal index can be extended to the manifold $S_b^3 \times S^1$, where $S_b^3$ is the squashed three-sphere whose isometry group is only $U(1)_L \times U(1)_R$ \cite{Hama:2011ea}.
 The squashed sphere is defined by considering the metric 
 \begin{align}
- d s^2 =& a^2 ( d x_0^2 + d x_1^2 ) + b^2 ( d x_2^2 + d x_3^2) \\
+ d s^2 =& l^2 ( d x_0^2 + d x_1^2 ) + \bar{l}^2 ( d x_2^2 + d x_3^2) \\
  & \; \hbox{with} \qquad  x_0^2 + x_1^2 + x_2^2 + x_3^2 = 1
 \end{align}
 With the change of coordinates 
@@ -92,12 +94,13 @@ x_1  & = \cos \theta \sin \phi \\
 x_2  & = \sin \theta \cos \chi \\
 x_3  & = \sin \theta \sin \chi 
 \end{align}
-we obtain the metric of the squashed sphere
+we obtain the metric of the squashed sphere with squashing parameter 
+$b = \frac{l}{\bar{l}}$
 \begin{align}
- d s^2 = f(\theta)^2 d \theta^2 + a^2 \cos^2 \theta d \phi ^2 + b^2 \sin^2 \theta d \chi^2 \\
-\hbox{with} \quad f( \theta) = \sqrt{ a^2 \sin^2 \theta + b^2 \cos^2 \theta}
+ d s^2 = f(\theta)^2 d \,theta^2 + l^2 \cos^2 \theta d \phi ^2 + \bar{l}^2 \sin^2 \theta d \chi^2 \\
+\hbox{with} \quad f( \theta) = \sqrt{ l^2 \sin^2 \theta + \bar{l}^2 \cos^2 \theta}
 \end{align}
-The index on the squashed sphere $\mathbb{S}_b^3 \times \mathbb{S}^1$ should coincide with the index on the round sphere $\mathbb{S}^3 \times \mathbb{S}^1$ since they have the same topology and the indices receive contributions from the same BPS states.
+The index on the squashed sphere $S_b^3 \times S^1$ should coincide with the index on the round sphere $S^3 \times S^1$ since they have the same topology and the indices receive contributions from the same BPS states.
 An explicit calculation \cite{Agarwal:2012hs} shows that this is indeed true. \\
 The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ which does not modify the physical content of the index since they are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.
 
@@ -138,10 +141,17 @@ We will provide a more detailed calculation for the electric and magnetic theori
 \\
 The equality of the superconformal index for pairs of dual theories can be demonstrated using integral identities of elliptic Gamma functions that were first demonstrated by Rains in \cite{rains309252transformations}.
 We will use this fact as a starting point in our discussion on the dimensional reduction of electric magnetic dualities.
-In fact, if we shrink the radius of $\mathbb{S}^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $\mathbb{S}_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
+%In fact, if we shrink the radius of $S^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $S_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
 
-\subsection{Localization}
-Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $\mathbb{S}^3$ and $\mathbb{S}_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz} and \cite{Hama:2011ea}.
+
+
+
+
+
+
+
+\section{Localization}
+Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $S^3$ and $S_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz}, \cite{Hama:2010av} and \cite{Hama:2011ea}.
 It can be used to calculate partition function or Wilson loops. \\
 The basic principle about localization is the following.
 Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leaves the measure of the path integral invariant and that it squares to a \emph{bosonic} symmetry $\Delta_B$, which can be a Lorentz or gauge transformation.\\
@@ -149,7 +159,7 @@ Consider the following modified partition function, which correspond to the part
 \begin{equation}
 Z(t) = \int \mathcal{D} \phi \; e^{- S(\phi) - t (\delta V)}
 \end{equation}
-where $V$ is a fermionic operator invariant under $\Delta_B$.\\
+where $V$ is a fermionic operator invariant under $\Delta_B$, i.e. $ \Delta_B V = 0$.\\
 This partition function is independent of $t$ since
 \begin{equation}
  \frac{d Z}{d t} = - \int \mathcal{D} \phi \; \delta V \, e^{- S(\phi) - t (\delta V)} =  - \int  \mathcal{D} \phi \; \delta \left( e^{- S(\phi) - t (\delta V)  }\right) = 0
@@ -162,13 +172,38 @@ The partition function receives contribution from the path integral only at one-
 The one-loop term is given by a functional determinant for every field present in the theory.
 The partition function can be written 
 \begin{equation}
- Z (\mu_a , \nu_b) \sim \int \, d^{r_G} \sigma \; e^{S_{saddle}(\sigma)} Z_{gauge}^{1-loop}(\sigma ) \prod_{a,b} Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
+ Z (\mu_a , \nu_b) \sim \int \, d^{r_G} \sigma \; e^{S_{saddle}(\sigma)} \; Z_{gauge}^{1-loop}(\sigma ) \; Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
 \end{equation}
 where $\mu_a,\nu_b$ are the real masses associated to global symmetries for left and right quarks. 
 The one loop contribution for matter fields is given by a hyperbolic gamma function, sometimes called \emph{double-sine} function \cite{Hama:2011ea} which depends on the charges of the field under the global and gauge symmetries.
-For the vector multiplet the result is similar but it is only charged only under gauge symmetry.
+\begin{equation}
+Z_{\Phi_i}^{1-loop} = \prod_{i}\Gamma_h ( \omega \Delta_i + \sum_{a} \mu_a e_a ; \omega_1 ,\omega_2)
+\end{equation}
+where $\omega_1 = i b  $, $\omega_2 =  i b^{-1}$ and $\omega =\frac{\omega_1 + \omega_2}{2}$.
+An overview on the properties of the hyperbolic gamma function can be found in appendix \ref{appendix:gamma_functions}.\\
+For the vector multiplet the result is similar and since it is in the adjoint representation of the gauge group it is given by
+\begin{equation}
+Z_{V}^{1-loop} = \prod_{1 \leq i < j \leq dim(G)} \frac{1}{\Gamma_h( \pm (\sigma_i - \sigma_j) )}
+\end{equation}
 \\
-As a result, the partition function can be calculated by an integral on the Cartan subalgebra of the gauge group with products of hyperbolic gamma function which depends on the symmetries and the field content of the theory.
+As a result, the partition function can be calculated by an integral on the Cartan subalgebra of the gauge group of products of hyperbolic gamma functions and exponential factors that are associate to Fayet-Iliopulos and Chern-Simons terms. 
 
 
-\subsection{Reduction of the index to the partition function}
+\section{Reduction of the superconformal index to the partition function}
+
+The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$.
+However, in order to obtain the partition function, it is necessary to be in the limit where the fugacities go to one. 
+They can be parametrized as function of the radius $r$ of $S^1$
+\begin{equation}
+p= e^{2 \pi i r \omega_1} \quad q=e^{2 \pi i r \omega_2} \quad u_a = e^{2 \pi i r \mu_a } \quad z_i = e^{2 \pi i r \sigma_i}
+\end{equation}
+where $\omega_1 = i b  $ and $\omega_2 =  i b^{-1}$ and $u_a$ are the fugacities associated to the global symmetries.\\
+
+
+
+
+
+
+
+
+
