@@ -116,7 +116,7 @@ It can be written as an elliptic gamma function through
 \\
 & \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \quad
 \end{align}
-In the same variables we can write the \emph{single particle index} of a vector multiplet into
+Using the same variables we can write the \emph{single particle index} of a vector multiplet into
 \begin{equation}
 i_V(p,q) = - \left( \frac{p}{1-p} + \frac{q}{1-q} \right)
 \end{equation}
@@ -140,12 +140,11 @@ We will use this fact as a starting point in our discussion on the dimensional r
 In fact, if we shrink the radius of $\mathbb{S}^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $\mathbb{S}_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
 
 \subsection{Localization}
-The partition function in three dimensions can be calculated alternatively using \emph{localization}, which reduces the the path integral to finite dimensional integral over the Cartan of the gauge group.\\
-Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $\mathbb{S}^3$ and $\mathbb{S}_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz} and \cite{Hama:2011ea}.\\
+Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $\mathbb{S}^3$ and $\mathbb{S}_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz} and \cite{Hama:2011ea}.
+It can be used to calculate partition function or Wilson loops. \\
 The basic principle about localization is the following.
-Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leaves the measure of the path integral invariant.
-Suppose that this transformation $\delta$ squares to a \emph{bosonic} symmetry $\Delta_B$ such as a Lorentz or gauge transformation.\\
-Consider the following partition function, which correspond to the partition function we want to calculate for $t=0$
+Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leaves the measure of the path integral invariant and that it squares to a \emph{bosonic} symmetry $\Delta_B$, which can be a Lorentz or gauge transformation.\\
+Consider the following modified partition function, which correspond to the partition function we want to calculate for $t=0$
 \begin{equation}
 Z(t) = \int \mathcal{D} \phi \; e^{- S(\phi) - t (\delta V)}
 \end{equation}
@@ -157,7 +156,18 @@ This partition function is independent of $t$ since
 Where the last equality holds if the fields decay sufficiently fast at infinity.\\
 Since $Z(t)$ is independent of $t$ we can calculate it at $t=0$, which is the original partition function or at $t=\infty$, where the integral localizes on the saddle points of the integral if the bosonic part of $\delta V$ is positive definite.\\
 In three dimensions, these saddle points are parametrized by the values of the scalar field in the vector multiplet and through gauge symmetry the integral can be reduced to the Cartan subalgebra. 
-The other fields are set to zero by the saddle points conditions.\\
-A rescaling of the fields shows that they contribute to the partition function only through one-loop contribution that can be computed exactly.
-Some contributions from fermions and bosons cancel between each other and the result is that for every chiral field the one loop contribution is proportional to a hyperbolic gamma function, sometimes called \emph{double-sine} function \cite{Hama:2011ea}.\\
-As a result, the partition function can be calculated by an integral on the Cartan subalgebra of the gauge group with products of hyperbolic gamma function which depends on the symmetries and the matter content of the theory.
+The saddle point conditions for the other fields set their value on the saddle points to zero.\\
+The partition function receives contribution from the path integral only at one-loop and it can be computed exactly.
+The one-loop term is given by a functional determinant for every field present in the theory.
+The partition function can be written 
+\begin{equation}
+ Z (\mu_a , \nu_b) \sim \int \, d^{r_G} \sigma \; e^{S_{saddle}(\sigma)} Z_{gauge}^{1-loop}(\sigma ) \prod_{a,b} Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
+\end{equation}
+where $\mu_a,\nu_b$ are the real masses associated to global symmetries for left and right fermions. 
+The one loop contribution for matter fields is given by a hyperbolic gamma function, sometimes called \emph{double-sine} function \cite{Hama:2011ea} which depends on the charges of the field under the global and gauge symmetries.
+For the vector multiplet the result is similar but it is only charged only under gauge symmetry.
+\\
+As a result, the partition function can be calculated by an integral on the Cartan subalgebra of the gauge group with products of hyperbolic gamma function which depends on the symmetries and the field content of the theory.
+
+
+\subsection{Reduction of the index to the partition function}
