@@ -193,11 +193,19 @@ As a result, the partition function can be calculated by an integral on the Cart
 
 The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$.
 However, in order to obtain the partition function, it is necessary to be in the limit where the fugacities go to one. 
-They can be parametrized as function of the radius $r$ of $S^1$
+Their correct parametrization as function of the radius $r$ of $S^1$ is the following
 \begin{equation}
 p= e^{2 \pi i r \omega_1} \quad q=e^{2 \pi i r \omega_2} \quad u_a = e^{2 \pi i r \mu_a } \quad z_i = e^{2 \pi i r \sigma_i}
 \end{equation}
-where $\omega_1 = i b  $ and $\omega_2 =  i b^{-1}$ and $u_a$ are the fugacities associated to the global symmetries.\\
+where $\mu_a$ are the real masses and $\sigma_i$ is the scalar in the vector multiplet.\\
+Since the superconformal index is written in terms of elliptic gamma functions, we can use the following identity \cite{vanDeBult:2007} to perform the limit $r \rightarrow 0$ 
+\begin{equation}
+\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 \pi i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \sim 
+ e^{\frac{ - i \pi^2 }{6  r \omega_1 \omega_2 } ( z - \omega)} 
+ \Gamma_h ( z ; \omega_1 , \omega_2 )
+\end{equation}
+
+
 
 
 
