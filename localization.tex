@@ -107,7 +107,7 @@ The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (
 An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$.
 The index of a chiral field in general can be written as
 \begin{equation}
-i_{\Phi} (p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \qquad \hbox{with} \quad p=tx \; q=t x^{-1} \; y = t^R z 
+i_{\Phi} (p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \qquad \hbox{with} \quad p=tx \; q=t x^{-1} \; y = t^R
 \end{equation}
 where $z$ is the fugacity associated to gauge and/or global symmetries.
 It can be written as an elliptic gamma function through
@@ -120,6 +120,11 @@ It can be written as an elliptic gamma function through
 \\
 & \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \quad
 \end{align}
+The contribution to the index of chiral field in the (anti)fundamental representation of global and gauge symmetries can be generally
+ written as
+\begin{equation}
+\Gamma_e \left(   (pq)^{\frac{R_i}{2}} \prod_a u_a^{e_a} ; p ,q \right)
+\end{equation}
 Using the same variables we can write the \emph{single particle index} of a vector multiplet into
 \begin{equation}
 i_V(p,q) = - \left( \frac{p}{1-p} + \frac{q}{1-q} \right)
@@ -136,11 +141,15 @@ and the \emph{Q-Pochhammer symbol} is defined as
 \begin{equation}
 (x;p) = \prod_{j \geq 0} ( 1- x p^j)
 \end{equation}
-Using these identities we can reduce the calculation of the superconformal index to a integral over the gauge group of products of elliptic Gamma functions.\\
+The contribution of a vector field in the adjoint representation reads
+\begin{equation}
+(p;p)^{r_G} (q;q)^{r_G} \prod_{1 \leq i < j \leq N_c} \frac{1}{(1-\frac{z_i}{z_j})(1-\frac{z_j}{z_i}) \Gamma_e(\frac{z_i}{z_j};p,q) \Gamma_e(\frac{z_j}{z_i};p,q)}
+\end{equation}
+The calculation of the superconformal index is now reduced to a integral over the gauge group of products of elliptic gamma functions.\\
 We will provide a more detailed calculation for the electric and magnetic theories of Kutasov-Schwimmer duality in the next chapter.
 \\
 The equality of the superconformal index for pairs of dual theories can be demonstrated using integral identities of elliptic Gamma functions that were first demonstrated by Rains in \cite{rains309252transformations}.
-We will use this fact as a starting point in our discussion on the dimensional reduction of electric magnetic dualities.
+We will use this fact as a starting point in our discussion on the dimensional reduction of dualities to three dimensions.
 %In fact, if we shrink the radius of $S^1 $ to zero the superconformal index reduces to the partition function of the three dimensional theory on $S_b^3$ obtained by dimensional reduction, i.e. with an $\eta$ superpotential.\\
 
 
@@ -169,21 +178,27 @@ Since $Z(t)$ is independent of $t$ we can calculate it at $t=0$, which is the or
 In three dimensions, these saddle points are parametrized by the values of the scalar field in the vector multiplet and through gauge symmetry the integral can be reduced to the Cartan subalgebra. 
 The saddle point conditions for the other fields set their value on the saddle points to zero.\\
 The partition function receives contribution from the path integral only at one-loop and it can be computed exactly.
-The one-loop term is given by a functional determinant for every field present in the theory.
+The one-loop term is given by a determinant of Laplace and Dirac operators for every field appearing in the lagrangian.
+\begin{equation}
+Z \sim \int [ d \sigma] \; e^{S_{saddle(\sigma)}} \prod_i \frac{ \Delta_{\psi_i}}{\Delta_{\phi_i}}
+\label{eqn:localization_determinant_expression}
+\end{equation}
 The partition function can be written 
 \begin{equation}
- Z (\mu_a , \nu_b) \sim \int \, d^{r_G} \sigma \; e^{S_{saddle}(\sigma)} \; Z_{gauge}^{1-loop}(\sigma ) \; Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
+ Z (\mu_a , \nu_b) \sim \int \, [d  \sigma] \; e^{S_{saddle}(\sigma)} \; Z_{gauge}^{1-loop}(\sigma ) \; Z_{matter}^{1-loop}(\sigma,\mu_a,\nu_b)
 \end{equation}
 where $\mu_a,\nu_b$ are the real masses associated to global symmetries for left and right quarks. 
 The one loop contribution for matter fields is given by a hyperbolic gamma function, sometimes called \emph{double-sine} function \cite{Hama:2011ea} which depends on the charges of the field under the global and gauge symmetries.
 \begin{equation}
 Z_{\Phi_i}^{1-loop} = \prod_{i}\Gamma_h ( \omega \Delta_i + \sum_{a} \mu_a e_a ; \omega_1 ,\omega_2)
+\label{eqn:1-loop_localization_phi}
 \end{equation}
 where $\omega_1 = i b  $, $\omega_2 =  i b^{-1}$ and $\omega =\frac{\omega_1 + \omega_2}{2}$.
 An overview on the properties of the hyperbolic gamma function can be found in appendix \ref{appendix:gamma_functions}.\\
 For the vector multiplet the result is similar and since it is in the adjoint representation of the gauge group it is given by
 \begin{equation}
 Z_{V}^{1-loop} = \prod_{1 \leq i < j \leq dim(G)} \frac{1}{\Gamma_h( \pm (\sigma_i - \sigma_j) )}
+\label{eqn:1-loop_localization_V}
 \end{equation}
 \\
 As a result, the partition function can be calculated by an integral on the Cartan subalgebra of the gauge group of products of hyperbolic gamma functions and exponential factors that are associate to Fayet-Iliopulos and Chern-Simons terms. 
@@ -191,21 +206,29 @@ As a result, the partition function can be calculated by an integral on the Cart
 
 \section{Reduction of the superconformal index to the partition function}
 
-The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$.
-However, in order to obtain the partition function, it is necessary to be in the limit where the fugacities go to one. 
-Their correct parametrization as function of the radius $r$ of $S^1$ is the following
+The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$  \cite{Gadde:2011ia} \cite{Dolan:2011rp}.\\
+A heuristic argument to support this claim is that the superconformal index receives contributions only from BPS states in four dimensions which are in one-to-one correspondence with three dimensional states with non zero eigenvalue of the operators appearing in \eqref{eqn:localization_determinant_expression}.\\
+Moreover, the BPS condition in four dimension once it is dimensionally reduced to three dimensions is equivalent to the saddle point conditions of the partition function \cite{Agarwal:2012hs}.\\
+In order to obtain the partition function, it is necessary that all the fugacities appearing in the index approach flow to one.
+They must be parametrized as function of the radius $r$ of $S^1$
 \begin{equation}
 p= e^{2 \pi i r \omega_1} \quad q=e^{2 \pi i r \omega_2} \quad u_a = e^{2 \pi i r \mu_a } \quad z_i = e^{2 \pi i r \sigma_i}
+\label{eqn:fugacities_r_limit_real_masses}
 \end{equation}
-where $\mu_a$ are the real masses and $\sigma_i$ is the scalar in the vector multiplet.\\
+where $\mu_a$ are the real masses and $\sigma_i$ is the scalar in the vector multiplet.
+\\
 Since the superconformal index is written in terms of elliptic gamma functions, we can use the following identity \cite{vanDeBult:2007} to perform the limit $r \rightarrow 0$ 
 \begin{equation}
-\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 \pi i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \sim 
+\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 \pi i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \,  \sim \,
  e^{\frac{ - i \pi^2 }{6  r \omega_1 \omega_2 } ( z - \omega)} 
  \Gamma_h ( z ; \omega_1 , \omega_2 )
+ \label{eqn:elliptic_to_hyperbolic_vdbult}
 \end{equation}
-
-
+Using this formula, we can reduce every elliptic gamma function in the index to a hyperbolic gamma function, which is the building block of the partition function in three dimension.
+The parametrization of the fugacities in \eqref{eqn:fugacities_r_limit_real_masses} ensures that the arguments of the hyperbolic gamma functions obtained using this identity match the expressions present in the 1-loop corrections \cite{Dolan:2011rp} that we introduced in \eqref{eqn:1-loop_localization_phi} and \eqref{eqn:1-loop_localization_V}.\\
+Applying the formula for every factor in the index we obtain the expression for the partition function in three dimension multiplied by a divergent prefactor, which is given by the product of the exponential factors in \eqref{eqn:elliptic_to_hyperbolic_vdbult} for every field.\\
+It can be shown \cite{Aharony:2013dha} that this prefactor is proportional to the $U(1)_R$-gravity-gravity and flavour-gravity-gravity anomalies which coincide for dual theories.
+As a result, this factor can be removed without problems since we are considering the reduction of the index  for dual theories. 
 
 
 
