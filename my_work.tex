@@ -1,0 +1,112 @@
+%!TEX root = tesi.tex
+
+
+\chapter{Dimensional reduction of \\ Kutasov-Schwimmer duality}
+
+The scope of this chapter is to provide an independent check of the results present in literature regarding Kim-Park duality for $SU(N_c)$ gauge group.\\
+We will reduce Kutasov-Schwimmer duality in three dimensions first by calculating the superconformal index in four dimensions and then reducing it to the three dimensional partition function.
+We can see by the charge assignement of the fields that the partition functions obtained with this method feature an $\eta$ superpotential, which breaks the symmetries that are anomalous in four dimensions.\\
+Since we are interested in a truly three dimensional duality we will get rid of the $\eta$ superpotential in the same way we did in field theory i.e. by a suitable real mass assignment.\\
+In this way, we can provide an independent and more solid proof for the results obtained in \cite{Nii:2014jsa}.
+
+
+\section{Electric theory}
+The electric theory was introduced in section \ref{sec:kutasov_duality4d} and we report the charge table in order to fix our notation.
+\begin{equation}
+\begin{array}{| c | c | c c c l | }
+\hline
+ & SU(N_c) &SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
+\hline
+Q & N_c&N_F & 1   &  1  & R_Q =  1 - 
+R_X %\frac{2}{k+1}
+ \frac{N_c}{N_f}  \\
+\tilde{Q} & \overbar{N_c} &  1 & \overbar{ N_F}   & -1   &   R_Q = 1 -
+ R_X %\frac{2}{k+1}
+  \frac{N_c}{N_f}    \\
+X & N_c^2-1 & 1   & 1    & 0   &  R_X = \frac{2}{k+1} \\
+\hline
+\end{array}
+\centering
+%\caption{Charges for the electric theory}
+%\label{table:charge_table_el_ks_4d}
+\end{equation}
+The expression for the superconformal index on \emph{single particle states} can be easily calculated with equations \eqref{eqn:superconforma_index_chiral} and \eqref{eqn:superconformal_index_vector}
+\begin{equation}
+% r = R_Q s = R_X / 2
+\begin{aligned}
+ & i_E (p,q,v, y,\tilde y ,z) = \\ 
+ & 
+  -\left({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
+\left((p q)^{\frac{R_X}{2}}- (p q)^{1-\frac{R_X}{2}}\right)
+\right) \left( p_{N_c}( z)\, p_{N_c}(z^{-1})-1\right ) \\ 
+&
+\begin{aligned}
+&
++{1\over (1-p)(1-q)}
+\bigg(
+&&(p q)^{{1\over 2}R_Q} \, v \, p_{N_f}(y)\, p_{N_c}(z)
+- (p q)^{1- {1\over 2}R_Q} \, {1 \over v}\, p_{{N_f}}(y^{-1})\, p_{{N_c}}(z^{-1}) \\
+%\qquad\qquad\qquad\qquad
+&
+ && +
+(p q)^{{1\over 2}R_Q}\, {1\over v}\, p_{{N_f}}({\tilde y}\,) \, p_{{N_c}}(z^{-1})
+- (p q)^{1- {1\over 2}R_Q} \, v\, p_{N_f}({\tilde y}^{-1})\, p_{N_c}(z)\bigg) \\
+\end{aligned}
+\end{aligned}\label{eqn:superconf_index_electric}
+\end{equation}
+where $ p,q$ are defined as in the previous chapters and the other fugacities are associated to the other symmetries by
+\begin{equation}
+v \rightarrow U(1)_B \quad y \rightarrow SU(N_F)_L \quad \tilde{y} \rightarrow SU(N_F)_R \quad z \rightarrow SU(N_c) 
+\end{equation}
+In \eqref{eqn:superconf_index_electric} we have written explicitly the character for the adjoint and the (anti) fundamental representations of $SU(N)$ which are given by \
+\begin{gather}
+%\begin{aligned}
+ \chi_{adj}(z) = p_{N}( z)\, p_{N}(z^{-1})-1 \quad \chi_{N}(y) = p_{N}(y) \quad \chi_{\overbar{N}}(\tilde{y}) = p_{N}(\tilde{y}^{-1}) \\
+ p_{N}(x) = \sum_{i =1}^{N} x_i \qquad p_{N}(x) = \sum_{i =1}^{N} \frac{1}{x_i}
+%\end{aligned}
+\end{gather}
+Moreover, we have the following constraints on the fugacities, since they are in the Cartan subgroup of $SU(N_c)$ or $SU(N_f)$
+\begin{equation}
+\prod_i^{N_c} z_i = 1 \qquad \prod_i^{N_f} y_i = 1 \qquad \prod_i^{N_f} \tilde{y}_i = 1   
+\end{equation}
+If we use the definition of the polynomials $p_N(x)$ we obtain
+\begin{equation}
+\begin{aligned}
+ & i_E (p,q,v, y,\tilde y ,z) = \\ 
+ & 
+  -\left({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
+\left((p q)^{\frac{R_X}{2}}- (p q)^{1-\frac{R_X}{2}}\right)
+\right) \left( \sum_{1\leq i,j \leq N_c} \frac{z_i}{z_j}-1\right ) \\ 
+&
+\begin{aligned}
+&
++{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
+\bigg(
+&&(p q)^{{1\over 2}R_Q} \, v \, y_i \, (z_j)
+- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
+%\qquad\qquad\qquad\qquad
+&
+ && +
+(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_i \,z_j^{-1}
+- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_i}^{-1}\, z_j\bigg) \\
+\end{aligned}
+\end{aligned}
+\end{equation}
+Since the index is given by the sum of different contributions, we can take the Plethystic exponential of every contributions and multiply them together in order to obtain the complete index. 
+
+
+
+The complete calculation can be found in appendix \ref{appendix:index_electric}.\\
+The contribution to the index from the vector field is
+\begin{equation}
+
+\end{equation}
+
+
+
+
+
+
+
+\section{Magnetic theory}
+
