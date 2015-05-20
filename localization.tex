@@ -1,10 +1,9 @@
 %!TEX root = tesi.tex
 
 
-\chapter{Superconformal index and partition functions}
+\chapter{Superconformal index and \\ partition functions}
 
-In this chapter we will introduce the superconformal index in four dimensions and we will describe how it can be used in order to obtain the expression of partition functions in three dimensions.\\
-{\color{red}{ \LARGE Devo Aggiunger qualcosa}}
+%In this chapter we will introduce the superconformal index in four dimensions and we will describe how it can be used in order to obtain the expression of partition functions in three dimensions.\\
 
 
 \section{Superconformal index}
@@ -95,7 +94,7 @@ x_2  & = \sin \theta \cos \chi \\
 x_3  & = \sin \theta \sin \chi 
 \end{align}
 we obtain the metric of the squashed sphere with squashing parameter 
-$b = \frac{l}{\bar{l}}$
+$b = l/\bar{l}$
 \begin{align}
  d s^2 = f(\theta)^2 d \,theta^2 + l^2 \cos^2 \theta d \phi ^2 + \bar{l}^2 \sin^2 \theta d \chi^2 \\
 \hbox{with} \quad f( \theta) = \sqrt{ l^2 \sin^2 \theta + \bar{l}^2 \cos^2 \theta}
@@ -180,7 +179,7 @@ The saddle point conditions for the other fields set their value on the saddle p
 The partition function receives contribution from the path integral only at one-loop and it can be computed exactly.
 The one-loop term is given by a determinant of Laplace and Dirac operators for every field appearing in the lagrangian.
 \begin{equation}
-Z \sim \int [ d \sigma] \; e^{S_{saddle(\sigma)}} \prod_i \frac{ \Delta_{\psi_i}}{\Delta_{\phi_i}}
+Z \sim \int [ d \sigma] \; e^{S_{saddle}(\sigma)} \, \frac{ \Delta_{\lambda}}{\Delta_{A_{\mu}}} \prod_i \frac{ \Delta_{\psi_i}}{\Delta_{\phi_i}}
 \label{eqn:localization_determinant_expression}
 \end{equation}
 The partition function can be written 
@@ -208,8 +207,8 @@ As a result, the partition function can be calculated by an integral on the Cart
 
 The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$  \cite{Gadde:2011ia} \cite{Dolan:2011rp}.\\
 A heuristic argument to support this claim is that the superconformal index receives contributions only from BPS states in four dimensions which are in one-to-one correspondence with three dimensional states with non zero eigenvalue of the operators appearing in \eqref{eqn:localization_determinant_expression}.\\
-Moreover, the BPS condition in four dimension once it is dimensionally reduced to three dimensions is equivalent to the saddle point conditions of the partition function \cite{Agarwal:2012hs}.\\
-In order to obtain the partition function, it is necessary that all the fugacities appearing in the index approach flow to one.
+Moreover, oncethe BPS condition in four dimensions is dimensionally reduced to three dimensions, it is equivalent to the saddle point conditions of the partition function \cite{Agarwal:2012hs}.\\
+In order to obtain the partition function, it is necessary that all the fugacities appearing in the index flow to one \cite{Dolan:2011rp}.
 They must be parametrized as function of the radius $r$ of $S^1$
 \begin{equation}
 p= e^{2 \pi i r \omega_1} \quad q=e^{2 \pi i r \omega_2} \quad u_a = e^{2 \pi i r \mu_a } \quad z_i = e^{2 \pi i r \sigma_i}
@@ -221,6 +220,7 @@ Since the superconformal index is written in terms of elliptic gamma functions, 
 \begin{equation}
 \lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 \pi i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \,  \sim \,
  e^{\frac{ - i \pi^2 }{6  r \omega_1 \omega_2 } ( z - \omega)} 
+ \,
  \Gamma_h ( z ; \omega_1 , \omega_2 )
  \label{eqn:elliptic_to_hyperbolic_vdbult}
 \end{equation}
@@ -228,10 +228,13 @@ Using this formula, we can reduce every elliptic gamma function in the index to 
 The parametrization of the fugacities in \eqref{eqn:fugacities_r_limit_real_masses} ensures that the arguments of the hyperbolic gamma functions obtained using this identity match the expressions present in the 1-loop corrections \cite{Dolan:2011rp} that we introduced in \eqref{eqn:1-loop_localization_phi} and \eqref{eqn:1-loop_localization_V}.\\
 Applying the formula for every factor in the index we obtain the expression for the partition function in three dimension multiplied by a divergent prefactor, which is given by the product of the exponential factors in \eqref{eqn:elliptic_to_hyperbolic_vdbult} for every field.\\
 It can be shown \cite{Aharony:2013dha} that this prefactor is proportional to the $U(1)_R$-gravity-gravity and flavour-gravity-gravity anomalies which coincide for dual theories.
-As a result, this factor can be removed without problems since we are considering the reduction of the index  for dual theories. 
-
-
-
+As a result, this factor can be removed without problems since we are considering the reduction of the index for dual theories.\\
+The advantage of obtaining the partition functions in this way is that the equality of the partition functions for dual theories is guaranteed by the matching of the corresponding four dimensional indices.
+The matching of the indices for dual theories is supported by mathematical identities  between integrals of elliptic gamma functions \cite{rains309252transformations}.
+\\
+Reducing the indices to three dimensions we obtained expressions involving integrals of hyperbolic gamma functions. 
+Mathematical identities that support the equality of the partition functions \cite{vanDeBult:2007} are not known for every three dimensional duality.
+In any case, the reduction process from four dimensions guarantees that the partition functions are identical.
 
 
 
