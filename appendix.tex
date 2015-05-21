@@ -332,11 +332,108 @@ It is called Fayet-Iliopulos term and can be present for every ideal $A$ of the 
 
 \chapter{Hypergeometric gamma \\ functions}
 \label{appendix:gamma_functions}
+\section{Elliptic hypergeometric functions}
+The elliptic functions are defined by
+\begin{equation} 
+	\begin{aligned}
+	   \Gamma_e (y;p,q) &= \prod_{j,k \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
+	  \quad \theta(z;p) &= \prod_{j \geq 0 } (1- z p^j) ( 1- z^{-1}p^{j+1}) \\
+	  (x;p) &= \prod_{j \geq 0} ( 1- xp^j)
+  	\end{aligned}
+\label{eqn:ellptic_hyper_definitions}
+\end{equation}
+
+\subsection{Identities for the vector field}
+The single particle index for the vector field reads
+\begin{equation}
+   i_E^V(p^n,q^n) \, = \, - \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)
+\end{equation}
+The following identities are useful to calculate the Plethystic exponential for the vector field
+\begin{gather}
+  \exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg)  = (p;p) (q;q) 
+ \label{eqn:elliptic_index_vector_zero_modes_identity}
+ \\
+\begin{aligned}
+\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg) \bigg( z^n + z^{-n} \bigg) \,& =
+\,  \frac{ \theta ( z;p) \theta (z;q) }{ 1-z^2 } \\
+& =  \, \frac{1}{ ( 1 - z ) ( 1 - z^{-1}) \Gamma_e( z;p,q) \Gamma_e( z^{-1}; p,q)} \,
+\label{eqn:elliptic_index_vector_adjoint}
+\end{aligned}
+\end{gather}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 \chapter{Superconformal index for the electric theory}
 \label{appendix:index_electric}
+
+\section{Contribution from the vector field}
+The Plethystic exponential for the index of the vector \eqref{eqn:sci_electric_vector} is given by
+\begin{equation}
+\begin{aligned}
+I_E^V(p,q,z) = &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,z^n) \bigg) \overset{def}{=} \\
+ &\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg(\bigg( \sum_{ 1 \leq i,j \leq N_c}  {z_i^n \over z_j^n}  \bigg)- 1 \bigg) \bigg) \, = \\
+ =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( \sum_{i=1}^{N_c} 1 \bigg)- 1 \bigg) \bigg) \, = \\
+  =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( N_c \bigg)- 1 \bigg) \bigg) \, = \\
+    =&
+    \bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) \bigg)\bigg] \\
+	&    \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( N_c - 1 \bigg) \bigg) \, = 
+\\
+=& \bigg[\prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)   {z_i^n \over z_j^n}\bigg) \bigg] \\
+&\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \big( {p^n \over 1-p^n} + {q^n \over 1-q^n} \big) \bigg) \bigg] ^{N_c-1}
+\end{aligned}
+\end{equation}
+which can be rewritten more compactly as
+\begin{equation}
+\bigg[\prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  {z_i^n \over z_j^n}\bigg) \bigg] \,
+\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \,  i_E^V(p^n,q^n) \bigg) \bigg] ^{N_c-1}
+\label{eqn:index_vector_compact}
+\end{equation}
+We can apply directly the mathematical identity \eqref{eqn:elliptic_index_vector_zero_modes_identity} to the last term obtaining
+$$
+	(p;p)^{N_c-1} ( q;q)^{N_c-1}
+$$
+Before applying the identity \eqref{eqn:elliptic_index_vector_adjoint} to the first term of  \eqref{eqn:index_vector_compact} we need to note that 
+$$
+ \prod_{ \overset{ 1 \leq i,j \leq N_c}{ i\neq j }} {z_i^n \over z_j^n} \,  = \,
+  \prod_{ 1 \leq i < j \leq N_c}\bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}   \bigg)
+ $$
+Using \eqref{eqn:elliptic_index_vector_adjoint} we obtain
+\begin{align*}
+\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg) \, =\\
+\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg)
+\\
+ \prod_{ 1 \leq i < j \leq N_c}   \, \frac{ 1 } { \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  }
+\end{align*}
+Consider both terms, the full contribution to the index is given by  \begin{align*}
+& (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  } \\
+& (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \frac{1}{ \Delta(z) \Delta (z^{-1})} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)}
+\end{align*}
+
+\section{Contribution from the adjoint chiral}
+
 
 
 

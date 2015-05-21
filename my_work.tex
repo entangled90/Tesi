@@ -30,6 +30,7 @@ X & N_c^2-1 & 1   & 1    & 0   &  R_X = \frac{2}{k+1} \\
 %\caption{Charges for the electric theory}
 %\label{table:charge_table_el_ks_4d}
 \end{equation}
+\subsection{Calculation of the index}
 The expression for the superconformal index on \emph{single particle states} can be easily calculated with equations \eqref{eqn:superconforma_index_chiral} and \eqref{eqn:superconformal_index_vector}
 \begin{equation}
 % r = R_Q s = R_X / 2
@@ -92,17 +93,44 @@ If we use the definition of the polynomials $p_N(x)$ we obtain
 \end{aligned}
 \end{aligned}
 \end{equation}
-Since the index is given by the sum of different contributions, we can take the Plethystic exponential of every contributions and multiply them together in order to obtain the complete index. 
-
-
-
-The complete calculation can be found in appendix \ref{appendix:index_electric}.\\
-The contribution to the index from the vector field is
+The index is given by the sum of contributions for every field in the theory
 \begin{equation}
-
+i_E(p,q,v,y,\tilde{y},z) = i_E^V(p,q,z) + i_E^{X} (p,q,z) + i_E^{\Phi}(p,q,v,y,z) + i_E^{\overbar{\Phi}} (p,q,v,\tilde{y},z)
 \end{equation}
-
-
+and the complete index is given by the Plethystic exponential
+\begin{equation}
+\begin{aligned}
+I_E(p,q,v,y,\tilde{y}) = & \int_{SU(N_c)} d \mu(z) \; \exp \left( \sum_{n=1}^{\infty} \frac{1}{n} i_E(p^n,q^n,v^n,y^n,\tilde{y}^n,z^n) \right) \\
+= & \int_{SU(N_c)} d \mu (z) \prod_{fields \; F } I_E^F(p,q,v,y,\tilde{y},z) 
+\end{aligned}
+\end{equation}
+where $I_E^F$ is given by the Plethystic exponential for the field F.\\
+Since the fugacity $z$ is in the maximal torus of the gauge group, we can restrict the integral to $T^{N_c -1}$.
+\begin{equation}
+  \int_{SU(N_c)}\, d \mu(z) \, f(z) = {1 \over N_c!} \int_{T^{N_c-1}} \prod_{i=1}^{N_c }
+  { d z_i \over { 2 \pi i z_i} } \Delta (z) \Delta (z^{-1}) f(z) \bigg \rvert_{\prod_{i=1}^{N_c} z_i = 1}
+ \end{equation}
+ where $\Delta (z) $ is the Vandermonde determinant:
+ $$
+ \Delta (z ) \, = \, \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c} ( z_i - z_j) \, = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg) \, z_j = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg)
+ $$
+The last equality holds since $ \prod_{i=1}^{N_c} z_i = 1$.\\
+ 
+We will calculate the superconformal index by considering separately the contributions from the various fields.
+The complete calculations for every field can be found in appendix \ref{appendix:index_electric}.\\
+\paragraph{Vector field}
+The vector field contributes to the index with
+\begin{equation}
+\begin{aligned} 
+I_E^V(p,q,z) = &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,z^n) \bigg) = \\
+ &\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg(\bigg( \sum_{ 1 \leq i,j \leq N_c}  {z_i^n \over z_j^n}  \bigg)- 1 \bigg) \bigg) \, = \\
+ = & (p;p)^{N_c-1} ( q;q)^{N_c-1}  \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  } \\
+ =& (p;p)^{N_c-1} ( q;q)^{N_c-1}  \prod_{ 1 \leq i < j \leq N_c}  \frac{1}{ \Delta(z) \Delta (z^{-1})} \,  \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)}
+ \end{aligned}
+ \label{eqn:sci_electric_vector}
+ \end{equation}
+ Note there is a term that cancels the Vandermonde determinant coming from the integration measure. This feature is not exclusive to $SU(N)$ gauge group but happens also for $SP(2N),SO(N)$ groups.\\
+\paragraph{Adjoint matter}
 
 
 
