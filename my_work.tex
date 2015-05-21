@@ -36,14 +36,13 @@ The expression for the superconformal index on \emph{single particle states} can
 % r = R_Q s = R_X / 2
 \begin{aligned}
  & i_E (p,q,v, y,\tilde y ,z) = \\ 
- & 
-  -\left({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
+ -& \left({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)}
 \left((p q)^{\frac{R_X}{2}}- (p q)^{1-\frac{R_X}{2}}\right)
 \right) \left( p_{N_c}( z)\, p_{N_c}(z^{-1})-1\right ) \\ 
 &
 \begin{aligned}
-&
-+{1\over (1-p)(1-q)}
++&
+{1\over (1-p)(1-q)}
 \bigg(
 &&(p q)^{{1\over 2}R_Q} \, v \, p_{N_f}(y)\, p_{N_c}(z)
 - (p q)^{1- {1\over 2}R_Q} \, {1 \over v}\, p_{{N_f}}(y^{-1})\, p_{{N_c}}(z^{-1}) \\
@@ -129,9 +128,19 @@ I_E^V(p,q,z) = &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,
  \end{aligned}
  \label{eqn:sci_electric_vector}
  \end{equation}
- Note there is a term that cancels the Vandermonde determinant coming from the integration measure. This feature is not exclusive to $SU(N)$ gauge group but happens also for $SP(2N),SO(N)$ groups.\\
+ Note there is a term that cancels the Vandermonde determinant coming from the integration measure. This feature is not exclusive to $SU(N)$ gauge group but happens also for $SP(2N) $ and $SO(N)$ groups.\\
 \paragraph{Adjoint matter}
+The single particle index for this field reads
+\begin{equation}
+	i_E^{X}(p,q,z) = {1 \over (1-p)(1-q)}
+	\left((p\,q)^{\frac{R_X}{2}}- (p\,q)^{1-\frac{R_X}{2}}\right) \left( \left(  \sum_{ 1 \leq i,j \leq N_c}  {z_i\over z_j}  \right)- 1 \right)
+\end{equation}
+which results in
+\begin{equation}
+ I_E^X (p,q,z) = \Gamma_e \left ( (pq)^\frac{R_X}{2};p,q \right)^{N_c-1} \displaystyle \prod_{1\leq i<j\leq N_c} \Gamma_e \left( (pq)^\frac{R_X}{2} {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} {z_j \over z_i}\right)
+\end{equation}
 
+\paragraph{Quarks}
 
 
 

@@ -346,7 +346,7 @@ The elliptic functions are defined by
 \subsection{Identities for the vector field}
 The single particle index for the vector field reads
 \begin{equation}
-   i_E^V(p^n,q^n) \, = \, - \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)
+   i_E^V(p^n,q^n) \, = \, - \left( {p^n \over 1-p^n} + {q^n \over 1-q^n} \right)
 \end{equation}
 The following identities are useful to calculate the Plethystic exponential for the vector field
 \begin{gather}
@@ -360,6 +360,12 @@ The following identities are useful to calculate the Plethystic exponential for 
 \label{eqn:elliptic_index_vector_adjoint}
 \end{aligned}
 \end{gather}
+While the following is used for chiral fields
+\begin{equation}
+\Gamma_e(z;p,q) \, = \, \exp \bigg( \sum_{n=1}^{\infty} {1 \over n }
+ \frac{ z^n - \big( {pq \over z} \big)^n }{(1-p^n) ( 1-q^n)} \bigg)
+ \label{eqn:elliptic_gamma_chiral_identity}
+\end{equation}
 
 
 
@@ -433,7 +439,46 @@ Consider both terms, the full contribution to the index is given by  \begin{alig
 \end{align*}
 
 \section{Contribution from the adjoint chiral}
+The single particle index of the adjoint matter is
+\begin{equation}
+	i_E^{X}(p,q,z) = {1 \over (1-p)(1-q)}
+	\left((p\,q)^{\frac{R_X}{2}}- (p\,q)^{1-\frac{R_X}{2}}\right) \left( \left(  \sum_{ 1 \leq i,j \leq N_c}  {z_i\over z_j}  \right)- 1 \right)
+\end{equation}
+similarly to the vector field index, we separe the terms depending on the presence of $z_i$
 
+\begin{multline}
+I_E^X(p,q,z) = 
+\left[ \exp \left( (N_c -1) \sum_{n=1}^{\infty} {1 \over n}  \frac{ (pq)^{{\frac{R_X}{2}}n} - (pq)^{\left(1-{\frac{R_X}{2}} \right ) n}}{(1-p^n)(1-q^n)} \right) \right]
+  \\
+\left[  \prod_{ 1 \leq i < j \leq N_c} 
+\exp \left(\sum_{n=1}^{\infty} {1 \over n}
+\left ((pq)^{\frac{R_X}{2} n} - (pq)^{\left(1-\frac{R_X}{2} \right)n} \right) \left ( {z_i^n\over z_j^n} + { z_j^n \over z_i^n} \right) \right)
+\right]
+\end{multline}
+These terms can be written in terms of elliptic gamma functions using \eqref{eqn:elliptic_gamma_chiral_identity}.
+In order to use it on the first factor, we define $ y= (pq)^{\frac{R_X}{2}}$ and we find
+\begin{multline}
+\left[ \exp \left(  \sum_{n=1}^{\infty} {1 \over n}  \frac{ (y)^{n} - ({pq \over y})^{n}}{(1-p^n)(1-q^n)} \right)\right]^{(N_c-1)}
+=
+\Gamma_e ( (pq)^{\frac{R_X}{2}}; p,q)^{(N_c-1)}
+\end{multline}
+The second term is a little more involved since we have to rearrange the terms in the numerator of the fraction
+\begin{multline}
+ \left ( \left (p q \right)^{\frac{R_X}{2} n} - (pq)^{\left( 1-\frac{R_X}{2} \right) n} \right) \left ( {z_i^n\over z_j^n} + { z_j^n \over z_i^n} \right)  = \\
+ \left(  (pq)^{\frac{R_X}{2} n} {z_i^n\over z_j^n} - (pq)^{\left( 1-\frac{R_X}{2} \right) n}{ z_j^n \over z_i^n} \right)  + \left(  (pq)^{\frac{R_X}{2} n} { z_j^n \over z_i^n} - (pq)^{\left (1-\frac{R_X}{2} \right )n}{z_i^n\over z_j^n} \right)
+\end{multline}
+in order to apply \eqref{eqn:elliptic_gamma_chiral_identity} we need to perform the following change of variables 
+\begin{equation}
+	 y = (pq)^{\frac{R_X}{2}} {z_i \over z_j} \quad y'= (pq)^{\frac{R_X}{2}} {z_j \over z_i}
+\end{equation}
+which results in the expression
+\begin{equation}
+\prod_{1\leq i<j\leq N_c} \Gamma_e \bigg( (pq)^\frac{R_X}{2} {z_i \over z_j} \bigg) \Gamma_e \bigg( (pq)^\frac{R_X}{2} {z_j \over z_i}\bigg)
+\end{equation}
+Combining the two factors, the contribution from the adjoint matter is 
+\begin{equation}
+\Gamma_e( (pq)^\frac{R_X}{2};p,q)^{N_c-1} \displaystyle \prod_{1\leq i<j\leq N_c} {\Gamma_e \bigg( (pq)^\frac{R_X}{2} {z_i \over z_j} \bigg) \Gamma_e \bigg( (pq)^s {z_j \over z_i}\bigg)}
+\end{equation}
 
 
 
