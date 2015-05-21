@@ -158,13 +158,42 @@ Their contribution can be written as
 I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v  \,  y_i \,  z_j \right)
 \Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_i}^{-1}\,  z_j^{-1}\right)
 \end{equation}
+\subsubsection{Expression of the superconformal index }
+The formula for the superconformal index can be obtained by multiplying all the contributions calculated above and reads
+\begin{multline}
+I_{E} ( p,q,v,y,\tilde y ) = 
+  \frac{ (p;p)^{N_c-1} ( q;q)^{N_c-1} }{ N_c !} \, \Gamma_e \left(   (pq)^\frac{R_X}{2};p,q\right)^{N_c-1} \\
+\int_{T^{N_c-1}} \left( \prod_{i=1}^{N_c } { d z_i \over { 2 \pi i z_i} } \right) \delta \left( \prod_{i=1}^{N_c} z_i - 1 \right)
+\prod_{ 1 \leq i < j \leq N_c} \frac{ \Gamma_e \left( (pq)^\frac{R_X}{2} {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} {z_j \over z_i} \right) }{ \Gamma_e \left( {z_i \over z_j};p,q \right) \Gamma_e \left({z_j \over z_i}; p,q \right)} \\
+ \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v \,  y_i \,  z_j \right)
+\Gamma_e \left( (pq)^{R_Q \over 2} v^{-1} \, {\tilde y_i}^{-1}\,  z_j^{-1}\right)
+\end{multline}
+
+{\Huge PARLA DELLE BALANCING CONDITIONS!}
+\subsubsection{Reduction of the superconformal index to the partition function}
+We can now proceed to reduce the index to the partition function on the squashed three sphere by appliying the procedure we introduced in the previous chapter. 
+We need to parametrize the fugacities as
+\begin{gather}
+p = e^{ 2 \pi i r  \omega_1 } \, \, \,  q = e^{ 2 \pi i r \omega_2 } \,  \, \, z_i = e^{ 2 \pi i r \sigma_i } \\
+\, \, y_a = e^{ 2 \pi i r m_a } \, \,  \,
+y_a = e^{ 2 \pi i r  {\tilde m_a} } \, \, \,  v = e^{ 2 \pi i r m_B}
+\label{eqn:fugacities_redefined_el}
+\end{gather}
+By using the identity \eqref{eqn:elliptic_to_hyperbolic_vdbult} on every term we can obtain the partition function as an integral of products of hyperbolic gamma functions.
+
+\subparagraph{Adjoint matter}
+
+\begin{multline}
+ \Gamma_e \left((pq)^{\frac{\Delta_X}{2}} \right)^{N_c -1} 
+\Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( { z_i \over z_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( { z_j \over z_i} \right) \right) \sim \\
+
+ \exp\bigg({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\bigg)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i)
+
+
+\end{multline}
 
 
 
-
-
-
-
-
+\newpage
 \section{Magnetic theory}
 
