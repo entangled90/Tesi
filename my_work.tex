@@ -82,7 +82,7 @@ If we use the definition of the polynomials $p_N(x)$ we obtain
 &
 +{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
 \bigg(
-&&(p q)^{{1\over 2}R_Q} \, v \, y_i \, (z_j)
+&&(p q)^{{1\over 2}R_Q} \, v \, y_i \, z_j
 - (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
 %\qquad\qquad\qquad\qquad
 &
@@ -94,7 +94,7 @@ If we use the definition of the polynomials $p_N(x)$ we obtain
 \end{equation}
 The index is given by the sum of contributions for every field in the theory
 \begin{equation}
-i_E(p,q,v,y,\tilde{y},z) = i_E^V(p,q,z) + i_E^{X} (p,q,z) + i_E^{\Phi}(p,q,v,y,z) + i_E^{\overbar{\Phi}} (p,q,v,\tilde{y},z)
+i_E(p,q,v,y,\tilde{y},z) = i_E^V(p,q,z) + i_E^{X} (p,q,z) + i_E^{Q,\tilde{Q}}(p,q,v,y,z)
 \end{equation}
 and the complete index is given by the Plethystic exponential
 \begin{equation}
@@ -113,7 +113,7 @@ Since the fugacity $z$ is in the maximal torus of the gauge group, we can restri
  $$
  \Delta (z ) \, = \, \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c} ( z_i - z_j) \, = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg) \, z_j = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg)
  $$
-The last equality holds since $ \prod_{i=1}^{N_c} z_i = 1$.\\
+The last equality holds since $ \prod_{i=1}^{N_c} z_i = 1$.
  
 We will calculate the superconformal index by considering separately the contributions from the various fields.
 The complete calculations for every field can be found in appendix \ref{appendix:index_electric}.\\
@@ -137,10 +137,31 @@ The single particle index for this field reads
 \end{equation}
 which results in
 \begin{equation}
- I_E^X (p,q,z) = \Gamma_e \left ( (pq)^\frac{R_X}{2};p,q \right)^{N_c-1} \displaystyle \prod_{1\leq i<j\leq N_c} \Gamma_e \left( (pq)^\frac{R_X}{2} {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} {z_j \over z_i}\right)
+ I_E^X (p,q,z) = \Gamma_e \left ( (pq)^\frac{R_X}{2};p,q \right)^{N_c-1} \displaystyle \prod_{1\leq i<j\leq N_c} \Gamma_e \left( (pq)^\frac{R_X}{2} \,  {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} \,  {z_j \over z_i}\right)
 \end{equation}
 
 \paragraph{Quarks}
+The quarks in the (anti) fundamental representation have a single particle index of the form
+\begin{multline}
+i_E^{Q,\tilde{Q}} (p,q,v,y,\tilde{y})=\\ 
+{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
+\bigg(
+(p q)^{{1\over 2}R_Q} \, v \, y_i \, z_j
+- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
+ + 
+(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_i \,z_j^{-1}
+- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_i}^{-1}\, z_j\bigg) 
+\end{multline}
+where $Q$ and $\tilde{Q} $ generate the first and second line of the index, respectively.\\
+Their contribution can be written as
+\begin{equation}
+I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v  \,  y_i \,  z_j \right)
+\Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_i}^{-1}\,  z_j^{-1}\right)
+\end{equation}
+
+
+
+
 
 
 

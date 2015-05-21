@@ -438,7 +438,10 @@ Consider both terms, the full contribution to the index is given by  \begin{alig
 & (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \frac{1}{ \Delta(z) \Delta (z^{-1})} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)}
 \end{align*}
 
-\section{Contribution from the adjoint chiral}
+
+
+
+\section{Contribution from the adjoint matter}
 The single particle index of the adjoint matter is
 \begin{equation}
 	i_E^{X}(p,q,z) = {1 \over (1-p)(1-q)}
@@ -479,6 +482,40 @@ Combining the two factors, the contribution from the adjoint matter is
 \begin{equation}
 \Gamma_e( (pq)^\frac{R_X}{2};p,q)^{N_c-1} \displaystyle \prod_{1\leq i<j\leq N_c} {\Gamma_e \bigg( (pq)^\frac{R_X}{2} {z_i \over z_j} \bigg) \Gamma_e \bigg( (pq)^s {z_j \over z_i}\bigg)}
 \end{equation}
+
+\section{Contribution from the quarks}
+
+The single particle index for the quarks reads
+\begin{multline}
+i_E^{Q,\tilde{Q}} (p,q,v,y,\tilde{y})=\\ 
+{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
+\bigg(
+(p q)^{{1\over 2}R_Q} \, v \, y_i \, z_j
+- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
+ + 
+(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_i \,z_j^{-1}
+- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_i}^{-1}\, z_j\bigg) 
+\end{multline}
+which can be simplified by the following transformations
+\begin{equation}
+(pq)^{\frac{R_Q}{2}} \, v \, y z_j \rightarrow  y_{i,j} \qquad 
+\left( (pq)^{- \frac{R_Q}{2}} \, v \, y z_j \right)^{-1}\rightarrow  \tilde{y}_{i,j}
+\end{equation}
+which results in
+\begin{multline}
+I_E^{Q,\tilde{Q}}(p,q,y,\tilde{y})  =
+\prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \exp \bigg[ \sum_{n=1}^{\infty} - {1 \over n} \, {1 \over (1-p^n)( 1-q^n)}
+\\
+\left( \bigg( (y_i z_j)^n - \big({ pq \over y_i z_j}\big)^n \bigg) + \left(  {1 \over  (\tilde{y_i} z_j)^n } - \big( { pq \tilde y_i z_j} \big)^n \right)  \right) \bigg]
+\end{multline}
+and using the identity \eqref{eqn:elliptic_gamma_chiral_identity} we obtain
+\begin{equation}
+I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v  \,  y_i \,  z_j \right)
+\Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_i}^{-1}\,  z_j^{-1}\right)
+\end{equation}
+
+
+
 
 
 
