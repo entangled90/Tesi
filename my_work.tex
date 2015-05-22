@@ -163,7 +163,7 @@ The formula for the superconformal index can be obtained by multiplying all the 
 \begin{multline}
 I_{E} ( p,q,v,y,\tilde y ) = 
   \frac{ (p;p)^{N_c-1} ( q;q)^{N_c-1} }{ N_c !} \, \Gamma_e \left(   (pq)^\frac{R_X}{2};p,q\right)^{N_c-1} \\
-\int_{T^{N_c-1}} \left( \prod_{i=1}^{N_c } { d z_i \over { 2 \pi i z_i} } \right) \delta \left( \prod_{i=1}^{N_c} z_i - 1 \right)
+\oint_{T^{N_c-1}} \left( \prod_{i=1}^{N_c } { d z_i \over { 2 \pi i z_i} } \right) \delta \left( \prod_{i=1}^{N_c} z_i - 1 \right)
 \prod_{ 1 \leq i < j \leq N_c} \frac{ \Gamma_e \left( (pq)^\frac{R_X}{2} {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} {z_j \over z_i} \right) }{ \Gamma_e \left( {z_i \over z_j};p,q \right) \Gamma_e \left({z_j \over z_i}; p,q \right)} \\
  \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v \,  y_i \,  z_j \right)
 \Gamma_e \left( (pq)^{R_Q \over 2} v^{-1} \, {\tilde y_i}^{-1}\,  z_j^{-1}\right)
@@ -179,6 +179,10 @@ p = e^{ 2 \pi i r  \omega_1 } \, \, \,  q = e^{ 2 \pi i r \omega_2 } \,  \, \, z
 y_a = e^{ 2 \pi i r  {\tilde m_a} } \, \, \,  v = e^{ 2 \pi i r m_B}
 \label{eqn:fugacities_redefined_el}
 \end{gather}
+and we have the following conditions on the real masses
+\begin{equation}
+\sum_a m_a =0 \qquad \sum_b m_b = 0 \qquad \sum_j \sigma_j = 0
+\end{equation}
 By using the identity \eqref{eqn:elliptic_to_hyperbolic_vdbult} on every term we can obtain the partition function as an integral of products of hyperbolic gamma functions.
 Explicit calculation can be found in appendix \ref{appendix:reduction_index_to_pf}.\\
 We will use the following notation for the hyperbolic gamma function
@@ -186,8 +190,8 @@ We will use the following notation for the hyperbolic gamma function
 \Gamma_h (z ; \omega_1 , \omega_2) = \Gamma_h(z) \qquad \Gamma_h ( u \pm z) = \Gamma_h( u + z) \Gamma_h( u - z)
 \end{equation}
 
-
 \paragraph{Vector field}
+\begin{comment}
 \begin{multline}
  \prod_{1 \leq i <j \leq N_c} 
   \Gamma_e\left(  {z_i \over z_j} \right)\Gamma_e\left(  {z_j \over z_i} \right) 
@@ -197,6 +201,18 @@ We will use the following notation for the hyperbolic gamma function
  \sim \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - N_c(N_c -1) \, \omega)}  \bigg)   \prod_{1 \leq i <j \leq N_c} 
 \, \Gamma_h ( \pm ( \sigma_i - \sigma_j)) 
  %\Gamma_h (  \sigma_j - \sigma_i)
+\end{multline}
+\end{comment}
+For the vector field in the adjoint representation we can use the identity \eqref{eqn:appendix_sl2z_theta} applied to $SU(N_c)$ gauge group
+\begin{multline}
+\lim_{r \rightarrow 0} \frac{ (p;p)^{N_c- 1}(q;q)^{N_c- 1} }{ N_c ! }
+\oint_{T^{N_c -1}} \prod_{j=1}^{N_c -1 } \frac{ d z_j}{2 \pi i z_j} \prod_{1 \leq i<j \leq N_c } \frac{1}{\Gamma_e( \frac{z_i}{z_j} )\Gamma_e( \frac{z_j}{z_i} )} \sim
+\\
+\sim 
+\exp \left(  
+- \frac{ i \pi \omega (N_c^2 -1)}{6 r \omega_1 \omega_2}
+\right)
+ \frac{1}{N_c !} \int \prod_{j=1}^{N_c -1 } \frac{d \sigma_j}{\sqrt{- \omega_1 \omega_2} } \prod_{1 \leq i<j \leq N_c }\frac{1}{\Gamma_h( \pm (\sigma_i - \sigma_j) }
 \end{multline}
 
 \paragraph{Adjoint matter}
@@ -218,14 +234,96 @@ We will use the following notation for the hyperbolic gamma function
 \Gamma_e\left(
 (pq)^{\frac{R_Q}{2} v y_a z_j }\right) 
 \Gamma_e\left(
-(pq)^{\frac{R_Q}{2} v^{-1} \tilde {y}_b^{-1} z_j^{-1} } \right)  = \\
-\sim \\
-=\, \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (R_Q - 1) + m_a - \tilde {m_b} )} \right)  \, \, \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b- \sigma_j)
+(pq)^{\frac{R_Q}{2} v^{-1} \tilde{y}_b^{-1} z_j^{-1} } \right)  = \\
+=\, \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega N_c N_f  (R_Q - 1) + N_c \sum_a m_a - N_c \sum_b \tilde {m_b} )} \right) \times  \, 
+\\
+\times
+\prod_{a,b}^{N_f} \prod_{j}^{N_c}
+ \, \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b- \sigma_j)
 \end{multline}
-Where the defined the real masses $\mu_a,\nu_b$
+Where we defined the real masses $\mu_a,\nu_b$
 \begin{equation}
  \mu_a = \omega \Delta + m_a + m_B  \quad  \nu_b = \omega \Delta - \tilde m_b - m_B
 \end{equation}
+
+\subsubsection{Divergent contribution}
+Summing up all the exponential terms from the previous limits we obtain
+\begin{multline}
+ \exp 
+ \biggl[
+ -\frac{i \pi\,  } {6 r \omega_1 \omega_2 }   
+ \biggl(
+ \omega \biggl(   (N_c^2 -1) +  (N_c^2 - 1) (\Delta_X -1) + \\ 
+   + 2  N_c N_f  (R_Q - 1) \biggr) 
+    + N_c \sum_a m_a - N_c \sum_b \tilde {m_b} \biggr)
+\biggr]
+\end{multline}
+which is compatible with the following general formula \cite{Aharony:2013dha}
+\begin{equation}
+ \exp 
+ \biggl[
+ -\frac{i \pi\,  \omega} {6 r \omega_1 \omega_2 }   
+ \biggl(
+ \omega \biggl(
+  |G| + \sum_{\alpha}(R_{ \alpha} -1 ) 
+  \biggr)
+   + \sum_a m_a \sum_{\alpha} e^{(\alpha)_a}
+ \biggr)
+\biggl]
+\end{equation}
+which is proportional to the gravitational anomaly \cite{Aharony:2013dha}
+which is identical between the electric and the magnetic theory.
+
+\subsubsection{Partition function}
+We can write down the formula for the partition function of the electric theory by putting al the pieces together and ignoring the divergente prefactor calculated previously.
+The partition function is then
+\begin{multline}
+Z_{el} ( \mu_a , \nu_b ) \; = 
+\; {1 \over N_c ! } \;
+\Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{N_c-1}
+\int
+\prod_{i=1}^{N_c} d \sigma_i \; \delta( \sum_i \sigma_i)  \\
+ \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}
+ \prod_{a,b}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b - \sigma_j)
+\end{multline}
+with 
+\begin{equation}
+ \mu_a = \omega \Delta + m_a + m_B  \quad  \nu_b = \omega \Delta - \tilde m_b - m_B
+\end{equation}
+Since we obtained the partition function by compactifying on $S^1$ we have the following condition on the real masses which is enforced by the $\eta$ superpotential
+\begin{equation}
+  { 1 \over 2 }\left(  \sum_a \mu_a + \nu_a  \right) = \omega \left( - N_c + N_c (1 - \Delta_X )  + N_f  \right)
+  \label{eqn:R-symm Anomaly}
+\end{equation}
+which in four dimension is equivalent to the condition that the R-symmetry is anomaly free.\\  
+
+\subsection{Flow to a duality withouth $\eta$ superpotential}
+With a suitable assignement of the real masses we can flow to a theory without $eta$ superpotential as we said before. 
+Following \eqref{eqn:real_mass_reduction_el} the gauge group breaks  $ SU(N_f+1)^2 \times U(1)_B \, \rightarrow \, SU(N_f)_L \times SU(N_f)_R \times U(1)_A \times U(1)_B$. 
+We will assign a large value to the mass $m$.
+The real masses are given by
+
+\begin{equation}
+\begin{aligned}
+\mu_a = 
+  \begin{cases}
+    \omega \, \Delta + m_a + m_A + m_B \qquad  &a = 1, \dotsc, N_f\\ 
+    \omega \, \Delta_M +  m - m_A N_f  + m_B \qquad  &a = N_f+1\\ 
+  \end{cases}
+  \\
+\nu_b = 
+  \begin{cases}
+    \omega \, \Delta + \tilde{m}_b + m_A - m_B \qquad  &b = 1, \dotsc, N_f\\ 
+    \omega \, \Delta_M - m - m_A N_f  - m_B \qquad  &b = N_f+1\\ 
+  \end{cases}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+
 
 \newpage
 \section{Magnetic theory}

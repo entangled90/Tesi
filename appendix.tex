@@ -385,7 +385,7 @@ The following identities are useful to calculate the Plethystic exponential for 
  \\
 \begin{aligned}
 \exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg) \bigg( z^n + z^{-n} \bigg) \,& =
-\,  \frac{ \theta ( z;p) \theta (z;q) }{ 1-z^2 } \\
+\,  \frac{ \theta ( z;p) \theta (z^{-1};q) }{ 1-z^2 } \\
 & =  \, \frac{1}{ ( 1 - z ) ( 1 - z^{-1}) \Gamma_e( z;p,q) \Gamma_e( z^{-1}; p,q)} \,
 \label{eqn:elliptic_index_vector_adjoint}
 \end{aligned}
@@ -406,10 +406,32 @@ While the following is used for chiral fields
  \end{multline}
 
 \paragraph{Elliptic to hyperbolic}
+The following mathematical identities will be used to find an expression in the limit of the shrinking circle.
+For chiral fields we will use \cite{vanDeBult:2007}
 \begin{equation}
 \lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \sim \\
  e^{ - \frac{ i \pi^2 }{6 r \omega_1 \omega_2 } (  z - \omega )} \Gamma_h(z;\omega_1 , \omega_2)
 \end{equation}
+While for the vector field in the adjoint representation we will use  this identity, which follows from the $SL(2,\mathbb{Z})$ properties of the $\theta(z;p)$ function \cite{Aharony:2013dha}
+\begin{multline}
+\lim_{r \rightarrow 0} \frac{ (p;p)^{r_G}(q;q)^{r_G} }{ |W| }
+\oint_{T^{r_G}} \prod_{j=1}^{r_G } \frac{ d z_j}{2 \pi i z_j} \prod_{ \alpha \in R_+ }
+ %\frac{1}{\Gamma_e( e^{\alpha} )\Gamma_e( e^{-\alpha} )} 
+ \theta(  e^{\alpha};p )  \theta(  e^{-\alpha};q ) 
+ \sim
+\\
+\sim 
+\exp \left(  
+- \frac{ i \, \pi \, \omega \, |G|}{6 r \omega_1 \omega_2}
+\right)
+ \frac{1}{|W|} 
+  \int 
+ \prod_{j=1}^{r_G } \frac{d \sigma_j}{\sqrt{- \omega_1 \omega_2} } \prod_{\alpha \in R_+ }
+ \frac{1}{\Gamma_h \left( \alpha(\sigma) \right) \Gamma_h \left( -\alpha( \sigma_j) \right) }
+ \label{eqn:appendix_sl2z_theta}
+\end{multline}
+where $|G|$ is the number of generators of the group $G$, $r_G$ its rank and $|W |$ is the order of the Weyl symmetry of the group. 
+The roots $\alpha$ are taken only taken positive.
 
 
 
@@ -445,11 +467,11 @@ I_E^V(p,q,z) = &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,
  =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( \sum_{i=1}^{N_c} 1 \bigg)- 1 \bigg) \bigg) \, = \\
   =&\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) + \bigg( N_c \bigg)- 1 \bigg) \bigg) \, = \\
     =&
-    \bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) \bigg)\bigg] \\
-	&    \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( N_c - 1 \bigg) \bigg) \, = 
+    \left[  \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( \bigg( \sum_{\overset{ 1 \leq i,j \leq N_c}{i \neq j}}  {z_i^n \over z_j^n} \bigg) \bigg)\right] \times \\
+	&   \times \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( N_c - 1 \bigg) \bigg) \, = 
 \\
-=& \bigg[\prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)   {z_i^n \over z_j^n}\bigg) \bigg] \\
-&\bigg[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \big( {p^n \over 1-p^n} + {q^n \over 1-q^n} \big) \bigg) \bigg] ^{N_c-1}
+=& \left[ \prod_{\overset{ 1 \leq i,j \leq N_c}{i\neq j}} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)   {z_i^n \over z_j^n}\bigg) \right]\times  \\
+& \times \left[ \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \big( {p^n \over 1-p^n} + {q^n \over 1-q^n} \big) \bigg) \right] ^{N_c-1}
 \end{aligned}
 \end{equation}
 which can be rewritten more compactly as
@@ -470,9 +492,9 @@ $$
 Using \eqref{eqn:elliptic_index_vector_adjoint} we obtain
 \begin{align*}
 \prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg) \, =\\
-\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg)
+\prod_{ 1 \leq i < j \leq N_c} \exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, i_E^V(p^n,q^n)  \bigg( {z_i^n \over z_j^n} + {z_j^n \over z_i^n}\bigg) \bigg) \times
 \\
- \prod_{ 1 \leq i < j \leq N_c}   \, \frac{ 1 } { \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  }
+\times  \prod_{ 1 \leq i < j \leq N_c}   \, \frac{ 1 } { \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  }
 \end{align*}
 Consider both terms, the full contribution to the index is given by  \begin{align*}
 & (p;p)^{N_c-1} ( q;q)^{N_c-1} \, \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  } \\
@@ -492,20 +514,21 @@ similarly to the vector field index, we separe the terms depending on the presen
 
 \begin{multline}
 I_E^X(p,q,z) = 
-\left[ \exp \left( (N_c -1) \sum_{n=1}^{\infty} {1 \over n}  \frac{ (pq)^{{\frac{R_X}{2}}n} - (pq)^{\left(1-{\frac{R_X}{2}} \right ) n}}{(1-p^n)(1-q^n)} \right) \right]
+\left[ \exp \left( (N_c -1) \sum_{n=1}^{\infty} {1 \over n}  \frac{ (pq)^{{\frac{R_X}{2}}n} - (pq)^{\left(1-{\frac{R_X}{2}} \right ) n}}{(1-p^n)(1-q^n)} \right) \right] \times
   \\
-\left[  \prod_{ 1 \leq i < j \leq N_c} 
+\times \left[  \prod_{ 1 \leq i < j \leq N_c} 
 \exp \left(\sum_{n=1}^{\infty} {1 \over n}
 \left ((pq)^{\frac{R_X}{2} n} - (pq)^{\left(1-\frac{R_X}{2} \right)n} \right) \left ( {z_i^n\over z_j^n} + { z_j^n \over z_i^n} \right) \right)
 \right]
 \end{multline}
 These terms can be written in terms of elliptic gamma functions using \eqref{eqn:elliptic_gamma_chiral_identity}.
 In order to use it on the first factor, we define $ y= (pq)^{\frac{R_X}{2}}$ and we find
-\begin{multline}
+\begin{equation}
 \left[ \exp \left(  \sum_{n=1}^{\infty} {1 \over n}  \frac{ (y)^{n} - ({pq \over y})^{n}}{(1-p^n)(1-q^n)} \right)\right]^{(N_c-1)}
 =
+\,
 \Gamma_e ( (pq)^{\frac{R_X}{2}}; p,q)^{(N_c-1)}
-\end{multline}
+\end{equation}
 The second term is a little more involved since we have to rearrange the terms in the numerator of the fraction
 \begin{multline}
  \left ( \left (p q \right)^{\frac{R_X}{2} n} - (pq)^{\left( 1-\frac{R_X}{2} \right) n} \right) \left ( {z_i^n\over z_j^n} + { z_j^n \over z_i^n} \right)  = \\
@@ -513,7 +536,7 @@ The second term is a little more involved since we have to rearrange the terms i
 \end{multline}
 in order to apply \eqref{eqn:elliptic_gamma_chiral_identity} we need to perform the following change of variables 
 \begin{equation}
-	 y = (pq)^{\frac{R_X}{2}} {z_i \over z_j} \quad y'= (pq)^{\frac{R_X}{2}} {z_j \over z_i}
+	 y = (pq)^{\frac{R_X}{2}} {z_i \over z_j} \qquad y'= (pq)^{\frac{R_X}{2}} {z_j \over z_i}
 \end{equation}
 which results in the expression
 \begin{equation}
@@ -557,8 +580,7 @@ I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \pr
 
 \chapter{Reduction of the index to the partition function}
 \label{appendix:reduction_index_to_pf}
-
-
+\begin{comment}
 \paragraph{Vector field}
 \begin{multline}
  \prod_{1 \leq i <j \leq N_c} 
@@ -569,6 +591,19 @@ I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \pr
 = \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - N_c(N_c -1) \, \omega)}  \bigg)   \prod_{1 \leq i <j \leq N_c} 
  \, \Gamma_h ( \pm ( \sigma_i - \sigma_j)) 
  %\Gamma_h (  \sigma_j - \sigma_i)
+\end{multline}
+
+\end{comment}
+\paragraph{Vector field}
+\begin{multline}
+\lim_{r \rightarrow 0} \frac{ (p;p)^{N_c- 1}(q;q)^{N_c- 1} }{ N_c ! }
+\oint_{T^{N_c -1}} \prod_{j=1}^{N_c -1 } \frac{ d z_j}{2 \pi i z_j} \prod_{1 \leq i<j \leq N_c } \frac{1}{\Gamma_e( \frac{z_i}{z_j} )\Gamma_e( \frac{z_j}{z_i} )} \sim
+\\
+\sim 
+\exp \left(  
+- \frac{ i \pi \omega (N_c^2 -1)}{6 r \omega_1 \omega_2}
+\right)
+ \frac{1}{N_c !} \int \prod_{j=1}^{N_c -1 } \frac{d \sigma_j}{\sqrt{- \omega_1 \omega_2} } \prod_{1 \leq i<j \leq N_c }\frac{1}{\Gamma_h( \pm (\sigma_i - \sigma_j) }
 \end{multline}
 
 
@@ -605,7 +640,7 @@ I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \pr
 \Gamma_e\left( e^{2 \pi i  r  \left( {R_Q \over 2} (\omega_1 + \omega_2)  + ( m_a + m_B + \sigma_j) \right) } \right )
 \Gamma_e\left( e^{2 \pi i r  \left( {R_Q \over 2} (\omega_1 + \omega_2) + ( -\tilde{m}_b - m_B - \sigma_j) \right) } \right) = \\
 & =   \,\exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( ( \omega R_Q + m_a + m_B + \sigma_j -  \omega) + ( \omega R_Q -\tilde{m}_b - m_B - \sigma_j -  \omega))} \right) \\
-& \qquad  \qquad \qquad \qquad \qquad  \Gamma_h ( \omega R_Q + m_a + m_B + \sigma_j) \; \Gamma_h ( \omega R_Q - \tilde{m}_b - m_B - \sigma_j) = \\
+& \qquad  \qquad \qquad \qquad \qquad  \times \Gamma_h ( \omega R_Q + m_a + m_B + \sigma_j) \; \Gamma_h ( \omega R_Q - \tilde{m}_b - m_B - \sigma_j) = \\
 & =\, \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (R_Q - 1) + m_a - \tilde{m}_b )} \right)  \, \, \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b - \sigma_j)
 \end{aligned}
 \end{equation}
