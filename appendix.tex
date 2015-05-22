@@ -330,6 +330,36 @@ It is called Fayet-Iliopulos term and can be present for every ideal $A$ of the 
  \end{equation}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Hypergeometric gamma \\ functions}
 \label{appendix:gamma_functions}
 \section{Elliptic hypergeometric functions}
@@ -368,7 +398,18 @@ While the following is used for chiral fields
 \end{equation}
 
 
+\section{Hyperbolic gamma function}
+\begin{multline}
+ \Gamma_h ( z;\omega_1, \omega_2) = \exp \left( \pi i \frac{(2z-\omega_1 - \omega_2)^2}{8 \omega_1 \omega_2 } - \pi i \frac{(\omega_1^2 + \omega_2^2)}{ 24 \omega_1 \omega_2} \right)
+ \\ \frac{ \left( \exp( -2 \pi i (z-\omega_2)/ \omega_1 ); \exp( 2 \pi i \omega_2 / \omega_1 ) \right)_{\infty}}
+ { \left (\exp( -2 \pi z / \omega_2 ); \exp( - 2 \pi i \omega_1 / \omega_2) \right)_{\infty}}
+ \end{multline}
 
+\paragraph{Elliptic to hyperbolic}
+\begin{equation}
+\lim_{r \rightarrow 0^+} \Gamma_e (e^{ 2 i r z}; e^{ 2 \pi i  r \omega_1} , e^{ 2 \pi i r  \omega_2}) \sim \\
+ e^{ - \frac{ i \pi^2 }{6 r \omega_1 \omega_2 } (  z - \omega )} \Gamma_h(z;\omega_1 , \omega_2)
+\end{equation}
 
 
 
@@ -514,8 +555,64 @@ I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \pr
 \Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_i}^{-1}\,  z_j^{-1}\right)
 \end{equation}
 
+\chapter{Reduction of the index to the partition function}
+\label{appendix:reduction_index_to_pf}
 
 
+\paragraph{Vector field}
+\begin{multline}
+ \prod_{1 \leq i <j \leq N_c} 
+  \Gamma_e\left(  {z_i \over z_j} \right)\Gamma_e\left(  {z_j \over z_i} \right) 
+  \sim  \\
+ \sim  \prod_{1 \leq i <j \leq N_c} 
+ \exp{\left( - \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega) \right) } \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+= \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - N_c(N_c -1) \, \omega)}  \bigg)   \prod_{1 \leq i <j \leq N_c} 
+ \, \Gamma_h ( \pm ( \sigma_i - \sigma_j)) 
+ %\Gamma_h (  \sigma_j - \sigma_i)
+\end{multline}
+
+
+
+
+\paragraph{Adjoint matter}
+\begin{equation}
+\begin{aligned}
+& \Gamma_e((pq)^{\frac{\Delta_X}{2}})^{N_c -1} =
+\Gamma_e \left( e^{2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)}\right)^{N_c-1} =  \Gamma_e \left( e^{2 \pi i r  \Delta_X \omega }\right)^{N_c-1} = \\
+&= \left[ \exp \left( - \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega) \right) \right]^{N_c-1} \Gamma_h ( \omega \Delta_X ; \omega_1, \omega_2)^{N_c-1}
+\\
+\\ 
+& \Gamma_e\left( (pq)^{\frac{\Delta_X}{2}} \left( { z_i \over z_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( { z_j \over z_i} \right) \right) = \\
+&= \Gamma_e \left( e^{2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)} e^{ 2 \pi  i r (\sigma_i - \sigma_j) } \right)  \Gamma_e \left( e^{ 2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)}  e^{ 2 \pi i r (\sigma_j - \sigma_i)} \right) =  \\
+&= \Gamma_e \left( e^{2 \pi  i r (\Delta_X \omega +\sigma_i - \sigma_j) } \right) \Gamma_e \left(  e^{2 \pi  i r (\Delta_X \omega +\sigma_j - \sigma_i )} \right) \\
+ & \sim   \exp \left(  {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\right)\, \, \Gamma_h ( \Delta_X \omega \pm( \sigma_i - \sigma_j )) 
+ %\Gamma_h ( \Delta_X \omega + \sigma_j - \sigma_i) \\	
+ 	\\
+ & \sim  \exp\left(- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) \right)  \, 
+  \Gamma_h ( \Delta_X \omega \pm( \sigma_i - \sigma_j ))%\Gamma_h ( \Delta_X \omega + \sigma_j - \sigma_i)
+\end{aligned}
+\end{equation}
+
+\paragraph{Quarks}
+\begin{equation}
+\begin{aligned}
+&\prod_{a,b}^{N_f} \prod_{j}^{N_c}
+\Gamma_e\left(
+(pq)^{\frac{R_Q}{2} \, v \,  y_a z_j }\right) 
+\Gamma_e\left(
+(pq)^{\frac{R_Q}{2} v^{-1} \tilde y_b^{-1} z_j^{-1} } \right)  = \\
+& =
+\Gamma_e\left( e^{2 \pi i  r  \left( {R_Q \over 2} (\omega_1 + \omega_2)  + ( m_a + m_B + \sigma_j) \right) } \right )
+\Gamma_e\left( e^{2 \pi i r  \left( {R_Q \over 2} (\omega_1 + \omega_2) + ( -\tilde{m}_b - m_B - \sigma_j) \right) } \right) = \\
+& =   \,\exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( ( \omega R_Q + m_a + m_B + \sigma_j -  \omega) + ( \omega R_Q -\tilde{m}_b - m_B - \sigma_j -  \omega))} \right) \\
+& \qquad  \qquad \qquad \qquad \qquad  \Gamma_h ( \omega R_Q + m_a + m_B + \sigma_j) \; \Gamma_h ( \omega R_Q - \tilde{m}_b - m_B - \sigma_j) = \\
+& =\, \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (R_Q - 1) + m_a - \tilde{m}_b )} \right)  \, \, \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b - \sigma_j)
+\end{aligned}
+\end{equation}
+where we defined
+\begin{equation}
+ \mu_a = \omega \Delta + m_a + m_B  \quad  \nu_b = \omega \Delta - \tilde m_b - m_B
+\end{equation}
 
 
 

@@ -170,7 +170,7 @@ I_{E} ( p,q,v,y,\tilde y ) =
 \end{multline}
 
 {\Huge PARLA DELLE BALANCING CONDITIONS!}
-\subsubsection{Reduction of the superconformal index to the partition function}
+\subsection{Reduction of the superconformal index to the partition function}
 We can now proceed to reduce the index to the partition function on the squashed three sphere by appliying the procedure we introduced in the previous chapter. 
 We need to parametrize the fugacities as
 \begin{gather}
@@ -180,19 +180,52 @@ y_a = e^{ 2 \pi i r  {\tilde m_a} } \, \, \,  v = e^{ 2 \pi i r m_B}
 \label{eqn:fugacities_redefined_el}
 \end{gather}
 By using the identity \eqref{eqn:elliptic_to_hyperbolic_vdbult} on every term we can obtain the partition function as an integral of products of hyperbolic gamma functions.
+Explicit calculation can be found in appendix \ref{appendix:reduction_index_to_pf}.\\
+We will use the following notation for the hyperbolic gamma function
+\begin{equation}
+\Gamma_h (z ; \omega_1 , \omega_2) = \Gamma_h(z) \qquad \Gamma_h ( u \pm z) = \Gamma_h( u + z) \Gamma_h( u - z)
+\end{equation}
 
-\subparagraph{Adjoint matter}
+
+\paragraph{Vector field}
+\begin{multline}
+ \prod_{1 \leq i <j \leq N_c} 
+  \Gamma_e\left(  {z_i \over z_j} \right)\Gamma_e\left(  {z_j \over z_i} \right) 
+  \,
+  \sim  \\
+ % \sim \exp{\left( - \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega) \right) } \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+ \sim \exp \bigg( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - N_c(N_c -1) \, \omega)}  \bigg)   \prod_{1 \leq i <j \leq N_c} 
+\, \Gamma_h ( \pm ( \sigma_i - \sigma_j)) 
+ %\Gamma_h (  \sigma_j - \sigma_i)
+\end{multline}
+
+\paragraph{Adjoint matter}
 
 \begin{multline}
  \Gamma_e \left((pq)^{\frac{\Delta_X}{2}} \right)^{N_c -1} 
+ \prod_{1 \leq i <j \leq N_c} 
 \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( { z_i \over z_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( { z_j \over z_i} \right) \right) \sim \\
-
- \exp\bigg({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\bigg)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i)
-
-
+ \exp \left(- \frac{i \pi} {6 r \omega_1 \omega_2 }  \left( (N_c^2-1) \omega (\Delta_X - 1)  \right) \right)   \prod_{1 \leq i <j \leq N_c} 
+  \, \Gamma_h \left( \Delta_X \omega \pm (\sigma_i - \sigma_j) \right) 
+ %\Gamma_h \left( \Delta_X \omega + (\sigma_j - \sigma_i) \right)
 \end{multline}
 
 
+\paragraph{Quarks}
+
+\begin{multline}
+\prod_{a,b}^{N_f} \prod_{j}^{N_c}
+\Gamma_e\left(
+(pq)^{\frac{R_Q}{2} v y_a z_j }\right) 
+\Gamma_e\left(
+(pq)^{\frac{R_Q}{2} v^{-1} \tilde {y}_b^{-1} z_j^{-1} } \right)  = \\
+\sim \\
+=\, \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (R_Q - 1) + m_a - \tilde {m_b} )} \right)  \, \, \Gamma_h ( \mu_a + \sigma_j) \Gamma_h ( \nu_b- \sigma_j)
+\end{multline}
+Where the defined the real masses $\mu_a,\nu_b$
+\begin{equation}
+ \mu_a = \omega \Delta + m_a + m_B  \quad  \nu_b = \omega \Delta - \tilde m_b - m_B
+\end{equation}
 
 \newpage
 \section{Magnetic theory}
