@@ -80,15 +80,15 @@ If we use the definition of the polynomials $p_N(x)$ we obtain
 &
 \begin{aligned}
 &
-+{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
++{1\over (1-p)(1-q)} \sum_{a=1}^{N_f} \sum_{j=1}^{N_c}
 \bigg(
-&&(p q)^{{1\over 2}R_Q} \, v \, y_i \, z_j
-- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
+&&(p q)^{{1\over 2}R_Q} \, v \, y_a \, z_j
+- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_a^{-1} \, z_j^{-1} \\
 %\qquad\qquad\qquad\qquad
 &
  && +
-(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_i \,z_j^{-1}
-- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_i}^{-1}\, z_j\bigg) \\
+(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_a \,z_j^{-1}
+- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_a}^{-1}\, z_j\bigg) \\
 \end{aligned}
 \end{aligned}
 \end{equation}
@@ -144,19 +144,20 @@ which results in
 The quarks in the (anti) fundamental representation have a single particle index of the form
 \begin{multline}
 i_E^{Q,\tilde{Q}} (p,q,v,y,\tilde{y})=\\ 
-{1\over (1-p)(1-q)} \sum_{i=1}^{N_f} \sum_{j=1}^{N_c}
-\bigg(
-(p q)^{{1\over 2}R_Q} \, v \, y_i \, z_j
-- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_i^{-1} \, z_j^{-1} \\
- + 
-(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_i \,z_j^{-1}
-- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_i}^{-1}\, z_j\bigg) 
+{1\over (1-p)(1-q)} \sum_{j=1}^{N_c}
+\bigg(  \sum_{a=1}^{N_f} \left(  
+(p q)^{{1\over 2}R_Q} \, v \, y_a \, z_j
+- (p q)^{1- {1\over 2} R_Q} \, v^{-1} \, y_a^{-1} \, z_j^{-1} \right)\\
+ +
+ \sum_{b=1}^{N_f} \left(  
+(p q)^{{1\over 2}R_Q}\, v^{-1}\, {\tilde y}_b \,z_j^{-1}
+- (p q)^{1- {1\over 2}R_Q} \, v\, {\tilde y_b}^{-1}\, z_j \right)\bigg) 
 \end{multline}
 where $Q$ and $\tilde{Q} $ generate the first and second line of the index, respectively.\\
 Their contribution can be written as
 \begin{equation}
-I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v  \,  y_i \,  z_j \right)
-\Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_i}^{-1}\,  z_j^{-1}\right)
+I_E^{Q,\tilde{Q}} ( p ,q,v,y,\tilde{y},z) \, = \, \prod_{ j}^{ N_c} \prod_{ a,b}^{N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v  \,  y_a \,  z_j \right)
+\Gamma_e \left( (pq)^{R_Q \over 2}\,  v^{-1} \,  {\tilde y_b}^{-1}\,  z_j^{-1}\right)
 \end{equation}
 \subsubsection{Expression of the superconformal index }
 The formula for the superconformal index can be obtained by multiplying all the contributions calculated above and reads
@@ -165,8 +166,8 @@ I_{E} ( p,q,v,y,\tilde y ) =
   \frac{ (p;p)^{N_c-1} ( q;q)^{N_c-1} }{ N_c !} \, \Gamma_e \left(   (pq)^\frac{R_X}{2};p,q\right)^{N_c-1} \\
 \oint_{T^{N_c-1}} \left( \prod_{i=1}^{N_c } { d z_i \over { 2 \pi i z_i} } \right) \delta \left( \prod_{i=1}^{N_c} z_i - 1 \right)
 \prod_{ 1 \leq i < j \leq N_c} \frac{ \Gamma_e \left( (pq)^\frac{R_X}{2} {z_i \over z_j} \right) \Gamma_e \left( (pq)^\frac{R_X}{2} {z_j \over z_i} \right) }{ \Gamma_e \left( {z_i \over z_j};p,q \right) \Gamma_e \left({z_j \over z_i}; p,q \right)} \\
- \prod_{ 1 \leq j \leq N_c} \prod_{ 1 \leq i \leq N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v \,  y_i \,  z_j \right)
-\Gamma_e \left( (pq)^{R_Q \over 2} v^{-1} \, {\tilde y_i}^{-1}\,  z_j^{-1}\right)
+ \prod_{ j}^{  N_c} \prod_{ a,b}^{ N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v \,  y_a \,  z_j \right)
+\Gamma_e \left( (pq)^{R_Q \over 2} v^{-1} \, \tilde {y}_b^{-1}\,  z_j^{-1}\right)
 \end{multline}
 
 {\Huge PARLA DELLE BALANCING CONDITIONS!}
@@ -368,24 +369,107 @@ Using this condition we can the R-charge of last flavour $\Delta_M$ as a functio
 c \left( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta_Q)  - N_c \Delta_X ) -  m_A N_f )\right)\,  \\
 c\left( 4\big( \sum_{i=1}^{N_c}   \sigma_i  \big) \big ( \omega( N_f (1 - \Delta_Q)  - N_c \Delta_X)  -  m_A N_f ) \big) \right)\\
 \end{multline}
-The term on the first can be taken outside the integral while the second term is killed by the delta function $\delta(\sum_i \sigma_i)$ upon integration.\\
+The term on the first line can be taken outside the integral and we will found an identical term in the magnetic side.
+The second term will be set to one by the delta function $\delta(\sum_i \sigma_i)$ upon integration.\\
 The partition function for the electric theory after integrating out the $N_f +1$-th flavour is then given by
 \begin{multline}
 %\begin{aligned}
- Z_{el} ( \mu_i , \nu_i )\,  =  & \,
+ Z_{el} ( \mu_i , \nu_i )\,  =  \\
  %\frac{1}{ (2 \ \pi i)^{N_c} }
+ c \left( 4 N_c  ( m  + m_B ) (-  m_A N_f   + \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) ) \right) 
  {1 \over N_c ! }
 \Gamma_h ( \Delta_X \omega )^{N_c-1} 
- c \left( 4 N_c  ( m  + m_B ) (-  m_A N_f   + \omega ( N_f (1 - \Delta)  - N_c \Delta_X ) ) \right) \\
-\int
-\prod_{i=1}^{N_c} d \sigma_i \, \delta( \sum_i \sigma_i) \,  c \left( 4\big( \sum_{i=1}^{N_c}  \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right)\\
-   \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}\\
+\\ \int
+\prod_{i=1}^{N_c} d \sigma_i \, \delta( \sum_i \sigma_i)  c \left( 4\big( \sum_{i=1}^{N_c}  \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right) 
+\\
+   \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}
  \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)
  %\end{aligned}
 \end{multline}
+Note that except for the exponential factors discuessed above, it corresponds to the partition function for a pure three-dimensional theory, withouth $\eta$ superpotential.\\
+The charges can be easily read off from the partition function and are given by 
+\begin{table}[h!]
+ \begin{tabular}{|c |c |c |c |c |c |c |}
+\hline
+Fields & $SU(N_f)_L$ & $SU(N_f)_R$ & $U(1)_B$ & $U(1)_A$ & $U(1)_J$ & $U(1)_R $ \\
+\hline
+$Q$ & $N_f$ & 0  &$ N_c $& $1 $& 0  & $\Delta_Q$ \\
+$\tilde{Q} $  & 0  &$\overline{N_f}$ & $ - N_c $& $1 $ & 0 & $\Delta_Q$ \\
+$X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
+\hline
+\end{tabular}
+\centering
+\end{table}
 
 
 
 \newpage
 \section{Magnetic theory}
+The four dimensional theory of Kutasov-Schwimmer duality was introduced in section \ref{sec:kutasov_duality4d}. 
+It is a $SU(\tilde{N}_c) = SU( k N_f - N_c)$ SQCD theory with $N_f$ flavours $q,\tilde{q} $, a matter field $Y$ in the adjoint representation and $k$ mesons $M$ that are identified with the electric mesons. There is a superpotential for the adjoint field $Y$ $ \Tr Y^{k+1}$ that results in $R_X = R_Y$\\
+We will now repeat the process that was applied to the electric theory for the magnetic side.
+The single particle index is given by
+\begin{equation}
+\begin{aligned}
+ & i_M (p,q, \tilde v, y,\tilde y ,\tilde z) =  &&\\
+& -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)} \big((p q)^{\frac{R_Y}{2}}- (p q)^{1-\frac{R_Y}{2}}\big)
+\bigg) \big( p_{\tilde N_c}( \tilde z)\, p_{\tilde N_c}(\tilde z^{-1})-1\big ) + && \\
+&
+\begin{aligned}
+&+
+{1\over (1-p)(1-q)} 
+&&\bigg((p q)^{{1 \over 2 } R_q} \,\tilde v \, p_{N_f}(y^{-1})\, p_{\tilde N_c}(\tilde z)
+- (p q)^{1-  {1\over 2}R_q} \, {1 \over \tilde v}\, p_{{N_f}}(y)\, p_{{\tilde N_c}}(\tilde z^{-1}) + \\
+& && 
+ + (p q)^{{1 \over 2 } R_q}\, {1\over \tilde v}\, p_{{N_f}}({\tilde y}\,) \, p_{{\tilde N_c}}(\tilde z^{-1})
+- (p q)^{1-{1\over 2}R_q} \, \tilde v \, p_{N_f}({\tilde y}^{-1})\, p_{\tilde N_c}(\tilde z)\bigg) +  \\
+& && \sum_{l=0}^{k-1}   \left( (pq)^{ R_Q + l \frac{R_Y}{2} } p_{N_f}(y) p_{N_f}(\tilde y^{-1}) - (pq)^{1 - ( R_Q + \frac{R_Y}{2} l )} p_{N_f}(y^{-1} p_{N_f}{\tilde y}\right) 
+\end{aligned}
+\end{aligned}
+\end{equation}
+where $R_q$ is the R-charge of the dual quark which is fixed in term of the charge $R_Q$ of the electric quark by requiring the validity of the duality.
+The last line is the contribution from the  $k$ different mesons.\\
+Using the explicit form of the polynomials $p_{N}(x)$ we have
+\begin{equation}
+\begin{aligned}
+ i_M &(p,q, \tilde v, y,\tilde y ,\tilde z) = \\
+& -\bigg({p \over 1-p}+{q \over 1-q} -{1 \over (1-p)(1-q)} \big((p\,q)^{\frac{R_Y}{2}}- (p\,q)^{1-\frac{R_Y}{2}}\big)
+\bigg) \big( \sum_{i,j}^{\tilde N_c} \tilde z_i \tilde z_j^{-1} -1\big ) + \\
+%% CHIRALS
+&
+\begin{aligned}
+& +{1\over (1-p)(1-q)} && \bigg[ \sum_j^{\tilde N_c} \bigg( \sum_a^{N_f}\left(  (p\,q)^{{1 \over 2 } R_q} \,\tilde v \, y_a^{-1}\, \tilde z_j\right) 
+-  (p\,q)^{1- {1\over 2}R_q} \, {1 \over \tilde v}\, y_a\,
+\tilde z_j^{-1} + \\
+&  &&+ \sum_b^{N_f} \left( (p\,q)^{{1 \over 2 } R_q}\, {1\over \tilde v}\,
+({\tilde y_b}\,) \,
+(\tilde z_j^{-1})
+- (p\,q)^{1-  {1\over 2}R_q} \, \tilde v \,
+{\tilde y_b}^{-1} \,
+\tilde z_j \bigg) \right) + \\
+%% MESONS
+ & &&\sum_a^{N_f} \sum_b^{N_f} \sum_{l=0}^{k-1}   \bigg(  (pq)^{ R_Q + l \frac{R_Y}{2}   } y_a \tilde y_b^{-1}   - (pq)^{1 -( R_Q + l \frac{R_Y}{2}  )}
+y_a^{-1}  {\tilde y_b}  \bigg) \bigg] 
+\end{aligned}
+\end{aligned}
+\end{equation}
+The index is now formally similar to the electric one except for the contribution of the mesons which can be easily calculatedby identifying the $(pq)^{R_q} + l \frac{R_Y}{2} y_a \tilde{y}_b^{-1}$ with the argument of the elliptic gamma function.
+Their contribution reads
+\begin{equation}
+ \exp \bigg( \sum_{n}^{\infty} \frac{1}{n} i_M^{Meson} (p^n,q^n, \tilde v^n, y^n,\tilde {y}^n) \bigg) = 
+\prod_a^{N_f} \prod_b^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{R_q + l \frac{R_Y}{2}} y_a \tilde{y}_b^{-1} ; p ,q)
+\end{equation}
+The complete expression for the superconformal index for the magnetic theory is given by
+\begin{equation}
+\begin{aligned}
+&I_{Mag} ( p,q,y,\tilde v,\tilde y) = \\
+ & { 1 \over \tilde{N_c} !} (p;p)^{\tilde{N_c}-1} ( q;q)^{\tilde{N_c}-1} \, 
+ \Gamma_e( (pq)^s;p,q)^{\tilde{N_c}-1} \bigg( \prod_a^{N_f} \prod_b^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{R_Q + l \frac{R_X}{2}} y_a \tilde{y_b}^{-1}; p ,q) \bigg) \\
+&\int \bigg( \prod_{i=1}^{ \tilde{N_c }} { d z_i \over { 2 \pi i z_i} } \bigg) \delta \bigg( \prod_{i=1}^{\tilde{N_c}} z_i - 1 \bigg)
+\prod_{ 1 \leq i < j \leq \tilde{N_c}} \frac{ \Gamma_e \big( (pq)^\frac{R_X}{2} {z_i \over z_j} \big) \Gamma_e \big( (pq)^\frac{R_X}{2} {z_j \over z_i} \big) }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)} \\
+&  \qquad \prod_{ j}^{\tilde{N_c}} \prod_{ a,b}^{N_f} \Gamma_e ( (pq)^{{1 \over 2 } R_q} \tilde{v}\,  y_a^{-1} \tilde{z_j} ; p,q)
+\; \Gamma_e ( (pq)^{{1 \over 2 } R_q} \tilde{v}^{-1} \tilde {y}_b \tilde{z_j}^{-1} ; p,q)
+\end{aligned}
+\end{equation}
+
 
