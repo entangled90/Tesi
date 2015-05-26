@@ -768,11 +768,13 @@ The result of the limit $ m \rightarrow \infty$ on the first of these terms give
 \begin{multline}
 \lim_{m \rightarrow \infty} \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big(\tilde \mu_{N_f+1} + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \tilde{\sigma_j} \big) = \\ 
 \exp
-\biggl \{ 
+\biggl \{ \frac{i \pi}{2 \omega_1 \omega_2}
+\biggl[ 
 \left(
 \sum_j^{k N_f - N_c} 4 \sigma'_j \left( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \right)  \right) +  \\
 4 (k N_f - N_c) \biggl(  m_B \frac{N_c}{k(N_f +1)- N_c}  \left(-  m_A N_f - \omega( \Delta_X - \Delta_M - 1)\right) + \\
  m \left(  m_A N_f + \omega( \Delta_X - \Delta_M - 1)\right)\biggr)
+\biggr]
  \biggr\}
 \end{multline}
 While the other term gives 
@@ -781,14 +783,36 @@ While the other term gives
 = \\
 \exp
 \biggl \{ 
+\biggr[
+\frac{i \pi}{2 \omega_1 \omega_2}
 \left( 4 N_f \sum_{j=1}^k  \rho'_j \left( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) \right) \right) \\
 +  k \sum_a^{N_f} m_a^2 - \tilde{m}_a^2 + 4 k N_f \biggl(  m_B \frac{N_c}{k(N_f +1)- N_c}  \left(- m_A +  \omega ( \Delta_X - \Delta_Q - 1)\right) \\
 + m ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)\biggr) 
+\biggr]
 \biggr\}
 \end{multline}
 
 
+\paragraph{Adjoint matter}
+The term associated to the adjoint matter can be written as
+\begin{multline}
+ \prod_{  i<j }^{k(N_f+1)- N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\tilde{\sigma}_i - \tilde{\sigma}_j)) }{ \Gamma_h ( \pm (\tilde{\sigma}_i - \tilde{\sigma}_j) )} = 
+ \prod_{i<j}^{kN_f- N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\tilde{\sigma}_i - \tilde{\sigma}_j)) }{ \Gamma_h ( \pm (\tilde{\sigma}_i - \tilde{\sigma}_j) )}
+\\
+ \prod_{ i<j }^{k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}
+  \prod_{\substack{i \leq k N_f - N_c \\ j \leq k} } \frac{ \Gamma_h( \Delta_X \omega \pm (\tilde{\sigma}_i - \rho_j)) }{ \Gamma_h ( \pm (\tilde{\sigma}_i - \rho_j) )}
+\end{multline}
+where only the last term represent massive contributions. The exponential term associated to this factor is
+\begin{equation}
+\exp 
+\left\{ \frac{i \pi}{2 \omega_1 \omega_2}
+\biggl[ 
+ 4 \omega \Delta_X \left( k ( k N_f - N_c)   (m ) + \sum_i^{k N_f -N_c} \sum_k^{k }  ( \sigma'_i + \rho'_j)\right)
+  \biggr]
+  \right\}
+\end{equation}
 
+\paragraph{Sum of the contributions}
 
 
 
