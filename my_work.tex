@@ -398,7 +398,7 @@ The partition function for the electric theory after integrating out the $N_f +1
  \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)
  %\end{aligned}
 \end{multline}
-Note that except for the exponential factors discuessed above, it corresponds to the partition function for a pure three-dimensional theory, withouth $\eta$ superpotential.\\
+Note that except for the exponential factors discussed above, it corresponds to the partition function for a pure three-dimensional theory, withouth $\eta$ superpotential.\\
 The charges can be easily read off from the partition function and are given by 
 \begin{table}[h!]
  \begin{tabular}{|c |c |c |c |c |c |c |}
@@ -569,10 +569,74 @@ In addition, the R-charges of the dual quarks are fixed by the superpotential in
 \begin{equation}
 R_q = R_Y - R_Q \qquad \overset{3D}{\longrightarrow} \qquad \Delta_q = \Delta_Y - \Delta_Q
 \end{equation}
+The real masses are then
+\begin{equation}
+\tilde{\mu}_a = - m_a + \frac{N_c}{k N_f - N_c} m_B + \omega (\Delta_X - \Delta_Q) \quad 
+\tilde{\nu}_b = + \tilde{m}_b - \frac{N_c}{k N_f - N_c} m_B + \omega (\Delta_X - \Delta_Q)
+\end{equation}
 
 
-\paragraph{}
 
+
+\paragraph{Mesons}
+Applying the same procedure to the mesons we obtain
+\begin{multline}
+\prod_a^{N_f} \prod_b^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{\frac{1}{2}\left( 2 \Delta_Q + l\Delta_X\right)} \, y_a \tilde{y_b}^{-1}; p ,q)  = \\
+\exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  \omega  N_f^2 \sum _{l=0}^{k-1} \left(  2 \left( \Delta_Q - \frac{1}{2}\right) +  l \Delta_X   \right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) \right) \\
+ \prod_a^{N_f} \prod_b^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \left( \omega ( 2 \Delta_Q + l \Delta_X) + m_a - \tilde{m_b} \right)
+\end{multline}
+
+\subsubsection{Divergent contributions}
+Summing up all the contributions from the various fields we obtain the following expression
+
+\begin{equation}
+\begin{aligned}
+%gauge
+  \omega (\tilde{N}_c^2 -1)
++
+%Mesons
+ \left(  \omega  N_f^2 \sum _{l=0}^{k-1} \left(  2 \left( \Delta_Q - \frac{1}{2}\right) +  l \Delta_X   \right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) + \\
+%adjoint matter
+ + \left( (\tilde{N}_c^2-1) \omega (\Delta_Y - 1)  \right)
+%quarks
+ +\big( 2  N_f \tilde{N_c}\omega (\Delta_q - 1 ) +  \tilde{N_c} \big( \sum_{a=1}^{N_f} - m_a + \tilde{m}_a \big)  \big)
+\end{aligned}
+\end{equation}
+We can verify that it is identical to the divergent contribution that we obtained in the electric theory by using the explicit value of $\tilde{N_c} = k N_f - N_c$ , $\Delta_Y = \Delta_X = \frac{2}{k+1}$ and $\Delta_q  = \Delta_X - \Delta_Q$.
+Note that this matching is a non trivial check of the duality and it corresponds to the 't Hooft anomaly matching for the gravitational anomalies.
+The complete calculation can be found in appendix \ref{appendix:magnetic_theory_calculations}.\\
+The final expression is identical to the electric one and is given by
+\begin{equation}
+\omega ( N_c^2 -1 ) + ( N_c^2 - 1) \omega (\Delta_X  - 1 ) + 2 N_f N_c  \omega ( \Delta_Q -1 )  + N_c \big( \sum_a^{N_f} m_a - \tilde m_a  \big)
+\end{equation}
+
+
+\subsection{Partition function}
+
+\begin{equation}
+\begin{aligned}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu}_a, \tilde{\nu}_b ) \,= & \, \frac{1}{\tilde{N_c}!}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ \tilde N_c-1}
+\left( \prod_{a,b=1}^{N_f}   \prod_{l=0}^{k-1} \Gamma_h \left( \mu_a+  \nu_b + l \omega \Delta_X \right)  \right) \\
+&\int
+\prod_{i=1}^{ kN_f - N_c} d \tilde{\sigma}_i \, \delta( \sum_i \tilde{\sigma}_i) \,
+ %% e^{- 2 \pi i r \tilde N_c \sum \sigma_i}
+ \prod_{i<j}^{kN_f - N_c} \frac{ \Gamma_h( \Delta_Y \omega \pm (\tilde{\sigma}_i - \tilde{\sigma}_j)) }{ \Gamma_h ( \pm (\tilde{\sigma}_i - \tilde{\sigma}_j) )} \\
+ &  \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c} \Gamma_h \big( \tilde{ \mu}_a + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde{\nu}_b - \tilde{\sigma_j} \big)
+\end{aligned}
+\end{equation}
+where we used
+\begin{equation}
+\begin{aligned}
+ \mu_a = \omega \Delta_Q + m_a  &\qquad \nu_a = \omega \Delta_Q - \tilde{m_a}\\
+ \tilde \mu_a = \omega ( \Delta_X - \Delta_Q ) + \tilde{m}_B - m_a  &  \qquad \tilde \nu_a = \omega ( \Delta_X - \Delta_Q ) - \tilde{m}_B + \tilde m_a
+\end{aligned}
+\end{equation}
+where the same condition \eqref{eqn:R-symm Anomaly} on the R-charges and real masses  holds.\\
+
+\subsection{Flow to a theory withouth $\eta$ superpotential}
+We need to perform the same procedure we already applied to the electric theory in order to flow to a pure three dimensional theory.
+Since we have already chosen a vaccum on the electric side, we need to find the vaccum on the magnetic side that can be matched with the electric one.\\
 
 
 
