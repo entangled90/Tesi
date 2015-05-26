@@ -628,15 +628,51 @@ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu}_a, \tilde{\nu}_b ) \,= & \, \frac{1}{\tild
 where we used
 \begin{equation}
 \begin{aligned}
- \mu_a = \omega \Delta_Q + m_a  &\qquad \nu_a = \omega \Delta_Q - \tilde{m_a}\\
- \tilde \mu_a = \omega ( \Delta_X - \Delta_Q ) + \tilde{m}_B - m_a  &  \qquad \tilde \nu_a = \omega ( \Delta_X - \Delta_Q ) - \tilde{m}_B + \tilde m_a
+ \mu_a = \omega \Delta_Q + m_a  
+ &\quad \nu_a = \omega \Delta_Q - \tilde{m_a}\\
+ \tilde \mu_a = \omega ( \Delta_X - \Delta_Q ) + \frac{N_c}{k N_f - N_c} m_B - m_a  
+ &  \quad \tilde \nu_a = \omega ( \Delta_X - \Delta_Q ) - \frac{N_c}{k N_f - N_c} m_B + \tilde m_a
 \end{aligned}
 \end{equation}
 where the same condition \eqref{eqn:R-symm Anomaly} on the R-charges and real masses  holds.\\
 
 \subsection{Flow to a theory withouth $\eta$ superpotential}
-We need to perform the same procedure we already applied to the electric theory in order to flow to a pure three dimensional theory.
+We need to perform the same procedure we already applied to the electric theory in order to flow to a pure three dimensional theory.\\
+We start from a $SU( k(N_f +1) - N_c)$ gauge theory with $N_f +1$ flavours, adjoint matter and $k (N_f +1)^2$ mesons singlets.
+We break the global symmetry group in the same way as we did in the electric side.\\
 Since we have already chosen a vaccum on the electric side, we need to find the vaccum on the magnetic side that can be matched with the electric one.\\
-
+The mapping of the real masses, considering the divergent terms is the following
+\begin{equation}
+\begin{aligned}
+   \tilde \mu_a =
+   \begin{cases}
+    \tilde{ \mu_a} =  \omega ( \Delta_X - \Delta_Q ) + m_B \frac{N_c}{k(N_f +1) - N_c} - m_a  - m_A + m_1  \qquad a = 1 \dots N_f \\
+    \tilde \mu_{N_f+1} =  \omega ( \Delta_X - \Delta_M ) + m_B \frac{N_c}{k(N_f +1) - N_c} +  m_A N_f + m_2    \\
+   \end{cases}
+   \\
+\tilde{ \nu_a} =
+  \begin{cases}
+  \tilde \nu_b = \omega ( \Delta_X - \Delta_Q ) - m_B \frac{N_c}{k(N_f +1) - N_c}  + \tilde m_b  - m_A - m_1 \qquad a = 1 \dots N_f\\
+   \tilde \nu_{N_f+1} = \omega ( \Delta_X - \Delta_M ) - m_B \frac{N_c}{k(N_f +1) - N_c}  +  m_A N_f- m_2 \\
+  \end{cases}
+\end{aligned}
+\end{equation}
+where we set 
+\begin{equation}
+m_1  = \frac{k}{k(N_f+1)-N_c} m  \qquad
+m_2  =  \frac{N_c - k N_f}{k(N_f+1)-N_c} m
+\end{equation}
+The mapping of real masses between electric and magnetic theory is identical to the one discussed in section \ref{sec:reduction_kss_sun}.
+As in section \ref{sec:reduction_kss_sun} we need to find the vacuum for $\tilde{\sigma}$ such that we have the most number of massless degress of freedom.
+However, since we don't have to introduce the polynomial deformation in the adjoint matter, the vacuum will be different. It is given by
+\begin{equation}
+ \tilde{\sigma}_{VEV} =
+ \begin{pmatrix}
+  - m_1 \bold{ 1}_{ k N_f - N_c} & 0 \\
+  0 &  - m_2 \bold{ 1}_{k}
+ \end{pmatrix}
+\end{equation}
+Note that this vacuum choice is traceless.\\
+This vacuum expectation value for $\sigma$ is more symmetric than \eqref{eqn:reduction_sun_sigma_vev} and breaks the gauge group only as $\left(U(k N_f - N_c) \times U(k) \right) / U(1)$.
 
 
