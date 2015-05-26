@@ -344,13 +344,14 @@ With this real mass assignment we can now perform the limit $m \rightarrow \inft
 % -1) + \sigma_i + (m+M)]^2 - \frac{\omega_1^2 + \omega_2^2}{12} \right) \right]
  \lim_{ t \rightarrow \infty } \Gamma_h ( z + t; \omega_1, \omega_2) = 
 \exp \left[ 
- \hbox{sign}(t) \; 
+ \hbox{sign}(t) \frac{\pi i}{2 \omega_1 \omega_2}\; 
   \left(
     \left(
       z +t - \omega
     \right)^2 - \frac{\omega_1^2 + \omega_2^2}{12}
   \right)
 \right]
+\label{eqn:m_infinity_limit_hyperbolic}
 \end{equation}
 Applying this identity to the terms associated to the last flavour of quarks that have mass $m$ we obtain
 \begin{equation}
@@ -412,6 +413,42 @@ $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
 \end{tabular}
 \centering
 \end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Magnetic theory}
@@ -650,9 +687,9 @@ The mapping of the real masses, considering the divergent terms is the following
     \tilde \mu_{N_f+1} =  \omega ( \Delta_X - \Delta_M ) + m_B \frac{N_c}{k(N_f +1) - N_c} +  m_A N_f + m_2    \\
    \end{cases}
    \\
-\tilde{ \nu_a} =
+   \tilde{ \nu_a} =
   \begin{cases}
-  \tilde \nu_b = \omega ( \Delta_X - \Delta_Q ) - m_B \frac{N_c}{k(N_f +1) - N_c}  + \tilde m_b  - m_A - m_1 \qquad a = 1 \dots N_f\\
+  \tilde{\nu}_b = \omega ( \Delta_X - \Delta_Q ) - m_B \frac{N_c}{k(N_f +1) - N_c}  + \tilde m_b  - m_A - m_1 \qquad a = 1 \dots N_f\\
    \tilde \nu_{N_f+1} = \omega ( \Delta_X - \Delta_M ) - m_B \frac{N_c}{k(N_f +1) - N_c}  +  m_A N_f- m_2 \\
   \end{cases}
 \end{aligned}
@@ -661,6 +698,23 @@ where we set
 \begin{equation}
 m_1  = \frac{k}{k(N_f+1)-N_c} m  \qquad
 m_2  =  \frac{N_c - k N_f}{k(N_f+1)-N_c} m
+\end{equation}
+The masses for the mesons are different, since they are not charged under the baryonic symmetry and the mass $m$ in the electric theory is the result of the sum of flavour and baryonic divergent mass terms.
+As a result they are given by
+\begin{equation}
+\begin{aligned}
+  \mu_a &  = \begin{cases}
+  m_a + m_A - M + \omega \Delta \\
+  M N_f - m_A N_f + \omega \Delta_M\\
+  \end{cases}
+  \\
+ \nu_a & =   \begin{cases}
+  - \tilde{m}_a + m_A + M + \omega \Delta \\
+  - M N_f - m_A N_f + \omega \Delta_M \\
+  \end{cases}
+\end{aligned}
+\\
+\hbox{with} \quad M =  \frac{m}{N_f +1}
 \end{equation}
 The mapping of real masses between electric and magnetic theory is identical to the one discussed in section \ref{sec:reduction_kss_sun}.
 As in section \ref{sec:reduction_kss_sun} we need to find the vacuum for $\tilde{\sigma}$ such that we have the most number of massless degress of freedom.
@@ -674,5 +728,74 @@ However, since we don't have to introduce the polynomial deformation in the adjo
 \end{equation}
 Note that this vacuum choice is traceless.\\
 This vacuum expectation value for $\sigma$ is more symmetric than \eqref{eqn:reduction_sun_sigma_vev} and breaks the gauge group only as $\left(U(k N_f - N_c) \times U(k) \right) / U(1)$.
+From now on, with $\tilde{\sigma}$ we will refer first $k N_f - N_c$ entries and with $\rho$ with the other $k$ entries of the original gauge scalar.
+\\
+We can now perform the limit $m \rightarrow \infty$ on the partition by using the identity \eqref{eqn:m_infinity_limit_hyperbolic}.
+
+\paragraph{Mesons}
+Most of the components of the mesons remains massless, since only the non diagonal $M_{i}^{N_f+1}$ and $M_{N_f+1}^{i}$ terms are massive.
+\begin{equation}
+\begin{aligned}
+& \prod_a^{N_f+1} \prod_b^{N_f+1}  \prod_{l=0}^{k-1}   \Gamma_h \big( \mu_a+  \nu_b + l \omega \Delta_X) \big)  = \\
+& \bigg(  \prod_{l=0}^{k-1}  \bigg ( \prod_a^{N_f} \prod_b^{N_f} \Gamma_h \big( \mu_a + \nu_b + l \omega \Delta_X) \big)  \bigg)\Gamma_h( - 2 m_A N_f + \omega ( 2 \Delta_M +  l \Delta_X) \bigg)  \\
+ &  \bigg(  \prod_{l=0}^{k-1} \prod_a^{N_f} \Gamma_h (m_a - m_A (N_f-1) - \underbrace{M(N_f+1)}_m  + \omega ( \Delta_Q + \Delta_M + l \Delta_X))\\
+ & \Gamma_h(  - \tilde{m}_a + \underbrace{M (N_f +1)}_m - m_A ( N_f-1) + \omega ( \Delta_Q + \Delta_M + l \Delta_X) ) \bigg)
+\end{aligned}
+\end{equation}
+Using the identity for the terms in the last two rows we obtain an exponential factor given by
+\begin{equation}
+\exp
+\left\{ \frac{\pi i }{2 \omega_1 \omega_2}
+\sum_{l=0}^{k-1} \sum_a^{N_f}
+\left[ - m_a^2 + \tilde{m}_a^2 + 4  m \left( m_A (N_f - 1)  + \omega \left( \Delta_Q +  \Delta_M + l\Delta_X  -1\right)  \right)
+\right]
+\right\}
+\label{eqn:contributo_mesoni}
+\end{equation}
+
+\paragraph{Quarks}
+The vacuum expectation value for $\tilde{\sigma}$ was chosen such that only the off-diagonal components would become massive, similarly to the mesons.
+\begin{equation}
+\begin{aligned}
+\bigg( \prod_{i=1}^{N_f} \prod_{j=1}^{k N_f - N_c } \Gamma_h \big( \tilde \mu_i + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_i - \tilde{\sigma_j} \big) \bigg)
+\bigg(\prod_{j=1}^{k} \Gamma_h \big( \tilde \mu_{N_f+1} + \rho_j \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \rho_j \big) \bigg)\\
+\bigg( \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big( \tilde \mu_{N_f+1} + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \tilde{\sigma_j} \big) \bigg)
+\bigg( \prod_{i=1}^{N_f} \prod_{j=1}^{k } \Gamma_h \big( \tilde \mu_i + \rho_j \big) \Gamma_h \big( \tilde \nu_i - \rho_j \big) \bigg)
+\end{aligned}
+\end{equation}
+The terms from the first line corresponds to massless quarks, while the second contains massless components that will generate exponential terms.\\
+The result of the limit $ m \rightarrow \infty$ on the first of these terms gives 
+\begin{multline}
+\lim_{m \rightarrow \infty} \prod_{j=1}^{k N_f - N_c}   \Gamma_h \big(\tilde \mu_{N_f+1} + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde \nu_{N_f+1} - \tilde{\sigma_j} \big) = \\ 
+\exp
+\biggl \{ 
+\left(
+\sum_j^{k N_f - N_c} 4 \sigma'_j \left( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \right)  \right) +  \\
+4 (k N_f - N_c) \biggl(  m_B \frac{N_c}{k(N_f +1)- N_c}  \left(-  m_A N_f - \omega( \Delta_X - \Delta_M - 1)\right) + \\
+ m \left(  m_A N_f + \omega( \Delta_X - \Delta_M - 1)\right)\biggr)
+ \biggr\}
+\end{multline}
+While the other term gives 
+\begin{multline}
+\left( \prod_{i=1}^{N_f} \prod_{j=1}^{k } \Gamma_h \big( \tilde \mu_i + \rho_j \big) \Gamma_h \big( \tilde \nu_i - \rho_j \big) \right) 
+= \\
+\exp
+\biggl \{ 
+\left( 4 N_f \sum_{j=1}^k  \rho'_j \left( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) \right) \right) \\
++  k \sum_a^{N_f} m_a^2 - \tilde{m}_a^2 + 4 k N_f \biggl(  m_B \frac{N_c}{k(N_f +1)- N_c}  \left(- m_A +  \omega ( \Delta_X - \Delta_Q - 1)\right) \\
++ m ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)\biggr) 
+\biggr\}
+\end{multline}
+
+
+
+
+
+
+
+
+
+
+
 
 
