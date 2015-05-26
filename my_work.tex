@@ -12,24 +12,47 @@ In this way, we can provide an independent and more solid proof for the results 
 
 \section{Electric theory}
 The electric theory was introduced in section \ref{sec:kutasov_duality4d} and we report the charge table in order to fix our notation.
+For the four dimensional theory we have
 \begin{equation}
 \begin{array}{| c | c | c c c l | }
 \hline
  & SU(N_c) &SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
-Q & N_c&N_F & 1   &  1  & R_Q =  1 - 
+Q & N_c&N_F & 1   &  1  & 1 - 
 R_X %\frac{2}{k+1}
- \frac{N_c}{N_f}  \\
-\tilde{Q} & \overbar{N_c} &  1 & \overbar{ N_F}   & -1   &   R_Q = 1 -
+ \frac{N_c}{N_f} = R_Q \\
+\tilde{Q} & \overbar{N_c} &  1 & \overbar{ N_F}   & -1   &   1 -
  R_X %\frac{2}{k+1}
-  \frac{N_c}{N_f}    \\
-X & N_c^2-1 & 1   & 1    & 0   &  R_X = \frac{2}{k+1} \\
+  \frac{N_c}{N_f}  = R_Q   \\
+X & N_c^2-1 & 1   & 1    & 0   &  \frac{2}{k+1} = R_X \\
 \hline
 \end{array}
 \centering
 %\caption{Charges for the electric theory}
 %\label{table:charge_table_el_ks_4d}
 \end{equation}
+%
+%
+and for the three dimensional theory
+%
+\begin{equation}
+\begin{array}{ | c | c | c c c c c l |}
+\hline
+  & SU(N_c) & SU(N_f)_L & SU(N_f)_R& U(1)_B & U(1)_A & U(1)_J  & U(1)_R   \\
+ \hline
+ Q & N_c &N_f & 1& 1 & 1 & 0   & \Delta_Q  \\  
+ \tilde{Q} & \overbar{N_c} & 1 & \overbar{N_f}& -1 & 1 & 0 & \Delta_Q      \\  
+  X & N_c^2 -1& 1 & 1  & 0 &0 & 0 & \frac{2}{k+1} = \Delta_X  \\ 
+ %v_{j,\pm} & 1  &1   & - N_f & \pm 1 & -N_f (\Delta_Q-1 ) - \frac{2}{k+1} (N_c-1 - j) \\
+ \hline
+\end{array}
+\end{equation}
+
+
+
+
+
+
 \subsection{Calculation of the index}
 The expression for the superconformal index on \emph{single particle states} can be easily calculated with equations \eqref{eqn:superconforma_index_chiral} and \eqref{eqn:superconformal_index_vector}
 \begin{equation}
@@ -393,18 +416,37 @@ $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
 
 \section{Magnetic theory}
 The four dimensional theory of Kutasov-Schwimmer duality was introduced in section \ref{sec:kutasov_duality4d}. 
-It is a $SU(\tilde{N}_c) = SU( k N_f - N_c)$ SQCD theory with $N_f$ flavours $q,\tilde{q} $, a matter field $Y$ in the adjoint representation and $k$ mesons $M$ that are identified with the electric mesons. There is a superpotential for the adjoint field $ \Tr Y^{k+1}$ that results in $R_X = R_Y$\\
+It is a $SU(\tilde{N}_c) = SU( k N_f - N_c)$ SQCD theory with $N_f$ flavours $q,\tilde{q} $, a matter field $Y$ in the adjoint representation and $k$ mesons $M$ that are identified with the electric mesons. There is a superpotential for the adjoint field $ \Tr Y^{k+1}$ that results in $R_X = R_Y$.
+The four dimensional magnetic theory can be summarized by
 \begin{equation}
-\begin{array}{|c |  c | c c c c |}
+\begin{array}{|c |  c | c c c l |}
 \hline
  & SU(\tilde{N_c})  & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
-q &  \tilde{N_c} & \overbar{N_F}  & 1   &   \frac{N_c}{k N_f - N_c }  &  1 - \frac{2}{k+1} \frac{ \tilde{N_c}}{N_f}  \\
-\tilde{q} & \overbar{\tilde{N_c}}  & 1  &  N_F  & -\frac{N_c}{k N_f - N_c }   &   1 - \frac{2}{k+1} \frac{\tilde{N_c}}{N_f}   \\
-Y & 1  &  \tilde{N_c}^2-1  & 1    & 0   &  \frac{2}{k+1} \\
+q &  \tilde{N_c} & \overbar{N_F}  & 1   &   \frac{N_c}{k N_f - N_c }  &  1 - \frac{2}{k+1} \frac{ \tilde{N_c}}{N_f} = R_q   \\
+\tilde{q} & \overbar{\tilde{N_c}}  & 1  &  N_F  & -\frac{N_c}{k N_f - N_c }   &   1 - \frac{2}{k+1} \frac{\tilde{N_c}}{N_f}  = R_q   \\
+Y & 1  &  \tilde{N_c}^2-1  & 1    & 0   &   \frac{2}{k+1} = R_X  \\
  M_j & 1 & N_f &  \overbar{N_f} & 0 & 2 - \frac{4}{k+1} \frac{N_c}{N_f} + j \frac{2}{k+1} \\
  \hline
 \end{array}
+\end{equation}
+%
+and the three dimensional one by
+%
+\begin{equation}
+\begin{array}{ | c | c c c c c l | } 
+ \hline
+  & SU(N_f)_L & SU(N_f)_R & U(1)_B & U(1)_A & U(1)_J  & U(1)_R   \\
+ \hline
+ q & N_f & 1 & \frac{N_c}{k N_f - N_c} & 1 & 0   & \Delta_Q  \\  
+ \tilde{q} & 1 & \overbar{N_f}& - \frac{N_c}{k N_f - N_c}  & 1 & 0 & \Delta_Q      \\  
+  Y & 1 & 1  & 0 & 0 & 0 & \frac{2}{k+1}= \Delta_Y    \\ 
+  M_j & N_f & \overbar{N_f} & 0 & 2  &  0& 2 \Delta_Q + j \frac{2}{k+1} \\
+ % v_{j,\pm} & 1  &1   & - N_f & \pm 1 & -N_f (\Delta_Q-1 ) - \frac{2}{k+1} (N_c-1 - j) \\
+ %\tilde{v}_{j,\pm} & 1  &1   & N_f & \pm 1 & N_f (\Delta_Q-1 ) + \frac{2}{k+1} (N_c + 1 + j) \\
+ \hline
+\end{array}
+\label{tab:kim-park-magnetic}
 \end{equation}
 
 
@@ -501,23 +543,32 @@ The reduction of the adjoint matter is identical to the electric theory (using \
 \begin{multline}
  \Gamma_e \left((pq)^{\frac{\Delta_Y}{2}} \right)^{\tilde{N}_c -1} 
  \prod_{1 \leq i <j \leq \tilde{N}_c} 
-\Gamma_e \left( (pq)^{\frac{\Delta_Y}{2}} \left( { z_i \over z_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_Y}{2}} \left( { z_j \over z_i} \right) \right) \sim \\
+\Gamma_e \left( (pq)^{\frac{\Delta_Y}{2}} \left( { \tilde{z}_i \over \tilde{z}_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_Y}{2}} \left( { \tilde{z}_j \over \tilde{z}_i} \right) \right) \sim \\
  \exp \left(- \frac{i \pi} {6 r \omega_1 \omega_2 }  \left( (\tilde{N}_c^2-1) \omega (\Delta_Y - 1)  \right) \right)   \prod_{1 \leq i <j \leq \tilde{N}_c} 
-  \, \Gamma_h \left( \Delta_Y \omega \pm (\sigma_i - \sigma_j) \right) 
- %\Gamma_h \left( \Delta_X \omega + (\sigma_j - \sigma_i) \right)
+  \, \Gamma_h \left( \Delta_Y \omega \pm (\tilde{\sigma}_i - \tilde{\sigma}_j) \right) 
+ %\Gamma_h \left( \Delta_X \omega + (\tilde{\sigma}_j - \tilde{\sigma}_i) \right)
 \end{multline}
 
 \paragraph{Quarks}
 \begin{multline}
- \prod_{ j }^{\tilde{N_c}} \prod_{ a,b }^{N_f}  \Gamma_e ( (pq)^{{1 \over 2 } R_q} \, \tilde{v} \, y_i^{-1} \tilde{z_j} ; p,q)\Gamma_e ( (pq)^{{1 \over 2 } R_q} \, \tilde{v}^{-1} \tilde y_b \tilde{z_j}^{-1} ; p,q)  = \\
-  =   \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big( 2  N_f \tilde{N_c}\omega (R_q - 1 ) +  \tilde{N_c} \big( \sum_{a=1}^{N_f} - m_a + \tilde{m}_a \big)  \big) \bigg)  \Gamma_h \big(\tilde{ \mu}_a + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde{\nu}_b - \tilde{\sigma_j} \big)
+ \prod_{ j }^{\tilde{N_c}} \prod_{ a,b }^{N_f}  \Gamma_e ( (pq)^{{1 \over 2 } \Delta_q} \, \tilde{v} \, y_i^{-1} \tilde{\tilde{z}_j} ; p,q)\Gamma_e ( (pq)^{{1 \over 2 } \Delta_q} \, \tilde{v}^{-1} \tilde y_b \tilde{\tilde{z}_j}^{-1} ; p,q)  = \\
+  =   \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big( 2  N_f \tilde{N_c}\omega (\Delta_q - 1 ) +  \tilde{N_c} \big( \sum_{a=1}^{N_f} - m_a + \tilde{m}_a \big)  \big) \bigg)  \Gamma_h \big(\tilde{ \mu}_a + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde{\nu}_b - \tilde{\sigma_j} \big)
 \end{multline}
 where we defined the real masses $\tilde{\mu}_a,\tilde{\nu}_b$
 \begin{equation}
-\tilde{\mu}_a = - m_a + \tilde{m}_B + \omega (R_q) \qquad 
-\tilde{\nu}_b = + \tilde{m}_b - \tilde{m}_B + \omega (R_q) \qquad 
+\tilde{\mu}_a = - m_a + \tilde{m}_B + \omega \Delta_q \qquad 
+\tilde{\nu}_b = + \tilde{m}_b - \tilde{m}_B + \omega \Delta_q \qquad 
 \end{equation}
-
+Note that the signs for the masses associated to the flavour group are inverted with respect to the electric theory, since the quarks sit in opposite representations.
+Moreover, we denoted $\tilde{m}_B$ as the baryonic mass in the magnetic theory.
+It can be related to the electric baryonic mass by
+\begin{equation}
+ \tilde{m}_B = \frac{N_c}{k N_f - N_c} m_B
+ \end{equation} 
+In addition, the R-charges of the dual quarks are fixed by the superpotential interaction with the mesons which results in the condition
+\begin{equation}
+R_q = R_Y - R_Q \qquad \overset{3D}{\longrightarrow} \qquad \Delta_q = \Delta_Y - \Delta_Q
+\end{equation}
 
 
 \paragraph{}
