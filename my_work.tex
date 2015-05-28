@@ -393,7 +393,8 @@ The partition function for the electric theory after integrating out the $N_f +1
  {1 \over N_c ! }
 \Gamma_h ( \Delta_X \omega )^{N_c-1} 
 \\ \int
-\prod_{i=1}^{N_c} \frac{d \sigma_i}{\sqrt{- \omega_1 \omega_2}} \, \delta( \sum_i \sigma_i)  c \left( 4\big( \sum_{i=1}^{N_c}  \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right) 
+\prod_{i=1}^{N_c} \frac{d \sigma_i}{\sqrt{- \omega_1 \omega_2}} \, \delta( \sum_i \sigma_i)  
+%c \left( 4\big( \sum_{i=1}^{N_c}  \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right) 
 \\
    \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}
  \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)
@@ -829,20 +830,20 @@ The term proportional to $m+m_B$ are identical to what we found in the electric 
 The partition function is given by multiplying the terms we found in the previous sections.
 \begin{equation}
 \begin{aligned}
-Z_{mag}  \,= & \, \frac{1}{ (k(N_f+1) - N_c)!}
+Z_{mag}  \,= & \, \frac{1}{ (k N_f - N_c)! \; k!}
  \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
  & c \left( 4  N_c(m_B + m)  ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
  &  \left( \prod_{j=0}^{k-1}
-\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 ù{\Delta_M} + j \Delta_X) \big)  \right) \\
 &\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
 & \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
-   \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }
-    &\begin{aligned}
-    &  &&\Gamma_h \bigg( \left( \tilde{\sigma}_j +  m_B \frac{N_c}{k(N_f+1)-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)   \bigg) \\
-   & &&\Gamma_h \bigg(  - \left( \tilde{\sigma}_j +m_B \frac{N_c}{k(N_f+1)-N_c} \right) + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  \bigg) \bigg)\\
+& \begin{aligned}
+   & \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c } 
+      &&  \Gamma_h \left( \left( \tilde{\sigma}_j +  m_B \frac{N_c}{k(N_f+1)-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)   \right) \\
+   &  && \Gamma_h \left(  - \left( \tilde{\sigma}_j +m_B \frac{N_c}{k(N_f+1)-N_c} \right) + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  \right) \bigg)
  \end{aligned}\\
- & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
- &c \big( 4 (   \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  ) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big)
+ & \left(\prod_{i=1}^{k} \Gamma_h \left( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - {\Delta_M }) \right) \right)\\
+ &c \left( 4 \left(   \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  \right) \left( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) \right)  \right)
  \end{aligned}
 \end{equation}
 For the moment we left the R-charge $\Delta_M$ even though it's the charge of the quark we integrated. It's value is fixed with respect to the other charges by using the condition \eqref{eqn:R-symm Anomaly} and we will remove it later.\\
@@ -851,7 +852,35 @@ This is achieved by the following rescaling
 \begin{equation}
  \xi \; \longrightarrow \; \frac{\xi}{\omega_1 \omega_2} \qquad \longrightarrow e^{\frac{2 \pi i}{\omega_1 \omega_2} \xi (\sum_i \sigma_i + \sum_j \rho_j)}
 \end{equation}
-
+We can remove the term, proportional to $\sum_i \tilde{\sigma}_i + \sum_j \rho_j $ in the last line by a finite shift in $\xi$.\\
+With a shift in $\sigma_i $ and $\rho_j$ we can renormalize the baryonic charges such that the baryonic real mass appear with a prefactor of 
+$ \frac{N_c}{k N_f - N_c}$.
+The (traceless) shift is given by
+\begin{equation}
+ \begin{aligned}
+  & \sigma_i \quad \longrightarrow \quad \sigma_i + \frac{k N_c }{(k N_f - N_c)(k (N_f+1) - N_c)} m_B \\
+  & \rho_j \quad \longrightarrow \quad \rho_j - \frac{N_c }{(k (N_f+1) - N_c)} m_B
+ \end{aligned}
+ \end{equation} 
+Moreover, this shift make the $U(k)$ quarks uncharged under the baryonic symmetry. In fact, it cancels exactly their contribution proportional to the baryonic real mass in the partition function.\\
+After these consideration the partition function can be rewritten as
+\begin{equation}
+\begin{aligned}
+Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} )= &
+  \frac{1}{ (k N_f - N_c)! \; k! } 
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ (k(N_f+1) - N_c) -1}  \\
+ %&  c \left( 4 N_c (m + m_B) \, ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1}
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+& \begin{aligned}
+ &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
+ & &&\Gamma_h \big(  -m_B \frac{N_c}{k N_f -N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - {\Delta_M }) \big) \bigg)\\
+\end{aligned}
+\end{equation}
 
 
 
