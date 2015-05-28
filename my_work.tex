@@ -929,6 +929,7 @@ We obtain the expression
 \prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega(\Delta_X - \Delta_M)) \pm \frac{\xi}{2} \right) 
 \\
 \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right)
+\label{eqn:result_mirror}
 \end{multline}
 The terms on the first line can be rewritten as
 \begin{equation}
@@ -945,9 +946,31 @@ The terms on the first line can be rewritten as
  \right)
 \end{aligned}
 \end{equation}
-
-
-
+using the explicit value of $\Delta_X$.\\
+These singlet fields $(b_j,\tilde{b}_j $are mapped to the magnetic monopoles of the electric theory which have the following charges
+\begin{equation}
+\begin{array}
+{| c | c  c  c c  c | }
+    \hline
+      &  U ( k N_f - N_c) \times U(1)_{mir} & U(1)_B & U(1)_A   & U(1)_J & U(1)_R \\
+      \hline
+    b_j   &  1_{1}              & 0   & -  N_f& 1 &  N_f ( 1 - \Delta_Q) + \Delta_X (j +1 - N_c)  \\
+    \tilde{b}_j   &  1_{-1}             & 0   & - N_f& -1  &  N_f ( 1 - \Delta_Q) + \Delta_X (j +1  - N_c) \\
+    \hline
+\end{array}
+\end{equation}
+They are exactly the same fields we introduced in the field theory analysis of the duality in section \ref{sec:reduction_kss_sun}.\\
+We can repeat the procedure for the other singlets of \eqref{eqn:result_mirror} and we obtain
+\begin{equation}
+\begin{aligned}
+& \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) = 
+\\
+ =&  \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + j) - 2 \Delta_M)\right) = \\
+= & \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + ( k - 1 - j) - 2 \Delta_M)\right) =  \\
+=& \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega( 2 -j \Delta_X  - 2 \Delta_M)\right) 
+\end{aligned}
+\end{equation}
+We can use the mathematical identity $\Gamma_h (2 \omega - x) \Gamma_h(x) = 1$ which tells use that a chiral field with a holomorphic mass $m$ does not contribute to the partition function in the infrared.
 
 
 
