@@ -835,8 +835,8 @@ Z_{mag}  \,= & \, \frac{1}{ (k N_f - N_c)! \; k!}
  & c \left( 4  N_c(m_B + m)  ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
  &  \left( \prod_{j=0}^{k-1}
 \bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 ù{\Delta_M} + j \Delta_X) \big)  \right) \\
-&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
-& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, \int d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ i<j}^{k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ i<j }^{k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
 & \begin{aligned}
    & \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c } 
       &&  \Gamma_h \left( \left( \tilde{\sigma}_j +  m_B \frac{N_c}{k(N_f+1)-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)   \right) \\
@@ -846,11 +846,12 @@ Z_{mag}  \,= & \, \frac{1}{ (k N_f - N_c)! \; k!}
  &c \left( 4 \left(   \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  \right) \left( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) \right)  \right)
  \end{aligned}
 \end{equation}
-For the moment we left the R-charge $\Delta_M$ even though it's the charge of the quark we integrated. It's value is fixed with respect to the other charges by using the condition \eqref{eqn:R-symm Anomaly} and we will remove it later.\\
 We need to rescale $xi$ in order to properly normalize its contribution to the partition function as a standard Fayet-Iliopulos term.
 This is achieved by the following rescaling
 \begin{equation}
- \xi \; \longrightarrow \; \frac{\xi}{\omega_1 \omega_2} \qquad \longrightarrow e^{\frac{2 \pi i}{\omega_1 \omega_2} \xi (\sum_i \sigma_i + \sum_j \rho_j)}
+ \xi \; \longrightarrow \; \frac{\xi}{2 \omega_1 \omega_2} \qquad 
+ d \xi \; \longrightarrow \;  |2 \omega_1 \omega_2 | \, d \xi  = 
+ %\longrightarrow e^{\frac{2 \pi i}{\omega_1 \omega_2} \xi (\sum_i \sigma_i + \sum_j \rho_j)}
 \end{equation}
 We can remove the term, proportional to $\sum_i \tilde{\sigma}_i + \sum_j \rho_j $ in the last line by a finite shift in $\xi$.\\
 With a shift in $\sigma_i $ and $\rho_j$ we can renormalize the baryonic charges such that the baryonic real mass appear with a prefactor of 
@@ -862,27 +863,88 @@ The (traceless) shift is given by
   & \rho_j \quad \longrightarrow \quad \rho_j - \frac{N_c }{(k (N_f+1) - N_c)} m_B
  \end{aligned}
  \end{equation} 
-Moreover, this shift make the $U(k)$ quarks uncharged under the baryonic symmetry. In fact, it cancels exactly their contribution proportional to the baryonic real mass in the partition function.\\
+Moreover, this shift makes the $U(k)$ quarks uncharged under the baryonic symmetry. 
+The gamma function associated to them is not function of the baryonic mass anymore.\\
 After these consideration the partition function can be rewritten as
 \begin{equation}
 \begin{aligned}
-Z_{mag} ( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} )= &
+Z_{mag} 
+%( \mu_a , \nu_b , \tilde{\mu_a}, \tilde{\nu_b} )
+= &
   \frac{1}{ (k N_f - N_c)! \; k! } 
  \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{ (k(N_f+1) - N_c) -1}  \\
  %&  c \left( 4 N_c (m + m_B) \, ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
  &  \left( \prod_{j=0}^{k-1}
-\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \{\Delta_M} + j \Delta_X) \big)  \right) \\
-&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
-& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+\left( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \left( \mu_a+  \nu_b + j \omega \Delta_X) \right) \right) \Gamma_h \left(- 2 m_A N_f +  2 \omega( \Delta_M + j \Delta_X) \right)  \right) \\
+%
+&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\, 
+ \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}}
+  \, \int |2 \omega_1 \omega_2 | d \xi \, e^{\frac{2 \pi i \xi}{\omega_1 \omega_2} ( \sum \sigma_i + \sum \rho_i)}  \\
+%
+& \prod_{ i<j }^{ k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{i<j }^{k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+%
 & \begin{aligned}
- &  \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \big( m_B \frac{N_c}{k N_f-N_c} - m_a - m_A + \omega (\Delta_X - \Delta_Q)  + \tilde{\sigma}_j \big) \\
- & &&\Gamma_h \big(  -m_B \frac{N_c}{k N_f -N_c} + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  - \tilde{\sigma}_j\big) \bigg)\\
+ &  \biggl(  \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }  &&\Gamma_h \left( \left(\tilde{\sigma}_j +  m_B \frac{N_c}{k N_f-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)    \right) \\
+ & &&\Gamma_h \left( - \left( \tilde{\sigma}_j + m_B \frac{N_c}{k N_f -N_c} \right) + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  \right) \biggr)\\
  \end{aligned}\\
- & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm \rho_i  + m_A N_f + \omega( \Delta_X - {\Delta_M }) \big) \bigg)\\
+ & \left( \prod_{i=1}^{k} \Gamma_h \left( \pm \rho_i  + m_A N_f + \omega( \Delta_X - {\Delta_M }) \right) \right)\\
 \end{aligned}
 \end{equation}
-
-
+We can now proceed to the dualization of the $U(k)$ sector as we did in the field theory analysis of the duality.
+However in that case, we had to introduce a perturbation that broke $U(k)$ into $U(1)^k$ and use field theory arguments to dualize the broken sector.\\
+On the other hand, on the partition function we still have the unbroken sector $U(k)$ and we can use the following mathematical identity \cite{vanDeBult:2007} to dualize it into a theory with chiral fields and no gauge group.\\
+Let's define the partition function for a $U(N_c)$ theory with adjoint matter as
+\begin{equation}
+\begin{aligned}
+W_{N_c , K } \, ( \mu_a, \nu_b , \tau, \lambda ) = & \frac{\Gamma_h (\tau)^{N_c}}{N_c !}
+\int \prod_{i=1}^{N_c} \, d \sigma_i \, e^{ \frac{i \pi}{2 \omega_1 \omega_2} \left( 2 \lambda
+\, \mbox{tr } \sigma - 2 K \mbox{ tr } \sigma^2 \right)} 
+\prod_{ i <j }^{N_c}
+\frac{ \Gamma_h ( \tau \pm ( \sigma_i - \sigma_j) }{ \Gamma_h  \left( \pm (\sigma_i - \sigma_j \right) } \\
+&  \prod_{i=1}^{N_c} \prod_{a,b=1}^{N_f} \Gamma_h ( \mu_a + \sigma_i) \Gamma_h(\nu_b- \sigma_i)
+\end{aligned}
+\end{equation}
+where $\lambda$ and $K$ are the Fayet-Iliopulos and Chern-Simons couplings respectively.\\
+The theory can than be dualized using the following identity
+\begin{equation}
+\begin{aligned}
+W_{N_c , 0 } \, ( \mu_a, \nu_b , \omega \Delta_X, \lambda )  = \prod_{j=0}^{k-1} \Gamma_h \left( \omega  - j \omega \Delta_X  - \frac{\mu+\nu}{2} \pm \frac{\lambda}{2} \right)
+\Gamma_h \left( \mu + \nu + j \omega \Delta_X \right)
+\label{eqn:dualization-mirror}
+\end{aligned}
+\end{equation}
+Thus, the $U(k)$ sector is dual to a theory withouth gauge group and with $3k$ singlets, $2k$ of them are charged under the topological symmetry.
+This is easily understood since the Fayet-Iliopulos term $\lambda$ is the charge of this symmetry.\\
+We can apply this identity with the following values for the real masses
+\begin{equation}
+\begin{aligned}
+  \mu_a & =  m_A N_f + \omega( \Delta_X - \Delta_M ) \\
+  \nu_a  &=  m_A N_f + \omega( \Delta_X -\Delta_M )\\
+  \tau  & =  \omega \Delta_X  \\
+  \lambda & = \xi\\
+\end{aligned}
+\end{equation}
+We obtain the expression
+\begin{multline}
+\prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega(\Delta_X - \Delta_M)) \pm \frac{\xi}{2} \right) 
+\\
+\Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right)
+\end{multline}
+The terms on the first line can be rewritten as
+\begin{equation}
+\begin{aligned}
+& \prod_{j=0}^{k-1} \Gamma_h \left( \omega - j \omega \Delta_X - ( m_A N_f + \omega( (N_c+1) \Delta_X - N_f (1 - \Delta_Q ) - 1) \pm \frac{\xi}{2} \right) = \\
+= & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left(
+ 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + j)  \right) - m_A N_f
+ \right) = \\
+ = & \prod_{j=0}^{k-1} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left(
+ 2 + N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c +1 + ( k - 1 - j )  \right) - m_A N_f \
+ \right) \\
+=   & \prod_{j'=1}^{k} \Gamma_h \left( \pm \frac{\xi}{2} +\omega \left(
+  N_f ( 1 - \Delta_Q ) - \Delta_X ( N_c - j - 1)  \right) - m_A N_f
+ \right)
+\end{aligned}
+\end{equation}
 
 
 
