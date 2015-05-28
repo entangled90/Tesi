@@ -812,7 +812,48 @@ where only the last term represent massive contributions. The exponential term a
   \right\}
 \end{equation}
 
-\paragraph{Sum of the contributions}
+\paragraph{Summation of the contribution}
+We expect that the sum of the contributions from the various term will be similar to the divergent factors we found in the electric theory in order to the remaining partition functions to be equal.
+By an explicit calculation we can see that this is indeed true (appendix \ref{appendix:magnetic_theory_calculations}).
+In fact, we have
+\begin{multline}
+\exp \Biggl\{ \frac{i \pi}{2 \omega_1 \omega_2}
+\Biggl( 4 \left( N_c (m + m_B) + \left(\sum_i^{k N_f - N_c} \tilde{\sigma}_i \right) + \left(\sum_j^{k} \rho_j  \right) \right)
+\\
+  \bigg( - m_A N_f + \omega \big(  -N_c \Delta_X + N_f ( 1 - \Delta_Q ) \big) \bigg) \Biggr) 
+\Biggr\}
+\end{multline}
+The term proportional to $m+m_B$ are identical to what we found in the electric theory while we will analyze the other two terms once we have wite down the partition function.
+
+\subsubsection{Partition function} 
+The partition function is given by multiplying the terms we found in the previous sections.
+\begin{equation}
+\begin{aligned}
+Z_{mag}  \,= & \, \frac{1}{ (k(N_f+1) - N_c)!}
+ \Gamma_h ( \Delta_X \omega ; \omega_1 , \omega_2)^{(k(N_f+1) - N_c) -1}  \\
+ & c \left( 4  N_c(m_B + m)  ( - m_A N_f + \omega( -N_c \Delta_X + N_f ( 1 - \Delta_Q))) \right) \\
+ &  \left( \prod_{j=0}^{k-1}
+\bigg( \prod_a^{N_f } \prod_b^{N_f}  \Gamma_h \big( \mu_a+  \nu_b + j \omega \Delta_X) \big) \bigg) \Gamma_h \big(- 2 m_A N_f +  \omega( 2 \Cline[red]{\Delta_M} + j \Delta_X) \big)  \right) \\
+&\int  \prod_{i=1}^{ k N_f - N_c } \frac{d \sigma_i }{\sqrt{-\omega_1 \omega_2}}\,  \prod_{i=1}^{ k } \frac{d \rho_i}{\sqrt{-\omega_1 \omega_2}} \, d \xi \, e^{2 \pi i \xi ( \sum \sigma_i + \sum \rho_i)}  \\
+& \prod_{ 1 \leq i<j \leq k N_f - N_c } \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )} \prod_{ 1 \leq i<j \leq k } \frac{ \Gamma_h( \Delta_X \omega \pm (\rho_i - \rho_j)) }{ \Gamma_h ( \pm (\rho_i - \rho_j) )}\\
+   \bigg( \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c }
+    &\begin{aligned}
+    &  &&\Gamma_h \bigg( \left( \tilde{\sigma}_j +  m_B \frac{N_c}{k(N_f+1)-N_c}\right) - m_a - m_A + \omega (\Delta_X - \Delta_Q)   \bigg) \\
+   & &&\Gamma_h \bigg(  - \left( \tilde{\sigma}_j +m_B \frac{N_c}{k(N_f+1)-N_c} \right) + \tilde{m}_b - m_A + \omega (\Delta_X - \Delta_Q)  \bigg) \bigg)\\
+ \end{aligned}\\
+ & \bigg(\prod_{i=1}^{k} \Gamma_h \big( \pm(  \rho_i  + m_B \frac{N_c}{k(N_f+1)-N_c})+ m_A N_f + \omega( \Delta_X - \Cline[red]{\Delta_M }) \big) \bigg)\\
+ &c \big( 4 (   \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  ) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))  \big)
+ \end{aligned}
+\end{equation}
+For the moment we left the R-charge $\Delta_M$ even though it's the charge of the quark we integrated. It's value is fixed with respect to the other charges by using the condition \eqref{eqn:R-symm Anomaly} and we will remove it later.\\
+We need to rescale $xi$ in order to properly normalize its contribution to the partition function as a standard Fayet-Iliopulos term.
+This is achieved by the following rescaling
+\begin{equation}
+ \xi \; \longrightarrow \; \frac{\xi}{\omega_1 \omega_2} \qquad \longrightarrow e^{\frac{2 \pi i}{\omega_1 \omega_2} \xi (\sum_i \sigma_i + \sum_j \rho_j)}
+\end{equation}
+
+
+
 
 
 
