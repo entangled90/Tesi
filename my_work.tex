@@ -850,7 +850,7 @@ Z_{mag}  \,= & \, \frac{1}{ (k N_f - N_c)! \; k!}
  &c \left( 4 \left(   \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j  \right) \left( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) \right)  \right)
  \end{aligned}
 \end{equation}
-We need to rescale $xi$ in order to properly normalize its contribution to the partition function as a standard Fayet-Iliopulos term.
+We need to rescale $\xi$ in order to normalize its contribution to the partition function as a standard Fayet-Iliopulos term.
 This is achieved by the following rescaling
 \begin{equation}
  \xi \; \longrightarrow \; \frac{\xi}{\omega_1 \omega_2} \qquad 
@@ -859,7 +859,7 @@ This is achieved by the following rescaling
 \end{equation}
 We can remove the term, proportional to $\sum_i \tilde{\sigma}_i + \sum_j \rho_j $ in the last line by a finite shift in $\xi$.\\
 With a shift in $\sigma_i $ and $\rho_j$ we can renormalize the baryonic charges such that the baryonic real mass appear with a prefactor of 
-$ \frac{N_c}{k N_f - N_c}$.
+$ \frac{N_c}{k N_f - N_c}$, which is the standard charge associated to $N_f$ flavours.
 The (traceless) shift is given by
 \begin{equation}
  \begin{aligned}
@@ -895,8 +895,10 @@ Z_{mag}
 \end{aligned}
 \end{equation}
 We can now proceed to the dualization of the $U(k)$ sector as we did in the field theory analysis of the duality.
-However in that case, we had to introduce a perturbation that broke $U(k)$ into $U(1)^k$ and use field theory arguments to dualize the broken sector.\\
-On the other hand, on the partition function we still have the unbroken sector $U(k)$ and we can use the following mathematical identity \cite{vanDeBult:2007} to dualize it into a theory with chiral fields and no gauge group.\\
+However in that case, we had to introduce a perturbation that broke $U(k)$ into $U(1)^k$ and use field theory arguments to dualize the broken sector.
+Removing the perturbation in the superpotential, the gauge group recovers to $U(k)$ and we had to assume that this enhancement doesn't change the results obtained.\\
+On the other hand, on the partition function we still have the unbroken sector $U(k)$ and we can use the following mathematical identity \cite{vanDeBult:2007} to dualize it into a theory with chiral fields and no gauge group.
+\\
 Let's define the partition function for a $U(N_c)$ theory with adjoint matter as
 \begin{equation}
 \begin{aligned}
@@ -917,7 +919,7 @@ W_{N_c , 0 } \, ( \mu_a, \nu_b , \omega \Delta_X, \lambda )  = \prod_{j=0}^{k-1}
 \label{eqn:dualization-mirror}
 \end{aligned}
 \end{equation}
-Thus, the $U(k)$ sector is dual to a theory withouth gauge group and with $3k$ singlets, $2k$ of them are charged under the topological symmetry.
+Thus, the $U(k)$ sector is dual to a theory withouth gauge group and with $3k$ singlets, where $2k$ of them are charged under the topological symmetry. 
 This is easily understood since the Fayet-Iliopulos term $\lambda$ is the charge of this symmetry.\\
 We can apply this identity with the following values for the real masses
 \begin{equation}
@@ -951,7 +953,7 @@ The terms on the first line can be rewritten as
 \end{aligned}
 \end{equation}
 using the explicit value of $\Delta_X$.\\
-These singlet fields $(b_j,\tilde{b}_j) $are mapped to the magnetic monopoles of the electric theory which have the following charges
+These singlet fields $(b_j,\tilde{b}_j) $ are mapped to the magnetic monopoles of the electric theory which have the following charges
 \begin{equation}
 \begin{array}
 {| c | c  c  c c  c | }
@@ -968,18 +970,15 @@ We can repeat the procedure for the other singlets of \eqref{eqn:result_mirror} 
 \begin{equation}
 \begin{aligned}
 & \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + 2 \omega(\Delta_X - \Delta_M) + j \omega \Delta_X \right) = 
-\\
- =&  \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + j) - 2 \Delta_M)\right) = \\
-= & \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega(\Delta_X ( 2 + ( k - 1 - j) - 2 \Delta_M)\right) =  \\
-=& \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega( 2 -j \Delta_X  - 2 \Delta_M)\right) 
+S=& \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega( 2 -j \Delta_X  - 2 \Delta_M)\right) 
 \end{aligned}
 \end{equation}
 After inserting this term back in the partition function we can use the mathematical identity $\Gamma_h (2 \omega - x) \Gamma_h(x) = 1$ 
-which is equivalent to the statement that a chiral field with a holomorphic mass $m$ does not contribute to the partition function in the infrared, since 
+which is equivalent to the fact that if two chiral fields acquire a holomorphic mass they are integrated out and disappear from the partition function.
 \begin{equation}
-  W = m \, M^{\dagger} M \quad \longrightarrow \quad R(M^{\dagger}) = 2 - R (M)
+  W = m \, M^{\dagger} M \quad \longrightarrow \quad R(M^{\dagger}) = 2 - R (M) \qquad Q(M^{\dagger}) = - Q(M)
 \end{equation}
-Applying the identity to the following terms we find that they disappear from the partition function
+Applying the identity to the following terms, they disappear from the partition function
 \begin{equation}
 \prod_{j=0}^{k-1} \Gamma_h \left( 2 m_A N_f + \omega( 2 -j \Delta_X  - 2 \Delta_M)\right) 
 \Gamma_h \left(- 2 m_A N_f +  2 \omega( \Delta_M + j \Delta_X) \right) 
@@ -1039,11 +1038,17 @@ We can modify baryonic charge of the quarks by mixing the baryonic symmetry with
 \end{equation}
 This shift is not traceless and in fact generates a mixed Chern-Simons term $k_{BJ}$ with the topological symmetry which contributes to the partition function as
 \begin{equation}
-\int d \xi \; e^{\frac{\pi i }{\omega_1 \omega_2} 2 \xi \left(   N_c m_B  + \sum_i \tilde{\sigma}_i \right)}
+\int d \xi \; e^{\frac{2 \pi i }{\omega_1 \omega_2}  \xi \left( -  N_c m_B  + \sum_i \tilde{\sigma}_i \right)}
 \end{equation}
 After this shift, the charge of the theory are identical to the charges in \cite{Nii:2014jsa}. 
-Moreover, the appearance of the mixed Chern-Simons was expected and discussed in \cite{Nii:2014jsa}
+Moreover, the appearance of the mixed Chern-Simons is expected since the $U(1)_{mirror}$ is the gauging of the topological symmetry which has the Fayet-Iliopulos term $\xi$ as a charge.
+The FI-term is associated to the $U(1)$ factor in the $U(k N_f - N_c)$ gauge group and as a result, we can understand the appearance of the mixed Chern-Simons term \cite{Nii:2014jsa}.
 
+
+
+
+%%%%%%%%%%%%%
+%%%% pag 191 van de bult eq 5.6.8  è quella giusta!
 
 
 
