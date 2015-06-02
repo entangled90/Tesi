@@ -7,7 +7,8 @@
 
 
 \section{Superconformal index}
-The superconformal index is a quantity that can be calculated in superconformal field theories that counts the number of BPS states with a scale dimension that saturates a unitarity bound.\\
+The superconformal index is a quantity that can be calculated in superconformal field theories that counts the number of short multiplets in the theory, which satisfy a BPS bound.
+The scaling dimensions of these states saturate a unitarity bound.\\
 For $\mN=4$ field theories it was first introduced in \cite{Kinney:2005ej}
 and it was later modified by Romelsberger for $\mN=1$ field theories in \cite{Romelsberger:2005eg}.\\
 The superconformal index can be introduced as a generalization of the Witten index, which is defined as 
@@ -31,6 +32,7 @@ We can pick one of the supercharges, e.g. $Q_1$, and from the superconformal alg
  \begin{equation}
  	\Xi = H - \frac{1}{2} R \geq \frac{2}{3} H 
  \end{equation}
+ which damps as well as the Hamiltonian.\\
 As we said before, we can add other terms in order to differentiate the various states.
 Such terms are given by the Cartan generators $J_1, J_2$ of the $SU(2)_L \times SU(2)_R$ isometry of the three-sphere and by the generators $e_a$ of the internal symmetry group.\\
 The superconformal index on the sphere $S^3 \times S^1$ is then defined as \cite{Romelsberger:2007ec}
@@ -38,14 +40,14 @@ The superconformal index on the sphere $S^3 \times S^1$ is then defined as \cite
  i( x, h_a) =&
 %  \Tr  \left[  (-1)^F e^{ - \mu \Xi } p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
 \Tr \left[ (-1)^F  e^{ - \mu \Xi} x^{2 J_2} \prod_a h_a^{e_a} \right] \\= &
-\Tr \left[ (-1)^F  t^{\Delta} t^{ 2 J_1 - R} x^{2 J_2} \prod_i h_a^{e_a} \right] 
+\Tr \left[ (-1)^F  t^{\Delta +  2 J_1 - R} x^{2 J_2} \prod_i h_a^{e_a} \right] 
  \end{align} 
  where we defined $t = e^{- \mu}$.
 WIth a change of variables, the superconformal index can be written as 
 \begin{equation}
  i( p, q, h_a) =
  \Tr  \left[  (-1)^F 
- (pq)^{ \frac{\Xi}{2}} %e^{ - \mu \Xi }
+ (pq)^{ \frac{\Delta}{2}} %e^{ - \mu \Xi }
   p^{J_1 + J_2 - \frac{R}{2}} q^{J_1 - J_2 - \frac{R}{2} } \prod_a u_a^{e_a}    \right]
 \end{equation}
 where $p,q$ are defined by
@@ -98,7 +100,7 @@ x_3  & = \sin \theta \sin \chi
 we obtain the metric of the squashed sphere with squashing parameter 
 $b = l/\bar{l}$
 \begin{align}
- d s^2 = f(\theta)^2 d \,theta^2 + l^2 \cos^2 \theta d \phi ^2 + \bar{l}^2 \sin^2 \theta d \chi^2 \\
+ d s^2 = f(\theta)^2 d \,\theta^2 + l^2 \cos^2 \theta d \phi ^2 + \bar{l}^2 \sin^2 \theta d \chi^2 \\
 \hbox{with} \quad f( \theta) = \sqrt{ l^2 \sin^2 \theta + \bar{l}^2 \cos^2 \theta}
 \end{align}
 The index on the squashed sphere $S_b^3 \times S^1$ should coincide with the index on the round sphere $S^3 \times S^1$ since they have the same topology and the indices receive contributions from the same BPS states.
@@ -121,7 +123,7 @@ It can be written as an elliptic gamma function through
 \\
 & \; \hbox{where} \quad i_S(p,q,y) = \frac{y - pq/y}{(1-p)(1-q)} \quad
 \end{align}
-The contribution to the index of chiral field in the (anti)fundamental representation of global and gauge symmetries can be generally
+The contribution to the index of chiral field in the fundamental or antifundamental representation of global and gauge symmetries can be generally
  written as
 \begin{equation}
 \Gamma_e \left(   (pq)^{\frac{R_i}{2}} \prod_a u_a^{e_a} ; p ,q \right)
@@ -161,8 +163,8 @@ We will use this fact as a starting point in our discussion on the dimensional r
 
 
 \section{Localization}
-Localization was first introduced on $S^4$ for $\mN=2,4$ theories in \cite{Pestun:2007rz} and then applied to $S^3$ and $S_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz}, \cite{Hama:2010av} and \cite{Hama:2011ea}.
-It can be used to calculate partition function or Wilson loops. \\
+Localization was first introduced by Witten \cite{Witten:1992xu} and Nekrasov \cite{Nekrasov:2002qd} and later generalized on $S^4$ for $\mN=2,4$ theories by Pestun in \cite{Pestun:2007rz} and then applied to $S^3$ and $S_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz}, \cite{Hama:2010av} and \cite{Hama:2011ea}.
+It can be used to calculate exactly the functional integral on a curved manifold.\\
 The basic principle about localization is the following.
 Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leaves the measure of the path integral invariant and that it squares to a \emph{bosonic} symmetry $\Delta_B$, which can be a Lorentz or gauge transformation.\\
 Consider the following modified partition function, which correspond to the partition function we want to calculate for $t=0$
@@ -216,7 +218,7 @@ They must be parametrized as function of the radius $r$ of $S^1$
 p= e^{2 \pi i r \omega_1} \quad q=e^{2 \pi i r \omega_2} \quad u_a = e^{2 \pi i r \mu_a } \quad z_i = e^{2 \pi i r \sigma_i}
 \label{eqn:fugacities_r_limit_real_masses}
 \end{equation}
-where $\mu_a$ are the real masses and $\sigma_i$ is the scalar in the vector multiplet.
+where $\sigma_i$ is the scalar in the vector multiplet and $\mu_a$ are the scalars in the background gauge multiplet that become real masses .
 \\
 Since the superconformal index is written in terms of elliptic gamma functions, we can use the following identity \cite{vanDeBult:2007} to perform the limit $r \rightarrow 0$ 
 \begin{equation}
@@ -236,7 +238,7 @@ The matching of the indices for dual theories is supported by mathematical ident
 \\
 Reducing the indices to three dimensions we obtained expressions involving integrals of hyperbolic gamma functions. 
 Mathematical identities that support the equality of the partition functions \cite{vanDeBult:2007} are not known for every three dimensional duality.
-In any case, the reduction process from four dimensions guarantees that the partition functions are identical.
+In any case, when the reduction process from four dimensions is well defined, it guarantees that the partition functions are identical.
 
 
 
