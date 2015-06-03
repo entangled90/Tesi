@@ -329,6 +329,27 @@ It is called Fayet-Iliopulos term and can be present for every ideal $A$ of the 
  \mathcal{L}_{FI} \, = \, \sum_{A} \xi_A \int d^2 \theta d^2 \bar{\theta} V^{A} \, = \, \frac{1}{2} \sum_{A} \xi_A D^A
  \end{equation}
 
+ \subsubsection{Scalar potential}
+%Supersymmetric field theories posseses a moduli space of vacua since there are many scalar fields in the supermultiplets and the scalar pontential is always non-negative.
+Supersymmetric field theories contain various scalar fields that can acquire non-zero vacuum expectation values.
+The scalar potential is the only term in the Lagrangian and in the Hamiltonian that can differ from zero since derivatives of the scalar fields have to be zero in order to preserve the Lorentz invariance of the vacuum.
+As a result, the minima of the scalar potential are in one-to-one correspondence with the states of minimal energy of the theory.\\
+The scalar potential for $4D \; \mN=1$ gauge theories with matter reads
+\begin{equation}
+ V ( \phi_i, \bar{\phi}_j) = F \bar{F} + \frac{1}{2} D^2  \quad \overset{\mathclap{on-shell}}=   \quad \frac{\partial W}{\partial \phi_i} F^i \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \bar{F}^i + \frac{g^2}{2} \sum_a | \bar{\phi}_j (T^a)^j_i \phi^j + \xi^a | ^2  \geq 0
+\end{equation} 
+$\xi^a$ is the Fayet-Iliopulos coefficient and differs from zero only if the gauge group has abelian factors.
+The last equality is valid since $D$ and $F$ are auxiliary fields with no dynamics whose value is set by their equations of motion
+\begin{equation}
+ \bar{F}_i  = \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \qquad D^a = - g \bar{\phi} T^a \phi - g \xi^a 
+\end{equation}
+It can be demonstrated that the scalar potential is positive definite function.
+The zeroes of the scalar potential can be found, if present, by solving separately the \emph{F-term} and \emph{D-term} equations
+\begin{equation}
+F = 0 \qquad D^a = 0
+\label{eqn:F_D_term}
+\end{equation}
+
 
 
 

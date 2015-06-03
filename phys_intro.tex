@@ -136,7 +136,7 @@ It was first demonstrated perturbatively, using the fact that for general supers
 \begin{equation}
 \int  d^4 x_1 \dots d^4 x_n d^2 \theta d^2 \bar{\theta} \; G (x_1 , \dots , x_n) \,F_1 ( x_1, \theta, \bar{\theta}) \dots  F_n ( x_n, \theta, \bar{\theta}) 
 \end{equation} 
-where $F_i$ are given by products of superfield and their covariant derivatives and $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
+where $F_i$ are given by products of superfields and their covariant derivatives and $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
 The importance of this result is that all contribution from Feynman diagrams are given by a single integral over full superspace ($d^2 \theta d^2 \bar{\theta} $) whereas the superpotential must be written as an integral in half-superspace($d^2 \theta $ only) of chiral fields.
 Exploiting the fact that a product of chiral fields is a chiral field, the most general form of a superpotential is 
 \begin{equation}
@@ -163,41 +163,22 @@ A more detailed discussion can be found in \cite{Seiberg:1994bp} and \cite{Intri
 
 \subsection{Moduli space}
 \label{sec:subsection_moduli_space}
-Supersymmetric field theories posses a moduli space of vacua since there are many scalard field in the supermultiplets and the scalar pontential is always non-negative.
-
-Lorentz invariance of the vacuum forbids fields with spin different from zero to acquire a vacuum expectation value.
-With the same reasoning, derivatives of scalar fields must be set to zero because of translational invariance of the vacuum.
-The scalar potential is the only term in the Lagrangian and in the Hamiltonian that can differ from zero.
-As a result, the minimums of the scalar potential are in one-to-one correspondence with the states of minimal energy of the theory.
-
-For $4D \; \mN=1$ gauge theories with matter, the scalar potential for the squarks reads
-\begin{equation}
- V ( \phi_i, \bar{\phi}_j) = F \bar{F} + \frac{1}{2} D^2  \quad \overset{\mathclap{on-shell}}=   \quad \frac{\partial W}{\partial \phi_i} F^i \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \bar{F}^i + \frac{g^2}{2} \sum_a | \bar{\phi}_j (T^a)^j_i \phi^j + \xi^a | ^2  \geq 0
-\end{equation} 
-$\xi^a$ is the Fayet-Iliopulos coefficient and differs from zero only for abelian factors of the gauge group.
-The last equality is valid since $D$ and $F$ are auxiliary fields with no dynamics.
-Their value is set by their equations of motion
-\begin{equation}
- \bar{F}_i  = \frac{\partial \bar{W}} {\partial \bar{\phi}_i} \qquad D^a = - g \bar{\phi} T^a \phi - g \xi^a 
-\end{equation}
-Supersymmetric vacua are described by the sets of values of the scalar \emph{VEVs} that give a zero scalar potential. 
-This requirement is equivalent to two different sets of equations, called $D-term$ and $F-term $ equations
+The \emph{classical moduli space} is the set of vacuum expectation values of the scalar fields that correspond to a zero of the scalar potential.
+The zeroes of the scalar potential can be found by solving to two different sets of equations, called $D-term$ and $F-term $ equations
 \begin{equation}
 \bar{F}^i ( \phi) = 0 \qquad D^a (\phi , \bar{\phi}) = 0
 \end{equation}
-\emph{F-term} equations are present only if there is a superpotential while the \emph{D-term} equations are always present.\\
+\emph{F-term} equations are present only if there is a superpotential while the \emph{D-term} equations are associated to the kinetic part of the lagrangian.\\
 If the minimum of the scalar potential is different from zero the vacuum is not supersymmetric. 
 In this case supersymmetry is spontaneously broken.
-Another possible situation is that the scalar potential has no minimum at all: the theory does not have any stable vacua.
-
-The \emph{classical moduli space} is the set of solution of these equations for scalar \emph{VEVs} and represents the classical supersymmetric vacua of the theory. 
-Gauge transformation should be taken into account in order to avoid redundance in the description.
-The moduli space describe physically inequivalent vacua, since the mass spectrum of the theory depends on the \emph{VEVs} of the scalar fields, that differ in every point of the moduli space. 
-
-Because of supersymmetry radiative corrections do not lift the energy of the ground state and the vacuum remains supersymmetric.
+Another possible situation is that the scalar potential has no minimum at all: the theory does not have any stable vacua.\\
+If it is not possible to find vacuum expectation values that correspond to a zero in the scalar potential, then the theory does not posses a moduli space.\\
+Gauge transformations should be taken into account in order to avoid redundance in the description.
+The moduli space describes physically inequivalent vacua, since the mass spectrum of the theory depends on the \emph{VEVs} of the scalar fields, which differ in every point of the moduli space. \\
+Because of supersymmetry, radiative corrections do not lift the energy of the ground state and the vacuum remains supersymmetric.
 As a result, only superpotentials generated from nonperturbative dynamics can lift the moduli space. 
 We will see examples of this phenomenon in the analysis of SQCD.
-
+\\
 An alternative description of the space of classical \emph{D-flat} directions is given by the space of all holomorphic gauge invariant polynomials of scalar fields modulo classical relations between them \cite{Luty:1995sd}.
 As a result, gauge invariant polynomials of operators parametrize the classical moduli space of the theory. 
 Using this description it's easier to find the moduli space of the theory in consideration.
@@ -243,7 +224,7 @@ After weakly gauging $G$ we introduce additional fermions that are charged only 
 Flowing towards the infrared, the anomaly is still zero if the global symmetry group is not broken.
 After constructing the low-energy effective field theory, 
 we can calculate the triangle anomalies for the group $G$ involving the composite low energy fields, which results in the term $A_{IR}$.
-The contribution of the additional fermions remains identical since they are massless and are weakly gauged.
+The contribution of the additional fermions remains identical since they are massless.
 \begin{equation}
  0 = A_{IR} + A_{F} = A_{UV} + A_{F} \quad \rightarrow \quad A_{IR} = A_{UV}
 \end{equation}
@@ -252,6 +233,6 @@ The anomaly coefficient can be easily computed since it is proportional to the g
  A = \Tr \; ( T^a \{ T^b, T^c \})
 \end{equation}
 Summarizing the result, we found that if the global symmetry group is not broken by the strong dynamics, triangle anomalies involving only the global symmetry group should be equal in the ultraviolet and in the infrared.\\
-We will use these anomaly matching conditions to find if two dual theories are invariant under the same global symmetries in the IR as an additional check of electric magnetic duality.
+We will use these anomaly matching conditions to find if two dual theories are invariant under the same global symmetries in the IR as an additional check of electric-magnetic duality.
 
 

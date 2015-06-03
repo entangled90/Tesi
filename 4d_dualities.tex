@@ -17,16 +17,14 @@ This is particularly useful since it provides an alternative, weakly coupled des
 \subsection{Electric theory: $SU(N)$ SQCD with $N_f$ flavours }
 We will start our analysis on eletric-magnetic duality studying the first pair of theories that were discovered to be dual in \cite{Seiberg:1994pq}.  
 We are going to analyse the properties of these theory in order to better understand the features of the duality.
-
-
-
+\\
 The electric theory is a $SU(N_c) $ supersymmetric gauge theory with $N_f$ massless flavours.
 Its non-anomalous global symmetry group is 
 \begin{equation}
 SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R 
 \label{eqn:seib_dual_global_symm_group}
 \end{equation}
-The axial symmetry gives rise to an anomaly through the triangular graph $U(1)_A SU(N_c)^2$, hence it is not a symmetry of the theory.\\ 
+The axial symmetry gives rise to an anomaly through the triangular graph $U(1)_A  \times SU(N_c)^2$, hence it is not a symmetry of the theory.\\ 
 The classical lagrangian in superspace language is given by
 \begin{equation}
  \mathcal{L} = \tau \int d^2 \theta \; Tr ( W_{\alpha} W^{\alpha} ) + \mathrm{h.c.} + 
@@ -55,7 +53,7 @@ The value of the R-charge is fixed by the triangle anomaly $SU(N_c)^2 \, U(1)_R 
 \label{fig:r_symm_triangle_anom}
 \caption{Feynman graphs contributing to the R-symmetry anomaly}
 \end{figure}
-Every fermion in the theory contributes to the anomaly which, as a result, is proportional to the R-charge of the fermions running in the loop and the Dynkin index of its representation.
+Each fermion in the theory contributes to the anomaly which, as a result, is proportional to the R-charge of the fermions running in the loop and the Dynkin index of its representation.
 Requiring the anomaly to vanish, we find
 \begin{align}
 R_{gaugino} T (\hbox{Ad}) + \sum_{ f} (& R_{f} - 1)  T(r)   = 0 
@@ -64,7 +62,7 @@ R_{gaugino} T (\hbox{Ad}) + \sum_{ f} (& R_{f} - 1)  T(r)   = 0
 N_c + \frac{1}{2}\,  2 N_f (R_Q -1)  = 0 \quad & \rightarrow \quad R_Q = \frac{N_f - N_c}{N_f}
 \end{align}
 where we set the gaugino R-charge to $1$ in order to have gluons not charged under R-symmetry.
-
+\\
 Since the non-anomalous R-symmetry condition leads to a unique set of R-charges, we found the R-charges at the superconformal infrared point of the theory.
 
 
@@ -75,17 +73,17 @@ They can be read from the on-shell lagrangian and are given by
  D^a = g \left( Q^{*i} T^a Q_i - \tilde{Q}^{* i} T^a \tilde{Q}_i \right) = 0
 \end{equation}
 where $T^a$ are the gauge group generators in fundamental or antifundamental representation and $i$ is a flavour index.
-
+\\
 After considering gauge and global symmetries, the squark \emph{VEVs}, represented as $N_f \times N_c$ matrices, which satisfy the D-term equation are given by
 \begin{itemize}
 \item for $N_f \le N_c$ and $a_i$ generic
 \begin{equation}
 Q = \tilde{Q} = 
 \begin{pmatrix}
- a_1 & 		&	 &	 & \vdots \\
-	 & a_2  & 	 & 	 & \vdots \\  	
- 	 & 		&	\ddots &	 &\vdots  \\
-	 &  & 	 & 	a_{N_f}  & \vdots
+ a_1 & 		&	 &	 & \vdots & \vdots \\
+	 & a_2  & 	 & 	 & \vdots & \vdots \\  	
+ 	 & 		&	\ddots &	 &\vdots & \vdots  \\
+	 &  & 	 & 	a_{N_f}  & \vdots & \vdots
 \end{pmatrix} 
  \\
 \end{equation}
@@ -98,6 +96,7 @@ Q  =
  	 & 		&	\ddots &	   \\
 	 &  & 	 & 	a_{N_c}  \\
 	 \dots & \dots & \dots & \dots\\ 
+	 \dots & \dots & \dots & \dots\\ 
 \end{pmatrix} 
 \quad
 \tilde{Q} = 
@@ -107,16 +106,16 @@ Q  =
  	 & 		&	\ddots &	   \\
 	 &  & 	 & 	\tilde{a}_{N_c}  \\
 	 \dots & \dots & \dots & \dots\\ 
+	 \dots & \dots & \dots & \dots\\ 
 \end{pmatrix} 
 \end{equation}
 \end{itemize}
-
 For $N_f \le N_c$ in a generic point of the moduli space the gauge group is broken to $SU(N_c - N_f)$ while for $N_f \geq N_c$ is broken completely.
 The gauge group breaks through the super Higgs mechanism: every broken generator is absorbed by the associated massless vector superfield.
 This process gives mass to the vector superfield.  
 \footnote{Remember that massive representation of supersymmetry have twice the degrees of freedom of massless ones, because in the latter half of the supercharges are represented trivially.}
 The mass of the gauge superfield is given by the VEVs of the squarks.
-
+\\
 As we said in section \ref{sec:subsection_moduli_space}, we can  study the classical moduli space by finding holomorphic gauge invariant polynomials in the operators and modding out classical relations between them.
 For $N_f < N_c$ we can only construct \emph{mesons} out of squarks
 \begin{equation}
@@ -146,10 +145,10 @@ B  \simeq & \;  a_1 a_2 \dots a_{N_c}
 \tilde{B} \simeq & \;  \tilde{a_1} \tilde{a_2}\dots \tilde{a_{N_c}}
 \end{align}
 We can see that if the mesons have rank less than $N_c$, then $B$ or $\tilde{B}$ (or both) has to vanish and the other has rank one. If the mesons' rank is $N_c$ both $B$ and $\tilde{B}$ have rank one.
-
+\\
 There are classical constraints that should be imposed between mesons and baryons, but depend on the number of flavours .
 For example for $N_f = N_c$ the classical constraint  is $ det \,( M) - B \tilde{B} = 0$.
-
+\\
 Singularities of the moduli space can be investigated using the gauge invariant description we have just introduced.
 The part of the lagrangian that describes flat directions can be written in terms of mesons and baryons. 
 The lagrangian involving mesons features a non-trivial Kahler potential that reads
@@ -166,13 +165,12 @@ some (or all) gluons are now massless and should be included in the low-energy d
 
 \subsubsection{Quantum moduli space}
 
-Quantum dynamics modifies the structure of the moduli space of the theory in a different way depending on the number of flavours.
-\\
+Quantum dynamics modifies the structure of the moduli space of the theory in a different way depending on the number of colours and flavours.
 \paragraph{Pure SYM}
  For pure \emph{Super Yang Mills}, i.e. no quarks, the theory exihibit a discrete set of $N_c$ vacua. 
 Without quarks a non-anomalous R-symmetry cannot be found,
 and the R-symmetry is broken down to the discreet symmetry $\mathbb{Z}_{2 N_c}$.
-Using holomorphy and symmetry arguments, the form of the non-perturbative potential can be found and it can be shown that induces the gaugino to condensate \cite{Veneziano:1982ah}, meaning that 
+Using holomorphy and symmetry arguments, the form of the non-perturbative potential can be found and it can be shown that it induces the gaugino to condensate \cite{Veneziano:1982ah}, meaning that 
 \begin{equation}
 \langle \lambda \lambda \rangle = - \frac{32 \pi^2}{N_c} a \, \Lambda^3
 \end{equation}
@@ -184,9 +182,7 @@ where $\Lambda$ is the dynamically generated scale of the theory defined as
 where $\tau$ is the complexified gauge coupling.
 $|\Lambda|$ is defined as the scale at which the coupling constant blows up.\\
 The gaugino condensation breaks R-symmetry to $\mathbb{Z}_2$ and in fact there are $N_c$ physically different vacua labelled by different phases of the gaugino condensate.
-\\
-\paragraph{
-$\mathbf{ N_f < N_c}$}
+\paragraph{$\mathbf{ N_f < N_c}$}
 The quantum corrections for \emph{SQCD} with $N_f < N_c$ flavours completely lift the moduli space through the Affleck-Dine-Seiberg (ADS) superpotential (\cite{Davis:1983mz}\cite{Affleck:1983mk}) which reads
 \begin{equation}
 W_{eff} = \left( N_c - N_f  \right)\left( 
@@ -203,7 +199,7 @@ The slope of the potential goes to zero only for $\mathrm{det} \, {M}  \rightarr
 \includegraphics[scale=0.5]{ads_super.png}
 \end{center}
 This situation is the perfect example where, unlike the classical moduli space, quantum corrections lift completely the moduli space and the theory does not posseses a vacuum anymore.
-\\
+
 \paragraph{$\mathbf{ N_f = N_c}$}
 When the number of flavours is equal the number of colours of the theory, the classical moduli space was subject to the constraint
 \begin{equation}
@@ -214,17 +210,16 @@ In the quantum corrected moduli space mesons and baryons satisfy \cite{Seiberg:1
  \Det{M} - B \tilde{B} = \Lambda^{2 N_c}
 \end{equation}
 which flows to the classical constraint in the classical limit ($\Lambda \; \rightarrow \;0$).
-
+\\
 \begin{SCfigure}[1.3][h]
 \centering
 {\includegraphics[width=5 cm]{quantum_moduli_space_sqcd.png} }
 {\caption{ Quantum and classical representation of the moduli space near the origin}}
 \end{SCfigure}
-
 The effect of this relation is that the origin  does not belong to the moduli space anymore and the moduli space is now smooth.
 For large expectation values of $M$, $B$ and $\tilde{B}$ the classical and the quantum moduli space look similar, while in the origin of the moduli space quantum corrections modify drastically the structure of the moduli space.
 Moreover, the subspace with $B$ or $\tilde{B}$ equal to zero, is not singular anymore while classically the meson matrix was constrained to have zero determinant. 
-
+\\
 Since the origin is not in the quantum moduli space the global symmetry group is necessarily broken in some way, depending on the position of the moduli space 
 \begin{align}
 M^i_j = \Lambda^2 \delta^i_j \quad B=\tilde{B}= 0 \quad & \rightarrow  \quad SU(N_f)_V \times U(1)_B \times U(1)_R\\
@@ -249,7 +244,6 @@ W = \frac{1}{\Lambda^{2 N_c -1}} \left( M^i_j B_i \tilde{B}^j - \Det{M} \right)
 \end{equation}
 that enforce the classical constraints \eqref{eqn:N_f__N_c_1_classical_constraints} through the equations of motion.
 For large VEVs of the fields, mesons and baryons acquire large mass through the superpotential.
-\\
 \paragraph{$\mathbf{ N_f > N_c +1 }$}
 Starting from $N_f = N_c +2$ it is not possible to construct a physical superpotential out of gauge invariant operators, in analogy to the previous cases.
 The only $SU(N_f)_L \times SU(N_f)_R$ invariant superpotential that can be written is given by
@@ -261,12 +255,12 @@ However this superpotential does not have R-charge equal to two and if we add mo
 As a result, near the origin the quantum corrected moduli space looks identical to the classical one.
 Unlike the case with $N_f = N_c +1$ the singularities in the moduli space cannot be interpreted as massless mesons and baryons and an effective description of these operator is singular \cite{Seiberg:1994bz}.
 Since 't Hooft anomaly matching conditions are not satisfied in the singular points it is clear that a description using mesons and baryons is not correct.
-
-To find a description of the low-energy degrees of freedom of the theory we will use Seiberg duality, which provides an alternative description of the theory.
 \\
+To find a description of the low-energy degrees of freedom of the theory we will use Seiberg duality, which provides an alternative description of the theory.
+
 \paragraph{\textbf{Conformal window}}
 %$\mathbf{  \frac{3}{2} N_c \geq N_f \geq  3 N_c}$ \textbf{: the conformal window}\\
-In this range the theory is not asympotically free. This can be seen by using the \emph{NSVZ} $\beta$ function, which, using \eqref{eqn:suN_Dynkin_indices}, reads
+Thetheory is not asympotically free in the range $\frac{3}{2} N_c < N_f < 3 N_c$. This can be seen by using the \emph{NSVZ} $\beta$ function\eqref{eqn:suN_Dynkin_indices}, which reads
 \begin{align}
  \beta (g) & \, = \,- \frac{g^3}{16 \pi^2} \frac{3 N_c - N_f + N_f \gamma(g^2)}{1 - N_c \frac{g^2}{8 \pi^2}} \\
 \gamma(g^2) &  \,= \, - \frac{g^2}{8 \pi^2} \frac{N_c^2 - 1}{N_c} + \mathcal{O} (g^4)
@@ -277,7 +271,7 @@ This is possible because one loop and two loop contributions to the beta functio
 As a result, the infrared theory is a non-trivial four dimensional superconformal theory. 
 The infrared degrees of freedom are quarks and gluons that are not confining but are interacting as massless particles.
 The theory is in a free non-Abelian Coulomb phase.
-
+\\
 Since the theory is superconformal, we have further restrictions on the algebra of operators \footnote{
 	R-symmetry is part of the superconformal algebra instead of being an automorphism of the algebra, as in superPoincarè algebra.  
 	}.
@@ -286,23 +280,25 @@ Superconformal algebra imposes that the dimension of every operator satisfy this
  D \geq \frac{3}{2} \; | R |
  \label{eqn:superconformal_dimension_rcharge}
 \end{equation}
-where the bound is satured for chiral fields.
-The operator product expansion (\emph{OPE} ) of two chiral operator is constrained by this fact.
-Since $R( O_1 O_2) = R(O_1) + R(O_2)$, we have that for chiral operators, $D(O_1 O_2) = D(O_1) + D(O_2)$. 
+where the bound is satured for chiral fields.\\
+The product of two chiral operator is constrained by this fact.
+%Because $R( O_1 O_2) = R(O_1) + R(O_2)$, for chiral operators, which saturate the bound \eqref{eqn:superconformal_dimension_rcharge}, $D(O_1 O_2) = D(O_1) + D(O_2)$. 
+Consider that for two operators $O_1,O_2$ we have $R( O_1 O_2) = R(O_1) + R(O_2)$.
+Because of the bound \eqref{eqn:superconformal_dimension_rcharge}, the scaling dimension of chiral operators is additive $D(O_1 O_2) = D(O_1) + D(O_2) = \frac{3}{2} R(O_1) + \frac{3}{2} R(O_2)$.
 Note that the dimension of the operator is quantum corrected, i.e. contains the anomalous dimension of the operator.
-Therefore, the OPE is not singular and the product of operators is well-defined. Because of this fact, chiral operators form the \emph{chiral ring}. 
-
+%Therefore, the OPE is not singular and the product of operators is well-defined. Because of this fact, chiral operators form the \emph{chiral ring}. 
+\\
 Since the superconformal R-symmetry is not anomalous and commutes with the global symmetry group of the theory it must be the R-symmetry that appears in table \ref{tab:suN_elect_charge}.
-The gauge invariant operators we defined previously must have
+Because of \eqref{eqn:superconformal_dimension_rcharge}, the gauge invariant operators we defined previously must have the following dimensions
 \begin{align}
  D(Q \tilde{Q}) &= \frac{3}{2} R(Q \tilde{Q}) = 3 \frac{N_f - N_c}{N_f}\\
  D(B) & = D(\tilde{B})  = \frac{3}{2} N_c \frac{N_f - N_c}{N_c}
 \end{align}
-
+\\
 Gauge invariant operators should be in unitary representation of the superconformal algebra.
-Unitarity imposes that in general $D\geq 1$ and the equality holds for free fields.
+Unitarity imposes that in general $D\geq 1$ and the equality holds for singlet fields.
 From the previous equation we can verify that $D(M) \geq 1$ for $ N_f \geq \frac{3}{2}N_c$ and it becomes a free field for $N_f = \frac{3}{2}N_c$. 
-
+\\
 For fewer number of flavours, the meson field is inconsistent with the unitarity bound.
 The theory is conjectured to flow to a different phase.
 \\
@@ -312,7 +308,7 @@ This is caused by the \emph{charge screening} effect of quarks, that make the co
 The theory is in a free non-Abelian electric phase.
 Its behaviour is not well defined at high energies because of the presence of a Landau pole at $R \sim \Lambda^{-1}$, although the theory can be a good description of a low-energy limit of another theory. 
 
-\subsubsection{Magnetic theory}
+\subsection{Magnetic theory}
 The magnetic theory is a \emph{SQCD} theory with the same global symmetries as the electric theory, but with gauge group $SU(N_f - N_c)$. 
 In addition there are $N_f^2$ color singlets, that we will call mesons, since they have the same properties as the mesons we can construct in the electric theory.
 In the magnetic theory they are fundamental fields i.e. they are not written as gauge invariant operators from quarks. 
@@ -338,7 +334,7 @@ M^i_{\tilde{j}}  &  1  & N_f & \overbar{N_f}  & 0 &  2 \frac{N_f - N_c}{N_f}\\
  %\caption{Charges of the magnetic theory}
 \end{equation}\\
 Dual quarks sit in opposite representation of flavour symmetries. 
-
+\\
 Mesons in the magnetic theory have the same charges of the mesons constructed from electric quarks.
 Baryons constructed from dual quarks have the same baryonic charge as the electric baryons.
 Moreover, it can be demonstrated that they are proportional to each other.\\
@@ -353,7 +349,7 @@ In the \emph{conformal window} the electric and magnetic theories we introduced 
 In this range, the magnetic theory has a non-trivial infrared fixed point too. 
 At this fixed point, the superpotential \eqref{eqn:seiberg_duality_mag_super} is a relevant perturbation since it has dimension $D = 1 + 3 \frac{N_c}{N_f}  <3 $ and it drives the theory to a new fixed point.\\
 Electric mesons have different dimension in the UV from the magnetic ones since they are constructed from a pair of quark.
-For this reason it is necessary to introduce a dimensionful scale $\mu$ in order to match their dimension in the UV: $ M = \mu M_m$, where $M_m$ are the magnetic mesons.\\
+For this reason it is necessary to introduce an energy scale $\mu$ in order to match their dimension in the UV: $ M = \mu M_m$, where $M_m$ are the magnetic mesons.\\
 The strong coupling scales of the electric $\Lambda$ and magnetic $\tilde{\Lambda}$ theories are related by the relation
 \begin{equation}
  \Lambda^{3 N_c - N_f} \tilde{\Lambda}^{3 (N_f - N_c) - N_f} = (-1)^{N_f - N_c} \mu^{N_f}
