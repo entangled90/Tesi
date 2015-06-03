@@ -77,7 +77,11 @@ where $Z_i$ is the wave function renormalization coefficient. The Dynkin indices
  T(\mathrm{N}) = \frac{1}{2} \qquad T( \mathrm{Adj}) = N 
 \label{eqn:suN_Dynkin_indices}
 \end{equation}
-The \emph{NSVZ $\beta$-function} was first calculated using instanton methods in \cite{Novikov:1985rd}. 
+The \emph{NSVZ $\beta$-function} was first calculated using instanton methods in \cite{Novikov:1985rd}.
+
+
+
+\begin{comment}
 Over the years it has been calculated in other ways using the fact that the action is holomorphic in the complexified coupling
 \begin{equation}
 	%\frac{1}{g_h^2}
@@ -100,7 +104,7 @@ At first sight, one should expect that the expressions should match since the fi
 The reason why the two expressions differ is that the Jacobian of the transformation between canonical and holomorphic normalization is anomalous. 
 Once the anomaly is taken into account the two expressions for the $\beta$-function agree. \\
 An explicit calculation relating the comparison between the two different approach can be found in \cite{ArkaniHamed:1997mj}.
-
+\end{comment}
 
 
 
@@ -123,16 +127,16 @@ An explicit calculation relating the comparison between the two different approa
 \label{sec:superpotential_hol_renorm}
 
 Other than renormalization constraints, supersymmetry provides non-renormalization theorems for certain objects, such as the superpotential. 
-
+\\
 In \cite{Grisaru:1979wc} it has been demonstrated that the superpotential is tree-level exact, i.e. it does not receive correction in perturbation theory. 
 However it usually receive contributions from nonperturbative dynamics.
 The superpotential features this property in theories with at least four supercharges and can be demonstrated independently using perturbative calculations or its holomorphic properties. 
-
+\\
 It was first demonstrated perturbatively, using the fact that for general supersymmetric field theories, supergraph loops diagrams with $n$ external leg yield a term that can be written in the form
 \begin{equation}
 \int  d^4 x_1 \dots d^4 x_n d^2 \theta d^2 \bar{\theta} \; G (x_1 , \dots , x_n) \,F_1 ( x_1, \theta, \bar{\theta}) \dots  F_n ( x_n, \theta, \bar{\theta}) 
 \end{equation} 
-where $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
+where $F_i$ are given by products of superfield and their covariant derivatives and $G (x_1 , \dots , x_n) $ is translationally invariant function.\\
 The importance of this result is that all contribution from Feynman diagrams are given by a single integral over full superspace ($d^2 \theta d^2 \bar{\theta} $) whereas the superpotential must be written as an integral in half-superspace($d^2 \theta $ only) of chiral fields.
 Exploiting the fact that a product of chiral fields is a chiral field, the most general form of a superpotential is 
 \begin{equation}
@@ -141,10 +145,10 @@ Exploiting the fact that a product of chiral fields is a chiral field, the most 
  \end{equation} 
  The second term of the superpotential is added in order to give a real lagrangian after the integration in superspace.
 From the definition, we can see that the superpotential is holomorphic in the fields and in the coupling constants.
-
-Fifteen years later, Seiberg \cite{Seiberg:1993vc} provided a proof of this theorem using a different approach.
-He noted that the coupling constants $\lambda_n$ can be treated as background fields, i.e. chiral superfields with no dynamics.
-
+\\
+An alternative proof of this theorem was provided by Seiberg \cite{Seiberg:1993vc} using a different approach.
+He noted that the coupling constants $\lambda_n$ can be treated as background chiral superfields with no dynamics.
+\\
 Using this observation we can assign transformation laws to the coupling constants, making the lagrangian invariant under a larger symmetry.
 Fields and coupling constants are charged under this symmetry and only certain combinations of them can appear in the superpotential.
 %The superpotential in the weak coupling limit is subject to the constraints imposed by holomorphy and symmetry.

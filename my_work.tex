@@ -206,8 +206,14 @@ I_{E} ( p,q,v,y,\tilde y ) =
  \prod_{ j}^{  N_c} \prod_{ a,b}^{ N_f} \Gamma_e \left( (pq)^{R_Q \over 2} \, v \,  y_a \,  z_j \right)
 \Gamma_e \left( (pq)^{R_Q \over 2} v^{-1} \, \tilde {y}_b^{-1}\,  z_j^{-1}\right)
 \end{multline}
+The index is written as an elliptic integral and as a result it is well defined only if the fugacities satisfy a balancing condition.
+It is given by
+\begin{equation}
+(pq)^{N_c R_X + N_f R_Q} \prod_{a=1}^{N_f} y_a  y_a^{-1} = (pq)^{N_f}
+\label{eqn:fugacities_condition_index}
+\end{equation}
+This constraint correspond to the anomaly-free condition of the R-symmetry and for the compactified theory is imposed by the $\eta$ superpotential.  
 
-{\Huge PARLA DELLE BALANCING CONDITIONS!}
 \subsection{Reduction of the superconformal index to the partition function}
 We can now proceed to reduce the index to the partition function on the squashed three sphere by appliying the procedure we introduced in the previous chapter. 
 We need to parametrize the fugacities as
@@ -221,8 +227,12 @@ and we have the following conditions on the real masses
 \begin{equation}
 \sum_a m_a =0 \qquad \sum_b m_b = 0 \qquad \sum_j \sigma_j = 0
 \end{equation}
+%The balancing condition of the previous section reads
+%\begin{equation}
+% \frac{1}{2} \sum_{a=1}^{N_f} m_a + \tilde{m}_a = \omega( - N_c \Delta_X + %N_f)
+%\end{equation}
 By using the identity \eqref{eqn:elliptic_to_hyperbolic_vdbult} on each term we can obtain the partition function as an integral of products of hyperbolic gamma functions.
-Explicit calculation can be found in appendix \ref{appendix:reduction_index_to_pf}.\\
+An explicit calculation can be found in appendix \ref{appendix:reduction_index_to_pf}.\\
 We will use the following notation for the hyperbolic gamma function
 \begin{equation}
 \Gamma_h (z ; \omega_1 , \omega_2) = \Gamma_h(z) \qquad \Gamma_h ( u \pm z) = \Gamma_h( u + z) \Gamma_h( u - z)
@@ -318,7 +328,7 @@ with
 \begin{equation}
  \mu_a = \omega \Delta_Q + m_a + m_B  \quad  \nu_b = \omega \Delta_Q - \tilde m_b - m_B
 \end{equation}
-Since we obtained the partition function by compactifying on $S^1$ we have the following condition on the real masses which is enforced by the $\eta$ superpotential
+Since we obtained the partition function by compactifying on $S^1$ we have the following condition on the real masses, obtained from \eqref{eqn:fugacities_condition_index}
 \begin{equation}
 	{ 1 \over 2 }\left(  \sum_a \mu_a + \nu_a  \right) = \omega \left( - N_c + N_c (1 - \Delta_X )  + N_f  \right)
 	\label{eqn:R-symm Anomaly}
