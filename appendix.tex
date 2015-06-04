@@ -696,9 +696,9 @@ partition function for
 &\prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{r + l s} y_i \tilde{y_j}^{-1}; p ,q)  = \\
 & \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e \big ( \exp \left( 2 \pi i r \left[ (2 \omega)(r + l s) +  ( m_i - \tilde{m_j})\right]); p ,q \right)  \sim \\
 \overset{ r\rightarrow 0 }{ \sim } &  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big( 2 \omega ( r + l s ) + m_i - \tilde{m_j} - \omega \big) \bigg) \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)   = \\
-= &  \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( r + l s - \frac{1}{2}  )\right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) \right) \\
+= &  \exp \left[ \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( r + l s - \frac{1}{2}  )\right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) \right] \\
 & \qquad \qquad\qquad \qquad  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l  \Delta_X) + m_i -  \tilde{m_j} \big)  \\
-= &  \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \big(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q - \frac{1}{2}) + \omega l \Delta_X   )\right)  +N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\big) \big) \right) \\
+= &  \exp \left[ \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q - \frac{1}{2}) + \omega l \Delta_X   )\right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) \right] \\
 &\qquad \qquad \qquad \qquad \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)
 \end{aligned}
 \end{equation}
@@ -734,22 +734,42 @@ where we defined the real masses
 $$
  \mu_i = \omega \Delta_q + \tilde{m_B} - m_i   \qquad \nu_i  = \omega \Delta_q - \tilde{m_B} +  \tilde m_i
 $$
-
+\begin{comment}
 \paragraph{Vector field}
 \begin{equation}
 \begin{aligned}
-  \Gamma_e\big( {z_i \over z_j})\Gamma_e\big( {z_j \over z_i}) = &e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega)} \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
-& = \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - 2 \omega)}  \right) , \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i)
+ &\prod_{1 \leq i < j \leq N_c } 
+  \Gamma_e\left( {z_i \over z_j} \right)
+  \Gamma_e\left( {z_j \over z_i} \right) \; = \\
+   = &\prod_{1 \leq i < j \leq N_c }  \exp \left[- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega) \right] \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+ = & \prod_{1 \leq i < j \leq N_c } \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - 2 \omega)}  \right) , \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i)
 \end{aligned}
 \end{equation}
+\end{comment}
+
+\paragraph{Vector field}
+\begin{multline}
+\lim_{r \rightarrow 0} \frac{ (p;p)^{N_c- 1}(q;q)^{N_c- 1} }{ N_c ! }
+\oint_{T^{\tilde{N}_c -1}} \prod_{j=1}^{\tilde{N}_c -1 } \frac{ d z_j}{2 \pi i z_j} \prod_{1 \leq i<j \leq \tilde{N}_c } \frac{1}{\Gamma_e( \frac{z_i}{z_j} )\Gamma_e( \frac{z_j}{z_i} )} \sim
+\\
+\sim 
+\exp \left(  
+- \frac{ i \pi \omega (\tilde{N}_c^2 -1)}{6 r \omega_1 \omega_2}
+\right)
+ \frac{1}{\tilde{N}_c !} \int \prod_{j=1}^{\tilde{N}_c -1 } \frac{d \sigma_j}{\sqrt{- \omega_1 \omega_2} } \prod_{1 \leq i<j \leq \tilde{N}_c }\frac{1}{\Gamma_h( \pm (\sigma_i - \sigma_j) }
+\end{multline}
+
+
+
 
 \paragraph{Adjoint matter field}
 
 \begin{equation}
 \begin{aligned}
 & \Gamma_e((pq)^{\frac{\Delta_X}{2}})^{N_c -1} =
-\Gamma_e( e^{2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)})^{\tilde{N_c}-1} =  \Gamma_e( e^{2 \pi i r  \Delta_X \omega })^{\tilde{N_c}-1} = \\
-&=\big[ \exp{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega) }\big]^{N_c-1} \Gamma_h ( \omega \Delta_X ; \omega_1, \omega_2)^{\tilde{N_c}-1}
+\Gamma_e \left( \exp \left[2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)\right] \right)^{\tilde{N_c}-1} =  \Gamma_e( e^{2 \pi i r  \Delta_X \omega })^{\tilde{N}_c-1} = \\
+=  &  \left\{ \exp \left[ - \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega)  \right] \right\} ^{\tilde{N}_c-1} 
+\Gamma_h \left( \omega \Delta_X ; \omega_1, \omega_2\right)^{\tilde{N}_c-1}
 %%%%%%%%%%%%%%%%%%%%%%%%
 \end{aligned}
 \end{equation}
@@ -758,14 +778,166 @@ $$
 
  \begin{equation}
  \begin{aligned}
- & \Gamma_e\big( (pq)^{\frac{\Delta_X}{2}} \big( { z_i \over z_j} \big) \big) \Gamma_e \big( (pq)^{\frac{\Delta_X}{2}} \big( { z_j \over z_i} \big) \big) = \\
-&= \Gamma_e\big( e^{2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)} e^{ 2 \pi  i r (\sigma_i - \sigma j)} \big) \big) \Gamma_e \big( e^{ 2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)}  e^{ 2 \pi i r (\sigma_j - \sigma_i)} \big) =  \\
-&= \Gamma_e\big( e^{2 \pi  i r (\Delta_X \omega +\sigma_i - \sigma j} \big) \Gamma_e \big(  e^{2 \pi  i r (\Delta_X \omega +\sigma_j - \sigma_i} \big) \\
- & = \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\right)\, \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) \\
- & = \exp\left({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\right)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i)
+ & \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( \frac{ z_i}{ z_j} \right) \right) \Gamma_e \left( (pq)^{\frac{\Delta_X}{2}} \left( \frac{ z_j}{z_i} \right) \right) = \\
+&= \Gamma_e\left( \exp \left[ 2 \pi i r \left( \frac{\Delta_X}{2} (\omega_1 + \omega_2) +  (\sigma_i - \sigma_j) \right) \right] \right) 
+%\right)
+ \Gamma_e \left( \exp \left[ 2 \pi i r \left( \frac{\Delta_X}{2} (\omega_1 + \omega_2) +  (\sigma_j - \sigma_i) \right) \right] \right)=  \\
+&= \Gamma_e \left( \exp \left[2 \pi  i r (\Delta_X \omega + (\sigma_i - \sigma_j ) \right] \right) \Gamma_e \left(  \exp \left[ 2 \pi  i r (\Delta_X \omega + (\sigma_j - \sigma_i )\right] \right) \\
+ & = \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\right)\, \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma_j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) \\
+ & = \exp\left({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\right)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma_i)
 \end{aligned}
 \end{equation}
 
+\paragraph{Sum of the divergent contributions}
+The exponent of the diverging terms is given by
+\begin{equation}
+\begin{aligned}
+&   \overbrace{ ( \omega (\Delta_x - 1)(\tilde { N}_c - 1) + ( 2 \omega (\Delta_x - 1)\frac{\tilde { N}_c(\tilde{ N}_c-1)}{2}) }^{ \hbox{Adj Chiral}} +  \overbrace{ \omega (\tilde{N}_c^2 - 1)}^{\hbox{ Vector}} +\\
+& \overbrace{2  N_f \tilde{N_c}\omega (\Delta' - 1 ) +  \tilde{N_c} \big( \sum_{i=1}^{N_f} - m_i + \tilde{m}_i \big) }^{\hbox{Fond Chirals}} +  \overbrace{ N_f^2 \big(  \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q + l \frac{\Delta_X}{2} - \frac{1}{2} ) \big)  + N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i} \big)}^{\hbox{Mesons}} = \\
+\end{aligned}
+\end{equation}
+
+In order to simplify this expression we need to use the following identity
+\begin{equation}
+ \sum_{i=0}^{n} i =  \frac{n ( n + 1 )}{2} \qquad \longrightarrow 	\qquad  \sum_{i=0}^{k-1} i =  \frac{ (k-1)k}{2}
+\end{equation}
+which in the case of the meson becomes
+\begin{equation}
+N_f^2 \omega ( 2 \Delta_Q - 1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} + k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)
+\end{equation}
+The exponent is then
+\begin{equation}
+\begin{aligned}
+&  \omega (\tilde {N}_c^2  - 1)  + ( \omega (\Delta_X - 1)( \tilde N_c^2 - 1) +  2   N_f \tilde N_c \omega (\Delta_q - 1 ) +  \tilde{N_c} \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big) +\\
++ &  N_f^2 \big(   \omega (2 \Delta_Q -1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} \big) + k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)= \\
+=&  \omega ( (k N_f -N_c)^2 - 1) + ( \omega (\Delta_X - 1)((k N_f -N_c)^2 - 1) + \\
+& 2   N_f (k N_f -N_c) \omega (\Delta_q - 1 ) +  (k N_f -N_c) \big( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \big)  +\\
++&  N_f^2 \big(  \omega ( 2 \Delta_Q -1) k + \omega \Delta_X  \frac{ ( k-1) k }{2} \big) +  k N_f \big( \sum_i^{N_f} m_i - \tilde{m_i} \big)
+\end{aligned}
+\end{equation}
+Using the explicit value of the R-charge for the dual quark ( $\Delta_q = \Delta_X -\Delta_Q $) and the explicit value of $\Delta_X$ we obtain
+\begin{equation}
+\begin{aligned}
+ & \omega \Delta_x ( N_c^2 - 1) + \omega ( - 2 N_f N_c  ) + \omega \Delta_Q ( 2 N_f N_c )  + N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) =  \\
+ = & \omega \Delta_x ( N_c^2 - 1) + ( + \omega - \omega)  ( N_c^2 -1 ) + 2 N_f N_c  \omega ( \Delta_Q -1 )  +  N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big) = \\
+ = &\omega ( N_c^2 -1 ) + ( N_c^2 - 1) \omega (\Delta_x  - 1 ) + 2 N_f N_c  \omega ( \Delta_Q -1 )  + N_c \big( \sum_i^{N_f} m_i - \tilde m_i  \big)
+\end{aligned}
+\end{equation}
+which coincides with the factor calculated in the electric theory.
+
+\paragraph{Infinite mass limit}
+The divergent contribution in the limit $m \rightarrow \infty$ is given by
+\begin{equation}
+\begin{aligned}
+\mbox{Mesons}  &\begin{cases}
+\sum_{j=0}^{k-1} 4 N_f   m (- m_A (N_f - 1)  + \omega( \Delta_Q +  \Delta_M + j \Delta_X -1  )  ) +
+\end{cases}
+\\
+\mbox{Chiral 1}& \begin{cases}
++  4 ( k N_f - N_c ) \big(  m_B  \frac{N_c}{k (N_f+1) - N_c} (  -  m_A N_f - \omega( \Delta_X - \Delta_M - 1)) +\\
+ +  m ( m_A N_f + \omega( \Delta_X - \Delta_M - 1)) + \\
+   +  4 \sum_j^{k N_f - N_c} \tilde{\sigma}_j \big( - m_A N_f -  \omega( \Delta_X - \Delta_M - 1) \big) \\
+\end{cases}\\
+\mbox{Chiral 2} & \begin{cases}
+  +    4 k N_f \big(  m_B \frac{N_c}{k (N_f+1) - N_c} (- m_A +  \omega ( \Delta_X - \Delta_Q - 1)) + \\
+  +  m ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1)+ \\
++  4 N_f \sum_{j=1}^k  \rho_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) ) \\
+\end{cases}\\
+\mbox{Adj matter} & \begin{cases}
+	+ m( 4 \omega \Delta_X k ( k N_f - N_C) +\\
+	- 4 k \sum_i \tilde{\sigma}_i (  \omega \Delta_X ) + \\
+	+ 4 (k N_f - N_c)  \sum_i \rho_i(  \omega \Delta_X )
+\end{cases}
+\end{aligned}
+\end{equation}
+Let us simplify this expression by separating it into various terms
+\paragraph{Contributions proportional to $m$}
+They are given by
+
+
+\begin{equation}
+\begin{aligned}
+ m  &\bigg( - 4 k N_f m_A ( N_f -1) - 4 N_f N_c m_A   + 4 k N_f m m_A (N_f -1)\bigg)  + \\
+  4 m \omega &  \bigg(   k N_f( \Delta_Q + \Delta_M -1 + \frac{(k-1)}{2} \Delta_X )  + (k N_f -N_c) ( \Delta_X - \Delta_M - 1) + k N_f ( \Delta_X - \Delta_Q -1) + \\
+  & +  \Delta_X  k ( k N_f - N_C) \bigg)
+\end{aligned}
+\end{equation}
+Using the constraint on the real masses we obtain
+\begin{equation}
+	\omega ( - N_c \Delta_X + N_f + 1  ) = \omega ( N_f \Delta_Q + \Delta_M) \quad \rightarrow \quad 	\Delta_M = -N_c \Delta_X + N_f ( 1 - \Delta_Q) + 1
+\end{equation}
+Using the explici value of $\Delta_X$ and writing $\frac{k-1}{2} = \frac{k+1}{2} - 1$
+\begin{equation}
+\begin{aligned}
+  4m & \bigg( -   N_f N_c m_A  +   \omega \big( k N_f ( \Delta_Q - N_c \Delta_X + N_f ( 1 - \Delta_Q)+ 1 + \frac{k+1}{2}\Delta_X - \Delta_X  -1 \big)  + \\
++& (k N_f -N_c) ( \Delta_X -( - N_c \Delta_X + N_f( 1-\Delta_Q) +1) - 1) +  k N_f (  \Delta_X -\Delta_Q - 1) \big)+ \\
++ &  \Delta_X  k ( k N_f - N_c)  \bigg)
+\end{aligned}
+\end{equation}
+which leads to 
+\begin{equation}
+\begin{aligned}
+ 4 & m \omega N_c \left(   -   N_f  m_A
+ -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \right) + \\
+ + & 4 m \omega (k N_f - N_c) \left(
+(\Delta_X - 2 + k \Delta_X )   \right)  = \\
+= 4 & m \omega N_c \left(    -   N_f  m_A
+ -\Delta_{X} N_{c} - {\left(\Delta_{Q} - 1\right)} N_{f} \right) + \\
+ + 4 & m \omega ( k N_f - N_c) \left( \Delta_X ( k+1) -2 ) \right) = \\
+ = 4 & m \omega N_c \left(    -   N_f  m_A + {\left(1-\Delta_{Q} \right)} N_{f}
+ -\Delta_{X} N_{c}  \right)  \\
+\end{aligned}
+\end{equation}
+which match with the result from the electric theory.
+
+
+\paragraph{Contributions proportional to $m_B$}
+They are given by
+\begin{equation}
+\begin{aligned}
+4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg( (k N_f - N_c ) ( -m_A N_f - \omega ( \Delta_X - \Delta_M -1) +\\
+ & +  k N_f ( -m_A + \omega ( \Delta_X - \Delta_Q -1) \bigg) = \\
+ =   4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1)  +\omega( \Delta_M - \Delta_Q)) +\\
+ & - N_c ( - m_A N_f - \omega( \Delta_X - \Delta_M-1) \bigg) = \\
+ = 4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1) + \omega ( - N_c \Delta_X + N_f( 1- \Delta_Q) + 1  - \Delta_Q) ) + \\
+ & + N_c (  m_A N_f +  \omega( \Delta_X - (- N_c \Delta_X + N_f( 1- \Delta_Q) + 1)-1) ) \bigg) = \\
+  =  4 m_B \frac{N_c}{k(N_f+1)-N_c} & \bigg ( k N_f ( - m_A (N_f+1) +\omega( - N_c \Delta_X + N_f - (N_f+1) \Delta_Q) + 1)) +\\
+  & + m_A N_f N_c   + N_c \omega  (    \Delta_X (N_c+1) + N_f( \Delta_Q - 1) - 2) \bigg)
+\end{aligned}
+\end{equation}
+Simplifying some fractions we get
+\begin{equation}
+\begin{aligned}
+& 4 m_B N_c N_f (-m_A) + 4 m_B N_c N_f ( - \omega \Delta_Q)  + 4 m_B N_c^2 \omega \Delta_X \bigg(- 1 + \frac{k+1}{k (N_f+1)-N_c} \bigg) \\
+& + 4 m_B N_c N_f   -8m_B N_c^2 \omega \frac{1}{k (N_f+1) - N_c} 
+\end{aligned}
+\end{equation}
+Expliciting the value of $\Delta_X$ we obtain
+\begin{equation}
+	4 m_B N_C ( - m_A N_f + \omega ( N_f ( 1 - \Delta_Q) - N_c \Delta_X )) \, + \, 4 m_B N_c^2 \omega \frac{1}{k (N_f+1)-N_c} \bigg({\frac{2}{k+1}} (k+1) - 2 \bigg)
+\end{equation}
+which is the same as the contribution in the electric theory
+\begin{equation}
+4 m_B N_C ( - m_A N_f + \omega ( N_f ( 1 - \Delta_Q) - N_c \Delta_X ))
+\end{equation}
+
+
+
+\paragraph{Contributions proportional to  $\sum_i \sigma_i + \sum_j \rho_j$}
+They are given by
+\begin{equation}
+\begin{aligned}
+  & 4 \sum_j^{k N_f - N_c} \tilde{\sigma}_j \big( - m_A N_f -  \omega( \Delta_X(1+k)  - \Delta_M - 1) \big) + \\ 
+   & 4 N_f \sum_{j=1}^k  \rho_j ( - m_A +  \omega ( \Delta_X - \Delta_Q - 1) )  + 4 (k N_f - N_c)  \sum_i \rho_i(  \omega \Delta_X )  =  \\
+  = & 4  \sum_j^{k N_f - N_c} \tilde{\sigma}_j \big( - m_A N_f -  \omega( 1 - \Delta_M) \big) + \\
+  + & 4  \sum_{j=1}^k  \rho_j ( - m_A N_f  +  \omega ( \Delta_X( N_f + ( k N_f - N_c) ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \tilde{\sigma}_j \big( - m_A N_f + \omega(  \Delta_M -1 ) \big) +  \\
+     +&4  \sum_{j=1}^k  \rho_j ( - m_A N_f  +  \omega ( \Delta_X N_f(k+1) - N_c \Delta_X ) - N_f \Delta_Q - N_f ) ) =  \\
+    =& 4  \sum_j^{k N_f - N_c} \tilde{\sigma}_j \big( - m_A N_f +  \omega( - N_c \Delta_X + N_f ( 1 - \Delta_Q)) \big) + 
+    + \\ + &  4  \sum_{j=1}^k  \rho_j \left( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ) \right) =  \\
+    & = 4 \left( \sum_i^{k N_f -N_c} \sigma_i + \sum_j^{k} \rho_j \right) ( - m_A N_f  +  \omega (  - N_c \Delta_X  +N_f (1- \Delta_Q ))
+\end{aligned}
+\end{equation}
 
 
 
