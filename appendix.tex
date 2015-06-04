@@ -713,10 +713,20 @@ partition function for
  &\Gamma_e \left( \exp \left( 2 \omega \left(  {1 \over 2 } \Delta_q \right)  - \tilde{m_B} + \tilde  m_i  - \tilde{\sigma_j} \right) ; p,q \right)  = \\
 % \overset{ r \rightarrow 0 } { \sim } \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f}   & \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  \left(\omega ( \Delta_q - 1) + \tilde{m_B} - m_i  + \tilde{\sigma_j} \right)  +  \left( \omega (  \Delta_q - 1) - \tilde{m_B} + \tilde m_i  - \tilde{\sigma_j}  \right) \right) \\
 &\Gamma_h \left(\omega \Delta_q + \tilde{m_B} - m_i  + \tilde{\sigma_j} \right) \Gamma_h \left(\omega \Delta_q - \tilde{m_B} +  \tilde m_i  - \tilde{\sigma_j} \right)  = \\
- =   \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} 
- & \left( 2  N_f \tilde{N_c} \omega (\Delta_q - 1 ) +  \tilde{N_c} 
- \left( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \right)  \right) 
- \right)  
+ =   
+ %\exp \left[ \frac{- i \pi }{6 r \omega_1 \omega_2} 
+ %& \left( 2  N_f \tilde{N_c} \omega (\Delta_q - 1 ) +  \tilde{N_c} 
+ %\left( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \right)  \right) 
+ %\right]
+\exp \Bigg[  
+ \frac{- i \pi}{6 r \omega_1 \omega_2} 
+ &
+ \left(
+ 2 N_f \tilde{N_c}\, \omega(\Delta_q-1) + \tilde{N_c} \left( 
+ \sum_{i=1}^{N_f} \tilde{m}_i - m_i
+ \right)
+ \right)
+\Bigg]
   \Gamma_h \left( \mu_i + \tilde{\sigma_j} \right) \Gamma_h \left(\nu_i - \tilde{\sigma_j} \right)
 \end{aligned}
 \end{equation}
