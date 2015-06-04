@@ -688,6 +688,74 @@ where we defined
 partition function for
 \\ the magnetic theory}
 \label{appendix:magnetic_theory_calculations}
+\section{Reduction of the index to the partition function}
+\paragraph{Mesons}
+
+\begin{equation}
+\begin{aligned}
+&\prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e ( (pq)^{r + l s} y_i \tilde{y_j}^{-1}; p ,q)  = \\
+& \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \Gamma_e \big ( \exp \left( 2 \pi i r \left[ (2 \omega)(r + l s) +  ( m_i - \tilde{m_j})\right]); p ,q \right)  \sim \\
+\overset{ r\rightarrow 0 }{ \sim } &  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1} \exp \bigg( \frac{- i \pi }{6 r \omega_1 \omega_2} \big( 2 \omega ( r + l s ) + m_i - \tilde{m_j} - \omega \big) \bigg) \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)   = \\
+= &  \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( r + l s - \frac{1}{2}  )\right)  +N_f \left( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\right) \right) \right) \\
+& \qquad \qquad\qquad \qquad  \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l  \Delta_X) + m_i -  \tilde{m_j} \big)  \\
+= &  \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \big(  N_f^2  \left( \sum _{l=0}^{k-1} 2 \omega ( \Delta_Q - \frac{1}{2}) + \omega l \Delta_X   )\right)  +N_f \big( \sum_{l=0}^{k-1} \sum_i^{N_f} m_i - \tilde{m_i}\big) \big) \right) \\
+&\qquad \qquad \qquad \qquad \prod_i^{N_f} \prod_j^{N_f}  \prod_{l=0}^{k-1}  \Gamma_h \big( \omega ( 2 \Delta_Q + l \Delta_X) + m_i - \tilde{m_j} \big)
+\end{aligned}
+\end{equation}
+
+\paragraph{Chiral fields}
+
+
+\begin{equation}
+\begin{aligned}
+ \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f} & \Gamma_e ( (pq)^{{1 \over 2 } \Delta_q} \tilde{v} y_i^{-1} \tilde{z_j} ; p,q)\Gamma_e \left( (pq)^{{1 \over 2 } \Delta_q} \tilde{v}^{-1} \tilde y_i \tilde{z_j}^{-1} ; p,q  \right)  = \\
+ = \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f}  & \Gamma_e \left( \exp\left( 2 \omega \left( {1 \over 2 } \Delta_q \right)   + \tilde{m_B} - m_i  + \tilde{\sigma_j} \right) ; p,q \right) \\
+ &\Gamma_e \left( \exp \left( 2 \omega \left(  {1 \over 2 } \Delta_q \right)  - \tilde{m_B} + \tilde  m_i  - \tilde{\sigma_j} \right) ; p,q \right)  = \\
+% \overset{ r \rightarrow 0 } { \sim } \prod_{ 1 \leq j \leq \tilde{N_c}} \prod_{ 1 \leq i \leq N_f}   & \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} \left(  \left(\omega ( \Delta_q - 1) + \tilde{m_B} - m_i  + \tilde{\sigma_j} \right)  +  \left( \omega (  \Delta_q - 1) - \tilde{m_B} + \tilde m_i  - \tilde{\sigma_j}  \right) \right) \\
+&\Gamma_h \left(\omega \Delta_q + \tilde{m_B} - m_i  + \tilde{\sigma_j} \right) \Gamma_h \left(\omega \Delta_q - \tilde{m_B} +  \tilde m_i  - \tilde{\sigma_j} \right)  = \\
+ =   \exp \left( \frac{- i \pi }{6 r \omega_1 \omega_2} 
+ & \left( 2  N_f \tilde{N_c} \omega (\Delta_q - 1 ) +  \tilde{N_c} 
+ \left( \sum_{i=1}^{N_f} - m_i + \tilde{m_i} \right)  \right) 
+ \right)  
+  \Gamma_h \left( \mu_i + \tilde{\sigma_j} \right) \Gamma_h \left(\nu_i - \tilde{\sigma_j} \right)
+\end{aligned}
+\end{equation}
+where we defined the real masses
+$$
+ \mu_i = \omega \Delta_q + \tilde{m_B} - m_i   \qquad \nu_i  = \omega \Delta_q - \tilde{m_B} +  \tilde m_i
+$$
+
+\paragraph{Vector field}
+\begin{equation}
+\begin{aligned}
+  \Gamma_e\big( {z_i \over z_j})\Gamma_e\big( {z_j \over z_i}) = &e^{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( (\sigma_j - \sigma_i) + (\sigma_i- \sigma_j) - 2 \omega)} \, \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i) =\\
+& = \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( - 2 \omega)}  \right) , \, \Gamma_h (  \sigma_i - \sigma_j) \Gamma_h (  \sigma_j - \sigma_i)
+\end{aligned}
+\end{equation}
+
+\paragraph{Adjoint matter field}
+
+\begin{equation}
+\begin{aligned}
+& \Gamma_e((pq)^{\frac{\Delta_X}{2}})^{N_c -1} =
+\Gamma_e( e^{2 \pi i r  {\Delta_X \over 2} (\omega_1 + \omega_2)})^{\tilde{N_c}-1} =  \Gamma_e( e^{2 \pi i r  \Delta_X \omega })^{\tilde{N_c}-1} = \\
+&=\big[ \exp{- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( \omega \Delta_X - \omega) }\big]^{N_c-1} \Gamma_h ( \omega \Delta_X ; \omega_1, \omega_2)^{\tilde{N_c}-1}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\end{aligned}
+\end{equation}
+
+
+
+ \begin{equation}
+ \begin{aligned}
+ & \Gamma_e\big( (pq)^{\frac{\Delta_X}{2}} \big( { z_i \over z_j} \big) \big) \Gamma_e \big( (pq)^{\frac{\Delta_X}{2}} \big( { z_j \over z_i} \big) \big) = \\
+&= \Gamma_e\big( e^{2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)} e^{ 2 \pi  i r (\sigma_i - \sigma j)} \big) \big) \Gamma_e \big( e^{ 2 \pi i r \frac{\Delta_X}{2} (\omega_1 + \omega_2)}  e^{ 2 \pi i r (\sigma_j - \sigma_i)} \big) =  \\
+&= \Gamma_e\big( e^{2 \pi  i r (\Delta_X \omega +\sigma_i - \sigma j} \big) \Gamma_e \big(  e^{2 \pi  i r (\Delta_X \omega +\sigma_j - \sigma_i} \big) \\
+ & = \exp \left( {- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega \Delta_X + (\sigma_i - \sigma_j)+(\sigma_j - \sigma_i) - 2 \omega) }\right)\, \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i) \\
+ & = \exp\left({- \frac{i \pi} {6 r \omega_1 \omega_2 }  ( 2 \omega (\Delta_X - 1) }\right)  \, \Gamma_h ( \Delta_X \omega + \sigma_i - \sigma j ) \Gamma_h ( \Delta_X \omega + \sigma_j - \sigma i)
+\end{aligned}
+\end{equation}
+
 
 
 

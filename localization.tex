@@ -54,7 +54,7 @@ where $p,q$ are defined by
 \begin{equation}
 p = t x \quad q = t x^{-1}
 \end{equation}
-The values of $p,q$ must satisfy the following conditions for convergence and reality of the index
+The values of $p,q$ must satisfy the following conditions in order for the index to be real and well-defined.
 \begin{equation}
 \hbox{Im} (pq) =0 \qquad |p/q| =  1 \qquad | pq| < 1
 \label{eqn:reality_convergence_condition_index}
@@ -66,7 +66,7 @@ The superconformal index receives contribution only from states with $\Delta=0$,
 %As a result, it may be computed in a weakly coupled UV theory that flows to a non trivial conformal fixed point, such as the theories appearing in electric magnetic dualities \cite{Romelsberger:2007ec}. \\
 The superconformal index can be calculated in two steps.
 First, we need to obtain the index on \emph{single particle states}.\\
-The index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
+The single particle index for chiral multiples $\Phi_i$ with R-charge $r_i$, with flavour symmetry group $F_i$ and gauge group $G_i$ reads \cite{Dolan:2008qi}
 \begin{align}
 i_{\Phi}(t,x,h,g) =&  \sum_{i} \frac{ t^{r_i} \chi_{F_i}(h) \, \chi_{G_i}(z) - t^{2-r_i} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-tx) (1- t x^{-1})} = \\
 =& \sum_{i} \frac{ (pq)^{\frac{r_i}{2}} \chi_{F_i}(h) \, \chi_{G_i}(z) - (pq)^{1-\frac{r_i}{2}} \chi_{\bar{F}_i}(h) \chi_{\bar{G}_i}(z)}{ (1-p) (1- q)} 
@@ -107,7 +107,8 @@ The index on the squashed sphere $S_b^3 \times S^1$ should coincide with the ind
 %The only difference between these indices is the presence of an additional factor for the index defined on the squashed sphere, which is the supersymmetric Casimir energy \cite{Assel:2015nca}.
 %An explicit calculation \cite{Agarwal:2012hs} shows that this is indeed true. \\
 The indices match up to a rescaling of the fugacities $(p,q) \, \rightarrow \, (p^{\frac{1}{a}}, q^{\frac{1}{b}})$ 
-\cite{Agarwal:2012hs} and a factor given by the Casimir energy, which does not modify the physical content of the index because $(p,q)$ are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.
+\cite{Agarwal:2012hs} and a factor given by the Casimir energy \cite{Assel:2015nca}.
+The rescaling of the fugacities does not modify the physical content of the index because $(p,q)$ are arbitrary parameters and they still satisfy the conditions \eqref{eqn:reality_convergence_condition_index}.
 \\
 An exact calculation of the index can be performed using the following mathematical identities involving the elliptic gamma function $\Gamma_e$.
 The index of a chiral field in general can be written as
@@ -165,7 +166,7 @@ We will use this fact as a starting point in our discussion on the dimensional r
 
 
 \section{Localization}
-Localization was first introduced by Witten \cite{Witten:1992xu} and Nekrasov \cite{Nekrasov:2002qd} and later generalized on $S^4$ for $\mN=2,4$ theories by Pestun in \cite{Pestun:2007rz} and then applied to $S^3$ and $S_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz}, \cite{Hama:2010av} and \cite{Hama:2011ea}.
+Localization was first introduced by Witten \cite{Witten:1992xu} and Nekrasov \cite{Nekrasov:2002qd} and later introduced  for $\mN=2,4$ theories on  $S^4$ by Pestun in \cite{Pestun:2007rz} and then applied to $S^3$ and $S_b^3$ for $\mN=2$ theories in \cite{Kapustin:2009kz}, \cite{Hama:2010av} and \cite{Hama:2011ea}.
 It can be used to calculate exactly the functional integral on a curved manifold.\\
 The basic principle about localization is the following.
 Suppose that the theory in question admits a \emph{fermionic} symmetry $\delta$ which leaves the measure of the path integral invariant and that it squares to a \emph{bosonic} symmetry $\Delta_B$, which can be a Lorentz or gauge transformation.\\
@@ -213,7 +214,7 @@ As a result, the partition function can be calculated by an integral on the Cart
 
 The superconformal index calculated on $S_b^3 \times S^1$ reduces to the partition function of the dimensionally reduced theory on $S_b^3$ with $\eta$ superpotential in the limit $S^1 \rightarrow 0$  \cite{Gadde:2011ia} \cite{Dolan:2011rp}.\\
 A heuristic argument to support this claim is that the superconformal index receives contributions only from BPS states in four dimensions which are in one-to-one correspondence with three dimensional states with non zero eigenvalue of the operators appearing in \eqref{eqn:localization_determinant_expression}.\\
-Moreover, oncethe BPS condition in four dimensions is dimensionally reduced to three dimensions, it is equivalent to the saddle point conditions of the partition function \cite{Agarwal:2012hs}.\\
+Moreover, once the BPS condition in four dimensions is dimensionally reduced to three dimensions, it is equivalent to the saddle point conditions of the partition function \cite{Agarwal:2012hs}.\\
 In order to obtain the partition function, it is necessary that all the fugacities appearing in the index flow to one \cite{Dolan:2011rp}.
 They must be parametrized as function of the radius $r$ of $S^1$
 \begin{equation}
@@ -240,7 +241,7 @@ The matching of the indices for dual theories is supported by mathematical ident
 \\
 Reducing the indices to three dimensions we obtained expressions involving integrals of hyperbolic gamma functions. 
 Mathematical identities that support the equality of the partition functions \cite{vanDeBult:2007} are not known for every three dimensional duality.
-In any case, when the reduction process from four dimensions is well defined, it guarantees that the partition functions are identical.
+In any case, when the reduction process from four dimensions is well defined, the identity between the indices guarantees that the partition functions are identical.
 
 
 
