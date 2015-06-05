@@ -19,7 +19,7 @@ We will start our analysis on eletric-magnetic duality studying the first pair o
 We are going to analyse the properties of these theory in order to better understand the features of the duality.
 \\
 The electric theory is a $SU(N_c) $ supersymmetric gauge theory with $N_f$ massless flavours.
-Its non-anomalous global symmetry group is 
+Its anomaly-free global symmetry group is 
 \begin{equation}
 SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_R 
 \label{eqn:seib_dual_global_symm_group}
@@ -39,7 +39,7 @@ The charges of the fields are given in the table below.
  & SU(N_c) & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
 Q & N_c & N_F & 1   &  1  &  \frac{N_f - N_c}{N_f}  \\
-\tilde{Q} &\overbar{N_c}  &  1 & \overbar{ N_F}   & -1   &  \frac{N_f - N_c}{N_f}   \\	 
+\tilde{Q} &\overline{N_c}  &  1 & \overline{ N_F}   & -1   &  \frac{N_f - N_c}{N_f}   \\	 
 \hline
  \end{array} 
 %	\centering
@@ -80,10 +80,10 @@ After considering gauge and global symmetries, the squark \emph{VEVs}, represent
 \begin{equation}
 Q = \tilde{Q} = 
 \begin{pmatrix}
- a_1 & 		&	 &	 & \vdots & \vdots \\
-	 & a_2  & 	 & 	 & \vdots & \vdots \\  	
- 	 & 		&	\ddots &	 &\vdots & \vdots  \\
-	 &  & 	 & 	a_{N_f}  & \vdots & \vdots
+ a_1 & 	0	& 0	 & 0	 & 0 & \dots & 0 \\
+	 0 & a_2  &  0 	 & 0	 & 0 & \dots & 0 \\  	
+ 	0 & 	 0	&	\ddots &	0 &\vdots & \dots & \vdots  \\
+	 0 & 0  &  0	 & 	a_{N_f}  & 0 &\dots & 0
 \end{pmatrix} 
  \\
 \end{equation}
@@ -91,22 +91,24 @@ Q = \tilde{Q} =
 \begin{equation}
 Q  = 
 \begin{pmatrix} 
-	 a_1 & 		&	 &	  \\
-	 & a_2  & 	 & 	 \\  	
- 	 & 		&	\ddots &	   \\
-	 &  & 	 & 	a_{N_c}  \\
-	 \dots & \dots & \dots & \dots\\ 
-	 \dots & \dots & \dots & \dots\\ 
+	 a_1 & 		0& 0  & 0 	  \\
+	 0& a_2  & 0 	 & 	 0\\  	
+ 	 0&  		0&	\ddots &	 0   \\
+	 0 & 0 & 	0  & 	a_{N_c}  \\
+	 0& 0 & \dots & 0 \\ 
+	 \vdots & \vdots & \ddots &\vdots \\ 
+	 0 & 0 & \dots & 0\\ 
 \end{pmatrix} 
 \quad
 \tilde{Q} = 
 \begin{pmatrix}
- \tilde{a}_1 & 		&	 &	  \\
-	 & \tilde{a}_2  & 	 & 	 \\  	
- 	 & 		&	\ddots &	   \\
-	 &  & 	 & 	\tilde{a}_{N_c}  \\
-	 \dots & \dots & \dots & \dots\\ 
-	 \dots & \dots & \dots & \dots\\ 
+ \tilde{a}_1 & 		0& 0  & 0 	  \\
+	 0& \tilde{a}_2  & 0 	 & 	 0\\  	
+ 	 0&  		0&	\ddots &	 0   \\
+	 0 & 0 & 	0  & 	\tilde{a}_{N_c}  \\
+	 0& 0 & \dots & 0 \\ 
+	 \vdots & \vdots & \ddots &\vdots \\ 
+	 0 & 0 & \dots & 0\\ 
 \end{pmatrix} 
 \end{equation}
 \end{itemize}
@@ -133,11 +135,13 @@ There are additional gauge invariant operators that can be constructed: \emph{ba
 Mesons and baryons can be written down using the \emph{VEVs} we found solving the \emph{D-term} equations (ignoring null components for baryons)
 \begin{align}
 M =& \begin{pmatrix}
-a_1 \tilde{a_1} & & & & & \\
-				& a_2 \tilde{a_2}	& 		&		 & & \\
-				&				 	& \ddots&		& 	& \\
-				&					&		& a_{N_c} \tilde{a_{N_c}} & \\
-				& & & & & \\	
+a_1 \tilde{a_1} & 0  & \dots& 0   & 0 & \dots & 0  \\
+	0			& a_2 \tilde{a_2}	& 0 		&	 \dots 	 & 0  & \dots & 0 \\
+	\vdots			&	0			 	& \ddots&	0	& 0  &\dots	&0  \\
+	\vdots			&	\vdots				&		0 & a_{N_c} \tilde{a_{N_c}} &  0 & \dots & 0 \\
+	0			& 0 & 0 &0  &0   & \dots & 0 \\	
+	\vdots			& \vdots&\ddots &\vdots &\vdots &\ddots & \vdots \\	
+	0			& 0& 0 & 0 &0  &0 & 0 \\	
 \end{pmatrix}
 \\
 B  \simeq & \;  a_1 a_2 \dots a_{N_c} 
@@ -211,10 +215,10 @@ In the quantum corrected moduli space mesons and baryons satisfy \cite{Seiberg:1
 \end{equation}
 which flows to the classical constraint in the classical limit ($\Lambda \; \rightarrow \;0$).
 \\
-\begin{SCfigure}[1.3][h]
+\begin{SCfigure}[1.6][b]
 \centering
-{\includegraphics[width=5 cm]{quantum_moduli_space_sqcd.png} }
-{\caption{ Quantum and classical representation of the moduli space near the origin}}
+{\includegraphics[width=10cm]{terning.png} }
+{\caption{ Classical and quantum 2D slice of the moduli space near the origin for $N_f = N_c$}}
 \end{SCfigure}
 The effect of this relation is that the origin  does not belong to the moduli space anymore and the moduli space is now smooth.
 For large expectation values of $M$, $B$ and $\tilde{B}$ the classical and the quantum moduli space look similar, while in the origin of the moduli space quantum corrections modify drastically the structure of the moduli space.
@@ -343,9 +347,9 @@ The charges of fields of the magnetic theory are
  \hline
  & SU(N_c) & SU(N_f)_L  &SU(N_f)_R   & U(1)_B &  U(1)_R \\
 \hline
-q & N_c & \overbar{N_F} & 1   &   \frac{N_c}{N_f-N_c}   &  \frac{N_c}{N_f}  \\
-\tilde{q} &\overbar{N_c}  &  1 & { N_F}   & - \frac{N_c}{N_f-N_c}   &   \frac{N_c}{N_f}   \\	 
-M^i_{\tilde{j}}  &  1  & N_f & \overbar{N_f}  & 0 &  2 \frac{N_f - N_c}{N_f}\\ 
+q & N_c & \overline{N_F} & 1   &   \frac{N_c}{N_f-N_c}   &  \frac{N_c}{N_f}  \\
+\tilde{q} &\overline{N_c}  &  1 & { N_F}   & - \frac{N_c}{N_f-N_c}   &   \frac{N_c}{N_f}   \\	 
+M^i_{\tilde{j}}  &  1  & N_f & \overline{N_f}  & 0 &  2 \frac{N_f - N_c}{N_f}\\ 
 \hline
  \end{array}
  \label{tab:sun_magnetich_charges}
