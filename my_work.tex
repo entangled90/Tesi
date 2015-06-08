@@ -5,12 +5,11 @@
 
 %
 The scope of this chapter is to provide an independent check  of the reduction of KSS duality with $SU(N_c)$ gauge group to the Kim-Park duality \cite{Nii:2014jsa}.
-We introduced these dualities in previos sections and we reviewed the procedure of dimensional reduction in field theory of \cite{Nii:2014jsa} in section \ref{sec:reduction_kss_sun}.\\
+We introduced these dualities in previous sections and we reviewed the procedure of dimensional reduction in field theory of \cite{Nii:2014jsa} in section \ref{sec:reduction_kss_sun}.\\
 %regarding the reduction of KSS duality to three dimensions.
 %The result of the reduction 
 We will reduce KSS duality to three dimensions first by calculating the superconformal index in four dimensions and then reducing it to the three dimensional partition function by shrinking the radius of the circle.\\
-As we said before, the presence of the compactified dimension induces an additional $\eta$ superpotential, which can be seen in the partition function from the constraint it imposes on the real masses.
-This constraint corresponds to the absence of anomalies in four dimension and we will see that the constraint on the fugacities in the index reduces to a constraint on the real masses in the partition function.
+As we said before, the presence of the compactified dimension induces an additional $\eta$ superpotential, which can be seen in the partition function from the constraints it imposes on the real masses in the partition function.
 We will flow to the Kim-Park duality by assigning real masses in a similar way to section \ref{sec:reduction_kss_sun}.\\
 As a result, we give an alternative derivation of the reduction of KSS duality without relying on some of the assumptions made in \cite{Nii:2014jsa}.
 
@@ -90,11 +89,11 @@ The single particle index can be calculated with equations \eqref{eqn:superconfo
 \end{aligned}
 \end{aligned}\label{eqn:superconf_index_electric}
 \end{equation}
-where $ p,q$ are defined as in the previous chapters and the other fugacities are associated to the other symmetries by
+where $ p,q$ are defined as in the previous chapters and the other fugacities are associated to the symmetries
 \begin{equation}
 v \rightarrow U(1)_B \quad y \rightarrow SU(N_F)_L \quad \tilde{y} \rightarrow SU(N_F)_R \quad z \rightarrow SU(N_c) 
 \end{equation}
-In \eqref{eqn:superconf_index_electric} we have written explicitly the character for the adjoint and the (anti) fundamental representations of $SU(N)$, which are given by \
+In \eqref{eqn:superconf_index_electric} we have written explicitly the character for the adjoint, fundamental and antifundamental representations of $SU(N)$, which are given by \
 \begin{gather}
 %\begin{aligned}
  \chi_{adj}(z) = p_{N}( z)\, p_{N}(z^{-1})-1 \quad \chi_{N}(y) = p_{N}(y) \quad \chi_{\overbar{N}}(\tilde{y}) = p_{N}(\tilde{y}^{-1}) \\
@@ -141,15 +140,16 @@ I_E(p,q,v,y,\tilde{y}) = & \int_{SU(N_c)} d \mu(z) \; \exp \left( \sum_{n=1}^{\i
 \end{equation}
 where $I_E^F$ is given by the Plethystic exponential for the field F.\\
 Given that the fugacity $z$ is in the maximal torus of the gauge group, we can restrict the integral to $T^{N_c -1}$.
+The integration on the gauge group reduces to
 \begin{equation}
 	\int_{SU(N_c)}\, d \mu(z) \, f(z) = {1 \over N_c!} \int_{T^{N_c-1}} \prod_{i=1}^{N_c }
 	{ d z_i \over { 2 \pi i z_i} } \Delta (z) \Delta (z^{-1}) f(z) \bigg \rvert_{\prod_{i=1}^{N_c} z_i = 1}
  \end{equation}
- where $\Delta (z) $ is the Vandermonde determinant:
+ where $\Delta (z) $ is the Vandermonde determinant, which is given by
  $$
  \Delta (z ) \, = \, \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c} ( z_i - z_j) \, = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg) \, z_j = \,  \prod_{ \overset{1 \leq i,j< \leq N_c} { i \neq j}}^{N_c}\bigg ( 1 - {z_i \over  z_j } \bigg)
  $$
-The last equality holds because $ \prod_{i=1}^{N_c} z_i = 1$.
+where the last equality holds because $ \prod_{i=1}^{N_c} z_i = 1$.
  
 We will calculate the superconformal index by considering separately the contributions from the various fields.
 The complete calculations for every field can be found in appendix \ref{appendix:index_electric}.\\
@@ -160,7 +160,7 @@ The vector field contributes to the index as
 I_E^V(p,q,z) = &\exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{Vett} (p^n,q^n,z^n) \bigg) = \\
  &\exp \bigg( \sum_{n=1}^{\infty} - {1 \over n} \, \bigg( {p^n \over 1-p^n} + {q^n \over 1-q^n} \bigg)  \bigg(\bigg( \sum_{ 1 \leq i,j \leq N_c}  {z_i^n \over z_j^n}  \bigg)- 1 \bigg) \bigg) \, = \\
  = & (p;p)^{N_c-1} ( q;q)^{N_c-1}  \prod_{ 1 \leq i < j \leq N_c} \frac{ 1 }{ \big( 1 -{ z_i \over z_j} \big) \big ( 1 - { z_j \over z_i} \big) \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)  } \\
- =& (p;p)^{N_c-1} ( q;q)^{N_c-1}  \prod_{ 1 \leq i < j \leq N_c}  \frac{1}{ \Delta(z) \Delta (z^{-1})} \,  \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)}
+ =& (p;p)^{N_c-1} ( q;q)^{N_c-1} \frac{1}{ \Delta(z) \Delta (z^{-1})}   \prod_{ 1 \leq i < j \leq N_c}   \frac{ 1 }{ \Gamma_e( {z_i \over z_j};p,q) \Gamma_e({z_j \over z_i}; p,q)}
  \end{aligned}
  \label{eqn:sci_electric_vector}
  \end{equation}
@@ -212,7 +212,7 @@ It is given by
 (pq)^{N_c R_X + N_f R_Q} \prod_{a=1}^{N_f} y_a  y_a^{-1} = (pq)^{N_f}
 \label{eqn:fugacities_condition_index}
 \end{equation}
-This constraint correspond to the anomaly-free condition of the R-symmetry and for the compactified theory is imposed by the $\eta$ superpotential.  
+Physically, this constraint correspond to the anomaly-free condition of the R-symmetry in four dimensions and for the compactified theory is imposed by the $\eta$ superpotential.  
 
 \subsection{Reduction of the superconformal index to the partition function}
 We can now proceed to reduce the index to the partition function on the squashed three sphere by appliying the procedure we introduced in the previous chapter. 
@@ -310,11 +310,11 @@ which is compatible with the following general formula \cite{Aharony:2013dha}
 \biggl]
 \end{equation}
 which is proportional to the gravitational anomaly \cite{Aharony:2013dha}
-which is identical between the electric and the magnetic theory.
+which is identical between the electric and the magnetic theory because of the KSS duality.
 
 \subsubsection{Partition function}
-We can write down the formula for the partition function of the electric theory by putting al the pieces together and ignoring the divergent prefactor calculated previously. 
-The partition function is then
+We can write down the formula for the partition function of the electric theory by putting all these pieces together and ignoring the divergent prefactor we calculated previously. 
+The partition function is then given by
 \begin{multline}
 Z_{el} ( \mu_a , \nu_b ) \; = 
 \; {1 \over N_c ! } \;
@@ -339,10 +339,10 @@ As a result the R-charges of the fields for the theory with $\eta$ superpotentia
 
 
 
-\subsection{Flow to a duality withouth $\eta$ superpotential}
+\subsection{Flow to a duality without $\eta$ superpotential}
 
 In order to obtain the duality without $\eta$ superpotential we start with $N_f + 1 $ flavours and we assign real masses in the same way as \eqref{eqn:real_mass_reduction_el}. \\
-The real mass assignment breaks the gauge group $ SU(N_f+1)^2 \times U(1)_B \, \rightarrow \, SU(N_f)_L \times SU(N_f)_R \times U(1)_A \times U(1)_B$. \\
+The real mass assignment breaks the gauge group $ SU(N_f+1)_L \times SU(N_f+1)_R \times U(1)_B \, \rightarrow \, SU(N_f)_L \times SU(N_f)_R \times U(1)_A \times U(1)_B$. \\
 We will assign a large value to the mass $m$. 
 The real masses are given by
 \begin{equation}
@@ -402,12 +402,12 @@ We can now use the condition on the real masses that is generated by the $\eta$ 
 \begin{equation}
 	{ 1 \over 2 } \sum_a \mu_a + \nu_a  = \omega ( -N_c \Delta_X + N_f + 1 )  \, =\omega( \, N_f \Delta_Q +  \Delta_M )
 \end{equation}
-Using this condition we can the R-charge of last flavour $\Delta_M$ as a function of the real masses of the light quarks and the exponential factor reads
+Using this condition we can write the R-charge of last flavour $\Delta_M$ as a function of the real masses of the light quarks and the exponential factor reads
 \begin{multline}
 c \left( 4 N_c  ( m  + m_B ) ( \omega ( N_f (1 - \Delta_Q)  - N_c \Delta_X ) -  m_A N_f )\right)\,  \\
 c\left( 4\big( \sum_{i=1}^{N_c}   \sigma_i  \big) \big ( \omega( N_f (1 - \Delta_Q)  - N_c \Delta_X)  -  m_A N_f ) \big) \right)
 \end{multline}
-The term on the first line can be taken outside the integral and we will found an identical term in the magnetic side.
+The terms on the first line can be taken outside the integral and we will found an identical term in the magnetic theory.
 The second term will be set to one by the delta function $\delta(\sum_i \sigma_i)$ upon integration.\\
 The partition function for the electric theory after integrating out the $N_f +1$-th flavour is then given by
 \begin{multline}
@@ -420,12 +420,11 @@ The partition function for the electric theory after integrating out the $N_f +1
 \\ \int
 \prod_{i=1}^{N_c} \frac{d \sigma_i}{\sqrt{- \omega_1 \omega_2}} \, \delta( \sum_i \sigma_i)  
 %c \left( 4\big( \sum_{i=1}^{N_c}  \sigma_i  \big) \big( \omega( N_f (1 - \Delta)  - N_c \Delta_X)  -  m_A N_f \big) \right) 
-\\
-	 \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}
+	 \prod_{ 1 \leq i<j \leq N_c} \frac{ \Gamma_h( \Delta_X \omega \pm (\sigma_i - \sigma_j)) }{ \Gamma_h ( \pm (\sigma_i - \sigma_j) )}\\
  \prod_{a,b=1}^{N_f} \prod_{j=1}^{N_c} \Gamma_h ( m_a + m_B + m_A + \sigma_j) \Gamma_h ( -\tilde{m}_a -m_B + m_A - \sigma_j)
  %\end{aligned}
 \end{multline}
-Note that except for the exponential factors discussed above, it corresponds to the partition function for a pure three-dimensional theory, withouth $\eta$ superpotential.\\
+Note that except for the exponential factors discussed above, it corresponds to the partition function for a pure three-dimensional theory, without $\eta$ superpotential.\\
 The charges can be easily read off from the partition function and are given by 
 \begin{table}[h!]
  \begin{tabular}{|c |c |c |c |c |c |c |}
@@ -479,7 +478,7 @@ $X$ & 0 & 0 & 0 & 0 &0 & $\Delta_X$ \\
 
 \section{Magnetic theory}
 The four dimensional theory of Kutasov-Schwimmer duality was introduced in section \ref{sec:kutasov_duality4d}. 
-It is a $SU(\tilde{N}_c) = SU( k N_f - N_c)$ SQCD theory with $N_f$ flavours $q,\tilde{q} $, a matter field $Y$ in the adjoint representation and $k$ mesons $M$ that are identified with the electric mesons. There is a superpotential for the adjoint field $ \Tr Y^{k+1}$ that results in $R_X = R_Y$.
+It is a $SU(\tilde{N}_c) = SU( k N_f - N_c)$ SQCD theory with $N_f$ flavours $q,\tilde{q} $, a matter field $Y$ in the adjoint representation and $k$ mesons $M_j$ that are identified with the electric mesons. There is a superpotential for the adjoint field $ \Tr Y^{k+1}$ that results in the condition $R_X = R_Y$.
 The four dimensional magnetic theory can be summarized by
 \begin{equation}
 \begin{array}{|c |  c | c c c l |}
@@ -675,7 +674,7 @@ The final expression is identical to the electric one and is given by
 
 
 \subsection{Partition function}
-
+The partition function for the magnetic theory without the divergent factor is given by
 \begin{equation}
 \begin{aligned}
 Z_{mag} ( \mu_a , \nu_b , \tilde{\mu}_a, \tilde{\nu}_b ) \,= & \, \frac{1}{\tilde{N_c}!}
@@ -688,7 +687,7 @@ Z_{mag} ( \mu_a , \nu_b , \tilde{\mu}_a, \tilde{\nu}_b ) \,= & \, \frac{1}{\tild
  &  \prod_{a,b=1}^{N_f} \prod_{j=1}^{k N_f - N_c} \Gamma_h \big( \tilde{ \mu}_a + \tilde{\sigma_j} \big) \Gamma_h \big( \tilde{\nu}_b - \tilde{\sigma_j} \big)
 \end{aligned}
 \end{equation}
-where we used
+where we cefined
 \begin{equation}
 \begin{aligned}
  \mu_a = \omega \Delta_Q + m_a  
