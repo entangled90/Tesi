@@ -1,12 +1,18 @@
 %!TEX root = tesi.tex
 \include{header_tesi}
+%\frontmatter
 
+\pagenumbering{gobble}
 \begin{document}
 
-
 \maketitle
+\cleardoublepage
+\pagenumbering{Roman}
 \tableofcontents
 
+%\mainmatter
+\cleardoublepage
+\pagenumbering{arabic}
 \input{introduction}
 \input{4d_dualities}
 \input{kutasov}
