@@ -1,5 +1,5 @@
 %!TEX root = tesi.tex
-\documentclass[a4paper,twoside,openright,12pt]{report}
+\documentclass[a4paper,twoside,openright,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -14,7 +14,7 @@
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
-\usepackage{titlesec, blindtext, color}
+\usepackage{blindtext, color}
 \usepackage{lmodern}
 \usepackage[toc,page]{appendix}
 \usepackage[outercaption]{sidecap}
@@ -27,14 +27,17 @@
 \usepackage[a4paper]{geometry}
 %\usepackage[nottoc,numbib]{tocbibind}
 
+%Per avere il titolo dei capitoli con un box
+\usepackage[ Lenny ]{ fncychap }
+%\usepackage{titlesec}
 
 
-
+%\raggedbottom
 
 %\usepackage[comma]{natbib}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 
 
