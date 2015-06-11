@@ -63,7 +63,7 @@ and
 $g$ is the gauge coupling.\\
 The Bianchi identity $d F = 0$ can be seen as a conservation law for the topological current, which is defined as
 \begin{equation}
- J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma \qquad \partial^{\mu} J_{\mu} =0
+ J_{\mu}^{top} = \frac{1}{2 \pi} ( * F)_{\mu} \; =  \; \frac{1}{2 \pi} d \, \gamma \qquad \partial^{\mu} J_{\mu} =0
 \end{equation}
 The topological current acts as shifts of the dualized photon $\gamma \rightarrow \gamma + \alpha$.\\
 The quantization of the magnetic flux implies that the dualised photon is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.
@@ -86,28 +86,43 @@ Using the dualized photon we can turn the vector multiplet into a chiral multipl
  Y = \exp{ \left( \frac{2 \pi \sigma}{g^2} + i \gamma \right)}
 \end{equation}
 because of its periodicity, it's natural to assign $\gamma$ to a phase factor.\\
-The dualization of the photon is possible as long there is not matter in the theory.
-
-However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and can be integrated out and in a low-energy description we can still dualize the gauge field.\\
+The classical lagrangian term of matter multiplets in representations $R_f$ of the gauge group is
+\begin{equation}
+\sum_f \int d^4 \theta Q^{\dagger}_f  e^{V} Q_{f}
+\end{equation}
+The dualization of the photon is possible as long there is no matter in the theory.\\
+The expansion of $V$ contains a term $\sigma \theta \bar{\theta}$ which give rise to a potential term for the squarks of the form
+\begin{equation}
+\sum_f | \sigma Q_f|^2
+\end{equation}
+As a result, matter fields couple with $\sigma$ with mass terms. 
+If we consider a generic point of the Coulomb branch, all charged matter fields are massive and can be integrated out.
+Therefore, in a low-energy description we can still dualize the gauge field.\\
 A similar reasoning can be applied to non-Abelian gauge theories.
 In fact, in a generic point of the Coulomb branch, the VEV of $\sigma$ breaks the gauge group to its maximal torus $U(1)^{r_G}$, where $r_G$ is the rank of the gauge group. 
 We now have $r_G$ massless vector multiplets that can be dualized into chiral multiplets $Y_i$ with $i=1,\dotsc,r_G$.
 \\
 Note that since the definition of $Y$ depends on the gauge coupling, it will be modified by quantum corrections.
 \\
-For $U(N)$ or $ SU(N)$ theories it's better to use the following coordinates on the Coulomb branch, because they are related to the simple roots of the algebra
+For $ SU(N)$ theories it's better to use the following coordinates on the Coulomb branch, because they are related to the simple roots of the algebra
 \begin{equation}
  Y_k \sim \exp \left( \frac{\sigma_j- \sigma_{j+1}}{\hat{g}^2} + i ( \gamma_j - \gamma_{j+1} )   \right) \qquad \hat{g}^2 =  \frac{g^2}{4 \pi}
 \label{eqn:Y_def_sun_theories}
 \end{equation}
-with $j = 1, \dotsc , N -1$ for $SU(N)$ or with $ j = 1, \dotsc, N$ for $U(N)$.
-From now on we will fix to a Weyl chamber by setting $\sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_N$ with a Weyl transformation.\\
+with $j = 1, \dotsc , N -1$.\\
+From now on we choose a Weyl chamber by setting $\sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_N$ with a Weyl transformation.\\
 For $SU(N)$ gauge theories is useful to define
 \begin{equation}
  Y = \prod_{j=1}^{r_G} Y_k
  \label{eqn:definition_of_Y_sun}
 \end{equation}
-since it's gonna be a coordinate of the unlifted Coulomb branch for such theories.
+since it will be be a coordinate of the unlifted Coulomb branch for such theories.\\
+For $U(N)$ theories we will use the following chiral fields as coordinates on the Coulom branch 
+\begin{equation}
+X_i  \sim \exp \left( \frac{\sigma_i}{g^2} + i \gamma_i \right) \qquad \hbox{for} i = 1, \dots , N
+\label{eqn:defined_un_cb_coordinates}
+\end{equation}
+
 
 
 
@@ -123,10 +138,10 @@ since it's gonna be a coordinate of the unlifted Coulomb branch for such theorie
 
 \subsubsection{Real masses}
 
-In $3 D \, \mN=2$ theories there's another way of giving a mass to a chiral multiplet other than with the superpotential term $W_{mass}= m \Phi^2$, which correspond to a holomorphic mass.\\
+In $3 D \; \mN=2$ theories there's another way to give a mass to a chiral multiplet other than with the superpotential term $W_{mass}= m \Phi^2$, which corresponds to a holomorphic mass.\\
 In these theories we can couple a global symmetry, which is not a R-symmetry, to a background vector multiplet.
 If we give a vacuum expectation value $\hat{m} $ to the scalar in the multiplet each field charged under that symmetry will receive a mass $q \, \hat{m}$, where $q$ is the charge of the field under that symmetry.
-If a chiral field is charged under different global symmetry, its mass  mass is a sum of the real masses for every global symmetry that we gauged.
+If a chiral field is charged under different global symmetry, its mass will be a sum of the real masses for every gauged global symmetry.
 Real masses are parity odd and belong to vector multiplets rather than chiral fields. For this reason, they cannot appear in holomorphic objects such as the superpotential.\\
 In addition, real masses relative to global abelian symmetries contribute to the central charge of the supersymmetry algebra $Z$ through
 \begin{equation}
@@ -135,9 +150,9 @@ In addition, real masses relative to global abelian symmetries contribute to the
  where $q_i$ is the charge of the field and $m_i$ the real masses under a global symmetry $U(1)_i$.\\
  Moreover, the central charge $Z$ can be promoted to a background linear superfield whose lowest component is $Z$.\\
  Another symmetry that can contribute to the central charge is the topological symmetry $U(1)_J$, whose current is given by the linear multiplet $\Sigma $ we defined in \eqref{eqn:linear_multiplet_gauge}.\\
- The added term is given by $\int d^4 \theta \; V_b \Sigma $ , where $V_b$ is a background vector multiplet.
+ The additional term is given by $\int d^4 \theta \; V_b \Sigma $ , where $V_b$ is a background vector multiplet.
  Integrating by parts and defining  $\Sigma_b = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V_b$ we obtain $\int d^4 \theta \; \Sigma_b V  $.\\
- Thus, the scalar component of the background vector field $\xi$ is a Fayet-Iliopulos term for the vector superfield .
+ Thus, the scalar component of the background vector field $\xi$ is a Fayet-Iliopulos term for the vector superfield.
  It contributes to the central charge with a mass $ m_J = \xi $.
 
 
@@ -159,26 +174,25 @@ In addition, real masses relative to global abelian symmetries contribute to the
 \subsubsection{Monopoles}
 In three dimensions there exist finite energy solutions that can be understood in terms of four dimensional monopoles after compactifying one direction.
 The scalar $\sigma$ will play the role of the scalar Higgs field in the adjoint representation typically used to introduce monopoles \cite{Weinberg:2006rq}.
-Different topological solutions can be found since the scalar field at infinity must approach a vaccum solution.
-Such solution doesn't have to be the same in every direction and as a result we find different topological solutions depending on how we choose to map the two-sphere at infinity to the gauge group $G$.
-The mapping relates $S^2_{\infty}$ to the gauge group rather than $S^3_{\infty}$ since monopoles are localized in space rather than in space-time.\\
+Different topological solutions can be found since the scalar field at infinity must approach a vacuum solution.
+Such a solution doesn't have to be the same in every direction and as a result we find different topological solutions depending on how we choose to map the two-sphere at infinity to the gauge group $G$ \footnote{The mapping relates $S^2_{\infty}$ to the gauge group rather than $S^3_{\infty}$ since monopoles are localized in space rather than in space-time.}.\\
 For a generic vacuum expectation value of $\sigma$, with $\sigma_i \neq \sigma_j$, the gauge group breaks to its maximal torus $U(1)^{r_G}$.
 The possible windings around $S^2_{\infty}$ are then characterised by
 \begin{equation}
  \Pi_{2} \left( G / U(1)^{r_G} \right) = \Pi_1 (U(1)^{r_G}) = \mathbb{Z}^{r_G}
 \end{equation}
-The equality holds if $\Pi_2(G) = 0$, which is true for every semisimple group and if $\Pi_1(G) = 0$, which is satisfied if the group is the covering group of the Lie algebra.
+The equality holds if $\Pi_2(G) = 0$, which is true for every semisimple group and if $\Pi_1(G) = 0$, which is satisfied if the group is the covering group of the Lie algebra \cite{Weinberg:2006rq}.
 As a result there are $r_G$ different topological solutions.
 Each of these solutions carry a magnetic charge for each of the $U(1)^{r_G}$ unbroken gauge fields. 
 For example, for $G= SU(N_c)$ we have $N_c-1$ different topological solutions.
 \\
-For $SU(2)$ gauge group one solution to the equation is given by the 't Hooft-Polyakov monopole, which in singular gauge reads \cite{Csaki:2014cwa}
+For $SU(2)$ gauge group one solution to the equations is given by the 't Hooft-Polyakov monopole, which in singular gauge reads \cite{Csaki:2014cwa}
 \begin{equation}
   \sigma = \left( v \, \coth (v r) - \frac{1}{r} \right)  \tau^3 \qquad A_{\mu} = \epsilon_{i j 3} \hat{r}^i \left( \frac{1}{r} + \frac{v}{\sinh (vr)} \right)
 \end{equation}
 This solution can be easily extended to $SU(N)$ gauge group by embedding the above solutions in a $SU(2)$ subgroup of the gauge group.
-Since the gauge group is broken in the vacuum, we cannot use $SU(N)$ gauge transformation to generate other solutions.
-As a results, each embedding of $SU(2)$ will result in a monopole charged under different $U(1)$ factors of the Cartan. 
+Since the gauge group is broken in the vacuum, we cannot use $SU(N)$ gauge transformations to generate other solutions.
+As a result, each embedding of $SU(2)$ will result in a monopole charged under different $U(1)$ factors of the Cartan. 
 Note that there are $N-1$ special embeddings of $SU(2)$ into $SU(N)$ which result in monopoles charged only under one factor of the $U(1)$ in the Cartan subalgebra. They are given by the N-1 contiguous 2x2 blocks in the diagonal.\\
 The importance of monopole operators in three dimensions is due to the fact that flowing to the infrared, they flow to the coordinates on the Coulomb branch we introduced in \eqref{eqn:Y_def_sun_theories} for $SU(N)$ theories \cite{Aharony:2013dha}.
 \\
@@ -191,8 +205,8 @@ Moreover, the mass of the monopoles is subject to the BPS bound which is given b
 \begin{equation}
 M_{monopole} \geq \frac{| \vec{g} \cdot \sigma| }{e^2} = \frac{2 \pi}{e^2} \sum_i n_i \sigma_i
 \end{equation}
-where $\sigma_i$ are the vaccum expectation values of $\sigma$.
-Monopoles that sature the bound are called BPS monopoles.\\
+where $\sigma_i$ are the vacuum expectation values of $\sigma$.
+Monopoles that saturate the bound are called BPS monopoles.\\
 
 %Considering now a finite value of the radius along the compactified direction, the BPS bound require that the potential must satisfy self-duality equations
 %\begin{equation}
@@ -247,7 +261,7 @@ The charges of the fields under the symmetries are given by
  \hline
  Q & 0 & 0  & 1 & N_f & 1  \\  
  \tilde{Q} & 0 & 0  & 1 & 1 & \overbar{N_f}  \\  
-   M & 0 &  0 & 2 & N_f & \overbar{N_f}\\  
+   %M & 0 &  0 & 2 & N_f & \overbar{N_f}\\  
    V_{\pm} & N_f & \pm 1  & -N_f & 1  &  1\\
    \hline
  \end{array}
@@ -289,8 +303,9 @@ where $\lambda_i$ are Lagrange multipliers in order the enforce the semiclassica
 
 
 \subsubsection{Moduli spaces for $SU(N_c)$ theories with $N_c >2 $ and with $N_f$ flavours }
-We will consider a $SU(N_c)$ gauge theory with equal number of $Q$ and $\tilde{Q}$ in order to avoid Chern-Simons term. 
-The simmetries of the theory are given by the following table
+We will consider a $SU(N_c)$ gauge theory with equal number of $Q$ and $\tilde{Q}$.
+%in order to avoid Chern-Simons term. 
+The symmetries of the theory are given by the following table
  \begin{equation}
 \begin{array}{| c | c c c c c |}
 \hline
@@ -306,35 +321,36 @@ The simmetries of the theory are given by the following table
 \end{array}
 \end{equation}
 where $Y_j$ are defined as in \eqref{eqn:Y_def_sun_theories} and $Y$ is defined as $Y = \prod_{j=1}^{N_c -1} Y_j \sim e^{ \frac{ \Phi_1 - \Phi_{N_c}  }{g^2}}$.
-The adjoint scalar VEV is ordered in such a way that $ \sigma_1 \geq \sigma_2 \geq \dotsc \geq \sigma_{N_c}$. The value of $j$ for which $\sigma$ changes sign is called $K$ and the associated instanton is $Y_K$.
-For $N_f > 1$ the theory has a Higgs branch, which break the gauge group in a generic point to $SU(N_f -N_c)$ for $N_f <N_c -1 $ and completely for $N_f \geq N_c - 1$. 
-The Higgs branch is parametrised as in four dimensions by mesons and for $N_f \geq N_c$ also by baryons.
-
-For theory withouth quarks, instantons generate the Affleck-Harvey-Witten \cite{Affleck:1982as} superpotential
+The VEVs of the adjoint scalar are ordered in such a way that $ \sigma_1 \geq \sigma_2 \geq \dotsc \geq \sigma_{N_c}$. 
+The value of $j$ for which $\sigma$ changes sign is called $K$ and the associated instanton is $Y_K$.
+In a generic point of the Higgs branch, the gauge group to $SU(N_f -N_c)$ for $N_f <N_c -1 $ and it breaks completely for $N_f \geq N_c - 1$. 
+As in four dimensions the Higgs branch is parametrised by mesons and, for $N_f \geq N_c$, by baryons too.
+\\
+For theories without quarks, instantons generate the Affleck-Harvey-Witten \cite{Affleck:1982as} superpotential
 \begin{equation}
 W = \sum_{j=1}^{N_c - 1} \frac{1}{Y_j}
 \label{eqn:def_AHW_Superpotential_Sun}
 \end{equation}
-which prohibits the theory to have stable supersymmetric vacuas.
-
+which prohibits the theory to have stable supersymmetric vacua.\\
 The theory with massless quarks features a superpotential generated by $N_c - 2$ instantons 
 \begin{equation}
 W_{inst} = \sum_{j \neq K} \frac{1}{Y_j}
 \label{eqn:AHW_superpotential}
 \end{equation}
 which doesn't completely lift the Coulomb branch.
-In fact, the following subspace is classically unlifted
+In fact, the following subspace is not lifted by the AHW superpotential \eqref{eqn:def_AHW_Superpotential_Sun}
 \begin{equation}
  \sigma_1 > \sigma_2 = \dots = 0 > \sigma_{N_c} = - \sigma_1
  \label{eqn:ahw_subspace_unlifted}
 \end{equation}
 The last equality holds because we have $\sum_i \sigma_i = 0$ for $SU(N_c)$ gauge group.
-The quantum corrected moduli space is different from the classical one and for $N_f < N_c -1 $ the effective superpotential is given by
+The quantum corrected moduli space is different from the classical one and for $N_f < N_c -1 $ the only effective superpotential which is compatible with the symmetries of the theory is given by \cite{Aharony:1997bx}
 \begin{equation}
  W_{eff} = (N_c - N_f - 1) ( Y \Det{(M)} ) ^{\frac{1}{N_f - N_c +1}}
 \end{equation}
 which admits no stable vacuum.\\
-For $N_f = N_c - 1 $ we obtain a constraint on the moduli space given by 
+For $N_f = N_c - 1 $ the effective superpotential defined above is not defined.
+For these values we have a constraint on the moduli space given by \cite{Aharony:1997bx} 
 \begin{equation}
 Y \Det( M) = 1
 \label{eqn:suN-3d-nf-nc-1-vacuum}
@@ -343,7 +359,7 @@ which results in a merging between the Higgs and the Coulomb branch.
 
 For $N_f \geq N_c $, the low-energy description contains baryons.
 The quantum moduli space is the same as the semi-classical moduli space and there is a superconformal fixed point at the origin.
-In the $N_f = N_c$ case an effective description of the moduli space can be given and the superpotential is 
+In the $N_f = N_c$ case an effective description of the moduli space can be given and the superpotential is \cite{Aharony:1997bx}
 \begin{equation}
 W = - Y ( \Det{(M)} - B \tilde{B})
 \label{eqn:3d_sun_nf__n_c_superpot}
@@ -361,7 +377,7 @@ and chiral fields $V_+ \, , \,V_-$, defined as
 V_+ \sim \exp{ \left(  \frac{\Phi_1}{g^2} + i \gamma_1 \right) } \qquad \quad V_- \sim \exp{ \left( \frac{\Phi_{N_c}}{g^2} + i \gamma_{N_c} \right) }
 \label{eqn:un_moduli_space_coordinates}
 \end{equation}
-because the null trace condition does not hold anymore.\\
+because the null trace condition does not hold any more.\\
  The $U(1)$ sector has a superpotential given by
  $$ W = - X V_+ V_-$$
 As a result, the superpotential for the theory is given by
@@ -392,7 +408,7 @@ W = -  V_+ V_-  \Det{(M)}
 
 
 \section{Aharony duality }
-One of the first three dimensional dualities was found by Aharony \cite{Aharony:1997gp} and Karch \cite{Karch:1997ux} for theories with $U(N_c) $ as gauge group and with non-chiral matter in the fundamental representation.
+One of the first three dimensional dualities was found by Aharony \cite{Aharony:1997gp} and Karch \cite{Karch:1997ux} for theories with gauge group $U(N_c) $ and non-chiral matter in the fundamental representation.
 The charges of the fields are given by the following table
 \begin{equation}
 \begin{array}{ | c | c c c c c |}
@@ -400,7 +416,7 @@ The charges of the fields are given by the following table
   & U(1)_R & U(1)_A & U(1)_J  & SU(N_f)_L & SU(N_f)_R \\
  \hline
  Q & 0 & 1& 0 & N_f& 1 \\ 
- \tilde{Q} & 0  & 1&0 & \overbar{N_f}&1  \\  
+ \tilde{Q} & 0  & 1&0 & 1 & \overbar{N_f}  \\  
    M & 0 & 2 & 0 & 1 & 1 \\ 
   V_{\pm} & N_f - N_c + 1 & - N_f  & \pm 1 &  1 & 1 \\
   \hline
@@ -410,7 +426,7 @@ where $V_{\pm} $ are defined as in the previous section and parametrize the unli
 The R-charges of the quarks have been fixed to zero in order to have the fermion in the multiplet with R-charge $-1$.
 The moduli space of this theory was described in the previous section.
 \\
-The dual theory is a $U(\tilde{N}_c) = U(N_f - N_c) $ gauge theory with $N_f$ flavours $q\, ,\, \tilde{q}$ and with singlet fields  $M \,,  V_+ \, , V_-$ with the same quantum number of the electric theory. 
+The dual theory is a $U(\tilde{N}_c) = U(N_f - N_c) $ gauge theory with $N_f$ flavours $q\, ,\, \tilde{q}$ and with the addition of singlet fields  $M \,,  V_+ \, , V_-$ with the same quantum number of the electric theory. 
 The charges are chosen in order to be consistent with a potential $W = M \, q \tilde{q}$ as in four dimensional dualities.\\
 The global charges of the theory are given by
 \begin{equation}
@@ -429,8 +445,8 @@ The magnetic theory features a superpotential of the form
 W = M^{\tilde{i}}_i q^i \tilde{q}_{\tilde{i}} + V_+ \, \tilde{V}_- + V_- \, \tilde{V}_+
 \label{eqn:aharony_mag_superpotential}
 \end{equation}
-The dual theory now contains the fields $V_+ \, , \, V_-$ which are matched with the coordinate on the Coulomb branch of the original theory.
-Remember that in three dimensions the moduli space contains the Coulomb branch, which wasn't present in four dimensional theories.
+The dual theory now contains the fields $V_+ \, , \, V_-$ which are matched with the coordinate on the Coulomb branch of the electric theory.
+Consider that in three dimensions the moduli space contains the Coulomb branch, which wasn't present in four dimensional theories.
 The introduction of the monopoles is crucial in order to have the same moduli space between the two theories.\\
 The dual theory exists only for $N_f > N_c$. 
 Starting with $N_f =N_c + 1$ we obtain a dual theory with $U(1)$ gauge group. Adding a mass term of the form $m M$ in the dual theory breaks the gauge group. After integrating out quarks and $\tilde{V}_{\pm}$ fields we obtain an effective description given only by mesons and $V_{\pm}$ with no other fields.
@@ -438,13 +454,13 @@ The superpotential is constrained by symmetries to be of the form
 \begin{equation}
 W = - V_+ V_- \Det{(M)}
 \end{equation}
-We found exactly the dual description of the theory we introduced in \eqref{eqn:aharony_dual_description_NcNf}.
+We found exactly the dual description of the theory we introduced in \eqref{eqn:aharony_dual_description_NcNf} for the case $N_f =1$.
 \\
 We can compare the moduli space between the dual theories by looking at specific vacua.
 For example, let's consider a point on the Higgs branch in the electric theory with vacuum expectation values of the mesons of rank $N_c$.
-The low-energy dual theory associated to such VEV is a $U(N_f - N_c)$ theory with $N_f - N_c$ massless flavours whose moduli space can be described by a superpotential of the form $W = \tilde{V}_+ \tilde{V}_- \, \Det{( q \tilde{q})} $ since $N_f = \tilde{N}_c$.
+The low-energy dual theory associated to such a VEV is a $U(N_f - N_c)$ theory with $N_f - N_c$ massless flavours whose moduli space can be described by a superpotential of the form $W = \tilde{V}_+ \tilde{V}_- \, \Det{( q \tilde{q})} $ since $N_f = \tilde{N}_c$.
 \\
-The equation of motion resulting from the addition of this term to the superpotential \eqref{eqn:aharony_mag_superpotential} set $V_+ = V_-= 0$, as in the electric theory.\\
+The equations of motion resulting from the addition of this term to the superpotential \eqref{eqn:aharony_mag_superpotential} set $V_+ = V_-= 0$, as in the electric theory.\\
 %If the VEV of the mesons has rank $N_c -1 $ the original theory is not completely higgsed and the dual theory can be given an effective description through the superpotential $W = \left(  \tilde{V}_+ \tilde{V}_- \, \Det{q \tilde{q}} \right)^{\frac{1}{2}}$ since $N_f = \tilde{N_c} +1$
 
 
@@ -485,7 +501,7 @@ They are defined as \cite{Kim:2013cma}
 v_{j,\pm} = \Tr{( v_{0,\pm} \, X^{j})}
 \label{eqn:3d_mag_monopoles_def}
 \end{equation}
-where $v_{0,\pm}$ is the bare monopole operator we defined in the previous section.\\
+where $v_{0,\pm}$ is the bare monopole operator we defined in the previous section in \eqref{eqn:defined_un_cb_coordinates}.\\
 To see the reason why there are $k$ different monopoles in this theory we can weakly deform the superpotential to a generic polynomial, as we did in \eqref{eqn:kutasov_deformed_superpotential}.
 The effect of this deformation is the breaking of the gauge group $U(N_c)$ in 
 \begin{equation}
@@ -493,7 +509,7 @@ U(N_c) \; \rightarrow \; U(r_1) \times U(r_2) \times \dots \times U(r_k) \quad \
 \end{equation}
 Following the same reasoning, in the infrared we find $k$ distinct SQCD sectors with gauge group $U(r_i)$ without adjoint matter, since it has been integrated out.\\
 Every sector must have a pair of monopoles since it is a $U(r_i)$ theory.\\
-Going in the limit of vanishing coupling we find that the original theory have $k$ pairs of monopole operators.\\
+Going to the limit of vanishing coupling we find that the original theory have $k$ pairs of monopole operators.\\
 %%%% DICO perchè son vestiti così
 
 
@@ -526,4 +542,4 @@ W_{monopoles} = \sum_{j=0}^{k-1} \left(   v_{i,+} \, \tilde{v}_{k-j-1,-} + v_{j,
 \label{eqn:kimpark_superpotential_monopoles}
 \end{equation}
 The duality maps the electric adjoint field with the magnetic one.
-Mesons and monopoles operators in the electric theory are mapped as singlets in the magnetic one. 
+Mesons and monopole operators in the electric theory are mapped as singlets in the magnetic one. 
