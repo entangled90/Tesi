@@ -10,7 +10,7 @@ Hence, in three dimension we have a two dimensional representation.
 In odd dimensions representations are irreducible and Weyl spinors do not exist: the chirality operator ($\gamma_{D+1}$ or $\gamma^*$ ) is proportional to the identity.
 \\
 %This is related to the fact that representations in odd dimensions are constructed by taking the representation in one dimension less, which is even, and adding the chirality operator as the $D$-th matrix in the Clifford algebra.\\
-Gamma matrices can be chosen real and the Majorana condition can be imposed, lowering the degress of freedom of the representation from four to two.\\
+Gamma matrices can be chosen real and the Majorana condition can be imposed, lowering the degrees of freedom of the representation from four to two.\\
 Since $3d \; \mN=2$ theories have four supercharges, we can use the $4d \; \mN=1$ superspace formalism. 
 \\
 The supersymmetry algebra and its representations can be found by dimensional reduction from four dimensions. 
@@ -18,16 +18,17 @@ The reduced algebra reads
 \begin{equation}
  \{ Q_{\alpha},Q_{\beta} \} =  \{ \bar{Q}_{\alpha},\bar{Q}_{\beta} \}= 0 \qquad \{ Q_{\alpha} , \bar{Q}_{\beta}   \} = 2 \sigma^{\mu}_{\alpha \beta} P_{\mu} + 2 i \epsilon_{\alpha \beta} Z
  \end{equation} 
+ where 
 The central charge $Z$ is the component of the momentum  along the reduced direction.
-Because of the presence of the central charge in the algebra, now states must satisfy a BPS bound of the form $M \geq Z $, which imply that massless representations have null central charge.
+Because of the presence of the central charge in the algebra, now states must satisfy a BPS bound of the form $M \geq Z $, which implies that massless representations have null central charge.
 \\
 The automorphism of this algebra is $U(1)_R \simeq SO(2)_R$, as in four dimensions.
 \\
 Superspace formalism is similar to what we introduced previously, with proper changes due to the different spinor representations in three dimension such as gamma matrices.
 \\
 Chiral superfields contain \emph{on-shell} one complex scalar and a complex spinor as in four dimensions.\\
-Vector superfield contains an additional real scalar field with respect to the four dimensional superfield.
-The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ along the reduced direction.
+A Vector superfield contains an additional real scalar field with respect to the four dimensional superfield.
+The scalar $\sigma $ comes from the component of the four dimensional vector field $A_{\mu}$ along the reduced direction.
 
 
 
@@ -41,26 +42,41 @@ The scalar $\sigma $ comes from the component of the vector field $A_{\mu}$ alon
 
 %%%%% Devo far passare il messaggio che FI è carica di U(1)_J
 In three dimensions a free photon can be dualized to a scalar $\gamma$ since it has only one polarization.
-Instead of defining a potential $A$ in order to solve the Bianchi identity for the potential $d F = d^2 A = 0$, we can define a scalar such that
+Instead of defining a potential $A$ in order to solve the Bianchi identity $d F = d^2 A = 0$, we can define a scalar such that
 \begin{equation}
   * F = \frac{g^2}{\pi} d  \gamma  \quad \rightarrow \quad d * F  = 0  
 \end{equation} 
-where $*$ is the Hodge operator and $g$ is the gauge coupling.\\
+\begin{comment}
+\begin{equation}
+  \epsilon_{\mu \nu \rho} F^{\nu \rho} = \frac{g^2}{\pi} d_{\mu}  \gamma  \quad \rightarrow \quad d * F  = 0  
+\end{equation} 
+\end{comment}
+where 
+$*$ is the Hodge operator \footnote{
+  The Hodge operator acts on $p$-forms in a $n$ dimensional manifold.
+  For a $p$-form $\omega$ its action is given by 
+  $$
+    ( * \omega)_{\mu_1 \dots \mu_{n-p}} = \frac{\sqrt{g}}{p!} \epsilon_{\mu_1 \dots \mu_n} g^{\mu_{n-p+1} \nu_1 \dots \mu_{n} \nu_p } \omega_{\mu_1 \dots \mu_p}
+  $$
+}
+and 
+$g$ is the gauge coupling.\\
 The Bianchi identity $d F = 0$ can be seen as a conservation law for the topological current, which is defined as
 \begin{equation}
- J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma \qquad \partial^{\mu} J_{\mu} 
+ J_{\mu}^{top} = \frac{1}{2 \pi} * F \; =  \; \frac{1}{2 \pi} d \gamma \qquad \partial^{\mu} J_{\mu} =0
 \end{equation}
 The topological current acts as shifts of the dualized photon $\gamma \rightarrow \gamma + \alpha$.\\
 The quantization of the magnetic flux implies that the dualised photon is periodic and is normalized in such a way that $\gamma \sim \gamma + 2 \pi$.
 \\
-From a vector superfield $V$ we can define a linear multiplet $\Sigma$, defined as
+From a vector superfield $V$ we can define a linear multiplet $\Sigma$, given by
 \begin{equation}
  \Sigma = \epsilon^{\alpha \beta} D_{\alpha} D_{\beta} V
  \label{eqn:linear_multiplet_gauge}
 \end{equation}
 It satisfies $D^2 \Sigma = 0$ and is gauge invariant under a transformation $V \rightarrow V + i (\Phi - \Phi^{\dagger})$.
-The lowest component of $\Sigma$ is the scalar in the vector multiplet and it contains also a term $ \bar{\theta} \sigma_{\rho} \theta \, \epsilon^{\mu \nu \rho} F_{\nu \rho}$, whose bosonic part is proportional to the topological current.
-The super Yang-Mills action can be written also as
+The lowest component of $\Sigma$ is the scalar in the vector multiplet.
+It contains also a term $ \bar{\theta} \sigma_{\rho} \theta \, \epsilon^{\mu \nu \rho} F_{\nu \rho}$,which is proportional to the topological current.
+The super Yang-Mills action can be written as
 \begin{equation}
 S \sim \int d^4 \theta \; \Sigma^2
 \end{equation}
@@ -69,8 +85,9 @@ Using the dualized photon we can turn the vector multiplet into a chiral multipl
 \begin{equation}
  Y = \exp{ \left( \frac{2 \pi \sigma}{g^2} + i \gamma \right)}
 \end{equation}
-because of its periodicty, it's natural to assign $\gamma$ to a phase factor.\\
-The dualization of the photon was possible because there wasn't matter in the theory.
+because of its periodicity, it's natural to assign $\gamma$ to a phase factor.\\
+The dualization of the photon is possible as long there is not matter in the theory.
+
 However, matter fields couple with $\sigma$ with mass terms. As a result, in a generic point of the Coulomb branch, all charged matter fields are massive and can be integrated out and in a low-energy description we can still dualize the gauge field.\\
 A similar reasoning can be applied to non-Abelian gauge theories.
 In fact, in a generic point of the Coulomb branch, the VEV of $\sigma$ breaks the gauge group to its maximal torus $U(1)^{r_G}$, where $r_G$ is the rank of the gauge group. 
