@@ -7,16 +7,17 @@
 \usepackage{amsthm}
 %\usepackage{fullpage}
 %%\usepackage{mathrsfs}
-\usepackage[english]{babel}
+\usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %%\usepackage{natbib}
 \usepackage{lmodern}
 \usepackage[toc,page]{appendix}
 \usepackage[a4paper]{geometry}
+\usepackage{microtype} %% font che esce a fine riga un pelo
 %\usepackage[nottoc,numbib]{tocbibind}
-\geometry{a4paper,top=1.5cm,bottom=1.5cm,left=2cm,right=2cm,%
-heightrounded,bindingoffset=5mm}
+\geometry{a4paper,top=1cm,bottom=1.5cm,left=2cm,right=2cm,%
+heightrounded} %,bindingoffset=0mm}
 
 
 
@@ -27,24 +28,34 @@ heightrounded,bindingoffset=5mm}
 %%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%OOOOOO
-\author{
- Carlo Sana  ~--~ matricola 726409 \\
- Laurea Magistrale in Fisica Teorica -- 29 June 2015\\
-%  cell 3295795286 \\
-\emph{Supervisor}: Silvia Penati 
-~
-\emph{Assistant supervisor}: Alberto Zaffaroni\\
-}
+%
 \date{}
 \title{ \textbf{4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach }}	
  
 
 
 \pagenumbering{gobble}
-
+\date{29 June 2015}
 \begin{document}
 \maketitle
+\vspace*{-1.5cm}
+	 \textbf{Carlo Sana}  ~-~ 726409  \hfill
+ LM in Fisica Teorica 
+ %-29 Giugno 2015
+\\
+\vspace{-0.5cm}
+%  cell 3295795286 \\
+\begin{center}
+\emph{Supervisor}: 
+\textsf{Silvia Penati} 
+~~
+\emph{Assistant supervisor}:
+\textsf{Alberto Zaffaroni}
+
+\end{center}
+
+
+
 Strongly coupled systems represent a challenge in each branch of physics because the lack of approximation methods available makes their analysis difficult.\\
 %%%% ASSIST TO?
 In the last twenty years we witnessed to the discovery of many dualities in high energy physics between theories at strong coupling and theories at weak coupling.
