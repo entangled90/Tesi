@@ -27,11 +27,12 @@
 \usepackage[a4paper]{geometry}
 \usepackage{microtype}
 %\usepackage[nottoc,numbib]{tocbibind}
-\usepackage{frontespizio}
+\usepackage[standard]{frontespizio}
 %Per avere il titolo dei capitoli con un box
 \usepackage[ Lenny ]{ fncychap }
 %\usepackage{titlesec}
-
+\usepackage{fancyhdr}
+\usepackage{emptypage}
 
 %\raggedbottom
 
@@ -41,7 +42,6 @@
 %\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
 
-
 \author{
 Carlo Sana }
 %Università degli studi di Milano-Bicocca \\
@@ -49,9 +49,19 @@ Carlo Sana }
 \date{}
 \title{4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
 
-%\makeindex
+%%% FANCYHDR STUFF
+\renewcommand\headrulewidth{1pt}%\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
+%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LE]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+\pagestyle{fancy}
 
-
+%\fancyhead[L]{\scshape{Chapter \thechapter - \chaptertitle} }
+%\fancyhead[R]{ \slshape  \nouppercase{\rightmark}}
+%\fancyfoot[C]{\scshape \thepage}
+%\fancyfoot[C]{\scshape \thepage}
 
 %%%%%%commands!!
 %%% Comando per far le matrici con le barre verticali
