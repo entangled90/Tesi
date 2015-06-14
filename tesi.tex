@@ -5,14 +5,18 @@
 
 \frontmatter
 
-\mypagestyle
 \include{titlepage}
+\pagestyle{mypagestyle}
+
 \tableofcontents
 
 \cleardoublepage
 \mainmatter
 
+\pagestyle{intro}
 \input{introduction}
+
+\pagestyle{mypagestyle}
 \input{4d_dualities}
 \input{kutasov}
 \input{3d_dualities}
@@ -25,7 +29,7 @@
 
 %\input{acknowledgment}
 
-\bibliopagestyle
+\pagestyle{biblio}
 \nocite{*}
 \bibliographystyle{jhep}
 \bibliography{bibliografia}

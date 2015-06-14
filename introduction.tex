@@ -1,28 +1,18 @@
 %!TEX root = tesi.tex
-
-
+\cleardoublepage
 \chapter{Introduction}
-
+\pagestyle{intro}
 %The most recent developments in quantum field theory have been associated to 
 After the triumph of the Standard Model in the seventies, many theoretical physicist shifted their attention to the understanding of the dynamics of strongly coupled quantum field theories. \\
 In that period, in fact, quantum field theories were properly understood only by using perturbation theory, which is only applicable if the theory is weakly coupled such as QED or QCD at high energies.
 However, QCD is strongly coupled at energies lower than a few GeVs, thus making perturbative methods unavailable in this regime.
-%%%% TAGLIABILE
-\begin{comment}
-Perturbative methods rely on the fact that the theory in question is weakly coupled, i.e. its coupling constant is much lower than one. This was not a problem for QED since its coupling constant $\alpha \sim 1/137$ is much lower than one at low energies and grows slowly while increasing the energy scale.
-As a result, QED calculations have a high precision and non-perturbative methods were not needed.\\
-In 1973 was discovered that quantum chromodynamics with three flavours is asymptotically free, i.e. its coupling constant becomes smaller at higher energies. 
-As a result, collider physics can be understood in terms of Feynman diagrams but at low-energies the theory is strongly coupled and perturbation theory cannot be used to understand the dynamics of the theory.
-Computer simulations on a lattice are the most reliable tool to investigate QCD at low-energies, but they cannot provide a complete understanding of the behavior of QCD.\\ 
-\end{comment}\
 \\
-In this context, dualities between theories at strong and weak coupling gained a lot of attention because by using them, we are able to map observables from the perturbative weakly-coupled theory to non-perturbative theory at strong coupling.
+In this context, dualities between theories at strong and weak coupling gained a lot of attention because they can be used to compute physical quantities of strongly coupled theories in the weakly-coupled theory through well-understood perturbative methods.
 \\
 
-The first example of strong-weak duality is the electric-magnetic duality of Maxwell's equations discovered by Dirac in 1931.  
-He discovered that the equations of motion are invariant if electric and magnetic field are exchanged. 
-In the presence of charges, the duality exchanges electric and magnetic charges. \\
-For a quantum system be invariant under such duality he demonstrated that electric and magnetic charge need to be inversely proportional to each other. 
+The first example of strong-weak duality is the electric-magnetic duality of Maxwell's equations discovered by Dirac in 1931, which consists in the invariance of the equations of motion under the exchange of the electric and magnetic field. 
+In the presence of charges, electric and magnetic charges are exchanged too. \\
+For a quantum system be invariant under such duality, electric and magnetic charges need to be inversely proportional to each other. 
 Dirac's quantization condition for particles that posses either electric or magnetic charge reads $e g =  2 n \pi \hbar$, where $e$ is the electric charge and $g$ the magnetic charge.
 \\
 
@@ -31,35 +21,35 @@ It states that a supersymmetric  $\mN=4$ quantum field theory in four dimensions
 The dual gauge group $G'$ in some cases is different from the gauge group $G$ of the original theory.
 \\
 
-The most important duality in modern physics is the AdS/CFT correspondence. 
-It is another example of strong-weak duality between a gravitational theory in an Anti-deSitter space (AdS) and a conformal gauge theory (CFT) which lives on the boundary of the AdS space. \\
-It was first conjectured by Maldacena between $II_B$ string theory on $AdS_5 \times S^5$ and $\mN=4$ Super Yang-Mills in four dimension. 
-It is an example of the holographic principle, which states that gravitational theories have the same number of degrees of freedom as gauge theories in a lower number of dimensions.\\
+The most important strong-weak duality in modern physics is the AdS/CFT correspondence. 
+It is a correspondence between a gravitational theory in an Anti-deSitter space (AdS) and a conformal gauge theory (CFT) which lives on the boundary of the AdS space. \\
+It was first conjectured by Maldacena between $II_B$ string theory on $AdS_5 \times S^5$ and a $\mN=4$ Super Yang-Mills theory in four dimensions. 
+It is a realization of the holographic principle, which states that gravitational theories have the same number of degrees of freedom as gauge theories in a lower number of dimensions.\\
 As we anticipated, the correspondence can be used to map observables in the strongly coupled field theory to observables in the weakly coupled gravitational theory in Anti-deSitter.
-Many quantities that were computable on both sides were calculated as a check of the duality, but the correspondence has been used in many different situations to improve our understanding of strongly coupled field theories and, at the same time, of gravity. \\
-It is now one of the more active areas of research and it was generalized to  Anti-deSitter spaces in other dimensions and to non-conformal field theories by considering spacetime configurations that are only asymptotically Anti-deSitter.
+Many quantities that were computable on both sides were calculated as a check of the duality, but the correspondence has been used in many situations to improve our understanding of strongly coupled field theories and, at the same time, of gravitational theories \\
+It is now one of the more active areas of research and it was generalized to Anti-deSitter spaces in different dimensions and to non-conformal field theories by considering spacetime configurations that are only asymptotically Anti-deSitter.
 As a result, the AdS/CFT correspondence is more generally called gauge/gravity duality.  \\
 More practical applications of the correspondence ranged from the calculation of the viscosity of the quark-gluon plasma to phenomenological models of high temperature superconductors in condensed matter physics.
-Even if these line of research are relatively new, gauge/gravity duality can provide some insights on the behavior of strongly coupled systems in other branches of physics.   
+Even if these line of research are relatively new, gauge/gravity duality can provide some insights on the behavior of strongly coupled systems in different branches of physics.   
 \\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% SEIBERG DUALITY
-
+\pagestyle{intro}
 Seiberg duality is another example of electric-magnetic duality.
 It relates the infrared behavior of two different supersymmetric theories, the electric and the magnetic theory.\\
 The  original Seiberg features as the electric theory a $\mN=1$ four dimensional gauge theory with $SU(N_c)$ gauge group and with $N_f$ quarks in the fundamental and antifundamental representation.
-The magnetic theory is a $SU(N_f-N_c)$ gauge theory with $N_f$ fundamental and antifundamental quarks and with $N_f^2$ singlets fields. \\
+The magnetic theory is a $SU(N_f-N_c)$ gauge theory with $N_f$ fundamental and antifundamental quarks and with $N_f^2$ singlets fields. 
 They are called mesons because they have the same quantum numbers of the mesons that can be constructed in the electric theory by combining a quark with an antiquark. 
 However, in the magnetic theory they are fundamental fields and they are not composite degrees of freedom as in the electric theory.\\
-Both the electric and magnetic theories feature a strongly-interacting superconformal fixed point for a particular range of the number of flavours and colours. 
+Both the electric and magnetic theories feature a strongly-interacting superconformal fixed point for a specific range of the number of flavours and colours. 
 The duality maps a strongly coupled theory into a weakly coupled one as the other dualities discussed above. 
-Therefore, we can use the magnetic degrees of freedom to analyse the properties of the electric theory where it is strongly coupled.\\
+Therefore, we can use the magnetic degrees of freedom to analyse the properties of the electric theory in the strongly coupled regime.\\
 Many generalizations of Seiberg duality exist and they can be constructed by starting with a theory with a different gauge group or by adding matter fields in other representations.
 %Our work will be focused on Seiberg duality with an additional matter field in the adjoint representation. 
 \\
-Seiberg duality was initially discovered in four dimensional field theories but only a dew years later, a three dimensional analogue of Seiberg duality with $U(N_c)$ gauge group was found by Aharony.\\
+Seiberg duality was initially discovered in four dimensional field theories but just afew years later, a three dimensional analogue of Seiberg duality with $U(N_c)$ gauge group was found by Aharony.\\
 
-For fifteen years it was believed that dualities in four and three dimensions were not linked to each other even if they had some striking similarities. 
+For fifteen years it was not clear how to link dualities in four and three dimensions even if they had some striking similarities. 
 A naive dimensional reduction, which is obtained by compactfiying a direction to a circle and then let the radius of the circle go to zero, is not compatible with the low-energy limit required by Seiberg duality in both teories.  
 However, it is possible to relate four dimensional dualities to three dimensional ones if we keep the radius of the circle finite. 
 If we flow to energies much lower than the inverse of the radius, the behavior of the theory will be effectively three dimensional, since the modes on the circle are too heavy to be excited.\\
@@ -70,18 +60,19 @@ We can apply this reasoning to various four dimensional dualities.
 In some cases we find already known dualities, while in other situations we discover unkown three dimensional dualities. 
 Given that most of the three dimensional dualities have been derived from four dimensional dualities, it is conjectured that this is true for every three dimensional duality.\\
 
-The process of dimensional reduction is understood in field theory in most cases, but some difficulties could arise anyway because of the non-perturbative dynamics of the theory.\\
-However, there is an independent way to check the results obtained with these methods.\\
-It is the partition function approach we will use in our work.
-It consists in the calculation of the superconformal index in four dimensions, for both dual theories. 
-The index is defined for supersymmetric field theories in four dimensions with one of the directions compactified into a circle.
+The process of dimensional reduction is understood in field theory in most cases, but some difficulties could arise of the strong coupling regime.\\
+However, the results obtained in this way can be check with an independent method which consists in the reduction of the duality directly through the partition function.
+%However, there is an independent way to check the results obtained with these methods.\\
+I%t is the partition function approach we will use in our work.
+The reduction process starts by calculating the superconformal index in four dimensions, for both dual theories. 
+The index is a quantity defined for supersymmetric field theories in four dimensions with one of the directions compactified into a circle.
 Mathematical identities guarantees that the indices of dual theories match.\\
-The key property of the index is that if we shrink the radius of the circle to zero it reduces to the partition function of the theory in three dimensions with the superpotential term due to the compactification.
+The key property of the index is that if we shrink the radius of the circle to zero it reduces to the partition function of the theory in three dimensions with a superpotential term due to the compactification.
 At this point, we can perform the large mass flow we discussed previously in order to remove the superpotential. 
-In this way we obtain the partition function of a three dimensional theory with all the symmetries that were broken by the superpotential term.\\
+In this way we obtain the partition function of a three dimensional theory invariant under all the symmetries that were broken by the superpotential term.\\
 If we perform this procedure for both theories we obtain the expression of the partition functions, which are equal because of the identity of the indices in four dimensions.
 Moreover, the field content of the theory can be read easily from the expression of the partition function, since the symmetries are explicit and the superpotential can be read off from the constraints it imposes to the field charges.\\  
-
+\pagestyle{intro}
 Our work focuses on the dimensional reduction of Seiberg duality with $SU(N_c)$ and with an additional chiral field in the adjoint representation by using the partition function approach discussed earlier.
 This duality is known in literature as the Kutasov-Schwimmer-Seiberg (KSS) duality.
 Its three dimensional analogue is called Kim-Park duality and it has a similar matter content to the four dimensional duality with the addition of singlet fields in the magnetic theory that have the same charges of the monopole operators of the electric theory.
@@ -89,11 +80,13 @@ The electric theory of Kim-Park is either $U(N_c)$ or $SU(N_c)$ which correspond
  \\
 The dimensional reduction of the KSS duality to the Kim-Park duality with $U(N_c)$ or $SU(N_c)$ gauge groups has been performed by Nii with field theory techniques.\\
 The scope of our work is to provide an independent check of his work by performing the dimensional reduction of KSS duality to $SU(N_c)$ Kim-Park duality on the partition function.\\
-The advantage of this approach is that it is easier to work on the partition function rather than in field theory for theories with adjoint matter because their non-perturbative dynamics is not as well understood as SQCD theories yet .
-Whereas the reduction on the partition function to $U(N_c)$ Kim-Park duality has already been done in literature, the reduction of the $SU(N_c)$ case wasn't performed yet.\\
-Our work showed that the KSS duality with $SU(N_c)$ gauge group reduced exactly to the Kim-Park duality with $SU(N_c)$ gauge group.\\
-The identity between the electric and magnetic partition function is not yet demonstrated as a mathematical identity and it could be one of the situations where physics can show new non-trivial mathematical relations. 
+The advantage of this approach is that it is easier to work on the partition function rather than in field theory mostly because of the non-perturbative regime.
+Moreover, in field theory one has to make some assumptions that are not still completely justified, while in the partition function approach such assumptions do not need to be made.
+Whereas the reduction on the partition function to $U(N_c)$ Kim-Park duality has already been done in literature, the reduction of the $SU(N_c)$ case wasn't performed yet.
+Thus, our work provides an independ check of the results obtained with field theory techniques.\\
+The identity between the electric and magnetic partition function is not yet demonstrated as a mathematical identity and it could be one of the situations where physics can unveil new non-trivial mathematical relations. 
 \\
+
 
 We begin our discussion in section 2 with a brief review of some of the properties of supersymmetric quantum field theories and the features of $SU(N_c)$ SQCD that will be needed in order to understand Seiberg duality.
 After these consideration we illustrate Seiberg and KSS duality.
