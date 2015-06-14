@@ -55,19 +55,46 @@ Carlo Sana }
 \date{}
 \title{4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
 
-%%% FANCYHDR STUFF
-\renewcommand\headrulewidth{1pt}%\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
-%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
-\fancyhf{}
-\fancyhead[CE]{\normalsize \nouppercase{\leftmark}}
-\fancyhead[CO]{\normalsize Section \nouppercase{\rightmark}}
-\fancyhead[LE,RO]{\scshape \thepage}
-\pagestyle{fancy}
 
+\newcommand{\mypagestyle}{
+	%%% FANCYHDR STUFF
+	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
+	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
+	\fancyhf{}
+	\fancyhead[CE]{\normalsize \nouppercase{\leftmark}}
+	\fancyhead[CO]{\normalsize Section \nouppercase{\rightmark}}
+	\fancyhead[LE,RO]{\scshape \thepage}
+	\pagestyle{fancy}
+}
 %\fancyhead[L]{\scshape{Chapter \thechapter - \chaptertitle} }
 %\fancyhead[R]{ \slshape  \nouppercase{\rightmark}}
 %\fancyfoot[C]{\scshape \thepage}
 %\fancyfoot[C]{\scshape \thepage}
+
+\newcommand{\bibliopagestyle}{
+	%%% FANCYHDR STUFF
+	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
+	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
+	\fancyhf{}
+	\fancyhead[CE]{\normalsize \nouppercase{\leftmark}}
+	\fancyhead[CO]{\normalsize  \nouppercase{\rightmark}}
+	\fancyhead[LE,RO]{\scshape \thepage}
+	\pagestyle{fancy}
+}
+
+
+
+
+
+\newcommand{\resetpagestyletoclear}{
+	\fancyhf{}
+	\renewcommand\headrulewidth{0pt}%
+	\pagestyle{fancy}
+}
+
+
+
+
 
 %%%%%%commands!!
 %%% Comando per far le matrici con le barre verticali
