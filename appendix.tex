@@ -383,8 +383,10 @@ F = 0 \qquad D^a = 0
 
 \chapter{Hypergeometric gamma  functions}
 \label{appendix:gamma_functions}
+In this appendix we list the basic definitions and the mathematical identities needed for our work.
+A more detailed introduction on hypergeometric gamma functions and their properties can be found in \cite{spiridonov2008essays,vanDeBult:2007}.
 \section{Elliptic hypergeometric functions}
-The elliptic functions are defined by
+The elliptic functions we used in the superconformal index are defined by
 \begin{equation} 
 	\begin{aligned}
 	   \Gamma_e (y;p,q) &= \prod_{j,k \geq 0} \frac{ 1 - y^{-1} p^{j+1} q^{k+1}}{ 1 - y p^j q^k}\\
@@ -399,7 +401,7 @@ The single particle index for the vector field reads
 \begin{equation}
    i_E^V(p^n,q^n) \, = \, - \left( {p^n \over 1-p^n} + {q^n \over 1-q^n} \right)
 \end{equation}
-The following identities are useful to calculate the Plethystic exponential for the vector field
+The following identities can be used to calculate the Plethystic exponential for the vector field
 \begin{gather}
   \exp \bigg( \sum_{n=1}^{\infty} {1 \over n} i_E^{V} (p^n,q^n) \bigg)  = (p;p) (q;q) 
  \label{eqn:elliptic_index_vector_zero_modes_identity}
@@ -452,7 +454,24 @@ While for the vector field in the adjoint representation we will use  this ident
  \label{eqn:appendix_sl2z_theta}
 \end{multline}
 where $|G|$ is the number of generators of the group $G$, $r_G$ its rank and $|W |$ is the order of the Weyl symmetry of the group. 
-The roots $\alpha$ are taken only taken positive.
+The roots $\alpha$ are taken only taken positive.\\
+
+\paragraph{Large mass limit}
+For the limit of large mass we will use the following formula \cite{vanDeBult:2007}
+\begin{equation}
+\begin{aligned}
+ \lim_{ t \rightarrow \infty } \Gamma_h ( z + t; \omega_1, \omega_2) = 
+\exp \left[ 
+ \hbox{sign}(t) \frac{\pi i}{2 \omega_1 \omega_2}\; 
+	\left(
+		\left(
+			z +t - \omega
+		\right)^2 - \frac{\omega_1^2 + \omega_2^2}{12}
+	\right)
+\right]
+\end{aligned}
+\end{equation}
+
 
 
 
@@ -683,6 +702,17 @@ where we defined
 \end{equation}
 
 
+
+
+
+
+
+
+
+
+
+
+
 \chapter[Index and PF for the magnetic theory]{Superconformal index and 
 partition function for the magnetic theory}
 \label{appendix:magnetic_theory_calculations}
@@ -822,8 +852,9 @@ Using the explicit value of the R-charge for the dual quark ( $\Delta_q = \Delta
 \end{aligned}
 \end{equation}
 which coincides with the factor calculated in the electric theory.
+\clearpage
 
-\paragraph{Infinite mass limit}
+\section{Infinite mass limit}
 The divergent contribution in the limit $m \rightarrow \infty$ is given by
 \begin{equation}
 \begin{aligned}
