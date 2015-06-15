@@ -24,6 +24,7 @@
 \usepackage{url}
 %\usepackage{makeidx}
 \usepackage{hyperref}
+\usepackage{titleps}
 \hypersetup{colorlinks,
             citecolor=blue,
             filecolor=black,
@@ -35,12 +36,14 @@
 %\usepackage[sans]{frontespizio}
 %Per avere il titolo dei capitoli con un box
 \usepackage[ Lenny ]{ fncychap }
-\usepackage{titlesec}
-\usepackage{fancyhdr}
+%\usepackage{titlesec}
+%\\usepackage{fancyhdr}
 \usepackage{emptypage}
 \usepackage{graphicx}
 \usepackage{transparent}
 \usepackage{eso-pic}
+\usepackage[rilegatura=.6cm]{layaureo}
+
 
 %\raggedbottom
 
@@ -59,17 +62,46 @@ Carlo Sana }
 \title{4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
 
 
+
+
+%%%%%%%% TITLE PS!
+
+ \newpagestyle{main}{
+    \sethead[\thepage][\textmd{ \chaptertitle}][\thesection]  % even
+            {\thesection}{\sectiontitle}{\thepage}
+	\setheadrule{.55pt}%
+            } % odd
+
+ \newpagestyle{intro}{
+    \sethead[\thepage][\textmd{ Introduction}][]  % even
+            {\thesection}{Introduction}{\thepage}
+	\setheadrule{.55pt}%
+            } % odd
+
+ \newpagestyle{biblio}{
+    \sethead[\thepage][\textmd{ Bibliography}][]  % even
+            {}{Bibliography}{\thepage}
+	\setheadrule{.55pt}%
+            } % odd
+
+
+
+
+
+\begin{comment}
+
 %fancy
 \setlength{\headheight}{15pt}
-
-
+%\renewcommand{\chaptermark}[1]{\markboth{\small\ttfamily\chaptername\ \thechapter.\ #1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\small\sffamily\thesection\ #1}}
 \fancypagestyle{mypagestyle}{
 	%%% FANCYHDR STUFF
+	\pagestyle{fancy}
 	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
 	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
 	\fancyhf{}
-	\fancyhead[CE]{\normalsize \nouppercase{\leftmark}}
-	\fancyhead[CO]{\normalsize  \nouppercase{\rightmark}}
+	\fancyhead[CE]{\normalsize \nouppercase{ \textmd {\leftmark}}}
+	\fancyhead[CO]{\normalsize  \nouppercase{\textmd {\rightmark}}}
 	\fancyhead[LE,RO]{\scshape \thepage}
 }
 %\fancyhead[L]{\scshape{Chapter \thechapter - \chaptertitle} }
@@ -78,6 +110,7 @@ Carlo Sana }
 %\fancyfoot[C]{\scshape \thepage}
 
 \fancypagestyle{biblio}{
+	\pagestyle{fancy}
 	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
 	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
 	\fancyhf{}
@@ -87,6 +120,7 @@ Carlo Sana }
 }
 
 \fancypagestyle{intro}{
+	\pagestyle{fancy}
 	%%% FANCYHDR STUFF
 	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
 	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
@@ -96,6 +130,16 @@ Carlo Sana }
 	\fancyhead[LE,RO]{\scshape \thepage}
 }
 
+\fancypagestyle{conclusion}{
+	\pagestyle{fancy}
+	%%% FANCYHDR STUFF
+	\renewcommand\headrulewidth{1pt}%	\renewcommand\chaptermark[1]{\markboth{#1}{#1}}
+	%\renewcommand\sectionmark[1]{\markright{#1}{#1}}
+	\fancyhf{}
+	\fancyhead[CE]{\normalsize Conclusions }
+	\fancyhead[CO]{\normalsize  Conclusions }
+	\fancyhead[LE,RO]{\scshape \thepage}
+}
 
 
 
@@ -105,8 +149,7 @@ Carlo Sana }
 }
 
 
-
-
+\end{comment}
 
 %%%%%%commands!!
 %%% Comando per far le matrici con le barre verticali
