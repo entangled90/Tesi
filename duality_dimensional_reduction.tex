@@ -101,9 +101,14 @@ The three-dimensional theory with the additiona $\eta$ superpotential has an eff
 which suggests the identification between $\lambda$ and $Y$.\\
 For $N_f = N_c + 1$ it can be demonstrated that the moduli spaces match but the situation is a little more involved and we refer to \cite{Aharony:2013dha} for a more complete discussion.\\ 
 
+
 \subsection{Flow to a pure three-dimensional duality}
 \label{sec:seib_4dto3d_flow_massive}
-Let's consider a three dimensional theory with $\eta $ superpotential and with $N_f + 1$ flavours and let's give a real mass $\hat{m}$ to the last flavour.
+We can flow to a three-dimensional duality withouth $\eta$ superpotential by performing a real mass flow on the theory.
+We give a large real mass to a flavour of quark and then integrate them out.
+This process will give us a duality between theories in three dimensions without the $eta$ superpotential, obtaining the already known three dimensional dualities.  
+\\
+Let's consider a three dimensional theory with $\eta $ superpotential and with $N_f + 1$ flavours and let's give a real mass ${m}$ to the last flavour.
 We will set in the limit in which $ m \rightarrow \infty$ in order to integrate out the last flavour.
 This can be achieved by giving expectation values to the fields associated to the diagonal $SU(N_f +1 ) \times U(1)_B$ flavour symmetry given by
 \begin{equation}
@@ -321,7 +326,7 @@ We can define the following composite operators out of these fields where for $\
  (N_j)^i = & q_j^{i} \tilde{X}^j \tilde{q}_j^{i} \\
  \hat{(N_j)}_a^i =& p_a^i \tilde{X}^j \tilde{p}_a^i
 \end{align}
-The superpotential can be rewritten and is given by
+The mesons' superpotential term can be rewritten and is given by
 \begin{equation}
 W = \sum_{j=0}^{k-1} \sum_{i=1}^{k} M_j 
 %q^i Y^{k-j-1} \tilde{q}^i 
@@ -347,12 +352,12 @@ The equations of motion set the terms with $\hat{ (N_j)_a^i}$.
 After sending the mass $M$ to infinity, we can weakly switch off the deformation in the adjoint field. 
 As a result, the $U(r_i-2)$ factors recombine to $U(k N_f - N_c)$ with adjoint matter $Y$.\\
 While removing the deformation, the 2k $U(1)$ factors become $U(k) \times U(k)$ each with one flavour and one adjoint matter field. 
-Such a theory should not have a vacuum \eqref{eqn:kutasov_vacuum_condition} but the additional terms in the superpotential should modify this condition.
-We assume that this enhancement to $U(k)$ does not modify the results and we will see in the next chapter with an independent argument on the partition function that our assumption is indeed correct.\\
-The Coulomb branch coordinates of the $U(r_i-2)$ terms give the Coulomb branch coordinates of the gauge group $U(k N_f -N_c)$ while the coordinates of the $U(1)^2$ factors are identified with the chiral fields $v_{j,\pm}$ \eqref{tab:kim-park-magnetic} that are mapped to the Coulomb branch coordinates of the electric theory.
+Such a theory should not have a vacuum because of the condition \eqref{eqn:kutasov_vacuum_condition} but the additional terms in the superpotential should modify this condition.
+We assume that this enhancement to $U(k)$ does not modify the results and we will see in the next chapter using an independent argument on the partition function that our assumption is indeed correct.\\
+The Coulomb branch coordinates of the $U(r_i-2)$ terms give the Coulomb branch coordinates of the gauge group $U(k N_f -N_c)$ while the coordinates of the $U(1)^2$ factors are identified with the chiral fields $t_{j,\pm}$ \eqref{tab:kim-park-magnetic} that are mapped to the Coulomb branch coordinates of the electric theory.
 The superpotential is then given by
 \begin{equation}
-W = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, q Y^{k-j-1} \tilde{q} + \sum_{j=0}^{k-1} \left(  v_{j,+} \tilde{v_{k-1-j,-}} + v_{j,-} \tilde{v}_{k-1-j,+} \right)
+W = \Tr{\tilde{X}^{k+1}} + \sum_{j=0}^{k-1} M_j \, q Y^{k-j-1} \tilde{q} + \sum_{j=0}^{k-1} \left(  t_{j,+} \tilde{t}_{k-1-j,-} + tv_{j,-} \tilde{t}_{k-1-j,+} \right)
 \end{equation}
  which is the same as the one appearing in the magnetic theory of Kim-Park duality.
 
@@ -394,7 +399,10 @@ The electric theory is the reduction of the electric theory in four dimensions w
 The same is true for the magnetic theory too.\\
 As in the previous cases, we can flow to a duality withouth these terms in the superpotential by a suitable assignment of real masses.\\ 
 We start our reduction with $N_f+1$ flavours.
-In the electric theory we assign the following values for real masses associated to the $SU(N_f+1)_L \times SU(N_f+1)_R \times U(1)_B$ global symmetry. 
+In the electric theory we assign the following values for real masses associated to the $SU(N_f+1)_L \times SU(N_f+1)_R \times U(1)_B$ global symmetry.
+The value of the diverging mass associated respectively to the flavour and baryonc summetry $M, M_B$ are choosen in order to break the global symmetry group to $SU(N_f)_L \times SU(N_f)_R \times U(1)_B \times U(1)_A$.
+This requirement imposes the condition $M=M_B$
+\\
 The real mass of the left quarks are
 \begin{align}
 m_{el} &= 
@@ -438,7 +446,6 @@ M -M_B   + m_A \\ & \ddots \\ & &  M -M_B   + m_A \\
  %\right) 
  \label{eqn:real_mass_reduction_el}
 \end{align}
-This mass assignment breaks the global symmetry group to $SU(N_f)_L \times SU(N_f)_R \times U(1)_A \times U(1)_B$.\\
 By comparison of the charges of the fields under the global symmetries, we can map the masses to the magnetic theory
 \begin{equation}
  \tilde{M} \, = \, - M \qquad \tilde{M}_B \, \rightarrow \, \frac{N_c}{k (N_f+1) - N_c} M_B \qquad \tilde{m}_A = m_A
@@ -467,6 +474,7 @@ The global symmetries in the magnetic theory are broken in the same way as in th
 We can introduce a deformation to the superpotential for both theories
 \begin{equation}
  W_{el}= \sum_{j=1}^{k} s_j \Tr{ X^{j} } \qquad W_{mag} = \sum_{j=1}^{k}\tilde{s}_j \Tr{ Y^{j}}
+ \label{eqn:kss_pol_deform}
 \end{equation}
 Where the terms proportional to $ \Tr{X},\Tr{Y}$ are Lagrange multipliers to enforce the traceless of $X$ and $Y$.\\
 By giving a large value to $m$ we flow to a theory withouth $\eta$ superpotential, as in the previous cases.
@@ -510,11 +518,9 @@ The $U(1)^{k-1}$ factor is associated to the breaking of the group from the vacu
 Before doing so, we are going to use $3D \, \mN=2$ mirror symmetry \cite{Aharony:1997bx} in the $U(1)^{k-1}$ sector of the deformed theory.
 As a result, this sector will be described by a $ U(1)$  gauge theory with $k$ flavours $(b_i, \tilde{b}_i)$.\\
 %We used mirror symmetry in order to dualize the $U(1)^{k-1}$ gauge sector in the deformed theory.
-We need to stress that we used mirror symmetry applied to the $U(1)^{k-1}$ gauge sector in the deformed theory but after switching off the deformation, the gauge group becomes $U(k)$ and a mirror dual is not known.\\
-{\Huge Sistemare qui, aggiungi che è caso limite di dualità note, abeliani duali a singoletti?}
-\\
+We need to stress that we used mirror symmetry applied to the $U(1)^{k-1}$ gauge sector in the deformed theory but after switching off the deformation \eqref{eqn:kss_pol_deform}, the gauge group becomes $U(k)$ and a mirror dual is not known.\\
 We assume that this enhancement to $U(k)$ in the undeformed theory does not modify the results we obtained. 
-We will show an independent method to reduce the duality through the partition function which does not rely on the deformation of the superpotential.
+We will provide an independent method to reduce the duality through the partition function which does not rely on the deformation of the superpotential.
 This method will yield the same result we found using this assumption.
 \\
 In order to obtain Kim-Park duality, we will need to switch off the deformation on both sides of the duality.\\
