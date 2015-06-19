@@ -9,13 +9,18 @@
 %\pagestyle{mypagestyle}
 \pagestyle{main}
 \pagenumbering{Roman}
+\ChNameVar{\Huge \bfseries \rm }
+\ChTitleVar{\Huge \bfseries \rm }
+
 \tableofcontents
 
 \cleardoublepage
 \mainmatter
 
 \pagestyle{intro}
+
 \input{introduction}
+\clearpage
 
 \pagestyle{main}
 \input{4d_dualities}
@@ -24,11 +29,14 @@
 \input{duality_dimensional_reduction}
 \input{localization}
 \input{my_work}
+\cleardoublepage
+\pagestyle{conclusion}
 \input{conclusion}
+\clearpage
 \pagestyle{main}
 \input{appendix}
 %\input{acknowledgment}
-\cleardoublepage
+\clearpage
 \pagestyle{biblio}
 \nocite{*}
 \bibliographystyle{jhep}

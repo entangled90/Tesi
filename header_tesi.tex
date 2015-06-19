@@ -9,6 +9,7 @@
 %\usepackage{fullpage}
 %%\usepackage{mathrsfs}
 \usepackage[utf8]{inputenc}
+\usepackage{xcolor}
 %%\usepackage{natbib}
 \usepackage{listings}
 \usepackage{color}
@@ -37,8 +38,6 @@ bindingoffset=0.6cm%,%
 \usepackage{microtype}
 %\usepackage[nottoc,numbib]{tocbibind}
 %\usepackage[sans]{frontespizio}
-%Per avere il titolo dei capitoli con un box
-\usepackage[ Lenny ]{ fncychap }
 %\usepackage{titlesec}
 %\\usepackage{fancyhdr}
 \usepackage{emptypage}
@@ -48,6 +47,7 @@ bindingoffset=0.6cm%,%
 \geometry{
 	top=3.5cm,bottom=3.5cm
 }
+%\usepackage{titlesec}
 %Interlinea a 1 --> 1.5
 %\linespread{1.5}
 %\raggedbottom
@@ -57,7 +57,10 @@ bindingoffset=0.6cm%,%
 \newcommand{\hsp}{\hspace{20pt}}
 %\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
+%Per avere il titolo dei capitoli con un box %Bjornstrup
+\usepackage[ PetersLenny ]{ fncychap }
+\ChNameVar{\Huge \bfseries \rm \color{\grey} }
+\ChTitleVar{\Huge \bfseries \centering \color{\grey} }
 
 \author{
 Carlo Sana }
@@ -67,6 +70,9 @@ Carlo Sana }
 \title{4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
 
 
+%%% Format titles of chapters
+
+%\titleformat{\chapter}{\Huge \bfseries}{\thechapter}{1em}{}
 
 
 %%%%%%%% TITLE PS!
