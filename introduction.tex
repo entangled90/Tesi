@@ -1,6 +1,6 @@
 %!TEX root = tesi.tex
 \cleardoublepage
-\chapter{  Introduction}
+\chapter{Introduction}
 %\pagestyle{intro}
 %The most recent developments in quantum field theory have been associated to 
 After the triumph of the Standard Model in the seventies, many theoretical physicist shifted their attention towards the understanding of the dynamics of strongly coupled quantum field theories. \\
@@ -9,6 +9,26 @@ However, QCD is strongly coupled at energies lower than a few GeVs, thus making 
 \\
 In this context, dualities between theories at strong and weak coupling gained a lot of attention because they can be used to compute physical quantities of strongly coupled theories in the weakly-coupled theory through well-understood perturbative methods.
 \\
+
+Even though the Standard Model has predicted many phenomenas with great accuracy, it is believe that it is not able to describe the physical world for all the energies below the Planck scale.
+If one would assume that a converse is true, some parameters such as the Higgs mass would require a fine tuning of the initial value that
+seems oddly unnatural .
+Such fine tuning is required since the Higgs mass receives quadratic corrections.
+Thi is called usually referred as the \emph{hierarchy problem}.
+\\
+One of the solutions found to this problem is supersymmetry, which is a symmetry between bosons and fermions. 
+For each particle, there exists a supersymmetric partner with different spin  such that every boson has a fermionic partner and viceversa.
+The presence of particles with different spin but identical quantum numbers removes quadratic corrections from every quantity because loop contributions from bosons and fermions cancel each other out and only logarithmic corrections remain.
+\\
+Moreover, supersymmetry theories posses many other useful renormalization properties such that they are easier to analyse with respect to non-supersymmetric theories.\\
+
+
+%Moreover, Coleman-Mandula theorem prohibits internal symmetries associated to a Lie algebra to transform non-trivially under the Lorentz group.
+%However, this theorem cannot be applied to supersymmetry since supersymmetry is written as a grade one Lie algebra. 
+%The simplest supersymmetric extension of the standard model associates a
+%a supersymmetric partner to each particle present in the original standard model. The partner is 
+
+
 
 The first example of strong-weak duality is the electric-magnetic duality of Maxwell's equations discovered by Dirac in 1931, which consists in the invariance of the equations of motion under the exchange of the electric and magnetic field. 
 In the presence of charges, electric and magnetic charges are exchanged too. \\
@@ -23,23 +43,26 @@ The dual gauge group $G'$ in some cases is different from the gauge group $G$ of
 
 Another important strong-weak duality is the AdS/CFT correspondence. 
 It is a duality  between a gravitational theory in an Anti-deSitter space (AdS) and a conformal gauge theory (CFT) which lives on the boundary of the AdS space. \\
-It was first conjectured by Maldacena between $II_B$ string theory on $AdS_5 \times S^5$ and a $\mN=4$ Super Yang-Mills theory in four dimensions. 
+It was first conjectured by Maldacena \cite{Maldacena:1997re} between $II_B$ string theory on $AdS_5 \times S^5$ and a $\mN=4$ Super Yang-Mills theory in four dimensions. 
 It is a realization of the holographic principle, which states that gravitational theories have the same number of degrees of freedom as gauge theories in a lower number of dimensions.\\
 As we anticipated, the correspondence can be used to map observables in the strongly coupled field theory to observables in the weakly coupled gravitational theory in Anti-deSitter.
 %Many quantities that were computable on both sides were calculated as a check of the duality, but the correspondence has been used in many situations to improve our understanding of strongly coupled field theories and, at the same time, of gravitational theories \\
-%It is now one of the more active areas of research and it was generalized to Anti-deSitter spaces in different dimensions and to non-conformal field theories by considering spacetime configurations that are only asymptotically Anti-deSitter.
-%As a result, 
-The AdS/CFT correspondence is more generally called gauge/gravity duality.  \\
+It is now one of the more active areas of research and it was generalized to Anti-deSitter spaces in different dimensions and to non-conformal field theories by considering spacetime configurations that are only asymptotically Anti-deSitter.
+As a result, the AdS/CFT correspondence is more generally called gauge/gravity duality.  \\
 Practical applications of the correspondence ranged from the calculation of the viscosity of the quark-gluon plasma to phenomenological models of high temperature superconductors in condensed matter physics.
 Even if these line of research are relatively new, gauge/gravity duality can provide some insights on the behavior of strongly coupled systems in different branches of physics.   
 \\ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% SEIBERG DUALITY
 %\pagestyle%{intro}
+The electric-magnetic duality can be generalized in four dimensions in field theories with the minimal amount of supersymmetry.
+This duality relates the infrared behaviour of two different field theories: the electric and the magnetic theory.
 
-Seiberg duality is another example of electric-magnetic duality.
+
+
+Seiberg duality is a generalization of the electric-magnetic duality to four dimensional supersymmetric field theories with the minimal amount of supersymmetry.
 It relates the infrared behavior of two different supersymmetric theories, the electric and the magnetic theory.\\
-The electric theory of the first Seiberg duality discovered features a $\mN=1$ four dimensional gauge theory with $SU(N_c)$ gauge group and with $N_f$ quarks in the fundamental and antifundamental representation.
+The electric theory of the first Seiberg duality discovered features a $\mN=1$ four dimensional gauge theory with $SU(N_c)$ gauge group and with $N_f$ superquarks in the fundamental and antifundamental representation.
 The magnetic theory is a $SU(N_f-N_c)$ gauge theory with $N_f$ fundamental and antifundamental quarks and with $N_f^2$ singlets fields. 
 They are called mesons because they have the same quantum numbers of the mesons that can be constructed in the electric theory by combining a quark with an antiquark. 
 However, in the magnetic theory they are fundamental fields and they are not composite degrees of freedom as in the electric theory.\\
@@ -52,12 +75,26 @@ Many generalizations of Seiberg duality exist and they can be constructed by sta
 Seiberg duality was initially discovered in four dimensional field theories but just afew years later, a three dimensional analogue of Seiberg duality with $U(N_c)$ gauge group was found by Aharony.\\
 
 For fifteen years it was not clear how to link dualities in four and three dimensions even if they had many similarities. 
-A naive dimensional reduction, which is obtained by compactfiying a direction to a circle and then let the radius of the circle go to zero, is not compatible with the low-energy limit required by Seiberg duality in both teories.  
+A naive dimensional reduction, which is obtained by compactfiying a direction to a circle and then ignoring the Kaluza-Klein modes associated to the compactified dimensions, is not compatible with the low-energy limit required by Seiberg duality in both teories.  \\
+However, the four dimensional duality can be preserved in the reduction if we consider the consider the effects of the finite size of the circle.
+In particular, there is one Kaluza-Klein instantonic state that needs to be considered.
+In fact, this instanton generates a non-perturbative potential that breaks the additional symmetries present in three dimensions.
+
+
+
+
+
+
+\begin{comment}
+
 However, it is possible to relate four dimensional dualities to three dimensional ones if we keep the radius of the circle finite. 
 If we flow to energies much lower than the inverse of the radius, the behavior of the theory will be effectively three dimensional, since the modes associated to the circle are not excited.\\
 The compactification results in an additional term in the superpotential that breaks the symmetries that are allowed in three dimensions but are forbidden in four, such as the axial symmetry.\\
 As a result, by keeping the radius finite and flowing to low-energy we obtained a three dimensional duality with some of the symmetries broken by the superpotential term generated by the compactification. 
 To restore those symmetries we can integrate out some quarks with large real masses. During this flow the superpotential term generated by the compactification goes to zero and we find a duality between three dimensional theories without additional the superpotential term.\\
+
+\end{comment}
+
 We can apply this reasoning to different four dimensional dualities. 
 In some cases we find already known dualities, while in other situations we discover unkown three dimensional dualities. 
 Given that most of the three dimensional dualities have been derived from four dimensional dualities, it is conjectured that this is true for every three dimensional duality.\\
@@ -65,17 +102,31 @@ Given that most of the three dimensional dualities have been derived from four d
 The process of dimensional reduction is understood in field theory in most cases, but some difficulties could arise of the strong coupling regime.\\
 However, the results obtained in this way can be check with an independent method which consists in the reduction of the duality directly through the partition function.
 %However, there is an independent way to check the results obtained with these methods.\\
-I%t is the partition function approach we will use in our work.
+%t is the partition function approach we will use in our work.
 The reduction process starts by calculating the superconformal index in four dimensions, for both dual theories. 
 The index is a quantity defined for supersymmetric field theories in four dimensions with one of the directions compactified into a circle.
+It counts the multiplets that have a specific relation between energy and angular momentum (BPS short multiplets). 
+After the dimensional reduction, once the Kaluza-Klein modes are integrated out they correspond to bosonic and fermionic 
+modes on the three-sphere.  
+As a result, the partition function on the three sphere can be obtained by considering the superconformal index in the limit of zero radius.\\
 Mathematical identities guarantees that the indices of dual theories match.\\
-The key property of the index is that if we shrink the radius of the circle to zero it reduces to the partition function of the theory in three dimensions with a superpotential term due to the compactification.
+
+We start the reduction by calculating the superconformal index for both dual theories and then we reduce the index to the partition function by shrinking the radius of the circle to zero.
+By performing a flow with large real masses assigned to some of the quarks, the instantonic superpotential disappears and we obtain a duality between three dimensional theories with the all the symmetries that were broken by the instantonic superpotential.
+This process can be done directly on the partition function and the result of the flow can be read easily from the partition function.\\
+
+\begin{comment}
+The key property of the index is that if we shrink the radius of the circle to 
+zero it reduces to the partition function of the theory in three dimensions with a superpotential term due to the compactification.
 At this point, we can perform the large mass flow we discussed previously in order to remove the superpotential. 
 In this way we obtain the partition function of a three dimensional theory invariant under all the symmetries that were broken by the superpotential term.\\
 If we perform this procedure for both theories we obtain the expression of the partition functions, which are equal because of the identity of the indices in four dimensions.
 Moreover, the field content of the theory can be read easily from the expression of the partition function, since the symmetries are explicit and the superpotential can be read off from the constraints it imposes to the field charges.\\  
 %\pagestyle{intro}
-Our work focuses on the dimensional reduction of Seiberg duality with $SU(N_c)$ and with an additional chiral field in the adjoint representation by using the partition function approach discussed earlier.
+\end{comment}
+
+Our work focuses on the dimensional reduction of Seiberg duality with $SU(N_c)$ gauge group 
+and with an additional chiral field in the adjoint representation by using the partition function approach discussed earlier.
 This duality is known in literature as the Kutasov-Schwimmer-Seiberg (KSS) duality.
 Its three dimensional analogue is called Kim-Park duality and it has a similar matter content to the four dimensional duality with the addition of singlet fields in the magnetic theory that have the same charges of the monopole operators of the electric theory.
 The electric theory of Kim-Park is either $U(N_c)$ or $SU(N_c)$ which correspond to different magnetic theories. 
