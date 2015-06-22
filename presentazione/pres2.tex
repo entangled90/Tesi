@@ -1,4 +1,4 @@
-\documentclass[10pt,compress]{beamer}
+\documentclass[9pt,compress]{beamer}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -36,7 +36,7 @@
 \usetheme{Madrid}
 \usecolortheme{}
 \beamertemplatenavigationsymbolsempty	% NESSUN SIMBOLO DI NAVIGAZIONE 
-\setbeamercovered{highly dynamic}
+\setbeamercovered{transparent}
 
 \makeatletter
 	\patchcmd{\beamer@sectionintoc}{\vskip 3em}{\vskip 2em}{}{}
@@ -65,37 +65,76 @@ Dipartimento di Fisica G. Occhialini
 
 \frame{\titlepage}
 
-\begin{frame}{Argomento della tesi}
-\begin{block}{KSS }
-
+\begin{frame}{Overview della tesi}
+\begin{block}{Dualità KSS}<+->
+	Generalizzazione della dualità di Seiberg con un ulteriore campo di materia nella aggiunta del gruppo di gauge $SU(N_c)$
 \end{block}
+\begin{block}{Riduzione dimensionale}<+->
+Ridurre entrambe le teorie da 4D a 3D in modo da mantenere la relazione di dualità tra di loro non può essere fatto in modo banale.\\
+\end{block}
+
+\begin{block}{Riduzione sulla funzione di partizione}<+->
+Effettueremo la riduzione dimensionale non usando tecniche di teoria di campo, ma calcolando la funzione di partizione e lavorando direttamente su di essa.\\
+Questo metodo ha numerosi vantaggi.
+\end{block}
+
+
 \end{frame}
 
 
-\begin{frame}{Dualità di Seiberg in 4D}
+\begin{frame}{Le dualità di Seiberg in 4D}
+Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\
 
-\begin{block}{Un esempio di dualità elettrica-magnetica}<1->
-Generalizzazione per teorie di campo supersimmetriche della dualità elettrica-magnetic di Dirac.\\
-La dualità originale mappa a basse energie (IR) 
+\begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$}<1->
+Dualità originale ('94) scoperta in teoria di campo.\\
+\emph{SQCD} = estensione supersimmetrica della QCD con gruppo di gauge $SU(N_c)$
 \begin{equation}
 \begin{aligned}
- \hbox{Teoria Elettrica} &\longleftrightarrow \hbox{Teoria Magnetica}\\
- 	 \hbox{gauge } SU(N_c)  \; N_f \hbox{quarks} &\longleftrightarrow \hbox{gauge } SU(N_c)  \; N_f \hbox{ quarks and } N_f^2 \hbox{ Mesons}\\
+ \hbox{Teoria Elettrica} &\qquad \hbox{Teoria Magnetica}\\
+ 	 SU(N_c) \; SQCD \; \hbox{con} \; N_f \hbox{ flavours} &\longleftrightarrow SU(N_f - N_c) \; SQCD \;\hbox{con}\; N_f \hbox{ flavours}  + N_f^2 \hbox{ Mesons}\\
 \end{aligned}
  \end{equation} 
 \end{block}
 
-%\begin{block}{Dualità KSS}
-%Simile alla dualità di Seiberg ma con l'aggiunta di un campo di materia nell'aggiunta.\\
-%Dinamica più complicata e non del tutto compresa in regime di accoppiamento forte.
-%\end{block}
-\begin{block}{Dualità strong-weak coupling }<2>
-La feature più interessante delle dualità di Seiberg è che se una teoria è fortemente interagente, la teoria duale è debolmente accoppiata.\\
- Tecniche perturbative (nella teoria duale) per ottenere informazioni su un sistema fortemente accoppiato.
+\begin{block}{}<+->
+	\begin{itemize}[<+->]
+\item	Le due teorie descrivono, a basse energie, lo stesso sistema fisico.\\
+\item	Sono entrambe superconformi.
+\item  Hanno le stesse simmetrie globali ma un diverso gruppo di gauge.
+\item Diverso contenuto di materia (i mesoni)
+	\end{itemize}
+	
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Dualità strong-weak coupling}
+\begin{block}{}<+->
+Esempio di dualità strong-weak coupling:\\
+quando una teoria è fortemente accoppiata, la teoria duale è in regime perturbativo.\\
+La dualità mi garantisce che posso calcolare una osservabile nella teoria fortemente accoppiata (che non so trattare) con tecniche perturbative nella teoria duale.\\
+%Teorie fortemente accoppiate sono molto difficili da trattare.
+\end{block}
+
+\begin{block}{}<+->
+Per tutte le dualità di Seiberg vale la relazione fra le costanti di accoppiamento
  $$
-  g \longleftrightarrow \frac{1}{\tilde{g}} 
+  g_{el} \sim \frac{1}{\tilde{g}_{mag}} 
 $$
 \end{block}
+
+
+\begin{block}{}<+->
+Altri esempi di dualità strong-weak coupling:
+\begin{itemize}
+\item AdS/CFT $\rightarrow$ gauge/gravity duality 
+\item Dualità di Montonen-Oliven
+\item S-duality in teoria delle stringhe
+\end{itemize}
+\end{block}
+
 \end{frame}
 
 \begin{frame}{Dualità di Seiberg in 3D}
