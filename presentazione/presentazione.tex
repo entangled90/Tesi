@@ -1,4 +1,4 @@
-\documentclass[]{beamer}
+\documentclass[10pt,compress]{beamer}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -26,97 +26,143 @@
 %\usepackage{titlesec}
 \usepackage{transparent}
 \usepackage{eso-pic}
+%\usepgfplotslibrary{dateplot}
+\hypersetup{colorlinks,
+            citecolor=blue,
+            filecolor=black,
+            linkcolor=black,
+            urlcolor=blue}
 
-\usetheme{Boadilla}
+\usetheme{Madrid}
 \usecolortheme{}
 \beamertemplatenavigationsymbolsempty	% NESSUN SIMBOLO DI NAVIGAZIONE 
 \setbeamercovered{highly dynamic}
+
+\makeatletter
+	\patchcmd{\beamer@sectionintoc}{\vskip 3em}{\vskip 2em}{}{}
+	\patchcmd{\beamer@subsectionintoc}{\vskip 2em}{\vskip 2em}{}{}
+\makeatother
+\setbeamercovered{transparent}
+
+
+
 \date{}
 \title{\boldmath \bfseries \scshape 4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
 \author{ \scshape{Carlo Sana} }
 \institute{\scshape Università degli Studi di Milano-Bicocca\\
 Scuola di Scienze \\
- Dipartimento di Fisica G. Occhialini
+Dipartimento di Fisica G. Occhialini
 }
 \date{\scshape 29 giugno 2015}
-\logo{\includegraphics[width=1.25cm]{logounimib.jpg}}
+%\logo{\includegraphics[width=1.25cm]{logounimib.jpg}}
+
+
+
+
+
 \begin{document}
+
 
 \frame{\titlepage}
 
-\begin{comment}
-\begin{frame}{Teorie quantistiche di campo e gruppo di rinormalizzazione}
-	\begin{block}{Gruppo di rinormalizzazione}
-		Parametri della teoria: $m_i, \, g_i$ non fissati.
-		\\
-		\begin{equation}
-		\frac{d g_i}{d \mu} \neq 0 \; \longrightarrow \; g_i = g_i(\mu) \qquad \mu =\hbox{scala tipica del processo}
-		\end{equation}
-	\end{block}
+\frame{\tableofcontents}
+
+\section{Dualità di Seiberg in 4D e 3D}
+\begin{frame}{Dualità di Seiberg in 4D}
+
+\begin{block}{Dualità originale}<1->
+Generalizzazione per teorie di campo supersimmetriche della dualità elettrica-magnetic di Dirac.\\
+La dualità originale mappa a basse energie (IR) 
+\begin{equation}
+\begin{aligned}
+ \hbox{Teoria Elettrica} &\longleftrightarrow \hbox{Teoria Magnetica}\\
+ 	 \hbox{gauge } SU(N_c)  \; N_f \hbox{quarks} &\longleftrightarrow \hbox{gauge } SU(N_c)  \; N_f \hbox{ quarks and } N_f^2 \hbox{ Mesons}\\
+\end{aligned}
+ \end{equation} 
+\end{block}
+
+%\begin{block}{Dualità KSS}
+%Simile alla dualità di Seiberg ma con l'aggiunta di un campo di materia nell'aggiunta.\\
+%Dinamica più complicata e non del tutto compresa in regime di accoppiamento forte.
+%\end{block}
+\begin{block}{Dualità strong-weak coupling }<2>
+La feature più interessante delle dualità di Seiberg è che se una teoria è fortemente interagente, la teoria duale è debolmente accoppiata.\\
+ Tecniche perturbative (nella teoria duale) per ottenere informazioni su un sistema fortemente accoppiato.
+ $$
+  g \longleftrightarrow \frac{1}{\tilde{g}} 
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}{Dualità di Seiberg in 3D}
+\begin{block}{}
+Caratteristiche simili alle dualità di Seiberg in 4D, nonostante le teorie di campo in 3D presentano
+\begin{itemize}
+\item<1-> diverso contenuto di materia: in 3D i gluoni hanno anche una partner scalare
+\item <2-> ulteriori simmetrie: simmetria assiale e topologica non presente in 4D
+\item <3-> insieme di vuoti aggiuntivo a causa degli scalari aggiuntivi 
+\end{itemize}
+\end{block}
+
+\begin{block}{Dualità in 3D}<4>
+A causa della diversa struttura dei vuoti la teoria magnetica contiene, oltre ai mesoni, un insieme aggiuntivo di singoletti.
+$$
+\hbox{Monopoli della teoria magnetica} \; \longrightarrow \; \hbox{Singoletti aggiuntivi nella teoria magnetica}
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}{$4D\overset{?}{ \longrightarrow} 3D $}
+%A causa di queste differenze, fino al 2013 non era chiaro come ridurre le teorie da 4D a 3D in modo da preservare la dualità.
+
+\begin{block}{Riduzione naturale delle teorie}<2->
+Si compattificano le teorie su un cerchio: $\mathbb{R}^4 \longrightarrow \mathbb{R}^3 \times \mathbb{S}^1$, con  cerchio di raggio $r$.\\
+Si ignorano i modi di Kaluza-Klein dei campi sul cerchio mandando $r \rightarrow 0 $
+\end{block}
+
+
+
+
+
+
+
+
+\begin{block}{}<3->
+Il limite a $r \rightarrow 0$ comporta
+$$
+ g^2_{3D} = \frac{g^2_{4D}}{2 \pi r} \; \rightarrow \infty \quad \hbox{per} \; r\rightarrow 0
+$$
+Ma stiamo trattando dualità a strong-weak coupling dove
+$$
+g_{el} \sim \frac{1}{g_{mag}}
+$$ 
+che è incompatibile con il limite $r \rightarrow 0 $ .
+\end{block}
 
 \end{frame}
 
-\begin{frame}{$QED$}
-	
-	\begin{block}{$QED$}
-	costante di accoppiamento $g $ = carica elettrica $e$\\
-	\begin{equation}
-		\alpha = \frac{e^2}{4\pi} \qquad \alpha(\mu \rightarrow 0) \rightarrow \frac{1}{137} 
-		 \ll 1
-	\end{equation}
-	\end{block}
-	\begin{block}{}
-	Basse energie $ \longrightarrow$ Teoria perturbativa\\
-	La carica elettrica cresce lentamente al crescere dell'energia:
-	\begin{equation}
-	\alpha(0) \sim \frac{1}{137} \qquad \alpha(m_Z = 90 GeV) \sim \frac{1}{128}
-	\end{equation}
-	\end{block}
-
-\end{frame}
-
-\begin{frame}{$QCD$}
-	\begin{block}{}
-	Comportamento opposto: \emph{asymptotic freedom}
-	\begin{equation}
-	\alpha_{strong} \left( \mu  = 200 MeV\right) \gg 1 \qquad \alpha \left({\mu = \infty}\right) = 0 
-	\end{equation}
-	Tecniche perturbative: $\mu \geq 3$ GeV
-	\end{block}
-
-	\begin{block}{}
-	Per $\mu \leq 1 GeV$
-	Tecniche perturbative non applicabili\\
-	
-	\end{block}
-
-\end{frame}
-\end{comment}
-
-\begin{frame}{Gruppo di rinormalizzazione}
-	\begin{block}{Rinormalizzazione dei parametri}
-	Il valore iniziale (bare) dei parametri di una teoria di campo quantistica è modificato dalla presenza delle interazioni (schermamento della carica). 
-	\end{block}
-
-	\begin{block}{Running dei valori}
-	Come conseguenza della rinormalizzazione, i valori dei parametri dipendono da una scala di energia $\mu$, associata alla scala del processo con cui si misurano. 
-	\end{block}
-\end{frame}
-
-\begin{frame}{Regime di accoppiamento della teoria}
-	\begin{block}{}
-	
-	\end{block}
+\begin{frame}{$4D \rightarrow 3D$ }
+\begin{block}{}<+->
+Per mantere la dualità tra le teorie è necessario mantenere il raggio del cerchio finito.\\
+\end{block}
+\begin{block}{}<+->
+L'effetto della taglia finita del cerchio consiste nel considerare un modo istantonico sul cerchio che genera un superpotenziale aggiuntivo.
+\end{block}
+\begin{block}{}<+->
+Il superpotenziale rompe le simmetrie in 3D che non sono simmetrie in 4D 
+\end{block}
 
 \end{frame}
 
 
-\begin{frame}
-	\begin{block}{QED}
 
 
-	\end{block}
-\end{frame}
 
+
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
 
 \end{document}
