@@ -101,36 +101,46 @@ Dipartimento di Fisica "G. Occhialini"
 
 
 \frame{\titlepage}
+\begin{frame}
+\tableofcontents
+\end{frame}
 
-\begin{frame}{Overview della tesi}
-\begin{block}{Dualità KSS}<+->
-	Generalizzazione della dualità di Seiberg con un ulteriore campo di materia nella aggiunta del gruppo di gauge $SU(N_c)$
-\end{block}
-\begin{block}{Riduzione dimensionale}<+->
-Ridurre entrambe le teorie da 4D a 3D in modo da mantenere la relazione di dualità tra di loro non può essere fatto in modo banale.\\
-\end{block}
+%\begin{frame}{Overview della tesi}
+%\begin{block}{Dualità KSS}<+->
+%	Generalizzazione della dualità di Seiberg con un ulteriore campo di materia nella aggiunta del gruppo di gauge $SU(N_c)$
+%\end{block}
+%\begin{block}{Riduzione dimensionale}<+->
+%Ridurre entrambe le teorie da 4D a 3D in modo da mantenere la relazione di dualità tra di loro non può essere fatto in modo banale.\\
+%\end{block}
 
-\begin{block}{Riduzione sulla funzione di partizione}<+->
-Effettueremo la riduzione dimensionale non usando tecniche di teoria di campo, ma calcolando la funzione di partizione e lavorando direttamente su di essa.\\
-Questo metodo ha numerosi vantaggi.
-\end{block}
+%\begin{block}{Riduzione sulla funzione di partizione}<+->
+%Effettueremo la riduzione dimensionale non usando tecniche di teoria di campo, ma calcolando la funzione di partizione e lavorando direttamente su di essa.\\
+%Questo metodo ha numerosi vantaggi.
+%\end{block}
+%\end{frame}
+
+\section{Dualità di Seiberg e KSS in 4D e 3D}
+\begin{frame}{Le dualità di Seiberg in 4D}
+Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\
+
+
+
+
+\vspace{0.5cm}
+
 
 
 \end{frame}
 
-\section{Dualità di Seiberg in 4D e 3D}
-\begin{frame}{Le dualità di Seiberg in 4D}
-Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\
-\vspace{0.5cm}
-
+\begin{frame}
 Dualità originale ('94) fra due teorie di SQCD con gruppo di gauge $SU(N_c)$.\\
 \vspace{0.5cm}
 
 { \centering \emph{SQCD} = estensione supersimmetrica della QCD \\
 }\begin{table}
 \begin{tabular}{l l}
-Superquark \quad $\longrightarrow$& squark (scalare) + quark \\
-Supergluone \quad $\longrightarrow$& gaugino (fermione) + gluone \\
+Superquark \quad & $\longrightarrow$ \quad squark $\left( \hbox{spin} \;  0 \right)$ + quark$\left (\hbox{spin} \;  \frac{1}{2} \right)$ \\
+Supergluone \quad &  $\longrightarrow$ \quad gaugino $\left (\hbox{spin} \;  \frac{1}{2} \right)$ + gluone  $\left( \hbox{spin} \;  1 \right)$ \\
 \end{tabular}
 \end{table}
 
@@ -153,6 +163,16 @@ Teoria magnetica & $SU(N_f - N_c)$  $SQCD$ con $N_f$ flavours  + $N_f^2$  Mesons
 
 
 \begin{frame}
+
+\begin{block}{Dualità di KSS con gruppo $SU(N_c)$}<1->
+Scoperta nel '95 da Kutasov, Schwimmer e Seiberg.\\
+\vspace{0.3cm}
+{\bfseries Teoria elettrica}  $SU(N_c)$  $SQCD$ con $N_f$  sapori $(Q,\tilde{Q})$, un campo di materia $X$ nell'aggiunta \\[0.2cm]
+{\bfseries Teoria magnetica}  $SU(k N_f - N_c)$  $SQCD$ con $N_f$ sapori $(q,\tilde{q})$, un campo di materia $Y$ nell'aggiunta e  $ k \, N_f^2$  Mesoni $M^j$\\
+\end{block}
+
+
+
 	\begin{itemize}
 \item<1->	Le due teorie descrivono, a basse energie, lo stesso sistema fisico.\\
 \item<2->	Sono entrambe superconformi.
@@ -253,24 +273,16 @@ Il superpotenziale $\eta$ rimane anche scendendo  a basse energie.
 \end{frame}
 
 
-\plain{Si può arrivare a una dualità 3D senza il superpotenziale $\eta $causato dalla presenza del cerchio?}
+\plain{Si può arrivare a una dualità 3D senza il superpotenziale $\eta $ causato dalla presenza del cerchio?}
 
 
 
 \begin{frame}{RG Flow verso una teoria senza superpotenziale}
 \begin{block}{Dualità di Seiberg \& KSS}
-Integrando una coppia di quark con grandi masse reali è possibile giungere a una dualità 3D senza il superpotenziale $\eta$ dovuto alla taglia finita del cerchio. 
+Facendo un RG flow con masse reali si ottengono teorie senza il superpotenziale $\eta$.\\
+\vspace{1cm}
+Si genera così la simmetria assiale che è anomala in 4D, ma che è permessa in 3D.
 \end{block}
-
-\vspace{0.5cm}
-A seguito di ciò il gruppo di simmetria globale si rompe e si genera la simmetria assiale
-
-\begin{align*}
-SU(N_f+1)_L \times &SU(N_f+1)_R \times U(1)_B \\
-& \downarrow \\
- SU(N_f)_L \times SU& (N_f)_R \times U(1)_B \times U(1)_A
-\end{align*}
-
 
 \end{frame}
 
@@ -285,7 +297,7 @@ Nel caso della dualità KSS
 % ( dualità di Seiberg con materia nell'aggiunta ),
 è necessario deformare la teoria aggiungendo una perturbazione nel superpotenziale. \\
 \vspace{0.3cm}
-Nella teoria duale, essa rompe la teoria in vari settori senza aggiunta con gruppo di gauge 
+Nella teoria duale, essa rompe la teoria in $k$ settori senza aggiunta con gruppo di gauge 
 $$
 SU(k N_f - N_c)  = \prod_i^k SU(n_i) \times U(1)^k
 \qquad \hbox{con} \; \sum_i n_i = k N_f - N_c
@@ -294,39 +306,40 @@ $$
 
 
 \begin{frame}{Riduzione dimensionale in teoria di campo}
-Si può dualizzare il settore $U(1)^k$  utilizzando \emph{mirror symmetry} si ottengono i singoletti non presenti in 4D.
+Si può dualizzare il settore $U(1)^k$  in modo da ottenere i singoletti non presenti in 4D.
 \\
 \vspace{0.5cm}
 
-\alert{\bfseries Rimuovendo la deformazione $U(1)^k \rightarrow U(k)$ e non posso usare \emph{mirror symmetry}}
+\alert{\bfseries Rimuovendo la deformazione $U(1)^k \rightarrow U(k)$ e non si sa come ottenere i singoletti della teoria magnetica.}
 \onslide<2->{
 \begin{center}
 {\arrowdown}
 \end{center}
 {\large 
-	Devo assumere che passando da $U(1)^k$ a $U(k)$ ottengo comunque i singoletti.\\
+	Devo assumere che rimuovendo la deformazione ottengo gli stessi  singoletti.\\
 }
-\alert{Non è chiaro perchè ciò sia vero.}
+\vspace{0.3cm}
+\alert{Non è chiaro come si può giustificare questa affermazione.}
 }
 \end{frame}
 
-\plain{Ho modi di verificare se questa intuizione è corretta? }
+\plain{Ho modo di verificare se questa intuizione è corretta? }
 
 
 
 \section{Riduzione della dualità con la funzione di partizione}
 
 \begin{frame}{Indice superconforme in 4D e funzioni di partizione in 3D} 
-Sfrutto la dualità fra le teorie in 4D, calcolando l'indice superconforme ( $I_{el} \& I_{mag} $).\\
-Esso è dato da un integrale sul gruppo di gauge di funzioni \alert{gamma ellittiche}.\\
+Sfrutto la dualità fra le teorie in 4D, calcolando l'indice superconforme ( $I_{el} \; \& \; I_{mag} $).\\
 Esso conta i multipletti corti BPS della teoria su $\mathbb{R}^3 \times \mathbb{S}^1$.\\
-Nel limite $r \rightarrow 0$ esso si riduce alla funzione di partizione della teoria in 3D con superpotenziale $\eta$.\\
-La funzione di partizione si ottiene facendo il limite delle gamma ellittiche $\Gamma_e$ che si riducono a gamma iperboliche $\Gamma_h$
+L'indice è dato da integrale sul gruppo di gauge di funzioni \alert{gamma ellittiche} $\Gamma_e$.\\
+Nel limite $r \rightarrow 0$ l'indice si riduce alla funzione di partizione della teoria in 3D \alert{con superpotenziale $\eta$.}\\
+La funzione di partizione si ottiene usando identità matematiche che trasformano le \alert{gamma ellittiche} $\Gamma_e$ in \alert{gamma iperboliche} $\Gamma_h$
 
 \begin{align*}
 I_{el} & = I_{mag}   \qquad \qquad && \Gamma_e \\
 \downarrow & \quad \downarrow  \qquad r \rightarrow 0 \qquad && \downarrow\\ 
-Z^{\eta}_{el} & \leftrightarrow Z^{\eta}_{mag}&& \Gamma_h
+Z^{\eta}_{el} & = Z^{\eta}_{mag}&& \Gamma_h
 \end{align*}
 \end{frame}
 
@@ -340,15 +353,17 @@ Identità integrali dimostrate matematicamente garantiscono l'identità fra gli 
 
 
 \begin{frame}{Flow verso una teoria senza superpotenziale $\eta$}
-Facendo un assegnamento di masse reali a una coppia di quark ottengo una teoria senza superpotenziale $\eta$ con gruppo di gauge rotto
-
+In modo a simile a quanto fatto in teoria di campo, 
+si fa un RG flow con masse reali direttamente sulla funzione di partizione.
+In questo caso però non è necessario introdurre una deformazione 
+e il gruppo di gauge si rompe come 
+\vspace{0.2cm}
 $$
  SU(k (N_f + 1) - N_c ) \longrightarrow U(k N_f - N_c ) \times U(k) / U(1)
 $$
 \\
-\vspace{1cm}
-
-Utilizzando una identità integrale fra gamma iperboliche $\Gamma_h$ sul settore $U(k)$ si ottengono gli stessi singoletti trovati in teoria di campo usando \emph{mirror symmetry}.
+\vspace{0.3cm}
+Utilizzando una identità integrale fra gamma iperboliche $\Gamma_h$ sul settore $U(k)$ si ottengono gli stessi singoletti trovati in teoria di campo dualizzando $U(1)^k$.
 \end{frame}
 
 
@@ -357,9 +372,10 @@ Utilizzando una identità integrale fra gamma iperboliche $\Gamma_h$ sul settore
 Verifica indipendente dei risultati ottenuti in teoria di campo, senza aver fatto assunzioni non spiegabili a priori.} 
 \\
 \vspace{0.5cm}
-Con questo metodo si è verificata anche la presenza di un termine di Chern-Simons misto $U(1)_J \times U(1)_B$ che era stato ipotizzato in teoria di campo. \\
-\vspace{0.5cm}
-L'identità fra le funzioni di partizione elettriche e magnetiche porta a una nuova identità integrale tra funzioni gamma iperboliche $\Gamma_h$
+L'identità fra le funzioni di partizione elettriche e magnetiche porta a una nuova identità integrale tra funzioni gamma iperboliche $\Gamma_h$ non ancora dimostrate matematicamente.
+
+
+
 \end{frame}
 
 
