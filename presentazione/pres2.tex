@@ -35,6 +35,27 @@
             linkcolor=black,
             urlcolor=blue}
 
+%%%% ARROWSS
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
+
+\tikzset{
+    myarrow/.style={
+        draw,
+        fill=orange,
+        single arrow,
+        minimum height=3.5ex,
+        single arrow head extend=0.8ex
+    }
+}
+\newcommand{\arrowup}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
+}
+\newcommand{\arrowdown}{%
+\tikz [baseline=-1.5ex]{\node [myarrow,rotate=-90] {};}
+}
+
+
 %\usetheme{Madrid}
 %usecolortheme{}
 \usetheme[usetitleprogressbar]{m}
@@ -219,26 +240,26 @@ Infine, si manda $r \rightarrow 0 $.
 \begin{center}
 {\Large \bfseries Riduzione corretta: $r$ finito}\\
 \vspace{0.5cm}
-La finitezza del cerchio genera un termine di superpotenziale dovuto a un instantone di Kaluza-Klein.\\
+La finitezza del cerchio genera un termine di superpotenziale ($\eta$) dovuto a un modo istantonico di Kaluza-Klein.\\
 \vspace{0.3cm}
-Il superpotenziale rompe le simmetrie presenti in 3D che sono proibite in 4D.\\
+Il superpotenziale $\eta$ rompe le simmetrie presenti in 3D che sono proibite in 4D.\\
 \vspace{0.3cm}
 Si ottengono teorie in 3D considerandone il limite a basse energie:
 per energie $\ll \frac{1}{r}$ la dinamica sul cerchio si disaccoppia. 
 \\
 \vspace{0.3cm}
-Il termine aggiuntivo nel superpotenziale rimane anche a basse energie.
+Il superpotenziale $\eta$ rimane anche scendendo  a basse energie.
 \end{center}
 \end{frame}
 
 
-\plain{Si può arrivare a una dualità 3D senza il termine di superpotenziale causato dalla presenza del cerchio?}
+\plain{Si può arrivare a una dualità 3D senza il superpotenziale $\eta $causato dalla presenza del cerchio?}
 
 
 
 \begin{frame}{RG Flow verso una teoria senza superpotenziale}
 \begin{block}{Dualità di Seiberg \& KSS}
-Integrando una coppia di quark con grandi masse reali è possibile giungere a una dualità 3D senza il termine di superpotenziale dovuto alla taglia finita del cerchio. 
+Integrando una coppia di quark con grandi masse reali è possibile giungere a una dualità 3D senza il superpotenziale $\eta$ dovuto alla taglia finita del cerchio. 
 \end{block}
 
 \vspace{0.5cm}
@@ -260,7 +281,8 @@ SU(N_f+1)_L \times &SU(N_f+1)_R \times U(1)_B \\
 
 La riduzione delle dualità è compresa in teoria di campo per diverse dualità 4D.\\
 \vspace{0.3cm}
-Nel caso della dualità KSS ( dualità di Seiberg con materia nell'aggiunta ),
+Nel caso della dualità KSS
+% ( dualità di Seiberg con materia nell'aggiunta ),
 è necessario deformare la teoria aggiungendo una perturbazione nel superpotenziale. \\
 \vspace{0.3cm}
 Nella teoria duale, essa rompe la teoria in vari settori senza aggiunta con gruppo di gauge 
@@ -271,20 +293,74 @@ $$
 \end{frame}
 
 
+\begin{frame}{Riduzione dimensionale in teoria di campo}
+Si può dualizzare il settore $U(1)^k$  utilizzando \emph{mirror symmetry} si ottengono i singoletti non presenti in 4D.
+\\
+\vspace{0.5cm}
 
+\alert{\bfseries Rimuovendo la deformazione $U(1)^k \rightarrow U(k)$ e non posso usare \emph{mirror symmetry}}
+\onslide<2->{
+\begin{center}
+{\arrowdown}
+\end{center}
+{\large 
+	Devo assumere che passando da $U(1)^k$ a $U(k)$ ottengo comunque i singoletti.\\
+}
+\alert{Non è chiaro perchè ciò sia vero.}
+}
+\end{frame}
 
-
+\plain{Ho modi di verificare se questa intuizione è corretta? }
 
 
 
 \section{Riduzione della dualità con la funzione di partizione}
-\begin{frame}{Indice superconforme}
 
+\begin{frame}{Indice superconforme in 4D e funzioni di partizione in 3D} 
+Sfrutto la dualità fra le teorie in 4D, calcolando l'indice superconforme ( $I_{el} \& I_{mag} $).\\
+Esso è dato da un integrale sul gruppo di gauge di funzioni \alert{gamma ellittiche}.\\
+Esso conta i multipletti corti BPS della teoria su $\mathbb{R}^3 \times \mathbb{S}^1$.\\
+Nel limite $r \rightarrow 0$ esso si riduce alla funzione di partizione della teoria in 3D con superpotenziale $\eta$.\\
+La funzione di partizione si ottiene facendo il limite delle gamma ellittiche $\Gamma_e$ che si riducono a gamma iperboliche $\Gamma_h$
 
+\begin{align*}
+I_{el} & = I_{mag}   \qquad \qquad && \Gamma_e \\
+\downarrow & \quad \downarrow  \qquad r \rightarrow 0 \qquad && \downarrow\\ 
+Z^{\eta}_{el} & \leftrightarrow Z^{\eta}_{mag}&& \Gamma_h
+\end{align*}
+\end{frame}
+
+\begin{frame}{Indici e funzioni di partizione}
+Identità integrali dimostrate matematicamente garantiscono l'identità fra gli indici in 4D.\\
+\begin{center}
+\arrowdown \\
+\end{center}
+\alert{\large \bfseries Le funzioni di partizione in 3D con superpotenziale $\eta$ sono  uguali grazie all'identità degli indici in 4D}
 \end{frame}
 
 
+\begin{frame}{Flow verso una teoria senza superpotenziale $\eta$}
+Facendo un assegnamento di masse reali a una coppia di quark ottengo una teoria senza superpotenziale $\eta$ con gruppo di gauge rotto
 
+$$
+ SU(k (N_f + 1) - N_c ) \longrightarrow U(k N_f - N_c ) \times U(k) / U(1)
+$$
+\\
+\vspace{1cm}
+
+Utilizzando una identità integrale fra gamma iperboliche $\Gamma_h$ sul settore $U(k)$ si ottengono gli stessi singoletti trovati in teoria di campo usando \emph{mirror symmetry}.
+\end{frame}
+
+
+\begin{frame}{Verifica del procedimento in teoria di campo}
+\alert{\Large \bfseries 
+Verifica indipendente dei risultati ottenuti in teoria di campo, senza aver fatto assunzioni non spiegabili a priori.} 
+\\
+\vspace{0.5cm}
+Con questo metodo si è verificata anche la presenza di un termine di Chern-Simons misto $U(1)_J \times U(1)_B$ che era stato ipotizzato in teoria di campo. \\
+\vspace{0.5cm}
+L'identità fra le funzioni di partizione elettriche e magnetiche porta a una nuova identità integrale tra funzioni gamma iperboliche $\Gamma_h$
+\end{frame}
 
 
 
