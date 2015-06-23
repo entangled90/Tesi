@@ -1,4 +1,4 @@
-\documentclass[9pt,compress]{beamer}
+\documentclass[10pt,compress]{beamer}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -7,14 +7,14 @@
 \usepackage{amsthm}
 %\usepackage{fullpage}
 %%\usepackage{mathrsfs}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 %%\usepackage{natbib}
 \usepackage{listings}
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
 \usepackage{ color}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 \usepackage[toc,page]{appendix}
 \usepackage[outercaption]{sidecap}
 %\usepackage{floatrow}
@@ -26,6 +26,8 @@
 %\usepackage{titlesec}
 \usepackage{transparent}
 \usepackage{eso-pic}
+%\usepackage{mtheme}
+%\usepackage{math}
 %\usepgfplotslibrary{dateplot}
 \hypersetup{colorlinks,
             citecolor=blue,
@@ -33,8 +35,22 @@
             linkcolor=black,
             urlcolor=blue}
 
-\usetheme{Madrid}
-\usecolortheme{}
+%\usetheme{Madrid}
+%usecolortheme{}
+\usetheme[usetitleprogressbar]{m}
+
+%\usepackage{booktabs}
+%\usepackage[scale=2]{ccicons}
+%\usepackage{minted}
+
+
+
+
+
+%\usepgfplotslibrary{dateplot}
+
+%\usemintedstyle{trac}
+
 \beamertemplatenavigationsymbolsempty	% NESSUN SIMBOLO DI NAVIGAZIONE 
 \setbeamercovered{transparent}
 
@@ -47,11 +63,11 @@
 
 
 \date{}
-\title{\boldmath \bfseries \scshape 4D to 3D reduction of Seiberg duality for $SU(N)$ susy gauge theories with adjoint matter: a partition function approach}
+\title{\boldmath \bfseries \scshape 4D to 3D reduction of Seiberg duality for {\boldmath SU(N)} susy gauge theories with adjoint matter: a partition function approach}
 \author{ \scshape{Carlo Sana} }
 \institute{\scshape Università degli Studi di Milano-Bicocca\\
 Scuola di Scienze \\
-Dipartimento di Fisica G. Occhialini
+Dipartimento di Fisica "G. Occhialini"
 }
 \date{\scshape 29 giugno 2015}
 %\logo{\includegraphics[width=1.25cm]{logounimib.jpg}}
@@ -81,136 +97,191 @@ Questo metodo ha numerosi vantaggi.
 
 \end{frame}
 
-
+\section{Dualità di Seiberg in 4D e 3D}
 \begin{frame}{Le dualità di Seiberg in 4D}
 Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\
+\vspace{0.5cm}
 
-\begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$}<1->
-Dualità originale ('94) scoperta in teoria di campo.\\
-\emph{SQCD} = estensione supersimmetrica della QCD con gruppo di gauge $SU(N_c)$
-\begin{equation}
-\begin{aligned}
- \hbox{Teoria Elettrica} &\qquad \hbox{Teoria Magnetica}\\
- 	 SU(N_c) \; SQCD \; \hbox{con} \; N_f \hbox{ flavours} &\longleftrightarrow SU(N_f - N_c) \; SQCD \;\hbox{con}\; N_f \hbox{ flavours}  + N_f^2 \hbox{ Mesons}\\
-\end{aligned}
- \end{equation} 
-\end{block}
+Dualità originale ('94) fra due teorie di SQCD con gruppo di gauge $SU(N_c)$.\\
+\vspace{0.5cm}
 
-\begin{block}{}<+->
-	\begin{itemize}[<+->]
-\item	Le due teorie descrivono, a basse energie, lo stesso sistema fisico.\\
-\item	Sono entrambe superconformi.
-\item  Hanno le stesse simmetrie globali ma un diverso gruppo di gauge.
-\item Diverso contenuto di materia (i mesoni)
-	\end{itemize}
-	
+{ \centering \emph{SQCD} = estensione supersimmetrica della QCD \\
+}\begin{table}
+\begin{tabular}{l l}
+Superquark \quad $\longrightarrow$& squark (scalare) + quark \\
+Supergluone \quad $\longrightarrow$& gaugino (fermione) + gluone \\
+\end{tabular}
+\end{table}
+
+\begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$}<2->
+%\begin{aligned}
+ %\hbox{Teoria Elettrica} &\qquad \hbox{Teoria Magnetica}\\
+% 	 SU(N_c) \; SQCD \; \hbox{con} \; N_f \hbox{ flavours} &\longleftrightarrow SU(N_f - N_c) \; SQCD \;\hbox{con}\; N_f \hbox{ flavours}  + N_f^2 \hbox{ Mesons}\\
+%\end{aligned}
+ %\end{equation} 
+
+\begin{table}
+\begin{tabular}{l l}
+Teoria elettrica  & $SU(N_c)$  $SQCD$ con $N_f$  flavours \\[0.2cm]
+Teoria magnetica & $SU(N_f - N_c)$  $SQCD$ con $N_f$ flavours  + $N_f^2$  Mesons\\
+\end{tabular}
+\end{table}
 \end{block}
 \end{frame}
 
 
 
-
-\begin{frame}{Dualità strong-weak coupling}
-\begin{block}{}<+->
-Esempio di dualità strong-weak coupling:\\
-quando una teoria è fortemente accoppiata, la teoria duale è in regime perturbativo.\\
-La dualità mi garantisce che posso calcolare una osservabile nella teoria fortemente accoppiata (che non so trattare) con tecniche perturbative nella teoria duale.\\
-%Teorie fortemente accoppiate sono molto difficili da trattare.
-\end{block}
-
-\begin{block}{}<+->
-Per tutte le dualità di Seiberg vale la relazione fra le costanti di accoppiamento
+\begin{frame}
+	\begin{itemize}
+\item<1->	Le due teorie descrivono, a basse energie, lo stesso sistema fisico.\\
+\item<2->	Sono entrambe superconformi.
+\item <3-> Hanno le stesse simmetrie globali ma un diverso gruppo di gauge.
+\item <4->Diverso contenuto di materia: nella teoria magnetica ci sono i mesoni elettrici.
+	\end{itemize}
+\vspace{0.5cm}
+\begin{block}{}<5->
+Per tutte le dualità di Seiberg vale la relazione fra le costanti di accoppiamento elettriche e magnetiche
  $$
   g_{el} \sim \frac{1}{\tilde{g}_{mag}} 
 $$
 \end{block}
 
 
-\begin{block}{}<+->
+\end{frame}
+
+
+
+
+\begin{frame}{Dualità strong-weak coupling}
+\onslide<+->{
+Quando una teoria è fortemente accoppiata, la teoria duale è in regime perturbativo.\\
+Si può calcolare una osservabile nella teoria fortemente accoppiata (difficile da trattare) con tecniche perturbative \alert{ben note} nella teoria duale.\\
+%Teorie fortemente accoppiate sono molto difficili da trattare.
+}
+
+\vspace{0.5cm}
+
+%\begin{block}{}<+->
 Altri esempi di dualità strong-weak coupling:
 \begin{itemize}
-\item AdS/CFT $\rightarrow$ gauge/gravity duality 
 \item Dualità di Montonen-Oliven
-\item S-duality in teoria delle stringhe
+\item AdS/CFT $\rightarrow$ gauge/gravity duality 
+\item S-duality in teorie di stringa
 \end{itemize}
-\end{block}
+%\end{block}
 
 \end{frame}
 
 \begin{frame}{Dualità di Seiberg in 3D}
-\begin{block}{}
 Caratteristiche simili alle dualità di Seiberg in 4D, nonostante le teorie di campo in 3D presentano
 \begin{itemize}
-\item<1-> diverso contenuto di materia: in 3D i gluoni hanno anche una partner scalare
+\item<1-> diverso contenuto di materia: in 3D i gluoni hanno anche una partner scalare ($\sigma_i$)
 \item <2-> ulteriori simmetrie: simmetria assiale e topologica non presente in 4D
-\item <3-> insieme di vuoti aggiuntivo a causa degli scalari aggiuntivi 
+\item <3-> uno spazio dei moduli (vuoti) aggiuntivo dovuto agli scalari $\sigma_i$ (\emph{Coulomb branch}) 
 \end{itemize}
-\end{block}
+\vspace{0,5cm}
 
-\begin{block}{Dualità in 3D}<4>
-A causa della diversa struttura dei vuoti la teoria magnetica contiene, oltre ai mesoni, un insieme aggiuntivo di singoletti.
-$$
-\hbox{Monopoli della teoria magnetica} \; \longrightarrow \; \hbox{Singoletti aggiuntivi nella teoria magnetica}
-$$
-\end{block}
+\onslide<4->{
+ La teoria magnetica 3D contiene, oltre ai mesoni, un insieme aggiuntivo di singoletti.\\
+ \vspace{0.3cm}
+	{ \centering Monopoli della teoria elettrica  $\longrightarrow $ singoletti nella teoria magnetica\\
+	}
+\vspace{0.3cm}
+%Essi permettono il match del \emph{Coulomb branch} fra le due teorie.
+}
 \end{frame}
 
-\section{Riduzione dimensionale $4D \rightarrow 3D$}
-\begin{frame}{$4D\overset{?}{ \longrightarrow} 3D $}
+\section{Riduzione dimensionale 4D $ \rightarrow$ 3D}
+
+\begin{frame}{4D $ \longrightarrow $ 3D: metodo n\"{a}ive}
 %A causa di queste differenze, fino al 2013 non era chiaro come ridurre le teorie da 4D a 3D in modo da preservare la dualità.
+\begin{center}
+{\bfseries \Large Riduzione naturale: $r \rightarrow 0$}
+\end{center}
+\vspace{0.5cm}
+Si compattificano le teorie su un cerchio di raggio $r$: $$\mathbb{R}^4 \longrightarrow \mathbb{R}^3 \times \mathbb{S}^1$$
+Si ignorano tutti i modi di Kaluza-Klein dei campi sul cerchio.\\
+Infine, si manda $r \rightarrow 0 $.
+\\
+\vspace{0.5cm}
+\onslide<2->{
+	\begin{center}
+	\alert{\Large  \bfseries Con questo procedimento non si ottengono due teorie duali in 3D}
+	\\
+	\vspace{0.3cm}
+	Limite a bassa energia incompatibile con la relazione di dualità.
+	\end{center}
+	}
+\end{frame}
 
-\begin{block}{Riduzione naturale delle teorie}<2->
-Si compattificano le teorie su un cerchio: $\mathbb{R}^4 \longrightarrow \mathbb{R}^3 \times \mathbb{S}^1$, con  cerchio di raggio $r$.\\
-Si ignorano i modi di Kaluza-Klein dei campi sul cerchio mandando $r \rightarrow 0 $
+\begin{frame}[fragile]
+\frametitle{4D $\longrightarrow $ 3D: metodo corretto}
+\begin{center}
+{\Large \bfseries Riduzione corretta: $r$ finito}\\
+\vspace{0.5cm}
+La finitezza del cerchio genera un termine di superpotenziale dovuto a un instantone di Kaluza-Klein.\\
+\vspace{0.3cm}
+Il superpotenziale rompe le simmetrie presenti in 3D che sono proibite in 4D.\\
+\vspace{0.3cm}
+Si ottengono teorie in 3D considerandone il limite a basse energie:
+per energie $\ll \frac{1}{r}$ la dinamica sul cerchio si disaccoppia. 
+\\
+\vspace{0.3cm}
+Il termine aggiuntivo nel superpotenziale rimane anche a basse energie.
+\end{center}
+\end{frame}
+
+
+\plain{Si può arrivare a una dualità 3D senza il termine di superpotenziale causato dalla presenza del cerchio?}
+
+
+
+\begin{frame}{RG Flow verso una teoria senza superpotenziale}
+\begin{block}{Dualità di Seiberg \& KSS}
+Integrando una coppia di quark con grandi masse reali è possibile giungere a una dualità 3D senza il termine di superpotenziale dovuto alla taglia finita del cerchio. 
 \end{block}
 
+\vspace{0.5cm}
+A seguito di ciò il gruppo di simmetria globale si rompe e si genera la simmetria assiale
 
+\begin{align*}
+SU(N_f+1)_L \times &SU(N_f+1)_R \times U(1)_B \\
+& \downarrow \\
+ SU(N_f)_L \times SU& (N_f)_R \times U(1)_B \times U(1)_A
+\end{align*}
 
-
-
-
-
-
-\begin{block}{}<3->
-Il limite a $r \rightarrow 0$ comporta
-$$
- g^2_{3D} = \frac{g^2_{4D}}{2 \pi r} \; \rightarrow \infty \quad \hbox{per} \; r\rightarrow 0
-$$
-Ma stiamo trattando dualità a strong-weak coupling dove
-$$
-g_{el} \sim \frac{1}{g_{mag}}
-$$ 
-che è incompatibile con il limite $r \rightarrow 0 $ .
-\end{block}
 
 \end{frame}
 
-\begin{frame}{$4D \rightarrow 3D$ }
-\begin{block}{}<+->
-Per mantere la dualità tra le teorie è necessario mantenere il raggio del cerchio finito.\\
-\end{block}
-\begin{block}{}<+->
-L'effetto della taglia finita del cerchio consiste nel considerare un modo istantonico sul cerchio che genera un nuovo termine superpotenziale.
-\end{block}
-\begin{block}{}<+->
-Il superpotenziale istantonico rompe le simmetrie in 3D che non sono permesse in 4D ( simmetria assiale) . 
-\end{block}
 
-\begin{block}{}<+->
-Si ottengono teorie in 3D considerandone il limite a basse energie.\\
-I modi di Kaluza-Klein sul cerchio si disaccoppiano per energie $\ll \frac{1}{r}$
-\end{block}
 
-\end{frame}
 
 \begin{frame}{Riduzione dimensionale in teoria di campo}
-\begin{block}{}
-La riduzione delle dualità in teoria di campo è stato effettuato per varie dualità note in 4D.\\
 
-\end{block}
-
+La riduzione delle dualità è compresa in teoria di campo per diverse dualità 4D.\\
+\vspace{0.3cm}
+Nel caso della dualità KSS ( dualità di Seiberg con materia nell'aggiunta ),
+è necessario deformare la teoria aggiungendo una perturbazione nel superpotenziale. \\
+\vspace{0.3cm}
+Nella teoria duale, essa rompe la teoria in vari settori senza aggiunta con gruppo di gauge 
+$$
+SU(k N_f - N_c)  = \prod_i^k SU(n_i) \times U(1)^k
+\qquad \hbox{con} \; \sum_i n_i = k N_f - N_c
+$$
 \end{frame}
 
+
+
+
+
+
+
+
+\section{Riduzione della dualità con la funzione di partizione}
+\begin{frame}{Indice superconforme}
+
+
+\end{frame}
 
 
 
