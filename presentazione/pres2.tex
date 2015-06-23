@@ -101,7 +101,9 @@ Dipartimento di Fisica "G. Occhialini"
 
 
 \frame{\titlepage}
-\begin{frame}
+
+
+\begin{frame}{pause}
 \tableofcontents
 \end{frame}
 
@@ -133,45 +135,46 @@ Generalizzazione per teorie di campo supersimmetriche della dualità fra campi e
 \end{frame}
 
 \begin{frame}
-Dualità originale ('94) fra due teorie di SQCD con gruppo di gauge $SU(N_c)$.\\
-\vspace{0.5cm}
-
-{ \centering \emph{SQCD} = estensione supersimmetrica della QCD \\
-}\begin{table}
+Prima dualità scoperta nel '94 fra teorie di \emph{Supersymmetric QCD} (SQCD)
+\begin{table}
 \begin{tabular}{l l}
 Superquark \quad & $\longrightarrow$ \quad squark $\left( \hbox{spin} \;  0 \right)$ + quark$\left (\hbox{spin} \;  \frac{1}{2} \right)$ \\
 Supergluone \quad &  $\longrightarrow$ \quad gaugino $\left (\hbox{spin} \;  \frac{1}{2} \right)$ + gluone  $\left( \hbox{spin} \;  1 \right)$ \\
 \end{tabular}
 \end{table}
 
-\begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$}<2->
-%\begin{aligned}
- %\hbox{Teoria Elettrica} &\qquad \hbox{Teoria Magnetica}\\
-% 	 SU(N_c) \; SQCD \; \hbox{con} \; N_f \hbox{ flavours} &\longleftrightarrow SU(N_f - N_c) \; SQCD \;\hbox{con}\; N_f \hbox{ flavours}  + N_f^2 \hbox{ Mesons}\\
-%\end{aligned}
- %\end{equation} 
-
-\begin{table}
-\begin{tabular}{l l}
-Teoria elettrica  & $SU(N_c)$  $SQCD$ con $N_f$  flavours \\[0.2cm]
-Teoria magnetica & $SU(N_f - N_c)$  $SQCD$ con $N_f$ flavours  + $N_f^2$  Mesons\\
-\end{tabular}
-\end{table}
+\begin{block}{Perchè la supersimmetria?}<2->
+Studiare una teoria con più simmetri porta molti vantaggi da un punto di vista teorico.\\
+\vspace{0.3cm}
+Le teorie di campo supersimmetriche sono più facilmente trattabili , soprattutto in regime \alert{non perturbativo}.\\
+\vspace{0.3cm}
+Studiare un sistema fisico più vincolato può dare \alert{informazioni} che possono essere valide anche per sistemi \alert{con meno simmetria}.  
 \end{block}
+
+
 \end{frame}
 
 
 
-\begin{frame}
+\begin{frame}{Dualità elettrica-magnetica}
 
-\begin{block}{Dualità di KSS con gruppo $SU(N_c)$}<1->
-Scoperta nel '95 da Kutasov, Schwimmer e Seiberg.\\
-\vspace{0.3cm}
-{\bfseries Teoria elettrica}  $SU(N_c)$  $SQCD$ con $N_f$  sapori $(Q,\tilde{Q})$, un campo di materia $X$ nell'aggiunta \\[0.2cm]
-{\bfseries Teoria magnetica}  $SU(k N_f - N_c)$  $SQCD$ con $N_f$ sapori $(q,\tilde{q})$, un campo di materia $Y$ nell'aggiunta e  $ k \, N_f^2$  Mesoni $M^j$\\
+\begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$ - [Seiberg '94] }<+->
+{\bfseries  Teoria elettrica}  \quad $SU(N_c)$  $SQCD$ con $N_f$ sapori \\[0.1cm]
+{\bfseries   Teoria magnetica} \quad   $SU(N_f - N_c)$  $SQCD$ con $N_f$ sapori,  $N_f^2$  mesoni,   costruiti con i quark elettrici $M = Q\tilde{Q}$\\
 \end{block}
 
+\vspace{0.5cm}
 
+
+\begin{block}{Dualità KSS con gruppo $SU(N_c)$ - [Kutasov-Schwimmer-Seiberg '95]}<+->
+%Scoperta nel '95 da Kutasov, Schwimmer e Seiberg \\
+{\bfseries  Teoria elettrica}  \quad $SU(N_c)$  $SQCD$ con $N_f$ sapori $(Q,\tilde{Q})$ e un campo di materia $X$ nell'aggiunta con superpotenziale $\mathrm{tr} \; X^{k+1}$\\[0.1cm]
+{\bfseries  Teoria magnetica}  \quad $SU(k N_f - N_c)$  $SQCD$ con $N_f$ sapori $(q,\tilde{q})$, un campo di materia $Y$ nell'aggiunta con superpotenziale $\mathrm{tr}\; Y^{k+1}$ e  $ k \, N_f^2$  Mesoni $M^j$, costruiti dai campi elettrici $M^j = Q \, X^{\,j} \, \tilde{Q}$\\
+\end{block}
+\vfill 
+\end{frame}
+
+\begin{frame}
 
 	\begin{itemize}
 \item<1->	Le due teorie descrivono, a basse energie, lo stesso sistema fisico.\\
@@ -262,14 +265,22 @@ Infine, si manda $r \rightarrow 0 $.
 \vspace{0.5cm}
 La finitezza del cerchio genera un termine di superpotenziale ($\eta$) dovuto a un modo istantonico di Kaluza-Klein.\\
 \vspace{0.3cm}
-Il superpotenziale $\eta$ rompe le simmetrie presenti in 3D che sono proibite in 4D.\\
+Il superpotenziale $\eta$ impone vincoli equivalenti all'assenza di \alert{anomalie in 4D}. \\
+In 3D le anomalie non ci possono essere.
+\\ Questi vincoli dovranno essere rimossi successivamente.
+\\
+%Il superpotenziale $\eta$ rompe le simmetrie 3D, anomale in 4D.\\
+%Impone anche un vincolo aggiuntivo sulle cariche dei campi.
+
 \vspace{0.3cm}
+\onslide<2->{
 Si ottengono teorie in 3D considerandone il limite a basse energie:
 per energie $\ll \frac{1}{r}$ la dinamica sul cerchio si disaccoppia. 
 \\
 \vspace{0.3cm}
 Il superpotenziale $\eta$ rimane anche scendendo  a basse energie.
 \end{center}
+}
 \end{frame}
 
 
@@ -279,9 +290,9 @@ Il superpotenziale $\eta$ rimane anche scendendo  a basse energie.
 
 \begin{frame}{RG Flow verso una teoria senza superpotenziale}
 \begin{block}{Dualità di Seiberg \& KSS}
-Facendo un RG flow con masse reali si ottengono teorie senza il superpotenziale $\eta$.\\
+Facendo un RG flow con masse reali si ottengono teorie senza il vincolo imposto dal superpotenziale $\eta$.\\
 \vspace{1cm}
-Si genera così la simmetria assiale che è anomala in 4D, ma che è permessa in 3D.
+Si genera anche la simmetria assiale che è anomala in 4D, ma che è permessa in 3D.
 \end{block}
 
 \end{frame}
@@ -327,7 +338,7 @@ Si può dualizzare il settore $U(1)^k$  in modo da ottenere i singoletti non pre
 
 
 
-\section{Riduzione della dualità con la funzione di partizione}
+\section{Riduzione della dualità sulla funzione di partizione}
 
 \begin{frame}{Indice superconforme in 4D e funzioni di partizione in 3D} 
 Sfrutto la dualità fra le teorie in 4D, calcolando l'indice superconforme ( $I_{el} \; \& \; I_{mag} $).\\
