@@ -1,4 +1,4 @@
-\documentclass[10pt,compress]{beamer}
+\documentclass[10pt,compress,usenames,dvipsnames]{beamer}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -13,7 +13,6 @@
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage[T1]{fontenc}
-\usepackage{ color}
 %\usepackage{lmodern}
 \usepackage[toc,page]{appendix}
 \usepackage[outercaption]{sidecap}
@@ -23,12 +22,8 @@
 \usepackage{url}
 %\usepackage{makeidx}
 \usepackage{hyperref}
-%\usepackage{titlesec}
-\usepackage{transparent}
-\usepackage{eso-pic}
-%\usepackage{mtheme}
-%\usepackage{math}
-%\usepgfplotslibrary{dateplot}
+%\usepackage[usenames,dvipsnames]{xcolor}
+
 \hypersetup{colorlinks,
             citecolor=blue,
             filecolor=black,
@@ -54,11 +49,14 @@
 \newcommand{\arrowdown}{%
 \tikz [baseline=-1.5ex]{\node [myarrow,rotate=-90] {};}
 }
+% color degli alert
 
 
 %\usetheme{Madrid}
 %usecolortheme{}
 \usetheme[usetitleprogressbar]{m}
+
+\setbeamercolor{alerted text}{fg=BurntOrange}
 
 %\usepackage{booktabs}
 %\usepackage[scale=2]{ccicons}
@@ -104,7 +102,7 @@ Dipartimento di Fisica "G. Occhialini"
 
 
 \begin{frame}{pause}
-\tableofcontents
+\tableofcontents[pausesections]
 \end{frame}
 
 %\begin{frame}{Overview della tesi}
@@ -122,19 +120,21 @@ Dipartimento di Fisica "G. Occhialini"
 %\end{frame}
 
 \section{Dualità di Seiberg e KSS in 4D e 3D}
-\begin{frame}{Le dualità di Seiberg in 4D}
-Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\
-
-\begin{block}{Dualità di Dirac}
+\begin{frame}{Dualità elettrica-magnetica di Dirac}
+Introducendo i monopoli magnetici con corrente $J_{\, mag}^{\mu}$ ottengo una invarianza $\mathbb{Z}_2$ delle equazioni di maxwell sotto la trasformazione
 \begin{equation*}
  \left( {E}^i, {B}^i \right) \longrightarrow \left({B}^i, - {E}^i \right)
  \qquad \left( J_{\, el}^{\mu }, J_{\, mag}^{\mu} \right) \longrightarrow \left( 
  J_{\, mag}^{\mu},  - J_{\, el}^{\mu }
  \right)
+ \quad  J^{\mu} = ( \rho , J^i)
 \end{equation*}
-
-
-\end{block}
+\\
+Unendo la dualità EM alla MQ si ottiene una condizione di \alert{\bfseries quantizzazione} della carica elettrica
+$$
+e g  = 2 \pi \hbar n
+$$
+Carica elettrica e magnetica sono \alert{\bfseries inversamente} proporzionali.
 
 
 
@@ -144,7 +144,9 @@ Generalizzazione per teorie di campo supersimmetriche della dualità fra campi e
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Dualità di Seiberg in 4D}
+Generalizzazione per teorie di campo supersimmetriche della dualità fra campi elettrici e magnetici di Dirac.\\[0,1cm]
+
 Prima dualità scoperta nel '94 fra teorie di \emph{Supersymmetric QCD} (SQCD)
 \begin{table}
 \begin{tabular}{l l}
@@ -155,10 +157,10 @@ Supergluone \quad &  $\longrightarrow$ \quad gaugino $\left (\hbox{spin} \;  \fr
 
 \begin{block}{Perchè la supersimmetria?}<2->
 Studiare una teoria con più simmetri porta molti vantaggi da un punto di vista teorico.\\
-\vspace{0.3cm}
-Le teorie di campo supersimmetriche sono più facilmente trattabili , soprattutto in regime \alert{non perturbativo}.\\
-\vspace{0.3cm}
-Studiare un sistema fisico più vincolato può dare \alert{informazioni} che possono essere valide anche per sistemi \alert{con meno simmetria}.  
+\vspace{0.1cm}
+Le teorie di campo supersimmetriche sono più facilmente trattabili , soprattutto in regime \alert{\bfseries non perturbativo}.\\
+\vspace{0.1cm}
+Studiare un sistema fisico più vincolato può dare \alert{\bfseries informazioni} che possono essere valide anche per sistemi \alert{\bfseries con meno simmetria}.  
 \end{block}
 
 
@@ -170,7 +172,7 @@ Studiare un sistema fisico più vincolato può dare \alert{informazioni} che pos
 
 \begin{block}{Dualità di Seiberg con gruppo $SU(N_c)$ - [Seiberg '94] }<+->
 {\bfseries  Teoria elettrica}  \quad $SU(N_c)$  $SQCD$ con $N_f$ sapori \\[0.1cm]
-{\bfseries   Teoria magnetica} \quad   $SU(N_f - N_c)$  $SQCD$ con $N_f$ sapori,  $N_f^2$  mesoni,   costruiti con i \alert{quark elettrici} $M = Q\tilde{Q}$\\
+{\bfseries   Teoria magnetica} \quad   $SU(N_f - N_c)$  $SQCD$ con $N_f$ sapori,  $N_f^2$  mesoni,   costruiti con i \alert{\bfseries quark elettrici} $M = Q\tilde{Q}$\\
 \end{block}
 
 \vspace{0.5cm}
@@ -179,17 +181,17 @@ Studiare un sistema fisico più vincolato può dare \alert{informazioni} che pos
 \begin{block}{Dualità KSS con gruppo $SU(N_c)$ - [Kutasov-Schwimmer-Seiberg '95]}<+->
 %Scoperta nel '95 da Kutasov, Schwimmer e Seiberg \\
 {\bfseries  Teoria elettrica}  \quad $SU(N_c)$  $SQCD$ con $N_f$ sapori $(Q,\tilde{Q})$ e un campo di materia $X$ nell'aggiunta con superpotenziale $\mathrm{tr} \; X^{k+1}$\\[0.1cm]
-{\bfseries  Teoria magnetica}  \quad $SU(k N_f - N_c)$  $SQCD$ con $N_f$ sapori $(q,\tilde{q})$, un campo di materia $Y$ nell'aggiunta con superpotenziale $\mathrm{tr}\; Y^{k+1}$ e  $ k \, N_f^2$  Mesoni $M^j$, costruiti dai \alert{campi elettrici} $M^j = Q \, X^{\,j} \, \tilde{Q}$\\
+{\bfseries  Teoria magnetica}  \quad $SU(k N_f - N_c)$  $SQCD$ con $N_f$ sapori $(q,\tilde{q})$, un campo di materia $Y$ nell'aggiunta con superpotenziale $\mathrm{tr}\; Y^{k+1}$ e  $ k \, N_f^2$  Mesoni $M^j$, costruiti dai \alert{\bfseries campi elettrici} $M^j = Q \, X^{\,j} \, \tilde{Q}$\\
 \end{block}
 \vfill 
 \end{frame}
 
 \begin{frame}
 \begin{block}{In cosa consiste la dualità?}
-Entrambe le teorie in un intervallo di sapori e colori fluiscono a basse energie a un \alert{punto fisso superconforme fortemente interagente.}
+Entrambe le teorie nello stesso intervallo di sapori e colori fluiscono a basse energie a un \alert{\bfseries punto fisso superconforme fortemente interagente.}
 \\
 \vspace{0.2cm}
-Gli operatori \alert{gauge invarianti} vengono mappati fra l'una e l'altra teoria
+Gli operatori \alert{\bfseries gauge invarianti} vengono mappati fra l'una e l'altra teoria
 \begin{table}
 \begin{tabular}{r l }
 {\bfseries Seiberg duality} &  \\
@@ -201,11 +203,11 @@ $\tilde{B}_{el} = \tilde{Q}_{[i} \dotsc \tilde{Q}_{N_c]}$ & $\longleftrightarrow
 
 \end{block}
 
-Tutte le \alert{osservabili} della teoria elettrica possono essere calcolate nella teoria magnetica e si ottengono gli stessi risultati. \\
+Tutte le \alert{\bfseries osservabili} della teoria elettrica possono essere calcolate nella teoria magnetica e si ottengono gli \alert{\bfseries stessi risultati}. \\
 \vspace{0.3cm}
 
 \onslide<2->{\begin{center}
-\alert{\bfseries Non ho modo di sapere se si osservano i gradi di libertà dell'una o dell'altra teoria.}
+\alert{\bfseries \bfseries Non ho modo di sapere se si osservano i gradi di libertà dell'una o dell'altra teoria.}
 \end{center}
 }
 
@@ -218,14 +220,14 @@ Tutte le \alert{osservabili} della teoria elettrica possono essere calcolate nel
 
 \onslide<+->{Per tutte le dualità elettriche-magnetiche vale la relazione 
 $$
-  g_{el} \sim \frac{1}{\tilde{g}_{mag}} 
+  g_{el} \sim \frac{1}{\tilde{g}_{mag}}  \quad \longrightarrow \quad \hbox{strong-weak coupling}
 $$
 }
 
 \onslide<+->{
 Quando una delle due teoria è fortemente accoppiata, la teoria duale è in regime perturbativo.\\
 \vspace{0.3cm}
-Si può calcolare una osservabile nella teoria \alert{fortemente accoppiata} (difficile da trattare) con \alert{tecniche perturbative} ben note nella teoria duale.\\
+Si può calcolare una osservabile nella teoria \alert{\bfseries fortemente accoppiata} (difficile da trattare) con \alert{\bfseries tecniche perturbative} ben note nella teoria duale.\\
 %Teorie fortemente accoppiate sono molto difficili da trattare.
 }
 \end{frame}
@@ -244,7 +246,7 @@ In particolare, con la dualità AdS/CFT (Anti-deSitter/Conformal field Theory):
 \item modelli per superconduttori olografici (AdS$_4$/CFT$_3$))
 \end{itemize}
 
-CFT \alert{fortemente} interagente, teoria di gravità \alert{debolmente} accoppiata.
+CFT \alert{\bfseries fortemente} interagente, teoria di gravità \alert{\bfseries debolmente} accoppiata.
 
 \end{frame}
 
@@ -253,16 +255,16 @@ CFT \alert{fortemente} interagente, teoria di gravità \alert{debolmente} accopp
 \begin{frame}{Dualità di Seiberg in 3D}
 Caratteristiche simili alle dualità di Seiberg in 4D, nonostante le teorie di campo in 3D presentano
 \begin{itemize}
-\item diverso contenuto di materia: in 3D i gluoni hanno anche una partner \alert{scalare} 
-\item ulteriori simmetrie: in 4D no simmetria \alert{assiale} e \alert{topologica} 
-\item uno spazio dei moduli (\alert{vuoti supersimmetrici}) con un \emph{branch} aggiuntivo  
+\item diverso contenuto di materia: in 3D i gluoni hanno anche una partner \alert{\bfseries scalare} 
+\item ulteriori simmetrie: in 4D no simmetria \alert{\bfseries assiale} e \alert{\bfseries topologica} 
+\item uno spazio dei moduli (\alert{\bfseries vuoti supersimmetrici}) con un \emph{branch} aggiuntivo  
 \end{itemize}
 \vspace{0,3cm}
 
 \onslide<2->{
  La teoria magnetica 3D contiene, oltre ai mesoni, un insieme aggiuntivo di singoletti.\\
  \vspace{0.3cm}
-	{ \centering \alert{Monopoli} della teoria elettrica  $\longrightarrow $ \alert{singoletti} nella teoria magnetica\\
+	{ \centering \alert{\bfseries Monopoli} della teoria elettrica  $\longrightarrow $ \alert{\bfseries singoletti} nella teoria magnetica\\
 	}
 \vspace{0.3cm}
 %Essi permettono il match del \emph{Coulomb branch} fra le due teorie.
@@ -284,7 +286,7 @@ Infine, si manda $r \rightarrow 0 $.
 \vspace{0.5cm}
 \onslide<2->{
 	\begin{center}
-	\alert{\Large  \bfseries Con questo procedimento non si ottengono due teorie duali in 3D}
+	\alert{\bfseries \Large  \bfseries Con questo procedimento non si ottengono due teorie duali in 3D}
 	\\
 	\vspace{0.3cm}
 	Limite a bassa energia incompatibile con la relazione di dualità.
@@ -299,7 +301,7 @@ Infine, si manda $r \rightarrow 0 $.
 \vspace{0.5cm}
 La finitezza del cerchio genera un termine di superpotenziale ($\eta$) dovuto a un modo istantonico di Kaluza-Klein.\\
 \vspace{0.3cm}
-Il superpotenziale $\eta$ impone vincoli tipici delle 4D (\alert{anomalie}). \\
+Il superpotenziale $\eta$ impone vincoli tipici delle 4D (\alert{\bfseries anomalie}). \\
 In 3D questi vincoli non ci sono e dovranno essere rimossi.
 \\
 %Il superpotenziale $\eta$ rompe le simmetrie 3D, anomale in 4D.\\
@@ -340,11 +342,11 @@ La riduzione delle dualità è compresa in teoria di campo per diverse dualità 
 \vspace{0.3cm}
 Nel caso della dualità KSS
 % ( dualità di Seiberg con materia nell'aggiunta ),
-è necessario deformare la teoria aggiungendo una \alert{perturbazione} nel superpotenziale. \\
+è necessario deformare la teoria aggiungendo una \alert{\bfseries perturbazione} nel superpotenziale. \\
 \vspace{0.3cm}
-Nella teoria duale, essa rompe la teoria in $k$ settori \alert{senza aggiunta} con gruppo di gauge 
+Nella teoria duale, essa rompe la teoria in $k$ settori \alert{\bfseries senza aggiunta} con gruppo di gauge 
 $$
-SU(k N_f - N_c)  = \prod_i^k SU(n_i) \times U(1)^k
+SU(k N_f - N_c)  = \prod_i^k SU(n_i) \times U(1)^k / U(1)
 \qquad \hbox{con} \; \sum_i n_i = k N_f - N_c
 $$
 
@@ -356,7 +358,7 @@ Si può dualizzare il settore $U(1)^k$  in modo da ottenere i singoletti non pre
 \\
 \vspace{0.5cm}
 
-\alert{\bfseries Rimuovendo la deformazione $U(1)^k \longrightarrow U(k)$ e non si sa come ottenere i singoletti della teoria magnetica.}
+\alert{\bfseries \bfseries Rimuovendo la deformazione $U(1)^k \longrightarrow U(k)$ e non si sa come si possono ottenere i singoletti della teoria magnetica.}
 \onslide<2->{
 \begin{center}
 {\arrowdown}
@@ -365,7 +367,7 @@ Si può dualizzare il settore $U(1)^k$  in modo da ottenere i singoletti non pre
 	Devo assumere che rimuovendo la deformazione ottengo gli stessi  singoletti.\\
 }
 \vspace{0.3cm}
-\alert{Non è chiaro come si può giustificare questa affermazione.}
+\alert{\bfseries Non è chiaro come si può giustificare questa affermazione.}
 }
 \end{frame}
 
@@ -379,27 +381,27 @@ Si può dualizzare il settore $U(1)^k$  in modo da ottenere i singoletti non pre
 Si calcola l'indice superconforme $I_{el} \; \& \; I_{mag} $:
 conta i multipletti BPS corti della teoria su $\mathbb{R}^3 \times \mathbb{S}^1$.\\
 \vspace{0.2cm}
-Nel limite $r \rightarrow 0$ l'indice si riduce alla funzione di partizione della teoria in 3D \alert{con superpotenziale $\eta$.}\\
+Nel limite $r \rightarrow 0$ l'indice si riduce alla funzione di partizione della teoria in 3D \alert{\bfseries con superpotenziale $\eta$.}\\
 \vspace{0.2cm}
 {\bfseries Indice superconf.} integrale sul gruppo di gauge di $\Gamma_e$ ellittiche
 \\
 {\bfseries Funz. di partiz.} integrale sul gruppo di gauge di $\Gamma_h$ iperboliche
 \\[0,2cm]
 \begin{equation}
-\begin{array}{r l l }
-\hbox{4D:}  \quad  I_{el} & = I_{mag}   & \Gamma_e \hfill \\
-\downarrow & \quad \downarrow  \quad r \rightarrow 0  & \downarrow\\ 
-\hbox{3D:} \quad Z^{\eta}_{el} & = Z^{\eta}_{mag}& \Gamma_h
+\begin{array}{l l l l l }
+\hbox{4D:}  \qquad  & I_{el} & =  &I_{mag}   & \Gamma_e  \\
+r \rightarrow 0 &\downarrow &   &\downarrow     & \downarrow\\ 
+\hbox{3D:} \qquad & Z^{\eta}_{el} & =&  Z^{\eta}_{mag} & \Gamma_h
 \end{array}
 \end{equation}
 \end{frame}
 
 \begin{frame}{Indici e funzioni di partizione}
-La dualità in 4D (\alert{fisicamente}) e identità integrali (\alert{matematicamente}) dimostrano l'identità fra gli indici in 4D.\\
+La dualità in 4D (\alert{\bfseries fisicamente}) e identità integrali (\alert{\bfseries matematicamente}) dimostrano l'identità fra gli indici in 4D.\\
 \begin{center}
 \arrowdown \\
 \end{center}
-\alert{\large \bfseries Le funzioni di partizione in 3D con superpotenziale $\eta$ sono  uguali grazie all'identità degli indici in 4D}
+\alert{\bfseries \large \bfseries Le funzioni di partizione in 3D con superpotenziale $\eta$ sono  uguali grazie all'identità degli indici in 4D}
 \end{frame}
 
 
@@ -415,22 +417,22 @@ $$
 $$
 \\
 \vspace{0.3cm}
-Utilizzando una identità \alert{matematica} fra gamma iperboliche $\Gamma_h$ sul settore $U(k)$ si ottengono gli \alert{stessi singoletti} trovati in teoria di campo dualizzando $U(1)^k$.
+Utilizzando una identità \alert{\bfseries matematica} fra gamma iperboliche $\Gamma_h$ sul settore $U(k)$ si ottengono gli \alert{\bfseries stessi singoletti} trovati in teoria di campo dualizzando $U(1)^k$.
 \end{frame}
 
 
 \begin{frame}{Verifica del procedimento in teoria di campo}
 \begin{center}
 {\large \bfseries  
-Il nostro lavoro è una \alert{verifica indipendente} dei risultati ottenuti in teoria di campo, senza fare \alert{assunzioni} non giustificabili.
+Il nostro lavoro è una \alert{\bfseries verifica indipendente} dei risultati ottenuti in teoria di campo, senza fare \alert{\bfseries assunzioni} non giustificabili.
 \\[0.3cm]
 \onslide<2->
-{\alert{Questo risultato non era presente in letteratura}.
+{\alert{\bfseries Questo risultato non era presente in letteratura}.
 }
 } 
 \\
 \vspace{0.5cm}
-\onslide<3->{L'identità fra le due funzioni di partizione $ Z_{el} = Z_{mag}$ porta a una \alert{nuova identità} integrale tra funzioni iperboliche $\Gamma_h$ \alert{non ancora dimostrate} matematicamente.
+\onslide<3->{L'identità fra le due funzioni di partizione $ Z_{el} = Z_{mag}$ porta a una \alert{\bfseries nuova identità} integrale tra funzioni iperboliche $\Gamma_h$ \alert{\bfseries non ancora dimostrate} matematicamente.
 }\\
 \end{center}
 
@@ -441,7 +443,8 @@ Il nostro lavoro è una \alert{verifica indipendente} dei risultati ottenuti in 
 
 
 \nocite{*}
-%\bibliographystyle{plain}
+\bibliographystyle{jhep}
+{ \footnotesize 
 \bibliography{biblio}
-
+}
 \end{document}
