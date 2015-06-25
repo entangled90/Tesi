@@ -361,47 +361,28 @@ Si ignora la dinamica sul cerchio e si manda $r \rightarrow 0$.\\
 \end{block}
 
 \begin{block}{Riduzione corretta: $r$ finito}
-La finitezza del cerchio modifica la dinamica e impone vincoli tipici della teorie 4D (\alert{\bfseries anomalie}).\\
-I vincoli sono generati dal superpotenziale $\eta$, generato da istantoni.\\
+La finitezza del cerchio modifica la dinamica e impone vincoli tipici della teorie 4D (\alert{\bfseries anomalie}), generati dal superpotenziale $\eta$.\\
 
 \end{block}
 Si scende a energie $\ll \frac{1}{r}$: la dinamica sul cerchio si disaccoppia.
 \end{frame}
 
 
-\plain{Si può arrivare a una dualità 3D senza i vincoli causati dalla presenza del cerchio?}
+%\plain{Si può arrivare a una dualità 3D senza i vincoli causati dalla presenza del cerchio?}
 
-\begin{frame}
+\begin{frame}{Riduzione Dualità KSS}
+
+Si possono rimuovere questi vincoli con un particolare RG flow.\\
+Inoltre, si riesce a generare la simmetria assiale (\alert{assente in 4D}).
+\\
+\vspace{0,3cm}
+Si è in grado di ridurre la \alert{\bfseries dualità KSS} con tecniche standard di QFT solo se si introduce una perturbazione al potenziale. \\
+\vspace{0,3cm}
+Per ottenere la dualità 3D standard è necessario \alert{\bfseries assumere} che rimuovendo la deformazione si ottenga lo stesso risultato, 
+ma tutt'ora non ci sono \alert{\bfseries argomentazioni teoriche} a riguardo.
 
 \end{frame}
 
-
-
-
-\begin{frame}{4D $\longrightarrow$ 3D in teoria di campo: dualità KSS}
-
-
-Nel caso della dualità KSS è necessario deformare la teoria
-aggiungendo una \alert{\bfseries perturbazione} nel superpotenziale.
-\\
-Con la deformazione si riescono a trovare i singoletti necessari per la dualità in 3D.
-\\
-\vspace{0.5cm}
-\alert{\bfseries \bfseries Rimuovendo la deformazione non si sa come ottenere i singoletti della teoria magnetica.}
-\onslide<2->{
-\begin{center}
-{\arrowdown}
-\end{center}
-{\large 
-	Devo assumere che rimuovendo la deformazione il risultato non cambia.\\
-}
-\vspace{0.3cm}
-
-\begin{center}
-\alert{\bfseries Non è chiaro come si può giustificare questa affermazione.}
-}
-\end{center}
-\end{frame}
 
 \plain{Ho modo di verificare se questa intuizione è corretta? }
 
@@ -411,20 +392,26 @@ Con la deformazione si riescono a trovare i singoletti necessari per la dualità
 
 \begin{frame}{Indice superconforme in 4D e funzioni di partizione in 3D} 
 Si calcola l'indice superconforme $I_{el} \; \& \; I_{mag} $:
-conta i multipletti BPS corti della teoria su $\mathbb{R}^3 \times \mathbb{S}^1$.\\
-\vspace{0.2cm}
-Nel limite $r \rightarrow 0$ l'indice si riduce alla funzione di partizione della teoria in 3D \alert{\bfseries con superpotenziale $\eta$.}\\
-\vspace{0.2cm}
-{\bfseries Indice superconf.} integrale sul gruppo di gauge di $\Gamma_e $ ellittiche
+conta i multipletti BPS corti su $\mathbb{R}^3 \times \mathbb{S}^1$.\\
+%\vspace{0.2cm}
+Esso è una quantità che è \alert{\bfseries uguale} per teorie duali.\\
+\vspace{0,2cm}
+Inoltre, nel limite $r \rightarrow 0$ l'indice si riduce alla funzione di partizione della teoria in 3D \alert{\bfseries con superpotenziale $\eta$.}\\
+\begin{table}
+\begin{tabular}{r l }
+{\bfseries Indice superconf.} & funzioni gamma ellittiche $\Gamma_e $
 \\
-{\bfseries Funz. di partiz.} integrale sul gruppo di gauge di $\Gamma_h$ iperboliche
-\\[0,2cm]
+{\bfseries Funz. di partiz.} & funzioni gamma iperboliche $\Gamma_h$
+\end{tabular}
+\end{table}
+\begin{center}
+{\bfseries Identità matematiche}: $ \Gamma_e  \overset{\small{ r \rightarrow 0}}{\longrightarrow} \Gamma_h $
+\end{center}
 \begin{equation*}
-\begin{array}{l l l l l }
-\hbox{4D:}  \qquad  & I_{el} & =  &I_{mag}   & \Gamma_e  \\
-r \rightarrow 0 &\downarrow &   &\downarrow     & \downarrow\\ 
-\hbox{3D:} \qquad & Z^{\eta}_{el} & =&  Z^{\eta}_{mag} & \Gamma_h
-\end{array}
+\begin{array}{l l l l }
+\hbox{4D:}  \qquad  & I_{el} & =  &I_{mag}   \\[0,2cm]
+r \rightarrow 0 &\downarrow &   &\downarrow    \\[0,2cm]
+\hbox{3D:} \qquad & Z^{\eta}_{el} & =&  Z^{\eta}_{mag} \end{array}
 \end{equation*}
 \end{frame}
 
